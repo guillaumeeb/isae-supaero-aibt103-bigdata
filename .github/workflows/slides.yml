@@ -5,12 +5,18 @@ jobs:
   convert_via_pandoc:
     runs-on: ubuntu-18.04
     steps:
-      #Checkout our files
+      # Checkout our files
       - uses: actions/checkout@v2
       - run: mkdir output
+      # Just a test for example build.
       - uses: docker://pandoc/latex:latest
         with:
           args: -t revealjs -s test_slides.md -o output/test_slides.html
+      # Build slidedeck
+      # TODO: Would need a index first...
+      - uses: docker://pandoc/latex:latest
+        with:
+          args: -t revealjs -s 00_Course_Introduction.md -o output/test_slides.html
       - uses: actions/upload-artifact@master
         with:
           name: output
