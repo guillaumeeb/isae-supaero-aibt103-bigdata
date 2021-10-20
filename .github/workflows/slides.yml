@@ -11,6 +11,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           repository: 'hakimel/reveal.js'
+          path: 'reveal.js'
       - uses: docker://pandoc/latex:2.9
         with:
           args: pandoc -t revealjs -s test_slides.md -o output/test_slides.html
