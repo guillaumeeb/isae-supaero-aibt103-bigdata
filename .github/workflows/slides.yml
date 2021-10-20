@@ -16,7 +16,7 @@ jobs:
       # TODO: Would need a index first...
       - uses: docker://pandoc/latex:latest
         with:
-          args: -t revealjs -s 00_Course_Introduction.md -o output/test_slides.html
+          args: -t revealjs -s 00_Course_Introduction.md -o output/00_Course_Introduction.html
       - uses: actions/upload-artifact@master
         with:
           name: output
