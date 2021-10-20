@@ -7,15 +7,10 @@ jobs:
     steps:
       #Checkout our files
       - uses: actions/checkout@v2
-      #Needs revealjs styles. Default for now.
-      - uses: actions/checkout@v2
+      - run: mkdir output
+      - uses: docker://pandoc/latex:2.14.12
         with:
-          repository: 'hakimel/reveal.js'
-          path: 'reveal.js'
-      - run: mkdir output && cp -r reveal.js output/
-      - uses: docker://pandoc/latex:2.9
-        with:
-          args: pandoc -t revealjs -s test_slides.md -o output/test_slides.html
+          args: pandoc -t revealjs -s test_slides.md -o output/test_slides.html -V revealjs-url=https://unpkg.com/reveal.js@4.1.3/
       - uses: actions/upload-artifact@master
         with:
           name: output
