@@ -12,7 +12,7 @@ jobs:
         with:
           repository: 'hakimel/reveal.js'
           path: 'reveal.js'
-      - run: mkdir output
+      - run: mkdir output && cp -r reveal.js output/
       - uses: docker://pandoc/latex:2.9
         with:
           args: pandoc -t revealjs -s test_slides.md -o output/test_slides.html
