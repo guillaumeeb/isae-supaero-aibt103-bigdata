@@ -5,6 +5,8 @@ jobs:
   convert_via_pandoc:
     runs-on: ubuntu-18.04
     steps:
+      #Checkout our files
+      - uses: actions/checkout@v2
       #Needs revealjs styles. Default for now.
       - uses: actions/checkout@v2
         with:
