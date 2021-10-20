@@ -8,9 +8,9 @@ jobs:
       #Checkout our files
       - uses: actions/checkout@v2
       - run: mkdir output
-      - uses: docker://pandoc/latex:2.14.1
+      - uses: docker://pandoc/latex:latest
         with:
-          args: pandoc -t revealjs -s test_slides.md -o output/test_slides.html -V revealjs-url=https://unpkg.com/reveal.js@4.1.3/
+          args: pandoc -t revealjs -s test_slides.md -o output/test_slides.html
       - uses: actions/upload-artifact@master
         with:
           name: output
