@@ -12,6 +12,10 @@ jobs:
       - uses: docker://pandoc/latex:latest
         with:
           args: -t revealjs -s test_slides.md -o output/test_slides.html -V theme=moon -V minScale=0.1 -V width='90%' -V height='90%'
+      # Build index
+      - uses: docker://pandoc/latex:latest
+        with:
+          args: -s -o output/index.html -f markdown index.md
       # Build slidedeck
       # TODO: Would need a index first...
       - uses: docker://pandoc/latex:latest
