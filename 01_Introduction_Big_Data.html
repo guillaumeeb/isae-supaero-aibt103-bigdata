@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc">
   <meta name="author" content="Guillaume Eynard-Bontemps">
   <meta name="dcterms.date" content="2021-11-15">
-  <title>Big Data Processing Course Introduction</title>
+  <title>Introduction to Big Data and its Ecosystem</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -27,110 +27,85 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">Big Data Processing Course Introduction</h1>
+  <h1 class="title">Introduction to Big Data and its Ecosystem</h1>
   <p class="author">Guillaume Eynard-Bontemps</p>
   <p class="date">November 15, 2021</p>
 </section>
 
 <section>
-<section id="welcome" class="title-slide slide level1">
-<h1>Welcome</h1>
+<section id="what-is-big-data" class="title-slide slide level1">
+<h1>What is Big Data?</h1>
 
 </section>
-<section id="course-overview" class="slide level2">
-<h2>Course Overview</h2>
-<p>Title - ARTIFICIAL INTELLIGENCE &amp; BUSINESS TRANSFORMATION - BLOC 1 : ARTIFICIAL INTELLIGENCE INTERNALS - AIBT103_Big Data Processing</p>
-<p>Goals</p>
-<p>Evaluation.</p>
+<section id="data-evolution" class="slide level2">
+<h2>Data evolution</h2>
+<figure>
+<img data-src="https://www.visualcapitalist.com/wp-content/uploads/2019/04/a-day-in-data.jpg" alt="Data in a day 2019" /><figcaption aria-hidden="true">Data in a day 2019</figcaption>
+</figure>
+<p>Volume of data produced in a day in 2019.</p>
 </section>
-<section id="about-myself" class="slide level2">
-<h2>About myself</h2>
-<ul>
-<li>Guillaume Eynard-Bontemps</li>
-<li>CNES</li>
-<li>5 years on Hadoop</li>
-<li>6 years on HPC</li>
-<li>3 years using Dask</li>
-</ul>
+<section id="some-figures" class="slide level2">
+<h2>Some figures</h2>
+</section>
+<section id="v-4v-5v" class="slide level2">
+<h2>3V, 4V, 5V</h2>
+</section>
+<section id="what-is-behind-big-data" class="slide level2">
+<h2>What is Behind Big Data</h2>
+</section>
+<section id="big-data-definition" class="slide level2">
+<h2>Big Data definition</h2>
 </section></section>
 <section>
-<section id="program" class="title-slide slide level1">
-<h1>Program</h1>
+<section id="legacy-big-data-ecosystem" class="title-slide slide level1">
+<h1>Legacy “Big Data” ecosystem</h1>
 
 </section>
-<section id="day-1-big-data-distributed-computing-and-spark" class="slide level2">
-<h2>Day 1: Big Data, Distributed Computing and Spark</h2>
-<ul>
-<li>Introduction to Big Data and its ecosystem (1h)
-<ul>
-<li>What is Big Data?</li>
-<li>Legacy “Big Data” ecosystem</li>
-<li>Big Data use cases</li>
-<li>Big Data to Machine Learning</li>
-</ul></li>
-<li>Big Data platforms (2h)
-<ul>
-<li>Hadoop: HDFS and MapReduce, Data distribution and chunking</li>
-<li>From HPC to Big Data to Cloud and High Performance Data Analytics</li>
-<li>BI vs Big Data</li>
-<li>Hadoop legacy: Spark, Dask, Object Storage, File format, Datalakes</li>
-<li>Distributed programming: Hadoop vs HPC vs Cloud</li>
-<li>Distributed Machine Learning, GPGPU computing</li>
-</ul></li>
-<li>Spark Introduction (1h)</li>
-<li>Play with MapReduce through Spark (small dataset) (2h)
-<ul>
-<li>Notebook</li>
-</ul></li>
-</ul>
+<section id="blowing-ecosystem" class="slide level2">
+<h2>Blowing ecosystem</h2>
 </section>
-<section id="day-2-cloud-computing-and-kubernetes" class="slide level2">
-<h2>Day 2: Cloud Computing and Kubernetes</h2>
-<ul>
-<li>Cloud computing (2h)
-<ul>
-<li>Virtualization and cloud computing: Different approaches, Economical models, Technical benefits, cloud engines</li>
-<li>IaaS, PaaS, CaaS, SaaS, Object Storage</li>
-<li>New Data processing standard: object store and compute as a service</li>
-</ul></li>
-<li>First interaction with Google Cloud, how to get a server? (1h)
-<ul>
-<li>TP through Google console</li>
-</ul></li>
-<li>Container as a Service (1.5h)
-<ul>
-<li>Container, TP Docker?</li>
-<li>Kubernetes</li>
-<li>Processing platform as a Service (Databricks, Coiled)</li>
-</ul></li>
-<li>TP Deploy Data processing platform on the Cloud based on Kubernetes and Dask (2h)
-<ul>
-<li>DaskHub or Dask Kubernetes or Pangeo</li>
-</ul></li>
-</ul>
+<section id="hadoop-map-reduce" class="slide level2">
+<h2>Hadoop &amp; Map Reduce</h2>
 </section>
-<section id="day-3-python-ecosystem-for-data-processing-and-dask" class="slide level2">
-<h2>Day 3: Python ecosystem for data processing and Dask</h2>
-<ul>
-<li>The rise of the Python ecosystem for Data Processing (1.5h)
-<ul>
-<li>Pydata stack (Pandas, Numpy, Dask)</li>
-<li>Machine and Deep Learning (Sickit Learn, TensorFlow Pytorch)</li>
-<li>Jupyter notebooks, Binder, Google Colab</li>
-</ul></li>
-<li>Pandas tutorial (1h)</li>
-<li>Dask Presentation (1h)</li>
-<li>Dask Tutorial (2h): notebook</li>
-<li>Pangeo tutorial or finish deploying your computing platform (1h)</li>
-</ul>
+<section id="nosql" class="slide level2">
+<h2>NoSQL</h2>
 </section>
-<section id="day-4-evaluation" class="slide level2">
-<h2>Day 4: Evaluation</h2>
-<ul>
-<li>Prerequisite: Pangeo platform deployed before</li>
-<li>Clean big amounts of data using Dask in the cloud (3h),</li>
-<li>Train machine learning models in parallel (hyper parameter search) (3h).</li>
-</ul>
+<section id="logs-etl-time-series" class="slide level2">
+<h2>Logs, ETL, Time series</h2>
+</section>
+<section id="dataviz" class="slide level2">
+<h2>Dataviz</h2>
+</section>
+<section id="data-science-and-machine-learning" class="slide level2">
+<h2>Data Science and Machine LEarning</h2>
+</section></section>
+<section>
+<section id="big-data-use-cases" class="title-slide slide level1">
+<h1>Big Data use cases</h1>
+
+</section>
+<section id="cost-effective-storage-and-processing" class="slide level2">
+<h2>Cost effective storage and processing</h2>
+</section>
+<section id="data-mining-data-value-data-cross-processing" class="slide level2">
+<h2>Data mining, data value, data cross processing</h2>
+</section>
+<section id="scientific-data-processing" class="slide level2">
+<h2>Scientific data processing</h2>
+</section>
+<section id="digital-twins-predictive-maintenance-intelligent-city-real-time-processing" class="slide level2">
+<h2>Digital twins, Predictive maintenance, Intelligent City, real time processing</h2>
+</section></section>
+<section>
+<section id="big-data-to-machine-learning" class="title-slide slide level1">
+<h1>Big Data to Machine Learning</h1>
+
+</section>
+<section id="big-data-allows-machine-learning-to-be-effective" class="slide level2">
+<h2>Big Data allows machine learning to be effective</h2>
+</section>
+<section id="pre-processing-before-machine-learning" class="slide level2">
+<h2>Pre processing before machine learning</h2>
 </section></section>
     </div>
   </div>
