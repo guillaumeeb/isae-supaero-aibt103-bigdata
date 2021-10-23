@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="John Doe">
-  <meta name="dcterms.date" content="2005-03-22">
-  <title>Habits</title>
+  <meta name="author" content="Guillaume Eynard-Bontemps">
+  <meta name="dcterms.date" content="2021-11-15">
+  <title>Big Data Processing Course Introduction</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -20,91 +20,117 @@
     ul.task-list{list-style: none;}
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/moon.css" id="theme">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/solarized.css" id="theme">
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">Habits</h1>
-  <p class="author">John Doe</p>
-  <p class="date">March 22, 2005</p>
+  <h1 class="title">Big Data Processing Course Introduction</h1>
+  <p class="author">Guillaume Eynard-Bontemps</p>
+  <p class="date">November 15, 2021</p>
 </section>
 
 <section>
-<section id="in-the-morning" class="title-slide slide level1">
-<h1>In the morning</h1>
+<section id="welcome" class="title-slide slide level1">
+<h1>Welcome</h1>
 
 </section>
-<section id="getting-up" class="slide level2">
-<h2>Getting up</h2>
-<ul>
-<li>Turn off alarm</li>
-<li>Get out of bed</li>
-</ul>
+<section id="course-overview" class="slide level2">
+<h2>Course Overview</h2>
+<p>Title - ARTIFICIAL INTELLIGENCE &amp; BUSINESS TRANSFORMATION - BLOC 1 : ARTIFICIAL INTELLIGENCE INTERNALS - AIBT103_Big Data Processing</p>
+<p>Goals</p>
+<p>Evaluation.</p>
 </section>
-<section id="breakfast" class="slide level2">
-<h2>Breakfast</h2>
+<section id="about-myself" class="slide level2">
+<h2>About myself</h2>
 <ul>
-<li>Eat eggs</li>
-<li>Drink coffee</li>
+<li>Guillaume Eynard-Bontemps</li>
+<li>CNES</li>
+<li>5 years on Hadoop</li>
+<li>6 years on HPC</li>
+<li>3 years using Dask</li>
 </ul>
 </section></section>
 <section>
-<section id="in-the-evening" class="title-slide slide level1">
-<h1>In the evening</h1>
+<section id="program" class="title-slide slide level1">
+<h1>Program</h1>
 
 </section>
-<section id="dinner" class="slide level2">
-<h2>Dinner</h2>
+<section id="day-1-big-data-distributed-computing-and-spark" class="slide level2">
+<h2>Day 1: Big Data, Distributed Computing and Spark</h2>
 <ul>
-<li>Eat spaghetti</li>
-<li>Drink wine</li>
+<li>Introduction to Big Data and its ecosystem (1h)
+<ul>
+<li>What is Big Data?</li>
+<li>Legacy “Big Data” ecosystem</li>
+<li>Big Data use cases</li>
+<li>Big Data to Machine Learning</li>
+</ul></li>
+<li>Big Data platforms (2h)
+<ul>
+<li>Hadoop: HDFS and MapReduce, Data distribution and chunking</li>
+<li>From HPC to Big Data to Cloud and High Performance Data Analytics</li>
+<li>BI vs Big Data</li>
+<li>Hadoop legacy: Spark, Dask, Object Storage, File format, Datalakes</li>
+<li>Distributed programming: Hadoop vs HPC vs Cloud</li>
+<li>Distributed Machine Learning, GPGPU computing</li>
+</ul></li>
+<li>Spark Introduction (1h)</li>
+<li>Play with MapReduce through Spark (small dataset) (2h)
+<ul>
+<li>Notebook</li>
+</ul></li>
 </ul>
 </section>
-<section class="slide level2">
-
-<figure>
-<img data-src="images/spaghetti.jpg" alt="picture of spaghetti" /><figcaption aria-hidden="true">picture of spaghetti</figcaption>
-</figure>
-</section>
-<section id="going-to-sleep" class="slide level2">
-<h2>Going to sleep</h2>
+<section id="day-2-cloud-computing-and-kubernetes" class="slide level2">
+<h2>Day 2: Cloud Computing and Kubernetes</h2>
 <ul>
-<li>Get in bed</li>
-<li>Count sheep</li>
+<li>Cloud computing (2h)
+<ul>
+<li>Virtualization and cloud computing: Different approaches, Economical models, Technical benefits, cloud engines</li>
+<li>IaaS, PaaS, CaaS, SaaS, Object Storage</li>
+<li>New Data processing standard: object store and compute as a service</li>
+</ul></li>
+<li>First interaction with Google Cloud, how to get a server? (1h)
+<ul>
+<li>TP through Google console</li>
+</ul></li>
+<li>Container as a Service (1.5h)
+<ul>
+<li>Container, TP Docker?</li>
+<li>Kubernetes</li>
+<li>Processing platform as a Service (Databricks, Coiled)</li>
+</ul></li>
+<li>TP Deploy Data processing platform on the Cloud based on Kubernetes and Dask (2h)
+<ul>
+<li>DaskHub or Dask Kubernetes or Pangeo</li>
+</ul></li>
 </ul>
 </section>
-<section id="a-very-long-list-test" class="slide level2">
-<h2>A very long list test</h2>
+<section id="day-3-python-ecosystem-for-data-processing-and-dask" class="slide level2">
+<h2>Day 3: Python ecosystem for data processing and Dask</h2>
 <ul>
-<li>Get in bed</li>
-<li>Count sheep</li>
-<li></li>
-<li>Get in bed</li>
-<li>Count sheep</li>
-<li></li>
-<li>Get in bed</li>
-<li>Count sheep</li>
-<li></li>
-<li>1</li>
-<li>2</li>
-<li>3</li>
-<li>4</li>
-<li>5</li>
-<li>6</li>
-<li>7</li>
-<li>8</li>
-<li>9</li>
-<li>10</li>
-<li>11</li>
-<li>12</li>
-<li>13</li>
-<li>14</li>
-<li>15</li>
+<li>The rise of the Python ecosystem for Data Processing (1.5h)
+<ul>
+<li>Pydata stack (Pandas, Numpy, Dask)</li>
+<li>Machine and Deep Learning (Sickit Learn, TensorFlow Pytorch)</li>
+<li>Jupyter notebooks, Binder, Google Colab</li>
+</ul></li>
+<li>Pandas tutorial (1h)</li>
+<li>Dask Presentation (1h)</li>
+<li>Dask Tutorial (2h): notebook</li>
+<li>Pangeo tutorial or finish deploying your computing platform (1h)</li>
 </ul>
-<p>Tadahhh</p>
+</section>
+<section id="day-4-evaluation" class="slide level2">
+<h2>Day 4: Evaluation</h2>
+<ul>
+<li>Prerequisite: Pangeo platform deployed before</li>
+<li>Clean big amounts of data using Dask in the cloud (3h),</li>
+<li>Train machine learning models in parallel (hyper parameter search) (3h).</li>
+</ul>
 </section></section>
     </div>
   </div>
