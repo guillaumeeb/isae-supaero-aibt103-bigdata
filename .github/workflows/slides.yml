@@ -43,7 +43,7 @@ jobs:
         with:
           path: output/*
           key: ${{ github.sha }}-${{ matrix.slides }}
-          restore-key: ${{ github.sha }}-
+          restore-keys: ${{ github.sha }}-
   deploy:
     runs-on: ubuntu-18.04
     needs: [build_slides]
@@ -55,7 +55,7 @@ jobs:
         with:
           path: output/*
           key: Deploy-${{ github.sha }}
-          restore-key: ${{ github.sha }}-
+          restore-keys: ${{ github.sha }}-
       - uses: actions/upload-artifact@master
         with:
           name: output
