@@ -2,12 +2,7 @@ name: Slides build
 on: push
 
 jobs:
-  convert_via_pandoc:
-    strategy:
-      matrix:
-        slides:
-          - 00_Course_Introduction
-          - 01_Introduction_Big_Data
+  build_index:
     runs-on: ubuntu-18.04
     steps:
       # Checkout our files
@@ -21,11 +16,22 @@ jobs:
       - uses: docker://pandoc/latex:latest
         with:
           args: -s -o output/index.html -f markdown index.md
+  build_slides:
+    strategy:
+      matrix:
+        slides:
+          - 00_Course_Introduction
+          - 01_Introduction_Big_Data
+    runs-on: ubuntu-18.04
+    steps:
       # Build slidedeck
       # TODO: Would need a index first...
       - uses: docker://pandoc/latex:latest
         with:
           args: -t revealjs -s ${{ matrix.slides }}.md -o output/${{ matrix.slides }}.html -V theme=solarized -V minScale=0.1 -V width='90%' -V height='90%'
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
       - uses: actions/upload-artifact@master
         with:
           name: output
