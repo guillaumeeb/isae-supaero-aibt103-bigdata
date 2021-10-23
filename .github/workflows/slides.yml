@@ -16,7 +16,8 @@ jobs:
       # TODO: Would need a index first...
       - uses: docker://pandoc/latex:latest
         with:
-          args: -t revealjs -s 00_Course_Introduction.md -o output/00_Course_Introduction.html -V theme=solarized -V width=90% -V height=90% -V minScale=0.1
+          args: -t revealjs -s 00_Course_Introduction.md -o output/00_Course_Introduction.html -V theme=solarized -V minScale=0.1
+          #args: -t revealjs -s 00_Course_Introduction.md -o output/00_Course_Introduction.html -V theme=solarized -V width=90% -V height=90% -V minScale=0.1
       - uses: actions/upload-artifact@master
         with:
           name: output
