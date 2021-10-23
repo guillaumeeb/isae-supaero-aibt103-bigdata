@@ -20,7 +20,7 @@ jobs:
         id: cache-html
         with:
           path: output/*
-          key: ${{ github.sha }}
+          key: ${{ github.sha }}-index
   build_slides:
     strategy:
       max-parallel: 1 # needed for the cache mechanism to work
@@ -54,7 +54,7 @@ jobs:
         id: cache-html
         with:
           path: output/*
-          key: Deploy-${{ github.sha }}
+          key: ${{ github.sha }}-deploy
           restore-keys: ${{ github.sha }}-
       - uses: actions/upload-artifact@master
         with:
