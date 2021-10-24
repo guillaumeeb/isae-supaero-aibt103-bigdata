@@ -11,7 +11,7 @@ jobs:
       # Just a test for example build.
       - uses: docker://pandoc/latex:latest
         with:
-          args: -t revealjs -s test_slides.md -o output/test_slides.html -V theme=moon -V minScale=0.1 -V width='90%' -V height=900
+          args: -t revealjs -s test_slides.md -o output/test_slides.html -V theme=moon -V minScale=0.1 -V width='90%' -V height=900 -V embedded=true
       # Build index
       - uses: docker://pandoc/latex:latest
         with:
