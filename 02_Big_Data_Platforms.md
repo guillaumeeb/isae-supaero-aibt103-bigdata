@@ -1,8 +1,6 @@
 ---
 title: Big Data Platforms
-author:
-- name: Guillaume Eynard-Bontemps
-  affiliation: CNES (Centre National d'Etudes Spatiales, French Space Agency)
+author: Guillaume Eynard-Bontemps, CNES (Centre National d'Etudes Spatiales - French Space Agency)
 date: 2020-11-15
 ---
 
