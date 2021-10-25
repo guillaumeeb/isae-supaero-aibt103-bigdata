@@ -46,4 +46,6 @@ Volume of data produced in a day in 2019.
 
 ## Big Data allows machine learning to be effective
 
+## Distribute datasets and algorithms
+
 ## Pre processing before machine learning
