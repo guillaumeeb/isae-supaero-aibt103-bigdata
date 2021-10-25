@@ -50,7 +50,7 @@ jobs:
           args: >- # allows you to break string into multiple lines
             -t revealjs -s ${{ matrix.slides }}.md -o output/${{ matrix.slides }}.html
             -V theme=solarized -V minScale=0.1 -V width=1800 -V height=900
-            -V background-image=images/logo.png
+            -V background-image=images/logos.png
       - uses: actions/cache@v2
         id: cache-html
         with:
