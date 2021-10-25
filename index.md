@@ -1,6 +1,6 @@
 # Big Data Processing Course
 
-# About the course
+## About the course
 
 Guillaume Eynard-Bontemps for ISAE-Supaero
 
@@ -19,18 +19,32 @@ Guillaume Eynard-Bontemps for ISAE-Supaero
 
 [Big Data Platforms](02_Big_Data_Platforms.html)
 
-[Spark Introduction](03_Spark_Introduction.html)
+[Spark Introduction and exercise](03_Spark_Introduction.html)
 
-[Play with MapReduce through Spark](?.html)
+[Play with MapReduce through Spark](https://github.com/SupaeroDataScience/OBD/blob/master/notebooks/Introduction%20to%20Spark.ipynb)
 
 ### Day 2: Cloud Computing and Kubernetes
 
 [Cloud Computing](10_Cloud_Computing.html)
 
-[First interaction with Google Cloud](11_Google_Cloud_interact.html)
+Includes first interaction with Google Cloud.
 
 [Container as a Service](12_CaaS.html)
 
-[Spark Introduction](03_Spark_Introduction.html)
+Includes Docker and Kubernetes exercises.
 
-[Deploy Data processing platform on the Cloud based on Kubernetes and Dask](?.html)
+[Deploy Data processing platform on the Cloud](13_Dask_On_Cloud.html)
+
+### Day 3: Python ecosystem for data processing and Dask
+
+[The rise of the Python ecosystem for Data Processing](21_Python_Data_Processing.html)
+
+Includes Pandas library tutorial.
+
+[Dask presentation and tutorials](22_Dask_Pangeo.html)
+
+[If necessary, finish data processing platform deployment](13_Dask_On_Cloud.html)
+
+### Day 4: Evaluation
+
+[Final Evaluation](30_Evaluation.html)
