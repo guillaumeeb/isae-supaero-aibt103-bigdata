@@ -6,7 +6,7 @@
 
 ## Data evolution
 
-![Data in a day 2019](https://www.visualcapitalist.com/wp-content/uploads/2019/04/a-day-in-data.jpg)
+![Data in a day 2019](https://www.visualcapitalist.com/wp-content/uploads/2019/04/a-day-in-data.jpg){class="r-stretch"}
 
 Volume of data produced in a day in 2019.
 
