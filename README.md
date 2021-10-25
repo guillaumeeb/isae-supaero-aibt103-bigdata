@@ -4,4 +4,4 @@
 Supaero Course on Big Data Processing support, for 4 days training.
 
 # Output
-https://guillaumeeb.github.io/isae-supaero-aibt103-bigdata/00_Course_Introduction.html
+https://guillaumeeb.github.io/isae-supaero-aibt103-bigdata
