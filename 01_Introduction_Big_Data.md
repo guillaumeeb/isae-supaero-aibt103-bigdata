@@ -7,10 +7,10 @@
 ## Data evolution
 
 
-1 ZB
-1,000,000 PB
-1,000,000,000,000 GB
-1,000,000,000,000,000,000,000 B
+1 ZB  
+1,000,000 PB  
+1,000,000,000,000 GB  
+1,000,000,000,000,000,000,000 B  
 
 ![Evolution of the global datasphere size (IDC)](https://supaerodatascience.github.io/OBD/slides/static/img/datasphere.png)
 
