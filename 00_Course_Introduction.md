@@ -1,6 +1,9 @@
-% Big Data Processing Course Introduction
-% Guillaume Eynard-Bontemps
-% November 15, 2021
+---
+title: Big Data Processing Course Introduction
+author: Guillaume Eynard-Bontemps, CNES (Centre National d'Etudes Spatiales - French Space Agency)
+date: 2020-11-15
+background-image: /images/background-logo.png 
+---
 
 # Welcome
 
