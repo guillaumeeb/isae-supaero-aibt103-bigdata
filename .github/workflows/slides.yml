@@ -28,6 +28,7 @@ jobs:
         slides:
           - 00_Course_Introduction
           - 01_Introduction_Big_Data
+          - 02_Big_Data_Platforms
     runs-on: ubuntu-18.04
     needs: [build_index]
     steps:
