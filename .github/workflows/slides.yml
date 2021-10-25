@@ -7,7 +7,7 @@ jobs:
     steps:
       # Checkout our files
       - uses: actions/checkout@v2
-      - run: mkdir output
+      - run: mkdir output && cp -r images output/
       # Just a test for example build.
       - uses: docker://pandoc/latex:latest
         with:
