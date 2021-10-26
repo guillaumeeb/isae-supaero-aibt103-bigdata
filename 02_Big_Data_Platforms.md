@@ -288,14 +288,35 @@ Hence the cloud computing model...
 
 # BI vs Big Data
 
-## 
+## Business Intelligence
+
+> Business intelligence (BI) comprises the strategies and technologies used by enterprises for the data analysis of business information.
+>
+> BI technologies provide historical, current, and predictive views of business operations. 
+
+_Wikipedia_
+
+Business Intelligence _can_ use Big Data ecosystems, but is more commonly considered something different.
 
 https://medium.com/doctolib/data-engineers-are-no-longer-data-folks-d10d44712580
 https://alphalyr.fr/blog/difference-bi-business-intelligence-big-data/
 
-## BI : KPI, Data warehouse, mainframe, structuring data, SQL, Data Value
+## Classical BI key points
 
-## Big Data: find insights from the data, distributed architecture, different tooling (Python …), Data Volume, Variety
+- Build data systems from Business questions
+- KPI and business decisions oriented
+- Data warehouse, mainframe = Big server with closed technology
+- Use structured data, like SQL databases, 
+- Oriented towards Data Value
+
+## Big Data key points
+
+- Find insights from the data systems, 
+- KPI and business of course, but many more use cases
+- Distributed architecture, lot of Open Source
+- Different toolset (Hadoop, Python), 
+- Every data flavor, keep anything!
+- Data Volume, Variety, Velocity
 
 # Hadoop and Big Data legacy
 
