@@ -26,7 +26,7 @@ date: 2020-11-15
 
 ### Earth Observation Data
 
-![Volume of data per year (source The Australian Geoscience Data Cube — Foundations and lessons learned, A. Lewis)](https://www.researchgate.net/profile/Adam-Lewis-12/publication/316080947/figure/fig1/AS:621814552227846@1525263550337/The-estimated-volumes-EOS-data-produced-by-the-Landsat-8-Sentinel-1-2-3-and.png)
+![Volume of data per year (source The Australian Geoscience Data Cube — Foundations and lessons learned, A. Lewis)](https://www.researchgate.net/profile/Adam-Lewis-12/publication/316080947/figure/fig1/AS:621814552227846@1525263550337/The-estimated-volumes-EOS-data-produced-by-the-Landsat-8-Sentinel-1-2-3-and.png){width="60%"}
 
 :::
 ::: {.column width="50%"}
@@ -38,7 +38,7 @@ date: 2020-11-15
 
 ![CERN current data volumes](images/CERNVolumes.png)
 
-[Yo can have a look](https://monit-grafana-open.cern.ch/d/000000884/it-overview?orgId=16)
+[You can have a look](https://monit-grafana-open.cern.ch/d/000000884/it-overview?orgId=16)
 
 :::
 ::::::::::::::
@@ -47,34 +47,93 @@ date: 2020-11-15
 
 ## What is Behind Big Data
 
-HTML?
+:::::::::::::: {.columns}
+::: {.column width="50%"}
 
-<table width="30%">
-    <tr><td>1 </td><td>	B</td><td> 	byte</td></tr>
-    <tr><td>1000 </td><td>	kB</td><td> 	kilobyte</td></tr>
-    <tr><td>1000^2 </td><td>	MB</td><td> 	megabyte</td></tr>
-    <tr><td>1000^3 </td><td>	GB</td><td> 	gigabyte</td></tr>
-    <tr><td>1000^4 </td><td>	TB</td><td> 	terabyte</td></tr>
-    <tr><td>1000^5 </td><td>	PB</td><td> 	petabyte</td></tr>
-    <tr><td>1000^6 </td><td>	EB</td><td> 	exabyte</td></tr>
-    <tr><td>1000^7 </td><td>	ZB</td><td> 	zettabyte</td></tr>
-</table>
+### Data
 
-## Big Data definition
+Volume, variety, multiple sources, internal, external...
+
+### Tools and technology
+
+Store, Compute, Analyse: Calculators, Cloud, Hadoop, Spark, Dask
+
+Visualize, Use: Applications, Web interfaces
+
+:::
+::: {.column width="50%"}
+
+### Definition (Wikipedia)
+
+> Big data is a field that treats ways to analyze, systematically extract information from, or otherwise deal with data sets that are too large or complex to be dealt with by traditional data-processing application software.
+
+> Big data is where parallel computing tools are needed to handle data.
+
+Not a technology.
+
+:::
+::::::::::::::
 
 # Legacy “Big Data” ecosystem
 
-## Blowing ecosystem
+## Blowing ecosystem{background-image=https://external-preview.redd.it/P6JcS17ECpmFF2si8KVnuoKpiabc5-pWTmgRt_YxTx4.png?auto=webp&s=3cbdbbe95112b6d6f5fb0bb59f6421b8e8be999e}
 
-## Hadoop & Map Reduce
+## Hadoop & Map Reduce{background-image=https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2016/10/HADOOP-ECOSYSTEM-Edureka.png}
 
-## NoSQL
+## NoSQL (Not only SQL)
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
+![SQL vs NoSQL databases model (Sumit Singh)](https://eadn-wc03-4064062.nxedge.io/cdn/wp-content/uploads/2020/12/asesoftware-sql-nosql.png)
+
+:::
+::: {.column width="50%"}
+
+![Popular NoSQL Databases](https://eadn-wc03-4064062.nxedge.io/cdn/wp-content/uploads/2020/12/NoSQL-databases.jpg)
+
+:::
+::::::::::::::
 
 ## Logs, ETL, Time series
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
+![Elastic stack](https://www.elastic.co/static-res/images/elk/elk-stack-elkb-diagram.svg)
+
+:::
+::: {.column width="50%"}
+
+![Grafana/Prometheus/InfluxDB](https://www.sqlpac.com/en/documents/images/influxdb-v2-getting-started-setup-preparing-migration-from-version-1.7-02.png)
+
+![Dahboards](https://grafana.com/static/img/screenshots/Modal_dashboards.png)
+
+:::
+::::::::::::::
+
 ## Dataviz
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
+### BI (softwares)
+
+![Classical BI tools](https://information4all.com/wp-content/uploads/2018/08/bi-logos.jpg)
+
+:::
+::: {.column width="50%"}
+
+### Python (libraries)
+
+![Python data vizualisation landscape](https://www.anaconda.com/wp-content/uploads/2019/01/PythonVisLandscape.jpg)
+
+:::
+::::::::::::::
+
 ## Data Science and Machine Learning
+
+![Machine Learning tools (Azure)](https://azurecomcdn.azureedge.net/cvt-4487a6447cf1bf91e230713a05f34bad0db35c4f6fcd9ef40ec213488bd18749/images/page/services/machine-learning/value-prop-4.png)
 
 # Big Data use cases
 
