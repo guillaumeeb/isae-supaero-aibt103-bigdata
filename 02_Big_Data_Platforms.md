@@ -35,6 +35,10 @@ Numerous Apache Software Foundation projects:
 :::
 ::::::::::::::
 
+## Hadoop distributions
+
+TODO
+
 ## HDFS and MapReduce principles
 
 ### Two main components of Hadoop
@@ -293,20 +297,79 @@ https://alphalyr.fr/blog/difference-bi-business-intelligence-big-data/
 
 ## Big Data: find insights from the data, distributed architecture, different tooling (Python …), Data Volume, Variety
 
-# Hadoop legacy: Spark, Dask, Object Storage, File format, Datalakes
+# Hadoop and Big Data legacy
 
-## HPDFS
+## Is Hadoop dead?
 
-Object Store same ideas.
+Not quite yet. Still used in many places.
 
-## MapReduce
+. . .
 
-Spark, Dask
+But clearly the two main components (HDFS and MapReduce) are now deprecated.
 
-## Sequence File, chunked File
+. . .
 
-Parquet, Zarr, CoG
+And have led the path to better alternatives.
 
-## Datalakes
+## Future of Big Data
 
-from process centric to data centric, different kind of data, architecture and example
+Infrastructure: Private or public cloud, and HPC(DA) in some cases.
+
+. . .
+
+HDFS? Object Storage!
+
+. . .
+
+MapReduce? Spark, Dask.
+
+. . .
+
+Chunked file format (SequenceFile)? Parquet, Zarr, Cloud optimized Geotiff.
+
+. . .
+
+YaRN? HPC job scheduler, or Kubernetes
+
+# Datalakes
+
+## Toward a new data management model
+
+:::::::::::::: {.columns}
+::: {.column width="33%"}
+
+### Process centric
+
+- Structured Data
+- Internal sources
+- Important data only
+- Multiple copies
+
+![](images/ProcessCentric.png)
+
+:::
+::: {.column width="33%"}
+
+### Data centric
+
+- Multiple types (structured, semi-structured, unstructured)
+- Multiple sources (internal, external)
+- Everything
+- One copy
+
+![](images/DataCentric.png)
+
+:::
+::::::::::::::
+
+## Host and process different kind of data
+
+![](images/Datalake1.png)
+
+## Typical Architecture
+
+![Oreilly's Datalake](https://www.oreilly.com/library/view/architecting-data-lakes/9781492042518/assets/ardl_0201.png)
+
+## CNES Datalake infrastructure example
+
+![](images/CNESDatalake.png)
