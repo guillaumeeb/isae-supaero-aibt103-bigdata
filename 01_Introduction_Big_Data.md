@@ -139,11 +139,46 @@ Not a technology.
 
 ## Cost effective storage and processing
 
+- Commodity hardware (standard servers, disks and network)
+- Horizontal scalability
+- Proximity of Storage and Compute
+- Secure storage (redundancy or Erasure Coding)
+
+Use cases:
+
+- Archiving
+- Massive volume handling
+- ETL (Extract Transform Load)
+
 ## Data mining, data value, data cross processing
+
+Extract new knowledge and value from the data:
+
+- Statistics,
+- Find new Key Performance Indicators,
+- Explain your data with no prior knowledge (Data Mining)
+
+Cross analyse internal and external data, correlation:
+- Trends with news or social network and correlation to sales
+- Near real time updates with Stream processing
 
 ## Scientific data processing
 
-## Digital twins, Predictive maintenance, Intelligent City, real time processing
+Data production or scientific exploration:
+- Stream processing, or near real time processing from sensor data
+- Distributed processing of massive volume of incomming data on computing farm
+- Data exploration and analysis
+- Data Science
+
+![Gaia: 150TB input, 6PB generated](images/GaiaPlatform.png){width=40%}
+![Iota2: 20-40TB of input data](images/Iota2.png)
+
+## Other main use cases
+
+- Digital twins
+- Predictive maintenance
+- Smart City
+- Real time processing
 
 # Big Data to Machine Learning
 
