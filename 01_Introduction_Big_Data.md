@@ -78,14 +78,16 @@ Not a technology.
 
 ## Blowing ecosystem{background-image=https://external-preview.redd.it/P6JcS17ECpmFF2si8KVnuoKpiabc5-pWTmgRt_YxTx4.png?auto=webp&s=3cbdbbe95112b6d6f5fb0bb59f6421b8e8be999e}
 
-## Hadoop & Map Reduce{background-image=https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2016/10/HADOOP-ECOSYSTEM-Edureka.png}
+## Hadoop & Map Reduce
+
+![Hadoop ecosystem](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2016/10/HADOOP-ECOSYSTEM-Edureka.png)
 
 ## NoSQL (Not only SQL)
 
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
 
-![SQL vs NoSQL databases model (Sumit Singh)](https://eadn-wc03-4064062.nxedge.io/cdn/wp-content/uploads/2020/12/asesoftware-sql-nosql.png)
+![SQL vs NoSQL databases model (Sumit Singh)](https://eadn-wc03-4064062.nxedge.io/cdn/wp-content/uploads/2020/12/asesoftware-sql-nosql.png){width=50%}
 
 :::
 ::: {.column width="50%"}
@@ -100,14 +102,14 @@ Not a technology.
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
 
-![Elastic stack](https://www.elastic.co/static-res/images/elk/elk-stack-elkb-diagram.svg)
+![Elastic stack](https://www.elastic.co/static-res/images/elk/elk-stack-elkb-diagram.svg){width=50%}
 
 :::
 ::: {.column width="50%"}
 
 ![Grafana/Prometheus/InfluxDB](https://www.sqlpac.com/en/documents/images/influxdb-v2-getting-started-setup-preparing-migration-from-version-1.7-02.png)
 
-![Dahboards](https://grafana.com/static/img/screenshots/Modal_dashboards.png)
+![Dahboards](https://grafana.com/static/img/screenshots/Modal_dashboards.png){width=50%}
 
 :::
 ::::::::::::::
@@ -119,14 +121,14 @@ Not a technology.
 
 ### BI (softwares)
 
-![Classical BI tools](https://information4all.com/wp-content/uploads/2018/08/bi-logos.jpg)
+![Classical BI tools](https://information4all.com/wp-content/uploads/2018/08/bi-logos.jpg){width=50%}
 
 :::
 ::: {.column width="50%"}
 
 ### Python (libraries)
 
-![Python data vizualisation landscape](https://www.anaconda.com/wp-content/uploads/2019/01/PythonVisLandscape.jpg)
+![Python data vizualisation landscape](https://www.anaconda.com/wp-content/uploads/2019/01/PythonVisLandscape.jpg){width=50%}
 
 :::
 ::::::::::::::
