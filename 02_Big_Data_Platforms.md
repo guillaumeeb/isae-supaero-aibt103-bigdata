@@ -4,21 +4,169 @@ author: Guillaume Eynard-Bontemps, CNES (Centre National d'Etudes Spatiales - Fr
 date: 2020-11-15
 ---
 
-# Hadoop: HDFS and MapReduce
+# Hadoop
 
 ## Introduction
 
-## HDFS and MapReduce principles: 
+### What is Hadoop?
 
-Data distribution and chunking
+Open source framework supported by Apache foundation:
 
-## Hadoop cluster components
+- Store and process massive amount of data
+- In a distributed way
+- On "commodity" hardware (i.e. not expensive)
+
+### A complex ecosystem
+
+:::::::::::::: {.columns}
+:::
+
+![Hadoop ecosystem](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2016/10/HADOOP-ECOSYSTEM-Edureka.png){width=60%}
+
+:::
+:::
+
+Numerous Apache Software Foundation projects:
+
+- Each covering a specific functionnality
+- With their own developer community
+- And their own development cycle
+
+:::
+::::::::::::::
+
+## HDFS and MapReduce principles
+
+### Two main components of Hadoop
+
+- Distributed Software Defined Storage: HDFS (Hadoop Distributed File System)
+![](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/images/hdfs-logo.jpg)
+- Distributed Data Processing: MapReduce
+![](https://www.pikpng.com/pngl/m/533-5331939_hadoop-apache-org-hadoop-map-reduce-logo-png.png)
+
+### Principles
+
+- Split and store data on a cluster of servers (with local storage)
+- Process data localy (on the server which owns it)
+- Horizontal scalability: add or remove machines, on the fly, for compute or storage
+
+## Hadoop cluster components{background-image=https://pbs.twimg.com/media/EKzU0wMWsAAkKLc.jpg data-background-opacity=0.4}
+
+- CLuster of "commodity" servers
+- **Shared Nothing** architecture: only shared component is _standard_ network
+- Each machine is a node which own both storage and compute
+
+Each cluster is composed of:
+
+- Master nodes: handle metadata and knowledge of the whole infrastructure
+- Worker nodes: 
+  - Host distributed pieces of data
+  - Execute data processing algorithm parts
 
 ## Hadoop story, from google to Spark
 
-## HDFS more detailed explanation
+![Hadoop history (Packt)](https://static.packt-cdn.com/products/9781788999830/graphics/assets/4cf97ee3-8f90-4904-9094-dffd90bd066c.png)
 
-## Map Reduce explanation, wordcount
+# HDFS 
+
+## HDFS Basics
+
+Distributed File System:
+
+- Written in **Java**
+- Allowing to **store** massive amounts of data, structured or not, on a machines cluster
+- Extensible and portable
+- One of the first **Software Defined Storage** (OK, Google was here first)
+
+Data is splitted and distributed among the Hadoop cluster:
+
+- Splitted into 128MB (default) **blocks**
+- With a **replication** factor for preventing data loss (3 replicas default)
+- Hadoop 3: **Erasure coding** = similar durability as replication 3, but only 50% volume increase
+
+In HDFS, data are of **writen-once** type (no inline modifications)
+
+## HDFS blocks repartition
+
+![](images/HDFSBlocks.png)
+
+## HDFS Daemons
+
+:::::::::::::: {.columns}
+:::
+
+### Namenode
+
+- Accountable for data locality and file system global namespace
+- Daemon on a dedicated server
+- Hosts metadata, create, remove, move files and folders
+- Knows nodes wich own the parts of a file
+- Needs to be replicated and secured (loss of metadata = loss of all data)
+
+:::
+:::
+
+### Datanode
+
+- Stores and loads data blocks
+- Daemon on every worker nodes
+- Reading and writing of data
+- Creation and Deletion of blocks
+
+:::
+::::::::::::::
+
+## HDFS Architecture
+
+![](https://hadoop.apache.org/docs/r1.2.1/images/hdfsarchitecture.gif)
+
+# Map Reduce
+
+## Map Reduce Basics
+
+- **Functional** language concept
+- Heavily used by Google for **WWW indexing**
+- **Colocate** data and processing (with Hadoop and others)
+- Automatic process **ditribution** on pieces of data (eager distribution)
+- Optimized for fast processing of **huge datasets**
+- **Fault tolerant**: 
+  - Data is replicated, 
+  - Individual task can be restarted anywhere
+
+## Wordcount (1. storage)
+
+![](images/Wordcount1.png)
+
+## Wordcount (2. split)
+
+![](images/Wordcount2.png)
+
+## Wordcount (3. map)
+
+![](images/Wordcount3.png)
+
+## Wordcount (4. shuffle)
+
+![](images/Wordcount4.png)
+
+## Wordcount (5. reduce)
+
+![](images/Wordcount5.png)
+
+## Wordcount (6. result)
+
+![](images/Wordcount6.png)
+
+## YaRN
+
+- Yet Another Resource Negociator...
+- Introduced in Hadoop v2
+- Separation between
+  - Resources scheduling and cluster state
+  - Job execution and distribution
+
+![](images/YARN.png)
+![](https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-site/yarn_architecture.gif)
 
 # From HPC to Big Data to Cloud and High Performance Data Analytics
 
@@ -71,6 +219,6 @@ Spark, Dask
 
 Parquet, Zarr, CoG
 
-## Datalakes: 
+## Datalakes
 
 from process centric to data centric, different kind of data, architecture and example
