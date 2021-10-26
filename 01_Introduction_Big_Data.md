@@ -102,14 +102,14 @@ Not a technology.
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
 
-![Elastic stack](https://www.elastic.co/static-res/images/elk/elk-stack-elkb-diagram.svg){width=50%}
+![Elastic stack](https://www.elastic.co/static-res/images/elk/elk-stack-elkb-diagram.svg){width=60%}
 
 :::
 ::: {.column width="50%"}
 
 ![Grafana/Prometheus/InfluxDB](https://www.sqlpac.com/en/documents/images/influxdb-v2-getting-started-setup-preparing-migration-from-version-1.7-02.png)
 
-![Dahboards](https://grafana.com/static/img/screenshots/Modal_dashboards.png){width=50%}
+![Dahboards](https://grafana.com/static/img/screenshots/Modal_dashboards.png){width=60%}
 
 :::
 ::::::::::::::
@@ -128,7 +128,7 @@ Not a technology.
 
 ### Python (libraries)
 
-![Python data vizualisation landscape](https://www.anaconda.com/wp-content/uploads/2019/01/PythonVisLandscape.jpg){width=50%}
+![Python data vizualisation landscape](https://www.anaconda.com/wp-content/uploads/2019/01/PythonVisLandscape.jpg){width=60%}
 
 :::
 ::::::::::::::
@@ -161,12 +161,14 @@ Extract new knowledge and value from the data:
 - Explain your data with no prior knowledge (Data Mining)
 
 Cross analyse internal and external data, correlation:
+
 - Trends with news or social network and correlation to sales
 - Near real time updates with Stream processing
 
 ## Scientific data processing
 
 Data production or scientific exploration:
+
 - Stream processing, or near real time processing from sensor data
 - Distributed processing of massive volume of incomming data on computing farm
 - Data exploration and analysis
@@ -177,15 +179,47 @@ Data production or scientific exploration:
 
 ## Other main use cases
 
+:::::::::::::: {.columns}
+:::
+
 - Digital twins
 - Predictive maintenance
 - Smart City
 - Real time processing
 
+:::
+:::
+
+![Airplane Digital Twin](https://www.prolim.com/wp-content/uploads/2019/08/digital-twin.jpg)
+
+:::
+::::::::::::::
+
 # Big Data to Machine Learning
 
-## Big Data allows machine learning to be effective
+## Big Data ecosystm allows (part of) machine learning to be effective
+
+- More data = more precise models
+- Deep Learning difficult without large (optionnaly generated) input datasets
+- Tools to collect, store, filter, index, structure data
+- Tools to analyse and visualize data
+- Real time model learning
+
+https://blog.dataiku.com/when-and-when-not-to-use-deep-learning
+
+## Pre processing before machine learning
+
+- Data wrangling and exploration
+- Feature engineering: unstructured data to input features
+- Cross mutliple data sources
+- Get insights on the data before processing it (statistics, vizualisation)
 
 ## Distribute datasets and algorithms
 
-## Pre processing before machine learning
+- For preprocessing as seen above
+- Means to load and learn on large volumes by distributing storage
+- Distributed learning with data locality on big datasets
+- Distributed hyper parameter search
+
+![Lambda Architecture (Azure)](https://docs.microsoft.com/fr-fr/azure/architecture/data-guide/big-data/images/big-data-pipeline.png){width=60%}
+
