@@ -22,6 +22,7 @@ which will be explored in this module.
 ## Objectives
 
 By the end of this module, participants will be able to:
+
 - Understand the differences and usage between main distributed computing architectures (HPC, Big Data, Cloud, CPU vs GPGPU)
 - Implement the distribution of simple operations via the Map/Reduce principle in PySpark
 - Connect on a cloud computing engine (e.g. Google Cloud Platform) and  use it
@@ -43,7 +44,7 @@ By the end of this module, participants will be able to:
 
 I'll try to propose some quizz to be sure your following!
 
-## About myself{background-image="images/HPC-blue.jpg"}
+## About myself{background-image="images/HPC-blue.jpg" style="color:white"}
 
 - Guillaume Eynard-Bontemps
 - CNES (Centre National d'Etudes Spatiales - French Space Agency)
