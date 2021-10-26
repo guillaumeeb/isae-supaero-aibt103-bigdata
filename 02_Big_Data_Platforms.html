@@ -39,35 +39,41 @@
 </section>
 <section id="introduction" class="slide level2">
 <h2>Introduction</h2>
-<h3 id="what-is-hadoop">What is Hadoop?</h3>
+<p>What is Hadoop?</p>
 <p>Open source framework supported by Apache foundation:</p>
 <ul>
 <li>Store and process massive amount of data</li>
 <li>In a distributed way</li>
 <li>On “commodity” hardware (i.e. not expensive)</li>
 </ul>
-<h3 id="a-complex-ecosystem">A complex ecosystem</h3>
+</section>
+<section id="a-complex-ecosystem" class="slide level2">
+<h2>A complex ecosystem</h2>
 <div class="columns">
-
-</div>
+<div class="column" style="width:50%;">
 <figure>
 <img data-src="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2016/10/HADOOP-ECOSYSTEM-Edureka.png" style="width:60.0%" alt="Hadoop ecosystem" /><figcaption aria-hidden="true">Hadoop ecosystem</figcaption>
 </figure>
-<p>::: :::</p>
+</div><div class="column" style="width:50%;">
 <p>Numerous Apache Software Foundation projects:</p>
 <ul>
 <li>Each covering a specific functionnality</li>
 <li>With their own developer community</li>
 <li>And their own development cycle</li>
 </ul>
-<p>::: ::::::::::::::</p>
+</div>
+</div>
+</section>
+<section id="hadoop-distributions" class="slide level2">
+<h2>Hadoop distributions</h2>
+<p>TODO</p>
 </section>
 <section id="hdfs-and-mapreduce-principles" class="slide level2">
 <h2>HDFS and MapReduce principles</h2>
 <h3 id="two-main-components-of-hadoop">Two main components of Hadoop</h3>
 <ul>
-<li>Distributed Software Defined Storage: HDFS (Hadoop Distributed File System) <img data-src="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/images/hdfs-logo.jpg" /></li>
-<li>Distributed Data Processing: MapReduce <img data-src="https://www.pikpng.com/pngl/m/533-5331939_hadoop-apache-org-hadoop-map-reduce-logo-png.png" /></li>
+<li>Distributed Software Defined Storage: HDFS (Hadoop Distributed File System) <img data-src="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/images/hdfs-logo.jpg" height="50" /></li>
+<li>Distributed Data Processing: MapReduce <img data-src="https://www.pikpng.com/pngl/m/533-5331939_hadoop-apache-org-hadoop-map-reduce-logo-png.png" height="50" /></li>
 </ul>
 <h3 id="principles">Principles</h3>
 <ul>
@@ -96,7 +102,7 @@
 <section id="hadoop-story-from-google-to-spark" class="slide level2">
 <h2>Hadoop story, from google to Spark</h2>
 <figure>
-<img data-src="https://static.packt-cdn.com/products/9781788999830/graphics/assets/4cf97ee3-8f90-4904-9094-dffd90bd066c.png" alt="Hadoop history (Packt)" /><figcaption aria-hidden="true">Hadoop history (Packt)</figcaption>
+<img data-src="https://static.packt-cdn.com/products/9781788999830/graphics/assets/4cf97ee3-8f90-4904-9094-dffd90bd066c.png" style="height:50.0%" alt="Hadoop history (Packt)" /><figcaption aria-hidden="true">Hadoop history (Packt)</figcaption>
 </figure>
 </section></section>
 <section>
@@ -128,8 +134,7 @@
 <section id="hdfs-daemons" class="slide level2">
 <h2>HDFS Daemons</h2>
 <div class="columns">
-
-</div>
+<div class="column" style="width:50%;">
 <h3 id="namenode">Namenode</h3>
 <ul>
 <li>Accountable for data locality and file system global namespace</li>
@@ -138,7 +143,7 @@
 <li>Knows nodes wich own the parts of a file</li>
 <li>Needs to be replicated and secured (loss of metadata = loss of all data)</li>
 </ul>
-<p>::: :::</p>
+</div><div class="column" style="width:50%;">
 <h3 id="datanode">Datanode</h3>
 <ul>
 <li>Stores and loads data blocks</li>
@@ -146,7 +151,8 @@
 <li>Reading and writing of data</li>
 <li>Creation and Deletion of blocks</li>
 </ul>
-<p>::: ::::::::::::::</p>
+</div>
+</div>
 </section>
 <section id="hdfs-architecture" class="slide level2">
 <h2>HDFS Architecture</h2>
@@ -174,27 +180,27 @@
 </section>
 <section id="wordcount-1.-storage" class="slide level2">
 <h2>Wordcount (1. storage)</h2>
-<p><img data-src="images/Wordcount1.png" /></p>
+<p><img data-src="images/Wordcount1.png" style="background:white" /></p>
 </section>
 <section id="wordcount-2.-split" class="slide level2">
 <h2>Wordcount (2. split)</h2>
-<p><img data-src="images/Wordcount2.png" /></p>
+<p><img data-src="images/Wordcount2.png" style="background:white" /></p>
 </section>
 <section id="wordcount-3.-map" class="slide level2">
 <h2>Wordcount (3. map)</h2>
-<p><img data-src="images/Wordcount3.png" /></p>
+<p><img data-src="images/Wordcount3.png" style="background:white" /></p>
 </section>
 <section id="wordcount-4.-shuffle" class="slide level2">
 <h2>Wordcount (4. shuffle)</h2>
-<p><img data-src="images/Wordcount4.png" /></p>
+<p><img data-src="images/Wordcount4.png" style="background:white" /></p>
 </section>
 <section id="wordcount-5.-reduce" class="slide level2">
 <h2>Wordcount (5. reduce)</h2>
-<p><img data-src="images/Wordcount5.png" /></p>
+<p><img data-src="images/Wordcount5.png" style="background:white" /></p>
 </section>
 <section id="wordcount-6.-result" class="slide level2">
 <h2>Wordcount (6. result)</h2>
-<p><img data-src="images/Wordcount6.png" /></p>
+<p><img data-src="images/Wordcount6.png" style="background:white" /></p>
 </section>
 <section id="yarn" class="slide level2">
 <h2>YaRN</h2>
@@ -216,27 +222,161 @@
 </section>
 <section id="hpc-platform-story-and-use-case" class="slide level2">
 <h2>HPC platform, story and use case</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<blockquote>
+<p>HPC = High Performance Computing</p>
+</blockquote>
+<ul>
+<li>Firsts HPC platforms built in the 1960s</li>
+<li>Mainly compute bounds algorithms</li>
+<li>At first for Weather forcasting and Aerodynamic research</li>
+<li>Structure modeling and fluid mecanics by discretization</li>
+<li>Needs (needed?) high performance hardware (network, CPUs, storage)</li>
+<li>Compute and storage are separated</li>
+<li>Uses a resource scheduler</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Rank</th>
+<th>System</th>
+<th>Cores</th>
+<th>Rmax (TFlop/s)</th>
+<th>Rpeak (TFlop/s)</th>
+<th>Power (kW)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Supercomputer Fugaku - Japan</td>
+<td>7,630,848</td>
+<td>442,010.0</td>
+<td>537,212.0</td>
+<td>29,899</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Summit - United States</td>
+<td>2,414,592</td>
+<td>148,600.0</td>
+<td>200,794.9</td>
+<td>10,096</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Sierra - United States</td>
+<td>1,572,480</td>
+<td>94,640.0</td>
+<td>125,712.0</td>
+<td>7,438</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>JUWELS Booster Module - Germany</td>
+<td>449,280</td>
+<td>44,120.0</td>
+<td>70,980.0</td>
+<td>1,764</td>
+</tr>
+<tr class="odd">
+<td>21</td>
+<td>PANGEA III - France</td>
+<td>291,024</td>
+<td>17,860.0</td>
+<td>25,025.8</td>
+<td>1,367</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<figure>
+<img data-src="http://www.idris.fr/media/images/jean-zay-annonce-01.jpg?id=web%3Aeng%3Ajean-zay%3Acpu%3Ajean-zay-cpu-hw-eng" alt="Jean-Zay supercomputer" /><figcaption aria-hidden="true">Jean-Zay supercomputer</figcaption>
+</figure>
+</div>
+</div>
 </section>
 <section id="big-data-and-hadoop" class="slide level2">
 <h2>Big Data and Hadoop</h2>
+<ul>
+<li>First platforms in the 2000’s</li>
+<li>Mainly data bound algorithms</li>
+<li>Limitation in standard ethernet network performances = data locality</li>
+<li>At first for web indexing, or large amount of textual or tabular data analysis</li>
+<li>Web giant problem, then banking or IT stuf</li>
+<li>Use commodity hardware</li>
+<li>Compute and storage colocated</li>
+</ul>
 </section>
 <section id="hpda-convergence" class="slide level2">
 <h2>HPDA convergence</h2>
+<p><img data-src="images/HPDA.png" /></p>
+<ul>
+<li>Hadoop world step to HPC: YaRN, equivalent to HPC resources scheduler</li>
+<li>HPC step to Big Data: hardware not so specialized</li>
+<li>Hadoop big limitation: non standard File System and compute and storage colocation</li>
+<li>HPC big limitation: storage can be difficult to scale</li>
+</ul>
 </section>
-<section id="cloud-computing-basics-object-store-and-compute-on-demand" class="slide level2">
-<h2>Cloud computing basics, object store and compute on demand</h2>
-<h3 id="infinite-resources">Infinite resources</h3>
+<section id="cloud-computing-basics" class="slide level2">
+<h2>Cloud computing basics</h2>
+<p>Hence the cloud computing model…</p>
+<ul>
+<li>Compute resources separated for storage (but proximity is key)</li>
+<li>Can host anything, at first not compute oriented</li>
+<li>Object store model: Software Defined Storage as HDFS, specific interface</li>
+<li>Horizontal scalability of compute AND storage</li>
+<li>Resources on demand, mutualized between millions of users</li>
+<li>Infinite resources for users</li>
+</ul>
 </section>
 <section id="distributed-programming-hadoop-vs-hpc-vs-cloud" class="slide level2">
 <h2>Distributed programming: Hadoop vs HPC vs Cloud</h2>
-<h3 id="hadoop-data-bound-algorithms-statistics-often-big-volume-in-inputs-small-outputs">Hadoop: data bound algorithms: statistics, often big volume in inputs, small outputs</h3>
-<h3 id="hpc-mpi-compute-bound-algorithm-small-or-medium-amount-of-inputs-medium-or-big-outputs-big-simulations">HPC (MPI): compute bound algorithm, small or medium amount of inputs, medium or big outputs (big simulations)</h3>
-<h3 id="cloud-anything-but-object-store-limitations-for-some-hpc-workflow-or-not-anymore">Cloud: anything, but object store limitations for some HPC workflow (or not anymore?)</h3>
+<div class="columns">
+<div class="column" style="width:33%;">
+<h3 id="hadoop-1">Hadoop</h3>
+<ul>
+<li>Data bound algorithms</li>
+<li>Statistics</li>
+<li>Big volumes in input</li>
+<li>Often small outputs</li>
+<li>Can be used for computing problems, but not physical simulation</li>
+</ul>
+</div><div class="column" style="width:33%;">
+<h3 id="hpc-mpi">HPC (MPI)</h3>
+<ul>
+<li>Compute bound algorithm</li>
+<li>Small or medium amount of inputs,</li>
+<li>Medium or big outputs (big simulations)</li>
+<li>Can be used for data processing too (Dask)</li>
+</ul>
+</div><div class="column" style="width:33%;">
+<h3 id="cloud">Cloud</h3>
+<ul>
+<li>Anything: services, storaage bound, compute bound</li>
+<li>Object store limitations for some HPC workflow</li>
+<li>Or not anymore: HPC as a Service</li>
+<li>Big Data as a Service too…</li>
+</ul>
+</div>
+</div>
 </section>
-<section id="distributed-machine-learning-gpgpu-computing" class="slide level2">
-<h2>Distributed Machine Learning, GPGPU computing</h2>
-<h3 id="ml-either-lots-of-data-in-inputs-or-lots-of-models-to-train-hyperparameter-search.">ML: Either lots of data in inputs, or lots of models to train (hyperparameter search).</h3>
-<h3 id="gpgpu-really-efficient-for-dl-algorithm-image-processing-language-processing">GPGPU: really efficient for DL algorithm (image processing, Language processing)</h3>
+<section id="machine-learning-computations" class="slide level2">
+<h2>Machine Learning Computations</h2>
+<h3 id="machine-learning">Machine learning</h3>
+<ul>
+<li>Either lots of data in inputs</li>
+<li>Or lots of models to train (hyperparameter search)</li>
+<li>And of course data preprocessing</li>
+<li>Big Data or HPC or Cloud</li>
+</ul>
+<h3 id="gpgpu">GPGPU</h3>
+<ul>
+<li>Specific hardware (expensive)</li>
+<li>Really efficient for Deep Learning algorithms</li>
+<li>Image processing, Language processing</li>
+</ul>
 </section></section>
 <section>
 <section id="bi-vs-big-data" class="title-slide slide level1">
@@ -254,25 +394,78 @@
 <h2>Big Data: find insights from the data, distributed architecture, different tooling (Python …), Data Volume, Variety</h2>
 </section></section>
 <section>
-<section id="hadoop-legacy-spark-dask-object-storage-file-format-datalakes" class="title-slide slide level1">
-<h1>Hadoop legacy: Spark, Dask, Object Storage, File format, Datalakes</h1>
+<section id="hadoop-and-big-data-legacy" class="title-slide slide level1">
+<h1>Hadoop and Big Data legacy</h1>
 
 </section>
-<section id="hpdfs" class="slide level2">
-<h2>HPDFS</h2>
-<p>Object Store same ideas.</p>
+<section id="is-hadoop-dead" class="slide level2">
+<h2>Is Hadoop dead?</h2>
+<p>Not quite yet. Still used in many places.</p>
+<div class="fragment">
+<p>But clearly the two main components (HDFS and MapReduce) are now deprecated.</p>
+</div>
+<div class="fragment">
+<p>And have led the path to better alternatives.</p>
+</div>
 </section>
-<section id="mapreduce" class="slide level2">
-<h2>MapReduce</h2>
-<p>Spark, Dask</p>
+<section id="future-of-big-data" class="slide level2">
+<h2>Future of Big Data</h2>
+<p>Infrastructure: Private or public cloud, and HPC(DA) in some cases.</p>
+<div class="fragment">
+<p>HDFS? Object Storage!</p>
+</div>
+<div class="fragment">
+<p>MapReduce? Spark, Dask.</p>
+</div>
+<div class="fragment">
+<p>Chunked file format (SequenceFile)? Parquet, Zarr, Cloud optimized Geotiff.</p>
+</div>
+<div class="fragment">
+<p>YaRN? HPC job scheduler, or Kubernetes</p>
+</div>
+</section></section>
+<section>
+<section id="datalakes" class="title-slide slide level1">
+<h1>Datalakes</h1>
+
 </section>
-<section id="sequence-file-chunked-file" class="slide level2">
-<h2>Sequence File, chunked File</h2>
-<p>Parquet, Zarr, CoG</p>
+<section id="toward-a-new-data-management-model" class="slide level2">
+<h2>Toward a new data management model</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<h3 id="process-centric">Process centric</h3>
+<ul>
+<li>Structured Data</li>
+<li>Internal sources</li>
+<li>Important data only</li>
+<li>Multiple copies</li>
+</ul>
+<p><img data-src="images/ProcessCentric.png" /></p>
+</div><div class="column" style="width:33%;">
+<h3 id="data-centric">Data centric</h3>
+<ul>
+<li>Multiple types (structured, semi-structured, unstructured)</li>
+<li>Multiple sources (internal, external)</li>
+<li>Everything</li>
+<li>One copy</li>
+</ul>
+<p><img data-src="images/DataCentric.png" /></p>
+</div>
+</div>
 </section>
-<section id="datalakes" class="slide level2">
-<h2>Datalakes</h2>
-<p>from process centric to data centric, different kind of data, architecture and example</p>
+<section id="host-and-process-different-kind-of-data" class="slide level2">
+<h2>Host and process different kind of data</h2>
+<p><img data-src="images/Datalake1.png" /></p>
+</section>
+<section id="typical-architecture" class="slide level2">
+<h2>Typical Architecture</h2>
+<figure>
+<img data-src="https://www.oreilly.com/library/view/architecting-data-lakes/9781492042518/assets/ardl_0201.png" alt="Oreilly’s Datalake" /><figcaption aria-hidden="true">Oreilly’s Datalake</figcaption>
+</figure>
+</section>
+<section id="cnes-datalake-infrastructure-example" class="slide level2">
+<h2>CNES Datalake infrastructure example</h2>
+<p><img data-src="images/CNESDatalake.png" /></p>
 </section></section>
     </div>
   </div>
