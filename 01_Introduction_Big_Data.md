@@ -180,7 +180,7 @@ Data production or scientific exploration:
 ## Other main use cases
 
 :::::::::::::: {.columns}
-:::
+::: {.column width="50%"}
 
 - Digital twins
 - Predictive maintenance
@@ -188,7 +188,7 @@ Data production or scientific exploration:
 - Real time processing
 
 :::
-:::
+::: {.column width="50%"}
 
 ![Airplane Digital Twin](https://www.prolim.com/wp-content/uploads/2019/08/digital-twin.jpg)
 

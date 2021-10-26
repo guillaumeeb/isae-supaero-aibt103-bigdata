@@ -8,7 +8,7 @@ date: 2020-11-15
 
 ## Introduction
 
-### What is Hadoop?
+What is Hadoop?
 
 Open source framework supported by Apache foundation:
 
@@ -16,15 +16,15 @@ Open source framework supported by Apache foundation:
 - In a distributed way
 - On "commodity" hardware (i.e. not expensive)
 
-### A complex ecosystem
+## A complex ecosystem
 
 :::::::::::::: {.columns}
-:::
+::: {.column width="50%"}
 
 ![Hadoop ecosystem](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2016/10/HADOOP-ECOSYSTEM-Edureka.png){width=60%}
 
 :::
-:::
+::: {.column width="50%"}
 
 Numerous Apache Software Foundation projects:
 
@@ -40,9 +40,9 @@ Numerous Apache Software Foundation projects:
 ### Two main components of Hadoop
 
 - Distributed Software Defined Storage: HDFS (Hadoop Distributed File System)
-![](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/images/hdfs-logo.jpg)
+![](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/images/hdfs-logo.jpg){height=50px}
 - Distributed Data Processing: MapReduce
-![](https://www.pikpng.com/pngl/m/533-5331939_hadoop-apache-org-hadoop-map-reduce-logo-png.png)
+![](https://www.pikpng.com/pngl/m/533-5331939_hadoop-apache-org-hadoop-map-reduce-logo-png.png){height=50px}
 
 ### Principles
 
@@ -65,7 +65,7 @@ Each cluster is composed of:
 
 ## Hadoop story, from google to Spark
 
-![Hadoop history (Packt)](https://static.packt-cdn.com/products/9781788999830/graphics/assets/4cf97ee3-8f90-4904-9094-dffd90bd066c.png)
+![Hadoop history (Packt)](https://static.packt-cdn.com/products/9781788999830/graphics/assets/4cf97ee3-8f90-4904-9094-dffd90bd066c.png){height=50%}
 
 # HDFS 
 
@@ -93,7 +93,7 @@ In HDFS, data are of **writen-once** type (no inline modifications)
 ## HDFS Daemons
 
 :::::::::::::: {.columns}
-:::
+::: {.column width="50%"}
 
 ### Namenode
 
@@ -104,7 +104,7 @@ In HDFS, data are of **writen-once** type (no inline modifications)
 - Needs to be replicated and secured (loss of metadata = loss of all data)
 
 :::
-:::
+::: {.column width="50%"}
 
 ### Datanode
 
@@ -135,27 +135,27 @@ In HDFS, data are of **writen-once** type (no inline modifications)
 
 ## Wordcount (1. storage)
 
-![](images/Wordcount1.png)
+![](images/Wordcount1.png){style="background:white"}
 
 ## Wordcount (2. split)
 
-![](images/Wordcount2.png)
+![](images/Wordcount2.png){style="background:white"}
 
 ## Wordcount (3. map)
 
-![](images/Wordcount3.png)
+![](images/Wordcount3.png){style="background:white"}
 
 ## Wordcount (4. shuffle)
 
-![](images/Wordcount4.png)
+![](images/Wordcount4.png){style="background:white"}
 
 ## Wordcount (5. reduce)
 
-![](images/Wordcount5.png)
+![](images/Wordcount5.png){style="background:white"}
 
 ## Wordcount (6. result)
 
-![](images/Wordcount6.png)
+![](images/Wordcount6.png){style="background:white"}
 
 ## YaRN
 
@@ -172,27 +172,115 @@ In HDFS, data are of **writen-once** type (no inline modifications)
 
 ## HPC platform, story and use case
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
+> HPC = High Performance Computing
+
+- Firsts HPC platforms built in the 1960s
+- Mainly compute bounds algorithms
+- At first for Weather forcasting and Aerodynamic research
+- Structure modeling and fluid mecanics by discretization
+- Needs (needed?) high performance hardware (network, CPUs, storage)
+- Compute and storage are separated
+- Uses a resource scheduler
+
+| Rank | System | Cores | Rmax (TFlop/s) | Rpeak (TFlop/s) | Power (kW) |
+|------| -------|-------|----------------|-----------------|------------|
+| 1 | Supercomputer Fugaku - Japan  | 7,630,848 | 442,010.0 | 537,212.0 | 29,899 |
+| 2 | Summit - United States | 2,414,592 | 148,600.0 | 200,794.9 | 10,096 |
+| 3 | Sierra - United States | 1,572,480 | 94,640.0 | 125,712.0 | 7,438 |
+| 8 | JUWELS Booster Module - Germany | 449,280 | 44,120.0 | 70,980.0 | 1,764 |
+| 21 | PANGEA III - France | 291,024 | 17,860.0 | 25,025.8 | 1,367 |
+
+:::
+::: {.column width="50%"}
+
+![Jean-Zay supercomputer](http://www.idris.fr/media/images/jean-zay-annonce-01.jpg?id=web%3Aeng%3Ajean-zay%3Acpu%3Ajean-zay-cpu-hw-eng)
+
+:::
+::::::::::::::
+
 ## Big Data and Hadoop
+
+- First platforms in the 2000's
+- Mainly data bound algorithms
+- Limitation in standard ethernet network performances = data locality
+- At first for web indexing, or large amount of textual or tabular data analysis
+- Web giant problem, then banking or IT stuf
+- Use commodity hardware
+- Compute and storage colocated
 
 ## HPDA convergence
 
-## Cloud computing basics, object store and compute on demand
+![](images/HPDA.png)
 
-### Infinite resources
+- Hadoop world step to HPC: YaRN, equivalent to HPC resources scheduler
+- HPC step to Big Data: hardware not so specialized
+- Hadoop big limitation: non standard File System and compute and storage colocation
+- HPC big limitation: storage can be difficult to scale
+
+## Cloud computing basics
+
+Hence the cloud computing model...
+
+- Compute resources separated for storage (but proximity is key)
+- Can host anything, at first not compute oriented
+- Object store model: Software Defined Storage as HDFS, specific interface
+- Horizontal scalability of compute AND storage
+- Resources on demand, mutualized between millions of users
+- Infinite resources for users
 
 ## Distributed programming: Hadoop vs HPC vs Cloud
 
-### Hadoop: data bound algorithms: statistics, often big volume in inputs, small outputs
+:::::::::::::: {.columns}
+::: {.column width="33%"}
 
-### HPC (MPI): compute bound algorithm, small or medium amount of inputs, medium or big outputs (big simulations)
+### Hadoop
 
-### Cloud: anything, but object store limitations for some HPC workflow (or not anymore?)
+- Data bound algorithms
+- Statistics
+- Big volumes in input
+- Often small outputs
+- Can be used for computing problems, but not physical simulation
 
-## Distributed Machine Learning, GPGPU computing
+:::
+::: {.column width="33%"}
 
-### ML: Either lots of data in inputs, or lots of models to train (hyperparameter search).
+### HPC (MPI)
 
-### GPGPU: really efficient for DL algorithm (image processing, Language processing)
+- Compute bound algorithm
+- Small or medium amount of inputs, 
+- Medium or big outputs (big simulations)
+- Can be used for data processing too (Dask)
+
+:::
+::: {.column width="33%"}
+
+### Cloud
+
+- Anything: services, storaage bound, compute bound
+- Object store limitations for some HPC workflow
+- Or not anymore: HPC as a Service
+- Big Data as a Service too...
+
+:::
+::::::::::::::
+
+## Machine Learning Computations
+
+### Machine learning
+
+- Either lots of data in inputs
+- Or lots of models to train (hyperparameter search)
+- And of course data preprocessing
+- Big Data or HPC or Cloud
+
+### GPGPU
+
+- Specific hardware (expensive)
+- Really efficient for Deep Learning algorithms
+- Image processing, Language processing
 
 # BI vs Big Data
 
