@@ -33,28 +33,181 @@
 </section>
 
 <section>
-<section id="hadoop-hdfs-and-mapreduce" class="title-slide slide level1">
-<h1>Hadoop: HDFS and MapReduce</h1>
+<section id="hadoop" class="title-slide slide level1">
+<h1>Hadoop</h1>
 
 </section>
 <section id="introduction" class="slide level2">
 <h2>Introduction</h2>
+<h3 id="what-is-hadoop">What is Hadoop?</h3>
+<p>Open source framework supported by Apache foundation:</p>
+<ul>
+<li>Store and process massive amount of data</li>
+<li>In a distributed way</li>
+<li>On “commodity” hardware (i.e. not expensive)</li>
+</ul>
+<h3 id="a-complex-ecosystem">A complex ecosystem</h3>
+<div class="columns">
+
+</div>
+<figure>
+<img data-src="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2016/10/HADOOP-ECOSYSTEM-Edureka.png" style="width:60.0%" alt="Hadoop ecosystem" /><figcaption aria-hidden="true">Hadoop ecosystem</figcaption>
+</figure>
+<p>::: :::</p>
+<p>Numerous Apache Software Foundation projects:</p>
+<ul>
+<li>Each covering a specific functionnality</li>
+<li>With their own developer community</li>
+<li>And their own development cycle</li>
+</ul>
+<p>::: ::::::::::::::</p>
 </section>
 <section id="hdfs-and-mapreduce-principles" class="slide level2">
-<h2>HDFS and MapReduce principles:</h2>
-<p>Data distribution and chunking</p>
+<h2>HDFS and MapReduce principles</h2>
+<h3 id="two-main-components-of-hadoop">Two main components of Hadoop</h3>
+<ul>
+<li>Distributed Software Defined Storage: HDFS (Hadoop Distributed File System) <img data-src="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/images/hdfs-logo.jpg" /></li>
+<li>Distributed Data Processing: MapReduce <img data-src="https://www.pikpng.com/pngl/m/533-5331939_hadoop-apache-org-hadoop-map-reduce-logo-png.png" /></li>
+</ul>
+<h3 id="principles">Principles</h3>
+<ul>
+<li>Split and store data on a cluster of servers (with local storage)</li>
+<li>Process data localy (on the server which owns it)</li>
+<li>Horizontal scalability: add or remove machines, on the fly, for compute or storage</li>
+</ul>
 </section>
-<section id="hadoop-cluster-components" class="slide level2">
-<h2>Hadoop cluster components</h2>
+<section id="hadoop-cluster-components" class="slide level2" data-background-image="https://pbs.twimg.com/media/EKzU0wMWsAAkKLc.jpg" data-background-opacity="0.4">
+<h2 data-background-image="https://pbs.twimg.com/media/EKzU0wMWsAAkKLc.jpg" data-background-opacity="0.4">Hadoop cluster components</h2>
+<ul>
+<li>CLuster of “commodity” servers</li>
+<li><strong>Shared Nothing</strong> architecture: only shared component is <em>standard</em> network</li>
+<li>Each machine is a node which own both storage and compute</li>
+</ul>
+<p>Each cluster is composed of:</p>
+<ul>
+<li>Master nodes: handle metadata and knowledge of the whole infrastructure</li>
+<li>Worker nodes:
+<ul>
+<li>Host distributed pieces of data</li>
+<li>Execute data processing algorithm parts</li>
+</ul></li>
+</ul>
 </section>
 <section id="hadoop-story-from-google-to-spark" class="slide level2">
 <h2>Hadoop story, from google to Spark</h2>
+<figure>
+<img data-src="https://static.packt-cdn.com/products/9781788999830/graphics/assets/4cf97ee3-8f90-4904-9094-dffd90bd066c.png" alt="Hadoop history (Packt)" /><figcaption aria-hidden="true">Hadoop history (Packt)</figcaption>
+</figure>
+</section></section>
+<section>
+<section id="hdfs" class="title-slide slide level1">
+<h1>HDFS</h1>
+
 </section>
-<section id="hdfs-more-detailed-explanation" class="slide level2">
-<h2>HDFS more detailed explanation</h2>
+<section id="hdfs-basics" class="slide level2">
+<h2>HDFS Basics</h2>
+<p>Distributed File System:</p>
+<ul>
+<li>Written in <strong>Java</strong></li>
+<li>Allowing to <strong>store</strong> massive amounts of data, structured or not, on a machines cluster</li>
+<li>Extensible and portable</li>
+<li>One of the first <strong>Software Defined Storage</strong> (OK, Google was here first)</li>
+</ul>
+<p>Data is splitted and distributed among the Hadoop cluster:</p>
+<ul>
+<li>Splitted into 128MB (default) <strong>blocks</strong></li>
+<li>With a <strong>replication</strong> factor for preventing data loss (3 replicas default)</li>
+<li>Hadoop 3: <strong>Erasure coding</strong> = similar durability as replication 3, but only 50% volume increase</li>
+</ul>
+<p>In HDFS, data are of <strong>writen-once</strong> type (no inline modifications)</p>
 </section>
-<section id="map-reduce-explanation-wordcount" class="slide level2">
-<h2>Map Reduce explanation, wordcount</h2>
+<section id="hdfs-blocks-repartition" class="slide level2">
+<h2>HDFS blocks repartition</h2>
+<p><img data-src="images/HDFSBlocks.png" /></p>
+</section>
+<section id="hdfs-daemons" class="slide level2">
+<h2>HDFS Daemons</h2>
+<div class="columns">
+
+</div>
+<h3 id="namenode">Namenode</h3>
+<ul>
+<li>Accountable for data locality and file system global namespace</li>
+<li>Daemon on a dedicated server</li>
+<li>Hosts metadata, create, remove, move files and folders</li>
+<li>Knows nodes wich own the parts of a file</li>
+<li>Needs to be replicated and secured (loss of metadata = loss of all data)</li>
+</ul>
+<p>::: :::</p>
+<h3 id="datanode">Datanode</h3>
+<ul>
+<li>Stores and loads data blocks</li>
+<li>Daemon on every worker nodes</li>
+<li>Reading and writing of data</li>
+<li>Creation and Deletion of blocks</li>
+</ul>
+<p>::: ::::::::::::::</p>
+</section>
+<section id="hdfs-architecture" class="slide level2">
+<h2>HDFS Architecture</h2>
+<p><img data-src="https://hadoop.apache.org/docs/r1.2.1/images/hdfsarchitecture.gif" /></p>
+</section></section>
+<section>
+<section id="map-reduce" class="title-slide slide level1">
+<h1>Map Reduce</h1>
+
+</section>
+<section id="map-reduce-basics" class="slide level2">
+<h2>Map Reduce Basics</h2>
+<ul>
+<li><strong>Functional</strong> language concept</li>
+<li>Heavily used by Google for <strong>WWW indexing</strong></li>
+<li><strong>Colocate</strong> data and processing (with Hadoop and others)</li>
+<li>Automatic process <strong>ditribution</strong> on pieces of data (eager distribution)</li>
+<li>Optimized for fast processing of <strong>huge datasets</strong></li>
+<li><strong>Fault tolerant</strong>:
+<ul>
+<li>Data is replicated,</li>
+<li>Individual task can be restarted anywhere</li>
+</ul></li>
+</ul>
+</section>
+<section id="wordcount-1.-storage" class="slide level2">
+<h2>Wordcount (1. storage)</h2>
+<p><img data-src="images/Wordcount1.png" /></p>
+</section>
+<section id="wordcount-2.-split" class="slide level2">
+<h2>Wordcount (2. split)</h2>
+<p><img data-src="images/Wordcount2.png" /></p>
+</section>
+<section id="wordcount-3.-map" class="slide level2">
+<h2>Wordcount (3. map)</h2>
+<p><img data-src="images/Wordcount3.png" /></p>
+</section>
+<section id="wordcount-4.-shuffle" class="slide level2">
+<h2>Wordcount (4. shuffle)</h2>
+<p><img data-src="images/Wordcount4.png" /></p>
+</section>
+<section id="wordcount-5.-reduce" class="slide level2">
+<h2>Wordcount (5. reduce)</h2>
+<p><img data-src="images/Wordcount5.png" /></p>
+</section>
+<section id="wordcount-6.-result" class="slide level2">
+<h2>Wordcount (6. result)</h2>
+<p><img data-src="images/Wordcount6.png" /></p>
+</section>
+<section id="yarn" class="slide level2">
+<h2>YaRN</h2>
+<ul>
+<li>Yet Another Resource Negociator…</li>
+<li>Introduced in Hadoop v2</li>
+<li>Separation between
+<ul>
+<li>Resources scheduling and cluster state</li>
+<li>Job execution and distribution</li>
+</ul></li>
+</ul>
+<p><img data-src="images/YARN.png" /> <img data-src="https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-site/yarn_architecture.gif" /></p>
 </section></section>
 <section>
 <section id="from-hpc-to-big-data-to-cloud-and-high-performance-data-analytics" class="title-slide slide level1">
@@ -118,7 +271,7 @@
 <p>Parquet, Zarr, CoG</p>
 </section>
 <section id="datalakes" class="slide level2">
-<h2>Datalakes:</h2>
+<h2>Datalakes</h2>
 <p>from process centric to data centric, different kind of data, architecture and example</p>
 </section></section>
     </div>
