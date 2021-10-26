@@ -1,11 +1,12 @@
-% Introduction to Big Data and its Ecosystem
-% Guillaume Eynard-Bontemps
-% November 15, 2021
+---
+title: Introduction to Big Data and its Ecosystem
+author: Guillaume Eynard-Bontemps, CNES (Centre National d'Etudes Spatiales - French Space Agency)
+date: 2020-11-15
+---
 
 # What is Big Data?
 
 ## Data evolution
-
 
 1 ZB  
 1,000,000 PB  
@@ -18,16 +19,31 @@
 
 ![Volume of data produced in a day in 2019 (source www.visualcapitalist.com)](https://www.visualcapitalist.com/wp-content/uploads/2019/04/a-day-in-data.jpg){width="50%"}
 
-## 3V, 4V, 5V
+## Some figures in sciences
 
-Try a table
+:::::::::::::: {.columns}
+::: {.column width="50%"}
 
+### Earth Observation Data
 
-| Right | Left | Default | Center |
-|-------|------|---------|:------:|
-|   1   |  2   |    byte   |    12  |
-|  123  |  123 |   123   |   123  |
-|    1  |    1 |     1   |     1  |
+![Volume of data per year (source The Australian Geoscience Data Cube — Foundations and lessons learned, A. Lewis)](https://www.researchgate.net/profile/Adam-Lewis-12/publication/316080947/figure/fig1/AS:621814552227846@1525263550337/The-estimated-volumes-EOS-data-produced-by-the-Landsat-8-Sentinel-1-2-3-and.png)
+
+:::
+::: {.column width="50%"}
+
+### CERN
+
+- The LHC experiments produce about 90 petabytes of data per year
+- an additional 25 petabytes of data are produced per year for data from other (non-LHC) experiments at CERN
+
+![CERN current data volumes](images/CERNVolumes.png)
+
+[Yo can have a look](https://monit-grafana-open.cern.ch/d/000000884/it-overview?orgId=16)
+
+:::
+::::::::::::::
+
+## 3V, 4V, 5V{background-image="https://www.lebigdata.fr/wp-content/uploads/2016/05/les-4-V-du-big-data-ibm.jpg"}
 
 ## What is Behind Big Data
 
