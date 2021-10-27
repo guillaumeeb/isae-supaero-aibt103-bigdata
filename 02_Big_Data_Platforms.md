@@ -190,6 +190,49 @@ In HDFS, data are of **writen-once** type (no inline modifications)
 ![](images/YARN.png){width=40%}
 ![](https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-site/yarn_architecture.gif){width=40%}
 
+# Datalakes
+
+## Toward a new data management model
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
+### Process centric
+
+- Structured Data
+- Internal sources
+- Important data only
+- Multiple copies
+
+![](images/ProcessCentric.png){height=40%}
+
+:::
+::: {.column width="50%"}
+
+### Data centric
+
+- Multiple types (structured, semi-structured, unstructured)
+- Multiple sources (internal, external)
+- Everything
+- One copy
+
+![](images/DataCentric.png){height=40%}
+
+:::
+::::::::::::::
+
+## Host and process different kind of data
+
+![](images/Datalake1.png){width=60%}
+
+## Typical Architecture
+
+![Oreilly's Datalake](https://www.oreilly.com/library/view/architecting-data-lakes/9781492042518/assets/ardl_0201.png){width=80%}
+
+## CNES Datalake infrastructure example
+
+![](images/CNESDatalake.png){width=70%}
+
 # From HPC to Big Data to Cloud and High Performance Data Analytics
 
 ## HPC platform, story and use case
@@ -345,15 +388,19 @@ https://alphalyr.fr/blog/difference-bi-business-intelligence-big-data/
 
 ## Is Hadoop dead?
 
-Not quite yet. Still used in many places.
+Not quite yet. Still **used in many places**
 
 . . .
 
-But clearly the two main components (HDFS and MapReduce) are now deprecated.
+It grew up with **web giants**, producing a really rich and **open source** ecosystem
 
 . . .
 
-And have led the path to better alternatives.
+But clearly the two main components (HDFS and MapReduce) are now **deprecated**
+
+. . .
+
+And have paved the way to better alternatives
 
 ## Future of Big Data
 
@@ -375,45 +422,6 @@ Chunked file format (SequenceFile)? Parquet, Zarr, Cloud optimized Geotiff.
 
 YaRN? HPC job scheduler, or Kubernetes
 
-# Datalakes
+. . . 
 
-## Toward a new data management model
-
-:::::::::::::: {.columns}
-::: {.column width="50%"}
-
-### Process centric
-
-- Structured Data
-- Internal sources
-- Important data only
-- Multiple copies
-
-![](images/ProcessCentric.png){height=40%}
-
-:::
-::: {.column width="50%"}
-
-### Data centric
-
-- Multiple types (structured, semi-structured, unstructured)
-- Multiple sources (internal, external)
-- Everything
-- One copy
-
-![](images/DataCentric.png){height=40%}
-
-:::
-::::::::::::::
-
-## Host and process different kind of data
-
-![](images/Datalake1.png){width=60%}
-
-## Typical Architecture
-
-![Oreilly's Datalake](https://www.oreilly.com/library/view/architecting-data-lakes/9781492042518/assets/ardl_0201.png){width=80%}
-
-## CNES Datalake infrastructure example
-
-![](images/CNESDatalake.png){width=70%}
+### Cloud Computing
