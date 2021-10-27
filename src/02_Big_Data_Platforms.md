@@ -32,12 +32,13 @@ Numerous Apache Software Foundation projects:
 - With their own developer community
 - And their own development cycle
 
+Hadoop distributions!
+- Cloudera/Horthonworks (2018 fusion)
+- MapR
+- Others smaller
+
 :::
 ::::::::::::::
-
-## Hadoop distributions
-
-TODO
 
 ## HDFS and MapReduce principles
 
