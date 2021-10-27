@@ -103,7 +103,7 @@
 <section id="spark-history" class="slide level2">
 <h2>Spark History</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:40%;">
 <ul>
 <li>Research project at the <a href="https://amplab.cs.berkeley.edu/">UC Berkeley AMPLab</a>, started in 2009</li>
 <li>Open sourced in early 2010:
@@ -115,10 +115,10 @@
 </ul></li>
 <li>Now with 100s of developers</li>
 </ul>
-</div><div class="column" style="width:50%;">
+</div><div class="column" style="width:60%;">
 <p>From <a href="https://spark.apache.org/research.html">Spark Research homepage</a>:</p>
 <blockquote>
-<p>Our goal was to design a programming model that supports a <strong>much wider class</strong> of applications than MapReduce, while maintaining its automatic <strong>fault tolerance</strong>. In particular, MapReduce is <strong>inefficient for multi-pass applications</strong> that require low-latency data sharing across multiple parallel operations.</p>
+<p>Our goal was to design a programming model that supports a <strong>much wider class</strong> of applications than MapReduce, while maintaining its automatic <strong>fault tolerance</strong>. In particular, MapReduce is <strong>inefficient for multi-pass applications</strong> (…).</p>
 </blockquote>
 <ul>
 <li>Iterative algorithms (many machine learning algorithms)</li>
@@ -143,16 +143,16 @@
 <div class="columns">
 <div class="column" style="width:70%;">
 <figure>
-<img data-src="https://databricks.com/wp-content/uploads/2016/02/Spark-Stack-1024x474.png" alt="Spark stack (Databricks)" /><figcaption aria-hidden="true">Spark stack (Databricks)</figcaption>
+<img data-src="https://databricks.com/wp-content/uploads/2016/02/Spark-Stack-1024x474.png" style="width:60.0%" alt="Spark stack (Databricks)" /><figcaption aria-hidden="true">Spark stack (Databricks)</figcaption>
 </figure>
 <figure>
-<img data-src="https://databricks.com/wp-content/uploads/2015/02/Introducing-DataFrames-in-Spark-for-Large-Scale-Data-Science1.png" alt="Spark sources (Databrick)" /><figcaption aria-hidden="true">Spark sources (Databrick)</figcaption>
+<img data-src="https://databricks.com/wp-content/uploads/2015/02/Introducing-DataFrames-in-Spark-for-Large-Scale-Data-Science1.png" style="width:60.0%" alt="Spark sources (Databrick)" /><figcaption aria-hidden="true">Spark sources (Databrick)</figcaption>
 </figure>
 </div><div class="column" style="width:30%;">
-<p><img data-src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png" /></p>
-<p><img data-src="https://www.r-project.org/logo/Rlogo.png" /></p>
-<p><img data-src="https://www.scala-lang.org/files/archive/spec/2.11/public/images/scala-logo-red-spiral-dark.png" /></p>
-<p><img data-src="https://www.oracle.com/a/ocom/img/cb71-java-logo.png" /></p>
+<p><img data-src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png" style="width:20.0%" /></p>
+<p><img data-src="https://www.r-project.org/logo/Rlogo.png" style="width:20.0%" /></p>
+<p><img data-src="https://www.scala-lang.org/files/archive/spec/2.11/public/images/scala-logo-red-spiral-dark.png" style="width:20.0%" /></p>
+<p><img data-src="https://www.oracle.com/a/ocom/img/cb71-java-logo.png" style="width:20.0%" /></p>
 </div>
 </div>
 </section>
@@ -160,11 +160,8 @@
 <h2>APIs</h2>
 <p><img data-src="https://databricks.com/wp-content/uploads/2018/05/rdd.png" /></p>
 </section>
-<section id="apis-detailed" class="slide level2">
-<h2>APIs (detailed)</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="resilient-distributed-dataset-rdd">Resilient Distributed Dataset (RDD)</h3>
+<section id="resilient-distributed-dataset-rdd" class="slide level2">
+<h2>Resilient Distributed Dataset (RDD)</h2>
 <ul>
 <li>Was primary user-facing API in Spark</li>
 <li>An RDD is an
@@ -181,8 +178,9 @@
 <li>In memory, <strong>fault tolerant</strong></li>
 <li>No schema, less optimization</li>
 </ul>
-</div><div class="column" style="width:50%;">
-<h3 id="dataframes-and-datasets">Dataframes and Datasets</h3>
+</section>
+<section id="dataframes-and-datasets" class="slide level2">
+<h2>Dataframes and Datasets</h2>
 <ul>
 <li>Also an immutable distributed collection of data</li>
 <li>Built on top of RDDs</li>
@@ -193,13 +191,11 @@
 <li>Catalyst optimizer, better performances</li>
 </ul>
 <p><img data-src="https://databricks.com/wp-content/uploads/2016/06/Unified-Apache-Spark-2.0-API-1.png" /></p>
-</div>
-</div>
 </section>
 <section id="transformations-and-actions" class="slide level2">
 <h2>Transformations and Actions</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:60%;">
 <h3 id="transformations"><a href="https://databricks.com/glossary/what-are-transformations">Transformations</a></h3>
 <ul>
 <li>Create a new (immutable) dataset from an existing one</li>
@@ -212,6 +208,20 @@
 <li>Just remember the transformations to base dataset</li>
 </ul></li>
 </ul>
+</div><div class="column" style="width:40%;">
+<h3 id="actions">Actions</h3>
+<ul>
+<li>Return a value to the driver program</li>
+<li>After running a computation on the dataset</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="transformations-and-actions-examples" class="slide level2">
+<h2>Transformations and Actions examples</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="transformations-1"><a href="https://databricks.com/glossary/what-are-transformations">Transformations</a></h3>
 <table>
 <thead>
 <tr class="header">
@@ -231,11 +241,7 @@
 </tbody>
 </table>
 </div><div class="column" style="width:50%;">
-<h3 id="actions"><a href="https://databricks.com/glossary/what-are-transformations">Actions</a></h3>
-<ul>
-<li>Return a value to the driver program</li>
-<li>After running a computation on the dataset</li>
-</ul>
+<h3 id="actions-1">Actions</h3>
 <table>
 <thead>
 <tr class="header">
@@ -275,12 +281,12 @@
 <section id="execution-plan-and-dags" class="slide level2">
 <h2>Execution Plan and DAGS</h2>
 <div class="columns">
-<div class="column" style="width:70%;">
+<div class="column" style="width:60%;">
 <div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>rdd1.<span class="bu">map</span>(splitlines).<span class="bu">filter</span>(<span class="st">&quot;ERROR&quot;</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>rdd2.<span class="bu">map</span>(splitlines).groupBy(key)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>rdd2.join(rdd1, key).take(<span class="dv">10</span>)</span></code></pre></div>
 <p><img data-src="https://databricks.com/wp-content/uploads/2014/03/spark-devs1.png" /></p>
-</div><div class="column" style="width:30%;">
+</div><div class="column" style="width:40%;">
 <ul>
 <li>Job: each action triggers a job</li>
 <li>Stages:
@@ -309,8 +315,8 @@
 <li>Estimator (can be actions)</li>
 </ul></li>
 </ul>
-<p><img data-src="https://spark.apache.org/docs/latest/img/ml-Pipeline.png" /></p>
-<p><img data-src="https://spark.apache.org/docs/latest/img/ml-PipelineModel.png" /></p>
+<p><img data-src="https://spark.apache.org/docs/latest/img/ml-Pipeline.png" style="width:60.0%" /></p>
+<p><img data-src="https://spark.apache.org/docs/latest/img/ml-PipelineModel.png" style="width:60.0%" /></p>
 </section>
 <section id="spark-application-and-execution" class="slide level2">
 <h2>Spark Application and execution</h2>
@@ -318,17 +324,12 @@
 </section>
 <section id="dashboard" class="slide level2">
 <h2>Dashboard</h2>
-<figure>
-<img data-src="https://spark.apache.org/docs/3.0.0-preview/img/JobPageDetail2.png" alt="Spark DAG" /><figcaption aria-hidden="true">Spark DAG</figcaption>
-</figure>
-<figure>
-<img data-src="https://spark.apache.org/docs/3.0.0-preview/img/AllStagesPageDetail3.png" alt="Spark stages details" /><figcaption aria-hidden="true">Spark stages details</figcaption>
-</figure>
+<p><img data-src="https://spark.apache.org/docs/3.0.0-preview/img/JobPageDetail2.png" alt="Spark DAG" /> <img data-src="https://spark.apache.org/docs/3.0.0-preview/img/AllStagesPageDetail3.png" alt="Spark stages details" /></p>
 </section>
 <section id="dashboard-2" class="slide level2">
 <h2>Dashboard 2</h2>
 <figure>
-<img data-src="https://spark.apache.org/docs/3.0.0-preview/img/AllStagesPageDetail6.png" alt="Spark tasks" /><figcaption aria-hidden="true">Spark tasks</figcaption>
+<img data-src="https://spark.apache.org/docs/3.0.0-preview/img/AllStagesPageDetail6.png" style="width:60.0%" alt="Spark tasks" /><figcaption aria-hidden="true">Spark tasks</figcaption>
 </figure>
 </section></section>
 <section>
@@ -343,7 +344,7 @@
 <li>Pre-configured</li>
 <li>Warm up on <a href="https://www.geeksforgeeks.org/estimating-value-pi-using-monte-carlo/">Py computation</a></li>
 </ul>
-<p><img data-src="https://camo.githubusercontent.com/e95b477d89032e6f4a7c7bc8fadaf4c8d185c900/687474703a2f2f7777772e706879736963732e736d752e6564752f66617474617275732f70692e706e67" /></p>
+<p><img data-src="https://camo.githubusercontent.com/e95b477d89032e6f4a7c7bc8fadaf4c8d185c900/687474703a2f2f7777772e706879736963732e736d752e6564752f66617474617275732f70692e706e67" style="width:20.0%" /></p>
 <ul>
 <li>RDDs</li>
 <li>Dataframes</li>
