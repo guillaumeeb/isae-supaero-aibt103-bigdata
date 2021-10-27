@@ -169,8 +169,8 @@ In HDFS, data are of **writen-once** type (no inline modifications)
   - Resources scheduling and cluster state
   - Job execution and distribution
 
-![](images/YARN.png)
-![](https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-site/yarn_architecture.gif)
+![](images/YARN.png){width=40%}
+![](https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-site/yarn_architecture.gif){width=40%}
 
 # From HPC to Big Data to Cloud and High Performance Data Analytics
 
@@ -189,14 +189,6 @@ In HDFS, data are of **writen-once** type (no inline modifications)
 - Compute and storage are separated
 - Uses a resource scheduler
 
-| Rank | System | Cores | Rmax (TFlop/s) | Rpeak (TFlop/s) | Power (kW) |
-|------| -------|-------|----------------|-----------------|------------|
-| 1 | Supercomputer Fugaku - Japan  | 7,630,848 | 442,010.0 | 537,212.0 | 29,899 |
-| 2 | Summit - United States | 2,414,592 | 148,600.0 | 200,794.9 | 10,096 |
-| 3 | Sierra - United States | 1,572,480 | 94,640.0 | 125,712.0 | 7,438 |
-| 8 | JUWELS Booster Module - Germany | 449,280 | 44,120.0 | 70,980.0 | 1,764 |
-| 21 | PANGEA III - France | 291,024 | 17,860.0 | 25,025.8 | 1,367 |
-
 :::
 ::: {.column width="50%"}
 
@@ -204,6 +196,19 @@ In HDFS, data are of **writen-once** type (no inline modifications)
 
 :::
 ::::::::::::::
+
+## TOP500
+
+| Rank | System | Cores | Rmax (TFlop/s) | Rpeak (TFlop/s) | Power (kW) |
+|------| -------|-------|----------------|-----------------|------------|
+| 1 | Supercomputer Fugaku - Japan  | 7,630,848 | 442,010.0 | 537,212.0 | 29,899 |
+| 2 | Summit - United States | 2,414,592 | 148,600.0 | 200,794.9 | 10,096 |
+| 3 | Sierra - United States | 1,572,480 | 94,640.0 | 125,712.0 | 7,438 |
+| 8 | JUWELS Booster Module - Germany | 449,280 | 44,120.0 | 70,980.0 | 1,764 |
+| 21 | PANGEA III - France | 291,024 | 17,860.0 | 25,025.8 | 1,367 |
+| 92 | Jean Zay - France | 93,960 | 4,478.0 | 7,345.6 |
+
+[Top 500 (june 2021)](https://top500.org/lists/top500/list/2021/06/)
 
 ## Big Data and Hadoop
 
@@ -217,7 +222,7 @@ In HDFS, data are of **writen-once** type (no inline modifications)
 
 ## HPDA convergence
 
-![](images/HPDA.png)
+![](images/HPDA.png){width=50%}
 
 - Hadoop world step to HPC: YaRN, equivalent to HPC resources scheduler
 - HPC step to Big Data: hardware not so specialized
@@ -228,12 +233,12 @@ In HDFS, data are of **writen-once** type (no inline modifications)
 
 Hence the cloud computing model...
 
-- Compute resources separated for storage (but proximity is key)
+- Compute resources separated from storage (but proximity is key)
 - Can host anything, at first not compute oriented
-- Object store model: Software Defined Storage as HDFS, specific interface
+- Object store model: Software Defined Storage as HDFS, specific interface (S3)
 - Horizontal scalability of compute AND storage
 - Resources on demand, mutualized between millions of users
-- Infinite resources for users
+- Infinite resources like for user
 
 ## Distributed programming: Hadoop vs HPC vs Cloud
 
@@ -253,7 +258,7 @@ Hence the cloud computing model...
 
 ### HPC (MPI)
 
-- Compute bound algorithm
+- Compute bound algorithms
 - Small or medium amount of inputs, 
 - Medium or big outputs (big simulations)
 - Can be used for data processing too (Dask)
@@ -263,7 +268,7 @@ Hence the cloud computing model...
 
 ### Cloud
 
-- Anything: services, storaage bound, compute bound
+- Anything: services, storage bound, compute bound
 - Object store limitations for some HPC workflow
 - Or not anymore: HPC as a Service
 - Big Data as a Service too...
@@ -357,7 +362,7 @@ YaRN? HPC job scheduler, or Kubernetes
 ## Toward a new data management model
 
 :::::::::::::: {.columns}
-::: {.column width="33%"}
+::: {.column width="50%"}
 
 ### Process centric
 
@@ -366,10 +371,10 @@ YaRN? HPC job scheduler, or Kubernetes
 - Important data only
 - Multiple copies
 
-![](images/ProcessCentric.png)
+![](images/ProcessCentric.png){height=40%}
 
 :::
-::: {.column width="33%"}
+::: {.column width="50%"}
 
 ### Data centric
 
@@ -378,19 +383,19 @@ YaRN? HPC job scheduler, or Kubernetes
 - Everything
 - One copy
 
-![](images/DataCentric.png)
+![](images/DataCentric.png){height=40%}
 
 :::
 ::::::::::::::
 
 ## Host and process different kind of data
 
-![](images/Datalake1.png)
+![](images/Datalake1.png){width=60%}
 
 ## Typical Architecture
 
-![Oreilly's Datalake](https://www.oreilly.com/library/view/architecting-data-lakes/9781492042518/assets/ardl_0201.png)
+![Oreilly's Datalake](https://www.oreilly.com/library/view/architecting-data-lakes/9781492042518/assets/ardl_0201.png){width=80%}
 
 ## CNES Datalake infrastructure example
 
-![](images/CNESDatalake.png)
+![](images/CNESDatalake.png){width=70%}
