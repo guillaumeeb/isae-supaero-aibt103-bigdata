@@ -14,30 +14,17 @@ https://supaerodatascience.github.io/OBD/1_3_containers.html
 
 ## Docker, Dockerfile
 
-## Singularity 
+## Singularity, Podman
 
 ## TP Docker? 30min play with docker https://www.docker.com/play-with-docker 
 
 # Kubernetes
 
-https://supaerodatascience.github.io/OBD/lectures/2_3_kubernetes.html#/
+## Thanks to Dennis
 
+https://supaerodatascience.github.io/OBD/lectures/2_3_kubernetes.html
 
-## What is Kubernetes
-
-## Container orchestration
-
-## Distributed design
-
-## Microservices
-
-## Example
-
-## Definitions, POD, Deployment, Service, Ingress,
-
-## HELM
-
-# Kubernetes tutorial
+## Kubernetes tutorial
 
 https://training.play-with-kubernetes.com/kubernetes-workshop/ 
 

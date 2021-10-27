@@ -31,6 +31,8 @@ Using K8S or not.
 
 ## TP Google Cloud
 
+Everyone has its credits?
+
 how to get a server? 
 
 TP through Google console, account, princing, ressources… VMs and Kubernetes
