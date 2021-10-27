@@ -53,13 +53,13 @@ From [Spark Research homepage](https://spark.apache.org/research.html):
 :::
 ::: {.column width="30%"}
 
-![](https://www.python.org/static/community_logos/python-logo-master-v3-TM.png){width=20%}
+![](https://www.python.org/static/community_logos/python-logo-master-v3-TM.png){width=40%}
 
-![](https://www.r-project.org/logo/Rlogo.png){width=20%}
+![](https://www.r-project.org/logo/Rlogo.png){width=30%}
 
-![](https://www.scala-lang.org/files/archive/spec/2.11/public/images/scala-logo-red-spiral-dark.png){width=20%}
+![](https://www.scala-lang.org/files/archive/spec/2.11/public/images/scala-logo-red-spiral-dark.png){width=40%}
 
-![](https://www.oracle.com/a/ocom/img/cb71-java-logo.png){width=20%}
+![](https://www.oracle.com/a/ocom/img/cb71-java-logo.png){width=40%}
 
 :::
 ::::::::::::::
@@ -85,6 +85,9 @@ From [Spark Research homepage](https://spark.apache.org/research.html):
 
 ## Dataframes and Datasets
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
 - Also an immutable distributed collection of data
 - Built on top of RDDs
 - Structured data, organized in named columns
@@ -93,7 +96,13 @@ From [Spark Research homepage](https://spark.apache.org/research.html):
 - Dataset: strongly typed objects
 - Catalyst optimizer, better performances
 
+:::
+::: {.column width="50%"}
+
 ![](https://databricks.com/wp-content/uploads/2016/06/Unified-Apache-Spark-2.0-API-1.png)
+
+:::
+::::::::::::::
 
 ## Transformations and Actions
 
@@ -200,9 +209,9 @@ rdd2.join(rdd1, key).take(10)
   - Transformers (analogy to transformation)
   - Estimator (can be actions)
 
-![](https://spark.apache.org/docs/latest/img/ml-Pipeline.png){width=60%}
+![](https://spark.apache.org/docs/latest/img/ml-Pipeline.png){width=50%}
 
-![](https://spark.apache.org/docs/latest/img/ml-PipelineModel.png){width=60%}
+![](https://spark.apache.org/docs/latest/img/ml-PipelineModel.png){width=50%}
 
 ## Spark Application and execution
 
@@ -211,8 +220,8 @@ rdd2.join(rdd1, key).take(10)
 
 ## Dashboard
 
-![Spark DAG](https://spark.apache.org/docs/3.0.0-preview/img/JobPageDetail2.png)
-![Spark stages details](https://spark.apache.org/docs/3.0.0-preview/img/AllStagesPageDetail3.png)
+![Spark DAG](https://spark.apache.org/docs/3.0.0-preview/img/JobPageDetail2.png){width=20%}
+![Spark stages details](https://spark.apache.org/docs/3.0.0-preview/img/AllStagesPageDetail3.png){width=70%}
 
 ## Dashboard 2
 
