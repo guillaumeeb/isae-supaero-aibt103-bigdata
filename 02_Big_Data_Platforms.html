@@ -52,7 +52,7 @@
 <div class="columns">
 <div class="column" style="width:50%;">
 <figure>
-<img data-src="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2016/10/HADOOP-ECOSYSTEM-Edureka.png" style="width:60.0%" alt="Hadoop ecosystem" /><figcaption aria-hidden="true">Hadoop ecosystem</figcaption>
+<img data-src="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2016/10/HADOOP-ECOSYSTEM-Edureka.png" style="width:80.0%" alt="Hadoop ecosystem" /><figcaption aria-hidden="true">Hadoop ecosystem</figcaption>
 </figure>
 </div><div class="column" style="width:50%;">
 <p>Numerous Apache Software Foundation projects:</p>
@@ -102,7 +102,7 @@
 <section id="hadoop-story-from-google-to-spark" class="slide level2">
 <h2>Hadoop story, from google to Spark</h2>
 <figure>
-<img data-src="https://static.packt-cdn.com/products/9781788999830/graphics/assets/4cf97ee3-8f90-4904-9094-dffd90bd066c.png" style="height:50.0%" alt="Hadoop history (Packt)" /><figcaption aria-hidden="true">Hadoop history (Packt)</figcaption>
+<img data-src="https://static.packt-cdn.com/products/9781788999830/graphics/assets/4cf97ee3-8f90-4904-9094-dffd90bd066c.png" style="height:40.0%" alt="Hadoop history (Packt)" /><figcaption aria-hidden="true">Hadoop history (Packt)</figcaption>
 </figure>
 </section></section>
 <section>
@@ -112,20 +112,44 @@
 </section>
 <section id="hdfs-basics" class="slide level2">
 <h2>HDFS Basics</h2>
-<p>Distributed File System:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="distributed-file-system">Distributed File System</h3>
 <ul>
 <li>Written in <strong>Java</strong></li>
-<li>Allowing to <strong>store</strong> massive amounts of data, structured or not, on a machines cluster</li>
-<li>Extensible and portable</li>
-<li>One of the first <strong>Software Defined Storage</strong> (OK, Google was here first)</li>
-</ul>
-<p>Data is splitted and distributed among the Hadoop cluster:</p>
+<li>Allowing to <strong>store</strong> massive amounts of data,
 <ul>
+<li>structured or not,</li>
+<li>on a machines cluster</li>
+</ul></li>
+<li>Extensible and portable</li>
+<li>One of the first <strong>Software Defined Storage</strong>
+<ul>
+<li>(OK, Google was here first)</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="data-blocks">Data blocks</h3>
+<ul>
+<li>Data is <strong>splitted</strong> and <strong>distributed</strong>
+<ul>
+<li>among the Hadoop cluster</li>
+</ul></li>
 <li>Splitted into 128MB (default) <strong>blocks</strong></li>
-<li>With a <strong>replication</strong> factor for preventing data loss (3 replicas default)</li>
-<li>Hadoop 3: <strong>Erasure coding</strong> = similar durability as replication 3, but only 50% volume increase</li>
+<li>With a <strong>replication</strong> factor for preventing data loss
+<ul>
+<li>(3 replicas default)</li>
+</ul></li>
+<li>Hadoop 3: <strong>Erasure coding</strong>
+<ul>
+<li>similar durability as replication 3,</li>
+<li>but <strong>only 50%</strong> volume increase</li>
+<li>instead of 200%</li>
+</ul></li>
 </ul>
 <p>In HDFS, data are of <strong>writen-once</strong> type (no inline modifications)</p>
+</div>
+</div>
 </section>
 <section id="hdfs-blocks-repartition" class="slide level2">
 <h2>HDFS blocks repartition</h2>
@@ -134,7 +158,7 @@
 <section id="hdfs-daemons" class="slide level2">
 <h2>HDFS Daemons</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:60%;">
 <h3 id="namenode">Namenode</h3>
 <ul>
 <li>Accountable for data locality and file system global namespace</li>
@@ -143,7 +167,7 @@
 <li>Knows nodes wich own the parts of a file</li>
 <li>Needs to be replicated and secured (loss of metadata = loss of all data)</li>
 </ul>
-</div><div class="column" style="width:50%;">
+</div><div class="column" style="width:40%;">
 <h3 id="datanode">Datanode</h3>
 <ul>
 <li>Stores and loads data blocks</li>
@@ -156,7 +180,7 @@
 </section>
 <section id="hdfs-architecture" class="slide level2">
 <h2>HDFS Architecture</h2>
-<p><img data-src="https://hadoop.apache.org/docs/r1.2.1/images/hdfsarchitecture.gif" /></p>
+<p><img data-src="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/images/hdfsarchitecture.png" /></p>
 </section></section>
 <section>
 <section id="map-reduce" class="title-slide slide level1">
@@ -213,7 +237,7 @@
 <li>Job execution and distribution</li>
 </ul></li>
 </ul>
-<p><img data-src="images/YARN.png" /> <img data-src="https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-site/yarn_architecture.gif" /></p>
+<p><img data-src="images/YARN.png" style="width:40.0%" /> <img data-src="https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-site/yarn_architecture.gif" style="width:40.0%" /></p>
 </section></section>
 <section>
 <section id="from-hpc-to-big-data-to-cloud-and-high-performance-data-analytics" class="title-slide slide level1">
@@ -236,6 +260,15 @@
 <li>Compute and storage are separated</li>
 <li>Uses a resource scheduler</li>
 </ul>
+</div><div class="column" style="width:50%;">
+<figure>
+<img data-src="http://www.idris.fr/media/images/jean-zay-annonce-01.jpg?id=web%3Aeng%3Ajean-zay%3Acpu%3Ajean-zay-cpu-hw-eng" alt="Jean-Zay supercomputer" /><figcaption aria-hidden="true">Jean-Zay supercomputer</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="top500" class="slide level2">
+<h2>TOP500</h2>
 <table>
 <thead>
 <tr class="header">
@@ -288,14 +321,17 @@
 <td>25,025.8</td>
 <td>1,367</td>
 </tr>
+<tr class="even">
+<td>92</td>
+<td>Jean Zay - France</td>
+<td>93,960</td>
+<td>4,478.0</td>
+<td>7,345.6</td>
+<td></td>
+</tr>
 </tbody>
 </table>
-</div><div class="column" style="width:50%;">
-<figure>
-<img data-src="http://www.idris.fr/media/images/jean-zay-annonce-01.jpg?id=web%3Aeng%3Ajean-zay%3Acpu%3Ajean-zay-cpu-hw-eng" alt="Jean-Zay supercomputer" /><figcaption aria-hidden="true">Jean-Zay supercomputer</figcaption>
-</figure>
-</div>
-</div>
+<p><a href="https://top500.org/lists/top500/list/2021/06/">Top 500 (june 2021)</a></p>
 </section>
 <section id="big-data-and-hadoop" class="slide level2">
 <h2>Big Data and Hadoop</h2>
@@ -311,7 +347,7 @@
 </section>
 <section id="hpda-convergence" class="slide level2">
 <h2>HPDA convergence</h2>
-<p><img data-src="images/HPDA.png" /></p>
+<p><img data-src="images/HPDA.png" style="width:50.0%" /></p>
 <ul>
 <li>Hadoop world step to HPC: YaRN, equivalent to HPC resources scheduler</li>
 <li>HPC step to Big Data: hardware not so specialized</li>
@@ -323,12 +359,12 @@
 <h2>Cloud computing basics</h2>
 <p>Hence the cloud computing model…</p>
 <ul>
-<li>Compute resources separated for storage (but proximity is key)</li>
+<li>Compute resources separated from storage (but proximity is key)</li>
 <li>Can host anything, at first not compute oriented</li>
-<li>Object store model: Software Defined Storage as HDFS, specific interface</li>
+<li>Object store model: Software Defined Storage as HDFS, specific interface (S3)</li>
 <li>Horizontal scalability of compute AND storage</li>
 <li>Resources on demand, mutualized between millions of users</li>
-<li>Infinite resources for users</li>
+<li>Infinite resources like for user</li>
 </ul>
 </section>
 <section id="distributed-programming-hadoop-vs-hpc-vs-cloud" class="slide level2">
@@ -346,7 +382,7 @@
 </div><div class="column" style="width:33%;">
 <h3 id="hpc-mpi">HPC (MPI)</h3>
 <ul>
-<li>Compute bound algorithm</li>
+<li>Compute bound algorithms</li>
 <li>Small or medium amount of inputs,</li>
 <li>Medium or big outputs (big simulations)</li>
 <li>Can be used for data processing too (Dask)</li>
@@ -354,7 +390,7 @@
 </div><div class="column" style="width:33%;">
 <h3 id="cloud">Cloud</h3>
 <ul>
-<li>Anything: services, storaage bound, compute bound</li>
+<li>Anything: services, storage bound, compute bound</li>
 <li>Object store limitations for some HPC workflow</li>
 <li>Or not anymore: HPC as a Service</li>
 <li>Big Data as a Service too…</li>
@@ -453,7 +489,7 @@
 <section id="toward-a-new-data-management-model" class="slide level2">
 <h2>Toward a new data management model</h2>
 <div class="columns">
-<div class="column" style="width:33%;">
+<div class="column" style="width:50%;">
 <h3 id="process-centric">Process centric</h3>
 <ul>
 <li>Structured Data</li>
@@ -461,8 +497,8 @@
 <li>Important data only</li>
 <li>Multiple copies</li>
 </ul>
-<p><img data-src="images/ProcessCentric.png" /></p>
-</div><div class="column" style="width:33%;">
+<p><img data-src="images/ProcessCentric.png" style="height:40.0%" /></p>
+</div><div class="column" style="width:50%;">
 <h3 id="data-centric">Data centric</h3>
 <ul>
 <li>Multiple types (structured, semi-structured, unstructured)</li>
@@ -470,23 +506,23 @@
 <li>Everything</li>
 <li>One copy</li>
 </ul>
-<p><img data-src="images/DataCentric.png" /></p>
+<p><img data-src="images/DataCentric.png" style="height:40.0%" /></p>
 </div>
 </div>
 </section>
 <section id="host-and-process-different-kind-of-data" class="slide level2">
 <h2>Host and process different kind of data</h2>
-<p><img data-src="images/Datalake1.png" /></p>
+<p><img data-src="images/Datalake1.png" style="width:60.0%" /></p>
 </section>
 <section id="typical-architecture" class="slide level2">
 <h2>Typical Architecture</h2>
 <figure>
-<img data-src="https://www.oreilly.com/library/view/architecting-data-lakes/9781492042518/assets/ardl_0201.png" alt="Oreilly’s Datalake" /><figcaption aria-hidden="true">Oreilly’s Datalake</figcaption>
+<img data-src="https://www.oreilly.com/library/view/architecting-data-lakes/9781492042518/assets/ardl_0201.png" style="width:80.0%" alt="Oreilly’s Datalake" /><figcaption aria-hidden="true">Oreilly’s Datalake</figcaption>
 </figure>
 </section>
 <section id="cnes-datalake-infrastructure-example" class="slide level2">
 <h2>CNES Datalake infrastructure example</h2>
-<p><img data-src="images/CNESDatalake.png" /></p>
+<p><img data-src="images/CNESDatalake.png" style="width:70.0%" /></p>
 </section></section>
     </div>
   </div>
