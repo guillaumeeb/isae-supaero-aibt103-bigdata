@@ -21,7 +21,7 @@ Open source framework supported by Apache foundation:
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
 
-![Hadoop ecosystem](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2016/10/HADOOP-ECOSYSTEM-Edureka.png){width=60%}
+![Hadoop ecosystem](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2016/10/HADOOP-ECOSYSTEM-Edureka.png){width=80%}
 
 :::
 ::: {.column width="50%"}
@@ -69,26 +69,44 @@ Each cluster is composed of:
 
 ## Hadoop story, from google to Spark
 
-![Hadoop history (Packt)](https://static.packt-cdn.com/products/9781788999830/graphics/assets/4cf97ee3-8f90-4904-9094-dffd90bd066c.png){height=50%}
+![Hadoop history (Packt)](https://static.packt-cdn.com/products/9781788999830/graphics/assets/4cf97ee3-8f90-4904-9094-dffd90bd066c.png){height=40%}
 
 # HDFS 
 
 ## HDFS Basics
 
-Distributed File System:
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
+### Distributed File System
 
 - Written in **Java**
-- Allowing to **store** massive amounts of data, structured or not, on a machines cluster
+- Allowing to **store** massive amounts of data, 
+  - structured or not, 
+  - on a machines cluster
 - Extensible and portable
-- One of the first **Software Defined Storage** (OK, Google was here first)
+- One of the first **Software Defined Storage** 
+  - (OK, Google was here first)
 
-Data is splitted and distributed among the Hadoop cluster:
+:::
+::: {.column width="50%"}
 
+### Data blocks
+
+- Data is **splitted** and **distributed**
+  -  among the Hadoop cluster
 - Splitted into 128MB (default) **blocks**
-- With a **replication** factor for preventing data loss (3 replicas default)
-- Hadoop 3: **Erasure coding** = similar durability as replication 3, but only 50% volume increase
+- With a **replication** factor for preventing data loss 
+  - (3 replicas default)
+- Hadoop 3: **Erasure coding**
+  - similar durability as replication 3, 
+  - but **only 50%** volume increase
+  - instead of 200%
 
 In HDFS, data are of **writen-once** type (no inline modifications)
+
+:::
+::::::::::::::
 
 ## HDFS blocks repartition
 
@@ -97,7 +115,7 @@ In HDFS, data are of **writen-once** type (no inline modifications)
 ## HDFS Daemons
 
 :::::::::::::: {.columns}
-::: {.column width="50%"}
+::: {.column width="60%"}
 
 ### Namenode
 
@@ -108,7 +126,7 @@ In HDFS, data are of **writen-once** type (no inline modifications)
 - Needs to be replicated and secured (loss of metadata = loss of all data)
 
 :::
-::: {.column width="50%"}
+::: {.column width="40%"}
 
 ### Datanode
 
@@ -122,7 +140,7 @@ In HDFS, data are of **writen-once** type (no inline modifications)
 
 ## HDFS Architecture
 
-![](https://hadoop.apache.org/docs/r1.2.1/images/hdfsarchitecture.gif)
+![](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/images/hdfsarchitecture.png)
 
 # Map Reduce
 
