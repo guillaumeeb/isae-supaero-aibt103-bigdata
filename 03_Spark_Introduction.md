@@ -229,8 +229,8 @@ rdd2.join(rdd1, key).take(10)
 
 ## Notebook
 
-[Notebook is here](https://github.com/SupaeroDataScience/OBD/blob/master/notebooks/Introduction%20to%20Spark.ipynb)
+[Notebook is here](https://github.com/guillaumeeb/isae-supaero-aibt103-bigdata/blob/main/notebooks/IntroductionToSpark.ipynb)
 
 Easiest:
 
-[Run it on Binder](https://mybinder.org/v2/gh/guillaumeeb/isae-supaero-aibt103-bigdata/master?urlpath=lab)
+[Run it on Binder](https://mybinder.org/v2/gh/guillaumeeb/isae-supaero-aibt103-bigdata/main?urlpath=lab)

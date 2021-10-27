@@ -21,7 +21,7 @@ Guillaume Eynard-Bontemps for ISAE-Supaero
 
 [Spark Introduction and exercise](03_Spark_Introduction.html)
 
-[Play with MapReduce through Spark](https://mybinder.org/v2/gh/guillaumeeb/isae-supaero-aibt103-bigdata/master?urlpath=lab)
+[Play with MapReduce through Spark](https://mybinder.org/v2/gh/guillaumeeb/isae-supaero-aibt103-bigdata/main?urlpath=lab)
 
 ### Day 2: Cloud Computing and Kubernetes
 
