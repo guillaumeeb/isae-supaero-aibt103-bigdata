@@ -10,4 +10,4 @@ https://guillaumeeb.github.io/isae-supaero-aibt103-bigdata
 
 Some of the notebooks from this class (Julia, Spark ...) can be launched with MyBinder:
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/guillaumeeb/isae-supaero-aibt103-bigdata/master?urlpath=lab)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/guillaumeeb/isae-supaero-aibt103-bigdata/main?urlpath=lab)
