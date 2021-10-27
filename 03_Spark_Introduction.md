@@ -9,7 +9,7 @@ date: 2020-11-15
 ## Spark History
 
 :::::::::::::: {.columns}
-::: {.column width="50%"}
+::: {.column width="40%"}
 
 - Research project at the [UC Berkeley AMPLab](https://amplab.cs.berkeley.edu/), started in 2009
 - Open sourced in early 2010:
@@ -20,12 +20,12 @@ date: 2020-11-15
 - Now with 100s of developers
 
 :::
-::: {.column width="50%"}
+::: {.column width="60%"}
 
 From [Spark Research homepage](https://spark.apache.org/research.html):
 
 > Our goal was to design a programming model that supports a **much wider class** of applications than MapReduce, while maintaining its automatic **fault tolerance**. 
-> In particular, MapReduce is **inefficient for multi-pass applications** that require low-latency data sharing across multiple parallel operations. 
+> In particular, MapReduce is **inefficient for multi-pass applications** (...). 
 
 - Iterative algorithms (many machine learning algorithms)
 - Interactive data mining
@@ -46,20 +46,20 @@ From [Spark Research homepage](https://spark.apache.org/research.html):
 :::::::::::::: {.columns}
 ::: {.column width="70%"}
 
-![Spark stack (Databricks)](https://databricks.com/wp-content/uploads/2016/02/Spark-Stack-1024x474.png)
+![Spark stack (Databricks)](https://databricks.com/wp-content/uploads/2016/02/Spark-Stack-1024x474.png){width=60%}
 
-![Spark sources (Databrick)](https://databricks.com/wp-content/uploads/2015/02/Introducing-DataFrames-in-Spark-for-Large-Scale-Data-Science1.png)
+![Spark sources (Databrick)](https://databricks.com/wp-content/uploads/2015/02/Introducing-DataFrames-in-Spark-for-Large-Scale-Data-Science1.png){width=60%}
 
 :::
 ::: {.column width="30%"}
 
-![](https://www.python.org/static/community_logos/python-logo-master-v3-TM.png)
+![](https://www.python.org/static/community_logos/python-logo-master-v3-TM.png){width=20%}
 
-![](https://www.r-project.org/logo/Rlogo.png)
+![](https://www.r-project.org/logo/Rlogo.png){width=20%}
 
-![](https://www.scala-lang.org/files/archive/spec/2.11/public/images/scala-logo-red-spiral-dark.png)
+![](https://www.scala-lang.org/files/archive/spec/2.11/public/images/scala-logo-red-spiral-dark.png){width=20%}
 
-![](https://www.oracle.com/a/ocom/img/cb71-java-logo.png)
+![](https://www.oracle.com/a/ocom/img/cb71-java-logo.png){width=20%}
 
 :::
 ::::::::::::::
@@ -68,12 +68,7 @@ From [Spark Research homepage](https://spark.apache.org/research.html):
 
 ![](https://databricks.com/wp-content/uploads/2018/05/rdd.png)
 
-## APIs (detailed)
-
-:::::::::::::: {.columns}
-::: {.column width="50%"}
-
-### Resilient Distributed Dataset (RDD)
+## Resilient Distributed Dataset (RDD)
 
 - Was primary user-facing API in Spark
 - An RDD is an 
@@ -88,10 +83,7 @@ From [Spark Research homepage](https://spark.apache.org/research.html):
 - In memory, **fault tolerant**
 - No schema, less optimization
 
-:::
-::: {.column width="50%"}
-
-### Dataframes and Datasets
+## Dataframes and Datasets
 
 - Also an immutable distributed collection of data
 - Built on top of RDDs
@@ -103,13 +95,10 @@ From [Spark Research homepage](https://spark.apache.org/research.html):
 
 ![](https://databricks.com/wp-content/uploads/2016/06/Unified-Apache-Spark-2.0-API-1.png)
 
-:::
-::::::::::::::
-
 ## Transformations and Actions
 
 :::::::::::::: {.columns}
-::: {.column width="50%"}
+::: {.column width="60%"}
 
 ### [Transformations](https://databricks.com/glossary/what-are-transformations)
 
@@ -121,6 +110,25 @@ From [Spark Research homepage](https://spark.apache.org/research.html):
   - No computations
   - Just remember the transformations to base dataset
 
+:::
+::: {.column width="40%"}
+
+
+### Actions
+
+- Return a value to the driver program 
+- After running a computation on the dataset
+
+:::
+::::::::::::::
+
+## Transformations and Actions examples
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
+### [Transformations](https://databricks.com/glossary/what-are-transformations)
+
 | Transformations |
 |---------|
 | map* |
@@ -130,11 +138,7 @@ From [Spark Research homepage](https://spark.apache.org/research.html):
 :::
 ::: {.column width="50%"}
 
-
-### [Actions](https://databricks.com/glossary/what-are-transformations)
-
-- Return a value to the driver program 
-- After running a computation on the dataset
+### Actions
 
 | Actions |
 |---------|
@@ -148,6 +152,7 @@ From [Spark Research homepage](https://spark.apache.org/research.html):
 :::
 ::::::::::::::
 
+
 ## Some code
 
 ```python
@@ -159,7 +164,7 @@ totalLength = lineLengths.reduce(lambda a, b: a + b)
 ## Execution Plan and DAGS
 
 :::::::::::::: {.columns}
-::: {.column width="70%"}
+::: {.column width="60%"}
 
 ```python
 rdd1.map(splitlines).filter("ERROR")
@@ -170,7 +175,7 @@ rdd2.join(rdd1, key).take(10)
 ![](https://databricks.com/wp-content/uploads/2014/03/spark-devs1.png)
 
 :::
-::: {.column width="30%"}
+::: {.column width="40%"}
 
 - Job: each action triggers a job
 - Stages:
@@ -195,9 +200,9 @@ rdd2.join(rdd1, key).take(10)
   - Transformers (analogy to transformation)
   - Estimator (can be actions)
 
-![](https://spark.apache.org/docs/latest/img/ml-Pipeline.png)
+![](https://spark.apache.org/docs/latest/img/ml-Pipeline.png){width=60%}
 
-![](https://spark.apache.org/docs/latest/img/ml-PipelineModel.png)
+![](https://spark.apache.org/docs/latest/img/ml-PipelineModel.png){width=60%}
 
 ## Spark Application and execution
 
@@ -207,12 +212,11 @@ rdd2.join(rdd1, key).take(10)
 ## Dashboard
 
 ![Spark DAG](https://spark.apache.org/docs/3.0.0-preview/img/JobPageDetail2.png)
-
 ![Spark stages details](https://spark.apache.org/docs/3.0.0-preview/img/AllStagesPageDetail3.png)
 
 ## Dashboard 2
 
-![Spark tasks](https://spark.apache.org/docs/3.0.0-preview/img/AllStagesPageDetail6.png)
+![Spark tasks](https://spark.apache.org/docs/3.0.0-preview/img/AllStagesPageDetail6.png){width=60%}
 
 # Play with Map Reduce through Spark 
 
@@ -222,7 +226,7 @@ rdd2.join(rdd1, key).take(10)
 - Pre-configured
 - Warm up on [Py computation](https://www.geeksforgeeks.org/estimating-value-pi-using-monte-carlo/)
 
-![](https://camo.githubusercontent.com/e95b477d89032e6f4a7c7bc8fadaf4c8d185c900/687474703a2f2f7777772e706879736963732e736d752e6564752f66617474617275732f70692e706e67)
+![](https://camo.githubusercontent.com/e95b477d89032e6f4a7c7bc8fadaf4c8d185c900/687474703a2f2f7777772e706879736963732e736d752e6564752f66617474617275732f70692e706e67){width=20%}
 
 - RDDs
 - Dataframes

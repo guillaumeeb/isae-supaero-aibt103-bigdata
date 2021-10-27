@@ -87,6 +87,7 @@ Each cluster is composed of:
 - Extensible and portable
 - One of the first **Software Defined Storage** 
   - (OK, Google was here first)
+- In HDFS, data are of **writen-once** type (no inline modifications)
 
 :::
 ::: {.column width="50%"}
@@ -102,8 +103,6 @@ Each cluster is composed of:
   - similar durability as replication 3, 
   - but **only 50%** volume increase
   - instead of 200%
-
-In HDFS, data are of **writen-once** type (no inline modifications)
 
 :::
 ::::::::::::::
@@ -204,7 +203,7 @@ In HDFS, data are of **writen-once** type (no inline modifications)
 - Important data only
 - Multiple copies
 
-![](images/ProcessCentric.png){height=40%}
+![](images/ProcessCentric.png){height=30%}
 
 :::
 ::: {.column width="50%"}
@@ -216,7 +215,7 @@ In HDFS, data are of **writen-once** type (no inline modifications)
 - Everything
 - One copy
 
-![](images/DataCentric.png){height=40%}
+![](images/DataCentric.png){height=30%}
 
 :::
 ::::::::::::::
@@ -231,7 +230,7 @@ In HDFS, data are of **writen-once** type (no inline modifications)
 
 ## CNES Datalake infrastructure example
 
-![](images/CNESDatalake.png){width=70%}
+![](images/CNESDatalake.png){width=60%}
 
 # From HPC to Big Data to Cloud and High Performance Data Analytics
 
