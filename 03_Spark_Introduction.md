@@ -233,4 +233,4 @@ rdd2.join(rdd1, key).take(10)
 
 Easiest:
 
-[Run it on Binder](https://mybinder.org/v2/gh/SupaeroDataScience/OBD/master?urlpath=lab)
+[Run it on Binder](https://mybinder.org/v2/gh/guillaumeeb/isae-supaero-aibt103-bigdata/master?urlpath=lab)

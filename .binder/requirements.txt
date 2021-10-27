@@ -1,0 +1,9 @@
+pyspark
+numpy
+pandas
+pyarrow
+matplotlib
+jupyter-server-proxy
+dask[complete]
+seaborn
+xarray
