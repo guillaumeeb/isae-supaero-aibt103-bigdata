@@ -198,28 +198,103 @@ Academic, public founded:
 
 ![](https://i2.wp.com/datacenter-magazine.fr/contenus/uploads/2020/03/CORE_MARKESS_PRG_OPE_19-20_COMPETITIVE_ENVIRONMENT_PRESSE_MARS-2020.png?resize=600%2C340&ssl=1)
 
-# Old slides
+# Cloud computing: usage revolution
 
-## Different approaches
+## A technical evolution
 
-IaaS, PaaS, CaaS, SaaS, Object Storage
+- More Virtualization
+- More API
+- More Managed Services
 
-## Economical models, Pay as you go
+## Access and operating computing power
 
-## Technical benefits
+- Outsourcing infra, maintenance, security, development of new services
+  - Less (?) operation cost (or at least burden)
+- Pay-per-use, pay as you go, change of economical model
+- "Infinitely scalable" for common folks
+- "No need to plan out" infrastructure
+  - Enabling innovation
+  - Power in the hands of developpers/builders
 
-Infrastructure as Code, Continuous Deployment, Infinite resources, scalability
+## Technical benefis
 
-## Cloud engines
-Google, AWS, OVH, Openstack
+- Infrastructure as Code
+- Continuous Deployment
+- Infinite resources
+- On demand scalability and resources
 
-# New Data processing standard
+## Changing the way we interact with hardware
 
-## Object store vs posix file system
+We interact with cloud providers using APIs...
+
+```bash
+gcloud compute --project=deeplearningsps instances create ${INSTANCE_NAME} \
+    --zone=${ZONE} \
+    --machine-type=n1-standard-8 \
+    --scopes=default,storage-rw,compute-rw \
+    --maintenance-policy=TERMINATE \
+    --image-family=ubuntu-1804-lts \
+    --image-project=ubuntu-os-cloud \
+    --boot-disk-size=200GB \
+    --boot-disk-type=pd-standard \
+    --accelerator=type=nvidia-tesla-p100,count=1 \
+    --metadata-from-file startup-script=startup_script.sh
+```
+
+## Infrastructure as Code
+
+- Infrastructure is now managed via text files
+- Data is securely stored on storage
+- So we store code + urls on git... and everything is reproducible ! (not _that_ simple)
+- We use automated deployment tools (terraform, gcp deployment manager...)
+
+## Pet vs Cattle
+
+![](https://blog.octo.com/wp-content/uploads/2016/12/image01-e1482225268205-1024x827.png)
+![](https://blog.octo.com/wp-content/uploads/2019/07/pet_vs-cattle-1024x636.png)
+
+# New Data Processing standard
+
+## Object store
+
+High througput storage system with horizontal scalability
+
+![](../images/FileStorage.png)
+![](../images/ObjectStorage.png)
 
 ## Compute as a service
 
-Using K8S or not.
+- Start and stop compute resources when needed
+  - IaC tools like Terraform, Ansible
+  - Mesos/Nomad nd Other tools.
+- Kubernetes as a Service
+  - With autoscaling features: add Vms if Needed
+  - Dask, Spark and other processing tools plugged in
+- Function as a Service
+  - Just put a bit of code, everything else is handled.
+- HPC as a Service
+  - With POSIX filesystem (sometimes over Object store)
+  - And high performance network.
+
+# Discussions and Troll
+
+## Is using cloud computing less expensive?
+
+- 👍 Depend on your {normal / peak} utilization
+- 👍 Access to latest hardware without investment
+- 👎 Fully utilized hardware is more expensive on the cloud
+- 👎 CLOUD HYGIENE !
+  - Watch for unused services / storage
+  - Shutdown machines when not used
+  - Services stack up...
+
+## Is using cloud computing more secure / safer.
+
+- 👍 The best engineers in the world working on it
+- 👍 Secure regions / private cloud...
+- 👎 Your data somewhere in some datacenter...
+- 👎 "Dependency" towards your cloud provider...
+- 👎 Still need to handle security inside you resources
 
 # First interaction with Google Cloud
 
