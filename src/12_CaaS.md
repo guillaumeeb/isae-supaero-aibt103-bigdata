@@ -245,15 +245,19 @@ docker run my-image
 
 ## Thanks to Dennis
 
-https://supaerodatascience.github.io/OBD/lectures/2_3_kubernetes.html
-
-## Kubernetes tutorial
-
-https://training.play-with-kubernetes.com/kubernetes-workshop/ 
+[Slides](https://supaerodatascience.github.io/OBD/lectures/2_3_kubernetes.html)
 
 # Processing platform as a Service
 
-## Databricks = Spark as a Service 
+## Databricks
 
-## Coiled = Dask as a Service
+Spark as a Service 
+
+## Coiled
+
+Dask as a Service
+
+# Kubernetes tutorial
+
+https://training.play-with-kubernetes.com/kubernetes-workshop/ 
 

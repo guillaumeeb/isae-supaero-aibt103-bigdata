@@ -66,29 +66,29 @@ I'll try to propose some quizz to be sure your following!
   - Big Data use cases
   - Big Data to Machine Learning
 - Big Data platforms (2h)
-  - Hadoop: HDFS and MapReduce, Data distribution and chunking
+  - Hadoop, HDFS and MapReduce,
+  - Datalakes
   - From HPC to Big Data to Cloud and High Performance Data Analytics 
   - BI vs Big Data
-  - Hadoop legacy: Spark, Dask, Object Storage, File format, Datalakes
-  - Distributed programming: Hadoop vs HPC vs Cloud
-  - Distributed Machine Learning, GPGPU computing
+  - Hadoop legacy: Spark, Dask, Object Storage ...
 - Spark Introduction (1h)
 - Play with MapReduce through Spark (Notebook on small datasets) (2h)
 
 ## Day 2: Cloud Computing and Kubernetes
 
-- Cloud computing (2h)
-  - Virtualization and cloud computing: Different approaches, 
-  Economical models, Technical benefits, cloud engines
-  - IaaS, PaaS, CaaS, SaaS, Object Storage
-  - New Data processing standard: object store and compute as a service
+- Introduction to Cloud Computing (2h)
+  - What's the Cloud, Virtualization
+  - Cloud history, layers, Engines
+  - Usage revolution an new Data processing standard
+  - Google Cloud Engine
 - First interaction with Google Cloud, how to get a server? (1h)
-  - Exercise through Google console
-- Container as a Service (1.5h)
-  - Container & Kubernetes
-  - Tutorial (if we have time)
-  - Processing platform as a Service (Databricks, Coiled)
-- Deploy a Data processing platform on the Cloud based on Kubernetes and Dask (2h)
+  - Exercise through Google console or cloud CLI
+- Container & Kubernetes (2h) 
+  - Container & Docker
+  - Play with Docker
+  - Kubernetes & CaaS & PaaS (Databricks, Coiled)
+  - Play with Kubernetes (if we have time)
+- Deploy a Data processing platform on the Cloud based on Kubernetes and Dask (1.5h)
   - Exercise: DaskHub or Dask Kubernetes or Pangeo
 
 ## Day 3: Python ecosystem for data processing and Dask
