@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Guillaume Eynard-Bontemps, CNES (Centre National d’Etudes Spatiales - French Space Agency)">
-  <meta name="dcterms.date" content="2020-11-15">
-  <title>Cloud Computing</title>
+  <meta name="dcterms.date" content="2020-11-16">
+  <title>Introduction to Cloud Computing</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -27,14 +27,232 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">Cloud Computing</h1>
+  <h1 class="title">Introduction to Cloud Computing</h1>
   <p class="author">Guillaume Eynard-Bontemps, CNES (Centre National d’Etudes Spatiales - French Space Agency)</p>
-  <p class="date">2020-11-15</p>
+  <p class="date">2020-11-16</p>
 </section>
 
 <section>
-<section id="virtualization-and-cloud-computing" class="title-slide slide level1">
-<h1>Virtualization and cloud computing</h1>
+<section id="credits-and-thanks" class="title-slide slide level1">
+<h1>Credits and thanks</h1>
+
+</section>
+<section id="didnt-do-this" class="slide level2">
+<h2>Didn’t do this</h2>
+<p>Thanks to <a href="florient.f.chouteau@airbus.com%3E">Florient Chouteau</a> and Dennis Wilson</p>
+<p>for their work on this subject.</p>
+<p>I took most of the content <a href="https://supaerodatascience.github.io/OBD/1_1_overview.html">from theirs</a>.</p>
+</section></section>
+<section>
+<section id="what-is-the-cloud" class="title-slide slide level1">
+<h1>What is the Cloud?</h1>
+
+</section>
+<section id="section" class="slide level2" data-background-image="https://nerds.net/wp-content/uploads/2018/02/cloud-computer-reality-750x646.jpg">
+<h2 data-background-image="https://nerds.net/wp-content/uploads/2018/02/cloud-computer-reality-750x646.jpg"></h2>
+</section>
+<section id="but-its-a-bit-bigger" class="slide level2">
+<h2>But it’s a bit bigger…</h2>
+<p><img src="static/img/fb_datacenter.jpg" alt="" width="30%" height="30%" style="background:none; border:none; box-shadow:none; float:left;margin:0 10px 0 20px;"/></p>
+<p><img src="https://www.datacenterknowledge.com/sites/datacenterknowledge.com/files/wp-content/uploads/2013/06/lulea-rows.jpg" alt="" width="25%" height="25%" style="background:none; border:none; box-shadow:none;"/></p>
+<p><img src="https://www.datacenterknowledge.com/sites/datacenterknowledge.com/files/wp-content/uploads/2013/06/fb-lulea-external-fans.jpg" alt="" width="25%" height="25%" style="background:none; border:none; box-shadow:none;"/></p>
+<p><img src="https://cdn.arstechnica.net/wp-content/uploads/2013/02/openrack2-640x426.jpg" alt="" width="25%" height="25%" style="background:none; border:none; box-shadow:none;"/></p>
+<p><img src="https://engineering.fb.com/wp-content/uploads/2015/05/GM23qAAlFJW8xm4BABnMiwAAAAAAbj0JAAAD.png" alt="" width="25%" height="25%" style="background:none; border:none; box-shadow:none;"/></p>
+<p>(Facebook’s data center &amp; server racks)</p>
+</section>
+<section id="google-cloud-data-center-locations" class="slide level2">
+<h2>Google Cloud Data Center locations</h2>
+<figure>
+<img data-src="https://cloud.google.com/images/locations/regions.png" alt="Data Centers" /><figcaption aria-hidden="true">Data Centers</figcaption>
+</figure>
+</section>
+<section id="cloud-definition" class="slide level2">
+<h2>Cloud Definition</h2>
+<blockquote>
+<p>The cloud is a real physical place - accessed over the internet - where a service is performed for you or where your stuff is stored. Your stuff is stoed in the cloud, not on your device because the cloud is not on any device; the cloud lives in datacenters. A program running on your device accesses the cloud over the internet. The cloud is infinite, accessible from anywhere, at any time</p>
+</blockquote>
+<p>Todd Hoff in “Explain the Cloud like I’m 10”</p>
+</section>
+<section id="cloud-computing" class="slide level2">
+<h2>Cloud Computing</h2>
+<p>Using cloud resources for any purpose, web server, storage, computations.</p>
+<ul>
+<li>The cloud is a set of <strong>cloud providers</strong></li>
+<li>Renting cloud <strong>services</strong></li>
+<li>Increasingly <strong>abstracted</strong> from the physical hardware</li>
+</ul>
+<div class="fragment">
+<p>Examples:</p>
+<ul>
+<li>“Renting a server” … (this is pure “cloud computing”)</li>
+<li>“Replicated &amp; Secure storage space”</li>
+<li>“Autoscaling deployment of a microservice”</li>
+</ul>
+</div>
+</section>
+<section id="a-portion-of-aws-services" class="slide level2">
+<h2>A portion of AWS services</h2>
+<p><img data-src="https://www.matthewb.id.au/cloud/images/AWS-Services.png" style="width:70.0%" /></p>
+</section>
+<section id="how" class="slide level2">
+<h2>How?</h2>
+</section></section>
+<section>
+<section id="virtualization" class="title-slide slide level1">
+<h1>Virtualization</h1>
+
+</section>
+<section id="definition" class="slide level2">
+<h2>Definition</h2>
+<blockquote>
+<p>In computing, virtualization refers to the act of creating a virtual (rather than actual) version of something, including virtual computer hardware platforms, storage devices, and computer network resources.</p>
+</blockquote>
+<p>Wikipedia</p>
+<blockquote>
+<p>Basically we are running software on “abstract hardware” which is a “portion” of a real computer (“bare metal”)</p>
+</blockquote>
+</section>
+<section id="desktop-virtualization" class="slide level2">
+<h2>Desktop virtualization</h2>
+<p><img data-src="https://www.unixtutorial.org/images/posts/Hardware-Virtualization-Desktop-Virtualization-Example.png" style="width:75.0%" /></p>
+</section>
+<section id="server-virtualization" class="slide level2">
+<h2>Server virtualization</h2>
+<p><img data-src="https://www.researchgate.net/profile/Bashir-Mohammed-2/publication/269636339/figure/fig1/AS:295113902313473@1447372045341/illustration-of-the-concept-of-Virtualization-7.png" /></p>
+</section>
+<section id="virtualization-evolution" class="slide level2">
+<h2>Virtualization evolution</h2>
+<p><img data-src="https://miro.medium.com/max/10698/1*wE7TrQmFyRTDwh6VpbkbMQ.png" /></p>
+</section>
+<section id="definitions" class="slide level2">
+<h2>Definitions</h2>
+<ul>
+<li>Hypervisor (VMWare, Virtualbox, KVM): A hypervisor is a program for creating and running virtual machines</li>
+<li>Virtual Machine: A virtual machine is the emulated equivalent of a computer system that runs on top of another system</li>
+<li>Containers: Isolated environments that share the same underlying OS (more this afternoon) &amp; resources</li>
+</ul>
+</section>
+<section id="opens-up-new-possibilities" class="slide level2">
+<h2>Opens up new possibilities</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="hardware-abstraction">Hardware abstraction</h3>
+<ul>
+<li>Hardware Abstraction (“download more RAM”)</li>
+<li>Fine-grained resource allocation / sharing</li>
+<li>Decouple maintenance of hardware from maintenance of software</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="reliability-security">Reliability, security…</h3>
+<figure>
+<img data-src="https://yogeek.github.io/enseignement/Introduction_Virtualisation_CloudComputing/img/vm_charge_repartition.gif" alt="balancing" /><figcaption aria-hidden="true">balancing</figcaption>
+</figure>
+</div>
+</div>
+</section></section>
+<section>
+<section id="cloud-history" class="title-slide slide level1">
+<h1>Cloud history</h1>
+
+</section>
+<section id="aws" class="slide level2">
+<h2>AWS</h2>
+<p>Once upon a time…</p>
+<p>Amazon (the e-commerce store) has “scaling” issues</p>
+<p><img data-src="https://cdn.chiefmartec.com/wp-content/uploads/2016/11/jeff_bezos_big_mandate.jpg" /></p>
+</section>
+<section id="idea" class="slide level2">
+<h2>Idea</h2>
+<p>2002-2003; The idea</p>
+<blockquote>
+<p>Building an infrastructure that is completely standardized, completely automated, and relied extensively on web services for things like storage</p>
+</blockquote>
+<p>http://blog.b3k.us/2009/01/25/ec2-origins.html</p>
+</section>
+<section id="so" class="slide level2">
+<h2>So …</h2>
+<p>So basically Amazon became very good at <em>running</em> scalable infrastructure as <em>services</em></p>
+<ul>
+<li>For themselves…</li>
+<li>… but also for other partners (target)</li>
+</ul>
+<p>And that infrastructure is often there to answer peak load…</p>
+</section>
+<section id="lets-sell-it" class="slide level2">
+<h2>Let’s sell it !</h2>
+<p><img data-src="https://fchouteau.github.io/isae-practical-gcp/static/img/ec2.png" /></p>
+</section></section>
+<section>
+<section id="the-many-layers-of-cloud-computing" class="title-slide slide level1">
+<h1>The many layers of Cloud Computing</h1>
+
+</section>
+<section id="public-hybrid-private" class="slide level2">
+<h2>Public, hybrid, private</h2>
+<figure>
+<img data-src="https://lh5.googleusercontent.com/e-i1nyv49RP3F3ZCHSepEZ4k_qYhqqgk496wDcsOkHLBbaT7deOuXi3AxesN6LNbQMWXJreOzRqpRbUkNgpFMhX8oxQvbAzAsIi8DObI9xWwq0d5lUfZmAlSbJf5ry-Vmto7i2JL" style="width:50.0%" alt="From Padok" /><figcaption aria-hidden="true">From Padok</figcaption>
+</figure>
+</section>
+<section id="different-layers-of-abstractions" class="slide level2">
+<h2>Different layers of abstractions</h2>
+<figure>
+<img data-src="https://static.packt-cdn.com/products/9781789538519/graphics/faf54214-c5e7-4cc4-9594-9cf06dacc923.png" alt="From pakt" /><figcaption aria-hidden="true">From pakt</figcaption>
+</figure>
+</section>
+<section id="abstraction-examples" class="slide level2">
+<h2>Abstraction examples</h2>
+<ul>
+<li>Using data storage service like google cloud storage without managing the infrastructure</li>
+<li>Using google drive</li>
+<li>Renting a server with hard drive and storing data</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>Using data storage service like google cloud storage without managing the infrastructure <strong>PaaS</strong></li>
+<li>Using google drive <strong>SaaS</strong></li>
+<li>Renting a server with hard drive and storing data <strong>IaaS</strong></li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="cloud-engines" class="title-slide slide level1">
+<h1>Cloud Engines</h1>
+
+</section>
+<section id="public" class="slide level2">
+<h2>Public</h2>
+<figure>
+<img data-src="https://yogeek.github.io/enseignement/Introduction_Virtualisation_CloudComputing/img/cloud_vendors.jpg" alt="Cloud Vendors" /><figcaption aria-hidden="true">Cloud Vendors</figcaption>
+</figure>
+</section>
+<section id="public-european" class="slide level2">
+<h2>Public (European)</h2>
+<p><img data-src="https://www.comptoir-hardware.com/images/stories/_logos/ovhcloud.png" /></p>
+<p><img data-src="https://cloud.orange.com/ui/app/static/assets/brand/logo_header_login.png" /></p>
+<p><img data-src="https://open-telekom-cloud.com/resource/blob/data/594220/5aa8c4c54f7a8b90fe1256f26948fbe7/open-telekom-cloud-tsystems-logo.png" /></p>
+<p>Academic, public founded:</p>
+<figure>
+<img data-src="https://www.data-infrastructure.eu/GAIAX/Redaktion/EN/Bilder/gaia-x.jpg?__blob=normal&amp;v=1&amp;size=834w" alt="gaiax" /><figcaption aria-hidden="true">gaiax</figcaption>
+</figure>
+<figure>
+<img data-src="https://eosc-portal.eu/sites/all/themes/theme1/logo.png" alt="EOSC" /><figcaption aria-hidden="true">EOSC</figcaption>
+</figure>
+</section>
+<section id="privateon-premise" class="slide level2">
+<h2>Private/on premise</h2>
+<p><img data-src="http://1.bp.blogspot.com/-1BuI8MUh498/Uc4BOPBpChI/AAAAAAAAGjk/XWA0iYO5drA/s1028/Screen+Shot+2013-06-28+at+12.03.11+PM.png" /></p>
+</section>
+<section id="leaders" class="slide level2">
+<h2>Leaders</h2>
+<p><img data-src="https://cdn.statcdn.com/Infographic/images/normal/18819.jpeg" /></p>
+</section>
+<section id="in-france" class="slide level2">
+<h2>In France</h2>
+<p><img data-src="https://i2.wp.com/datacenter-magazine.fr/contenus/uploads/2020/03/CORE_MARKESS_PRG_OPE_19-20_COMPETITIVE_ENVIRONMENT_PRESSE_MARS-2020.png?resize=600%2C340&amp;ssl=1" /></p>
+</section></section>
+<section>
+<section id="old-slides" class="title-slide slide level1">
+<h1>Old slides</h1>
 
 </section>
 <section id="different-approaches" class="slide level2">
@@ -48,7 +266,7 @@
 <h2>Technical benefits</h2>
 <p>Infrastructure as Code, Continuous Deployment, Infinite resources, scalability</p>
 </section>
-<section id="cloud-engines" class="slide level2">
+<section id="cloud-engines-1" class="slide level2">
 <h2>Cloud engines</h2>
 <p>Google, AWS, OVH, Openstack</p>
 </section></section>
