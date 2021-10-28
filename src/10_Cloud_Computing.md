@@ -296,12 +296,59 @@ High througput storage system with horizontal scalability
 - 👎 "Dependency" towards your cloud provider...
 - 👎 Still need to handle security inside you resources
 
-# First interaction with Google Cloud
+# Google Cloud Platform
 
-## TP Google Cloud
+## Presentation
+
+- One of the main cloud provider
+- Behind AWS in SaaS (serverless...)
+- More "readable" product line (for a Cloud Provider...)
+- Very good "virtual machine" management  
+  * per second billing
+  * fine-grained resource allocation
+
+## Services
+
+![](https://static.packt-cdn.com/products/9781788837675/graphics/ee72c164-888d-4cec-b3f9-efd3b8e8e4cb.png)
+
+## {background-image=https://raw.githubusercontent.com/gregsramblings/google-cloud-4-words/master/Poster-medres.png}
+
+## Concepts: 2ones and regions
+
+![](https://cloud.google.com/docs/images/overview/regions-zones.svg)
+
+## Concepts: Projects
+
+![](https://cloud.google.com/docs/images/overview/console-ids.png)
+
+- Access (Enabling API/Services)
+- Ressources (Quota by project)
+- Networking
+- Billing
+
+## Concepts: Identity and Access Management (IAM)
+
+![IAM](https://miro.medium.com/max/638/0*kGyUfNWZCk78hmPU.)
+
+## Interacting with GCP: The Console
+
+![https://console.cloud.google.com](https://cloud.google.com/docs/images/overview/console.png)
+
+## Interacting with GCP: SDK & Cloud Shell
+
+- Using the gcloud CLI: https://cloud.google.com/sdk/install
+- Using Google Cloud Shell: A small VM instance you can connect to with your browser
+
+# First interaction with Google Cloud (Exercise)
+
+## Objectives
 
 Everyone has its credits?
 
-how to get a server? 
+- Create your GCP account, configure your credentials
+- Interact with Google cloud console, 
+- Connect to google cloud shell and interact with it
+- Create a Virtual Machine and connect to it
+- Create a Google Storage bucket and upload content
 
-TP through Google console, account, princing, ressources… VMs and Kubernetes
+We'll do more this afternoon!
