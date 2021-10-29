@@ -259,8 +259,8 @@ gcloud compute --project=deeplearningsps instances create ${INSTANCE_NAME} \
 
 High througput storage system with horizontal scalability
 
-![](../images/FileStorage.png)
-![](../images/ObjectStorage.png)
+![](images/FileStorage.png)
+![](images/ObjectStorage.png)
 
 ## Compute as a service
 

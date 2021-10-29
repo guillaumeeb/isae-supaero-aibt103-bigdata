@@ -295,7 +295,7 @@ https://www.kubeflow.org/
 
 ## Coiled: Dask as a Service
 
-![](../images/Coiled.png)
+![](images/Coiled.png)
 
 # Kubernetes tutorial
 
