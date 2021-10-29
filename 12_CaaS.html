@@ -95,16 +95,24 @@
   <p class="date">2020-11-15</p>
 </section>
 
-<section id="credits-and-thanks" class="slide level1">
+<section>
+<section id="credits-and-thanks" class="title-slide slide level1">
 <h1>Credits and thanks</h1>
-<h2 id="didnt-do-this">Didn’t do this</h2>
+
+</section>
+<section id="didnt-do-this" class="slide level2">
+<h2>Didn’t do this</h2>
 <p>Thanks to <a href="florient.f.chouteau@airbus.com%3E">Florient Chouteau</a> and Dennis Wilson</p>
 <p>for their work on this subject.</p>
 <p>I took most of the content from theirs: - https://supaerodatascience.github.io/OBD/slides/1_4_containers.html - https://supaerodatascience.github.io/OBD/slides/1_5_orchestration.html - https://supaerodatascience.github.io/OBD/slides/2_3_kubernetes.html#/</p>
-</section>
-<section id="containers" class="slide level1">
+</section></section>
+<section>
+<section id="containers" class="title-slide slide level1">
 <h1>Containers</h1>
-<h2 id="why-containers">Why containers?</h2>
+
+</section>
+<section id="why-containers" class="slide level2">
+<h2>Why containers?</h2>
 <ul>
 <li>How to get software to run reliably when moved from one computing environment to another
 <ul>
@@ -116,9 +124,13 @@
 <li>Build once, run anywhere</li>
 <li>Pet vs Cattle, at another level</li>
 </ul>
-<h2 id="container-vs-vm">Container vs VM</h2>
+</section>
+<section id="container-vs-vm" class="slide level2">
+<h2>Container vs VM</h2>
 <p><img data-src="https://images.contentstack.io/v3/assets/blt300387d93dabf50e/bltb6200bc085503718/5e1f209a63d1b6503160c6d5/containers-vs-virtual-machines.jpg" /></p>
-<h2 id="container-vs-vm-similarities-and-drawbacks">Container vs VM: similarities and drawbacks</h2>
+</section>
+<section id="container-vs-vm-similarities-and-drawbacks" class="slide level2">
+<h2>Container vs VM: similarities and drawbacks</h2>
 <div class="columns">
 <div class="column" style="width:30%;">
 <h3 id="similarities">Similarities</h3>
@@ -127,14 +139,17 @@
 <li>Movable between hosts</li>
 </ul>
 </div><div class="column" style="width:40%;">
-<h2 id="vm-drawbacks">VM Drawbacks</h2>
+<section id="vm-drawbacks" class="slide level2">
+<h2>VM Drawbacks</h2>
 <ul>
 <li>VM Contains full OS at each install =&gt; Install + Resource overhead</li>
 <li>VM needs pre-allocation of resource for each VM (=&gt; Waste if not used)</li>
 <li>Communication between VM &lt;=&gt; Communication between computers</li>
 </ul>
+</section>
 </div><div class="column" style="width:30%;">
-<h2 id="continers-drawbacks">Continers Drawbacks</h2>
+<section id="continers-drawbacks" class="slide level2">
+<h2>Continers Drawbacks</h2>
 <ul>
 <li>Containers are Linux based (but still works on Windows)</li>
 <li>Isolation is not perfect since containers share underlying kernels
@@ -142,13 +157,18 @@
 <li>(security and stability)</li>
 </ul></li>
 </ul>
+</section>
 </div>
 </div>
-<h2 id="applications-concept">Applications concept</h2>
+</section>
+<section id="applications-concept" class="slide level2">
+<h2>Applications concept</h2>
 <figure>
 <img data-src="https://www.nebulaworks.com/insights/posts/containers-the-new-guy-on-the-block-so-why-all-the-noise/assets/images/build-ship-run.77855d42ceb65e4f433e274a3105b95d.gif" alt="Build, Ship, Run" /><figcaption aria-hidden="true">Build, Ship, Run</figcaption>
 </figure>
-<h2 id="containers-for-data-science">Containers for Data science</h2>
+</section>
+<section id="containers-for-data-science" class="slide level2">
+<h2>Containers for Data science</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>Data Science is about <strong>reproducibility</strong></p>
@@ -168,16 +188,22 @@
 </ul>
 </div>
 </div>
-</section>
-<section id="docker" class="slide level1">
+</section></section>
+<section>
+<section id="docker" class="title-slide slide level1">
 <h1>Docker</h1>
-<h2 id="docker-1">Docker</h2>
+
+</section>
+<section id="docker-1" class="slide level2">
+<h2>Docker</h2>
 <p>Docker is <strong>a</strong> solution that <strong>standardizes</strong> packaging and execution of software in isolated environments (<strong>containers</strong>) that share resources and can communicate between themselves</p>
 <blockquote>
 <p>Build, Share, and Run Any App, Anywhere</p>
 </blockquote>
 <p><img data-src="https://www.docker.com/sites/default/files/social/docker_facebook_share.png" /></p>
-<h2 id="history">History</h2>
+</section>
+<section id="history" class="slide level2">
+<h2>History</h2>
 <p><a href="https://www.docker.com/">Docker</a></p>
 <ul>
 <li>Created in 2013</li>
@@ -186,13 +212,19 @@
 <li>Docker is a company built around its main product (Docker Engine)</li>
 <li>In charge of dev of everything docker + additional paid services (Docker hub…)</li>
 </ul>
-<h2 id="under-the-hood">Under the hood</h2>
+</section>
+<section id="under-the-hood" class="slide level2">
+<h2>Under the hood</h2>
 <p>Docker is some fancy tech over linux kernel capabilities (containers)</p>
 <p><img data-src="https://miro.medium.com/max/700/1*4dxszUyIznfjjzSNgpI0nw.png" /></p>
 <p><a href="https://medium.com/@goyalsaurabh66/docker-basics-cb006b9be243">more info</a></p>
-<h2 id="using-docker-in-practice">Using Docker in practice</h2>
+</section>
+<section id="using-docker-in-practice" class="slide level2">
+<h2>Using Docker in practice</h2>
 <p><img data-src="static/img/docker-jworkflow.jpg" /></p>
-<h2 id="vocabulary-of-docker">Vocabulary of Docker</h2>
+</section>
+<section id="vocabulary-of-docker" class="slide level2">
+<h2>Vocabulary of Docker</h2>
 <ul>
 <li><strong>Layer</strong>: Set of read-only files to provision the system</li>
 <li><strong>Image</strong>: Read-Only layer “snapshot” (or blueprint) of an environment. Can inherit from another <strong>Image</strong>. Image have a <em>name</em> and a <em>tag</em></li>
@@ -201,15 +233,21 @@
 <li><strong>Container Registry</strong>: Repository of Docker Images</li>
 <li><strong>Dockerhub</strong>: The main container registry of docker.com</li>
 </ul>
-<h2 id="workflow">Workflow</h2>
+</section>
+<section id="workflow" class="slide level2">
+<h2>Workflow</h2>
 <figure>
 <img data-src="https://pointful.github.io/docker-intro/docker-img/basics-of-docker-system.png" alt="workflow" /><figcaption aria-hidden="true">workflow</figcaption>
 </figure>
-<h2 id="layers-container-image">Layers, Container, Image</h2>
+</section>
+<section id="layers-container-image" class="slide level2">
+<h2>Layers, Container, Image</h2>
 <figure>
 <img data-src="https://jfrog--c.documentforce.com/servlet/servlet.ImageServer?id=0151r000006uDeN&amp;oid=00D20000000M3v0&amp;lastMod=1584629516000" alt="layers" /><figcaption aria-hidden="true">layers</figcaption>
 </figure>
-<h2 id="layer-image-analogy">Layer / Image Analogy</h2>
+</section>
+<section id="layer-image-analogy" class="slide level2">
+<h2>Layer / Image Analogy</h2>
 <p>Docker:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode dockerfile"><code class="sourceCode dockerfile"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> python:3.6</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">RUN</span> pip install torch</span>
@@ -227,7 +265,9 @@
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>       <span class="va">self</span>.b <span class="op">=</span> b</span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>container <span class="op">=</span> NewImage(a<span class="op">=</span><span class="dv">0</span>,b<span class="op">=</span><span class="dv">1</span>)</span></code></pre></div>
-<h2 id="dockerfile">Dockerfile</h2>
+</section>
+<section id="dockerfile" class="slide level2">
+<h2>Dockerfile</h2>
 <ul>
 <li>Used to build Images</li>
 </ul>
@@ -247,16 +287,22 @@
 <li>Reproducible (if you include static data)</li>
 <li>Can be put under version control (simple text file)</li>
 </ul>
-<h2 id="architecture">Architecture</h2>
+</section>
+<section id="architecture" class="slide level2">
+<h2>Architecture</h2>
 <p><img data-src="https://docs.docker.com/engine/images/architecture.svg" /></p>
-<h2 id="registry">Registry</h2>
+</section>
+<section id="registry" class="slide level2">
+<h2>Registry</h2>
 <ul>
 <li>Local registry: All images/containers in your machine</li>
 <li>https://hub.docker.com/</li>
 <li>GCP Container Registry</li>
 <li>Social Dimension (share docker images to speed up development/deployment)</li>
 </ul>
-<h2 id="alternatives-singularity">Alternatives: Singularity</h2>
+</section>
+<section id="alternatives-singularity" class="slide level2">
+<h2>Alternatives: Singularity</h2>
 <p><img data-src="https://sylabs.io/guides/3.0/user-guide/_static/logo.png" /></p>
 <p>“Docker for HPC”</p>
 <ul>
@@ -269,7 +315,9 @@
 <li>Bridge between Dockerimage and Singularity images</li>
 <li>OCI compliant</li>
 </ul>
-<h2 id="alternatives-podman">Alternatives: Podman</h2>
+</section>
+<section id="alternatives-podman" class="slide level2">
+<h2>Alternatives: Podman</h2>
 <p><img data-src="https://podman.io/images/podman.svg" /></p>
 <p>“Rootless Docker for Redhat”</p>
 <ul>
@@ -278,33 +326,96 @@
 <li>Fully compliant with Docker images (and OCI)</li>
 <li>Better security and isolation</li>
 </ul>
-</section>
-<section id="hands-on-docker" class="slide level1">
+</section></section>
+<section>
+<section id="hands-on-docker" class="title-slide slide level1">
 <h1>Hands on Docker</h1>
-<h2 id="play-with-docker">Play with Docker</h2>
+
+</section>
+<section id="play-with-docker" class="slide level2">
+<h2>Play with Docker</h2>
 <ul>
 <li>You need to have a docker hub account : https://hub.docker.com/</li>
 <li>https://labs.play-with-docker.com/</li>
 <li>Free, interactive, cluster of vms to experiment docker with</li>
 <li>https://training.play-with-docker.com/ lots of resoures !</li>
 </ul>
-</section>
-<section id="kubernetes" class="slide level1">
+</section></section>
+<section>
+<section id="kubernetes" class="title-slide slide level1">
 <h1>Kubernetes</h1>
-<h2 id="thanks-to-dennis">Thanks to Dennis</h2>
+
+</section>
+<section id="why-orchestration" class="slide level2">
+<h2>Why orchestration?</h2>
+<p>Suppose I have a large pool of machines available</p>
+<ul>
+<li>How do I <strong>deploy my container</strong>?</li>
+<li>How do I <strong>put the right containers at the right spot</strong>?</li>
+<li>How do I <strong>scale (up and down) to demand</strong>?</li>
+<li>How do I <strong>expose the http endpoints</strong>?</li>
+<li>How do I <strong>manage failure of containers</strong>?</li>
+<li>How do I <strong>update my model without downtime</strong>?</li>
+</ul>
+</section>
+<section id="tools-example" class="slide level2">
+<h2>Tools example</h2>
+<p>Examples…</p>
+<ul>
+<li>Docker Swarm</li>
+<li>CoreOS Fleet</li>
+<li><a href="https://mesos.apache.org/">Apache Mesos</a> / <a href="https://github.com/mesosphere/marathon">Marathon</a></li>
+</ul>
+<p>… and so many more !</p>
+<figure>
+<img data-src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&amp;fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F996C7D4B5AF43B6C27" alt="ecosystem" /><figcaption aria-hidden="true">ecosystem</figcaption>
+</figure>
+</section>
+<section id="short-kubernetes-history" class="slide level2">
+<h2>Short Kubernetes history</h2>
+<p>Kubernetes (or k8s) comes from Google’s internal systems <a href="https://github.com/SupaeroDataScience/OBD/blob/master/readings/borg.pdf">Borg</a></p>
+<p>It is open source now <a href="https://github.com/kubernetes" class="uri">https://github.com/kubernetes</a> and used… everywhere ?</p>
+</section>
+<section id="thanks-to-dennis-for-the-next-part" class="slide level2">
+<h2>Thanks to Dennis for the next part</h2>
 <p><a href="https://supaerodatascience.github.io/OBD/lectures/2_3_kubernetes.html">Slides</a></p>
+</section></section>
+<section>
+<section id="processing-platform-on-kubernetes" class="title-slide slide level1">
+<h1>Processing platform on Kubernetes</h1>
+
 </section>
-<section id="processing-platform-as-a-service" class="slide level1">
-<h1>Processing platform as a Service</h1>
-<h2 id="databricks">Databricks</h2>
-<p>Spark as a Service</p>
-<h2 id="coiled">Coiled</h2>
-<p>Dask as a Service</p>
+<section id="kubeflow" class="slide level2">
+<h2>Kubeflow</h2>
+<p>https://www.kubeflow.org/</p>
+<figure>
+<img data-src="https://miro.medium.com/max/2446/1*ZQsFV3o1c3Amu26Z-IEd7w.png" style="width:55.0%" alt="kubeflow" /><figcaption aria-hidden="true">kubeflow</figcaption>
+</figure>
 </section>
-<section id="kubernetes-tutorial" class="slide level1">
+<section id="jupyterhubbinder" class="slide level2">
+<h2>Jupyterhub/Binder</h2>
+<p><img data-src="https://miro.medium.com/max/1400/1*F_jJ1nDSQgBhrkbsEXB93Q.png" style="width:70.0%" /></p>
+</section>
+<section id="databricks-spark-as-a-service" class="slide level2">
+<h2>Databricks: Spark as a Service</h2>
+<p><img data-src="https://docs.gcp.databricks.com/_images/databricks-architecture-gcp.png" style="width:50.0%" /></p>
+</section>
+<section id="coiled-dask-as-a-service" class="slide level2">
+<h2>Coiled: Dask as a Service</h2>
+<p><img data-src="../images/Coiled.png" /></p>
+</section></section>
+<section>
+<section id="kubernetes-tutorial" class="title-slide slide level1">
 <h1>Kubernetes tutorial</h1>
-<p>https://training.play-with-kubernetes.com/kubernetes-workshop/</p>
+
 </section>
+<section id="try-some" class="slide level2">
+<h2>Try some</h2>
+<p>https://training.play-with-kubernetes.com/kubernetes-workshop/</p>
+<p>https://www.katacoda.com/courses/kubernetes</p>
+<p>https://labs.play-with-k8s.com/</p>
+<p>https://github.com/yogeek/kubernetes-local-development</p>
+</section></section>
     </div>
   </div>
 
