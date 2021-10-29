@@ -51,12 +51,14 @@ date: 2020-11-17
 ## Matlab and others
 
 Matlab (and equivalent Scilab)
+
 - Interactive
 - With IDE and plotting
 - Closed, not reproducible
 - For some searchers
 
 C/C++, Java
+
 - Static languages
 - Not much visualization
 - For under layers of use libraries.
@@ -157,6 +159,16 @@ rng = np.random.default_rng()
 samples = rng.normal(size=2500)
 ```
 
+## Xarray
+
+![](http://xarray.pydata.org/en/stable/_static/dataset-diagram-logo.png){height=10%}
+
+- Manipulate N-dimensionnal **labelled** arrays and **datasets**
+- Introduce dimensions, coordinates and attributes on top of Numpy
+- Borrows heavily from Pandas
+
+![](https://gdfa.ugr.es/python/climate_data/img/xarray2.png)
+
 ## Matplotlib
 
 :::::::::::::: {.columns}
@@ -223,57 +235,211 @@ plt.show()
 :::
 ::::::::::::::
 
-# Distributed computing
+# Distributed and sctientific computing
 
 ## Built-in mutliprocessing
 
+- Python core package
+- Spawning processes using an API similar to the threading module
+- Effectively side-steps the **Global Interpreter Lock** by using subprocesses instead of threads
+
+```python
+from multiprocessing import Pool
+
+def f(x):
+    return x*x
+
+if __name__ == '__main__':
+    with Pool(5) as p:
+        print(p.map(f, [1, 2, 3]))
+```
+
 ## Dask
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
+![](https://dask.org/_images/dask_horizontal_white_no_pad.svg){height=10%}
+
+- Provides advanced parallelism for analytics
+- First designed as allowing to process datasets bigger than memory
+- Now from local computer to clusters, to HPC or Cloud computing
+- Scales Numpy and Pandas with same interfaces
+- More low level APIs for distributing any algorithm
+- More this afternoon
+
+```python
+import dask.dataframe as dd
+df = dd.read_csv('2014-*.csv')
+df.describe().compute()
+```
+
+:::
+::: {.column width="50%"}
+
+![](https://docs.dask.org/en/latest/_images/dask-dataframe.svg)
+
+:::
+::::::::::::::
 
 ## PySpark
 
-## Ray
+![](https://databricks.com/wp-content/uploads/2018/12/PySpark-1024x164.png){height=10%}
 
-# Packaging
+- Spark is Scala (JVM based), but for data scientists, provides Python and R interface
+- This means some complexity and translation between languages
 
-## Pip
+![](images/PySpark.jpg)
 
-## Conda
 
-# Vizualisation
+## Others
 
-## Matplotlib, 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
 
-## Seaborn Leaflet
+### [Ray](https://www.ray.io)
 
-## Pyviz: Bokeh, Holowiews… 
+![](https://docs.ray.io/en/latest/_static/ray_logo.png){height=10%}
 
-# Others
+- Scale general Python apps
+- And a lot of high-level libs oriented towards Machine and Deep Learning
 
-## Binder?
+:::
+::: {.column width="50%"}
 
-https://pyviz.org/ 
+### [Vaex](https://vaex.io/docs/index.html)
+
+![](https://user-images.githubusercontent.com/18574951/90343540-a1181f80-e011-11ea-8ff5-bb21e5fdc71c.png){height=10%}
+
+- Lazy out-of-core Dataframes (similar to Pandas)
+- Performance oriented on tabular datasets
+- Vizualisation
+
+:::
+::::::::::::::
+
+# Vizualisation (other than Matplotlib)
+
+## Landscape
+
+![Adaptation of Jake VanderPlas graphic about the Python visualization landscape, by Nicolas P. Rougier](https://rougier.github.io/python-visualization-landscape/landscape-colors.png)
+
+## Seaborn
+
+![](https://seaborn.pydata.org/_images/logo-wide-lightbg.svg)
+
+- Based on Matplotlib
+- Integrates closely with Pandas
+- Dataset oriented to produce informative plots
+
+![](https://seaborn.pydata.org/_images/faceted_lineplot.png)
+
+## Plotly
+
+![](https://en.wikipedia.org/wiki/Plotly#/media/File:Plotly-logo-01-square.png){width=10%}
+
+- Interactive, publication-quality graphs
+- Make dashboard with Dash
+
+![](https://raw.githubusercontent.com/cldougl/plot_images/add_r_img/anim.gif)
+
+## Pyviz
+
+![](https://miro.medium.com/max/518/1*Tw1LzNLwcmpJPVI0v1ZsVA.png)
+
+![](https://miro.medium.com/max/2400/1*I-xXZpedIymi1cP3RRrhHw.png)
+
+- **HoloViews**: Declarative objects for instantly visualizable data, building Bokeh plots from convenient high-level specifications
+- **GeoViews**: Visualizable geographic data that that can be mixed and matched with HoloViews objects
+- **Bokeh**: Interactive plotting in web browsers, running JavaScript but controlled by Python
+- **Panel**: Assembling objects from many different libraries into a layout or app, whether in a Jupyter notebook or in a standalone serveable dashboard
+- **Datashader**: Rasterizing huge datasets quickly as fixed-size images
+- **hvPlot**: Quickly return interactive HoloViews or GeoViews objects from your Pandas, Xarray, or other data structures
+- **Param**: Declaring user-relevant parameters, making it simple to work with widgets inside and outside of a notebook context
 
 # Machine and Deep Learning
 
+## Kaggle stats
+
+![Machine Learning Frameworks usage](images/KaggleFrameworkUsage.png)
+
 ## Sickit Learn
 
-Every traditional ML algorithm.
-Python.
+![](https://scikit-learn.org/stable/_images/scikit-learn-logo-notext.png){height=150px}
+
+- Simple and efficient tools for predictive data analysis
+- Built on NumPy, SciPy, and matplotlib
+- Every classical ML Algorithms
+- Standard interface with Pipelines, estimators, transformers
+- No GPU support (so not good for Deep Learning)
+
+```python
+from sklearn.ensemble import RandomForestClassifier
+clf = RandomForestClassifier(random_state=0)
+X = [[ 1,  2,  3],  # 2 samples, 3 features
+     [11, 12, 13]]
+y = [0, 1]  # classes of each sample
+clf.fit(X, y)
+```
 
 ## TensorFlow, Keras, Pytorch
 
-Deep Learning on GPU with no knowledge
-Python.
+![](https://camo.githubusercontent.com/906e661107a3bc03104ca5d88336d1f4b0e80fdcac65efaf7904041d371c747f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6b657261732e696f2f696d672f6b657261732d6c6f676f2d323031382d6c617267652d313230302e706e67){height=150px}
+![](https://camo.githubusercontent.com/aeb4f612bd9b40d81c62fcbebd6db44a5d4344b8b962be0138817e18c9c06963/68747470733a2f2f7777772e74656e736f72666c6f772e6f72672f696d616765732f74665f6c6f676f5f686f72697a6f6e74616c2e706e67){height=150px}
+![](https://upload.wikimedia.org/wikipedia/commons/9/96/Pytorch_logo.png){height=150px}
 
-## Xgboost, Light GBM…
+- Deep Learning on GPU with no previous knowledge
+- Keras on top of Tensorflow
+- Tensorflow complete platform, with TensorBoard and other tools
+- Always trolls about Keras/TF vs PyTorch
 
-Other popular algorithms. Python.
+![](https://www.tensorflow.org/tensorboard/images/tensorboard.gif){width=50%}
 
-# Scientific domain
+## Gradient boosting algorithms
 
-## Astropy Sunpy
+:::::::::::::: {.columns}
+::: {.column width="50%"}
 
-## GeoPandas...
+### [XGBoost](https://xgboost.readthedocs.io/en/latest/)
+
+- Distributed gradient boosting library
+- Efficient, flexible and portable
+- XGBoost provides a parallel tree boosting
+- Runs on major distributed environment (Hadoop, SGE, MPI, Spark)
+- Solve problems beyond billions of examples
+
+![](https://raw.githubusercontent.com/dmlc/dmlc.github.io/master/img/logo-m/xgboost.png)
+
+:::
+::: {.column width="50%"}
+
+### [LighGBM](https://lightgbm.readthedocs.io/en/latest/)
+
+- Distributed gradient boosting framework
+- Efficient, Faster, lower memory usage, better accuracy
+- Support of parallel, distributed, and GPU learning
+- Capable of handling large-scale data
+
+![](https://lightgbm.readthedocs.io/en/latest/_images/LightGBM_logo_black_text.svg)
+
+:::
+::::::::::::::
+
+# Others
+
+## Packaging: Pip / Conda
+
+## Numba
+
+## Binder?
+
+## Scientific domain
+
+Astropy Sunpy
+
+Xarray
+
+GeoPandas...
 
 # Exercice
 
