@@ -104,24 +104,33 @@
 <h2>Didn’t do this</h2>
 <p>Thanks to <a href="florient.f.chouteau@airbus.com%3E">Florient Chouteau</a> and Dennis Wilson</p>
 <p>for their work on this subject.</p>
-<p>I took most of the content <a href="https://supaerodatascience.github.io/OBD/1_1_overview.html">from theirs</a>.</p>
+<p>I took most of the content:</p>
+<ul>
+<li>https://supaerodatascience.github.io/OBD/1_1_overview.html</li>
+<li>https://supaerodatascience.github.io/OBD/slides/1_1_cloud_computing.html</li>
+<li>https://supaerodatascience.github.io/OBD/slides/1_2_cloud_usage.html</li>
+<li>https://supaerodatascience.github.io/OBD/slides/1_3_gcp.html</li>
+</ul>
 </section></section>
 <section>
 <section id="what-is-the-cloud" class="title-slide slide level1">
 <h1>What is the Cloud?</h1>
 
 </section>
-<section id="section" class="slide level2" data-background-image="https://nerds.net/wp-content/uploads/2018/02/cloud-computer-reality-750x646.jpg">
-<h2 data-background-image="https://nerds.net/wp-content/uploads/2018/02/cloud-computer-reality-750x646.jpg"></h2>
+<section id="section" class="slide level2" data-background-image="https://nerds.net/wp-content/uploads/2018/02/cloud-computer-reality-750x646.jpg" data-background-size="contains">
+<h2 data-background-image="https://nerds.net/wp-content/uploads/2018/02/cloud-computer-reality-750x646.jpg" data-background-size="contains"></h2>
 </section>
 <section id="but-its-a-bit-bigger" class="slide level2">
 <h2>But it’s a bit bigger…</h2>
-<p><img src="static/img/fb_datacenter.jpg" alt="" width="30%" height="30%" style="background:none; border:none; box-shadow:none; float:left;margin:0 10px 0 20px;"/></p>
-<p><img src="https://www.datacenterknowledge.com/sites/datacenterknowledge.com/files/wp-content/uploads/2013/06/lulea-rows.jpg" alt="" width="25%" height="25%" style="background:none; border:none; box-shadow:none;"/></p>
-<p><img src="https://www.datacenterknowledge.com/sites/datacenterknowledge.com/files/wp-content/uploads/2013/06/fb-lulea-external-fans.jpg" alt="" width="25%" height="25%" style="background:none; border:none; box-shadow:none;"/></p>
-<p><img src="https://cdn.arstechnica.net/wp-content/uploads/2013/02/openrack2-640x426.jpg" alt="" width="25%" height="25%" style="background:none; border:none; box-shadow:none;"/></p>
-<p><img src="https://engineering.fb.com/wp-content/uploads/2015/05/GM23qAAlFJW8xm4BABnMiwAAAAAAbj0JAAAD.png" alt="" width="25%" height="25%" style="background:none; border:none; box-shadow:none;"/></p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="https://supaerodatascience.github.io/OBD/slides/static/img/fb_datacenter.jpg" style="width:30.0%" /></p>
+</div><div class="column" style="width:70%;">
+<p><img data-src="https://www.datacenterknowledge.com/sites/datacenterknowledge.com/files/wp-content/uploads/2013/06/lulea-rows.jpg" style="width:25.0%" /> <img data-src="https://www.datacenterknowledge.com/sites/datacenterknowledge.com/files/wp-content/uploads/2013/06/fb-lulea-external-fans.jpg" style="width:25.0%" /></p>
+<p><img data-src="https://cdn.arstechnica.net/wp-content/uploads/2013/02/openrack2-640x426.jpg" style="width:25.0%" /> <img data-src="https://engineering.fb.com/wp-content/uploads/2015/05/GM23qAAlFJW8xm4BABnMiwAAAAAAbj0JAAAD.png" style="width:25.0%" /></p>
 <p>(Facebook’s data center &amp; server racks)</p>
+</div>
+</div>
 </section>
 <section id="google-cloud-data-center-locations" class="slide level2">
 <h2>Google Cloud Data Center locations</h2>
@@ -132,7 +141,7 @@
 <section id="cloud-definition" class="slide level2">
 <h2>Cloud Definition</h2>
 <blockquote>
-<p>The cloud is a real physical place - accessed over the internet - where a service is performed for you or where your stuff is stored. Your stuff is stoed in the cloud, not on your device because the cloud is not on any device; the cloud lives in datacenters. A program running on your device accesses the cloud over the internet. The cloud is infinite, accessible from anywhere, at any time</p>
+<p>The cloud is a real physical place - accessed over the internet - where a service is performed for you or where your stuff is stored. Your stuff is stored in the cloud, not on your device because the cloud is not on any device; the cloud lives in datacenters. A program running on your device accesses the cloud over the internet. The cloud is infinite, accessible from anywhere, at any time</p>
 </blockquote>
 <p>Todd Hoff in “Explain the Cloud like I’m 10”</p>
 </section>
@@ -153,9 +162,8 @@
 </ul>
 </div>
 </section>
-<section id="a-portion-of-aws-services" class="slide level2">
-<h2>A portion of AWS services</h2>
-<p><img data-src="https://www.matthewb.id.au/cloud/images/AWS-Services.png" style="width:70.0%" /></p>
+<section id="a-portion-of-aws-services" class="slide level2" data-background-image="https://www.matthewb.id.au/cloud/images/AWS-Services.png" data-background-size="contains">
+<h2 data-background-image="https://www.matthewb.id.au/cloud/images/AWS-Services.png" data-background-size="contains">A portion of AWS services</h2>
 </section>
 <section id="how" class="slide level2">
 <h2>How?</h2>
@@ -190,9 +198,9 @@
 <section id="definitions" class="slide level2">
 <h2>Definitions</h2>
 <ul>
-<li>Hypervisor (VMWare, Virtualbox, KVM): A hypervisor is a program for creating and running virtual machines</li>
-<li>Virtual Machine: A virtual machine is the emulated equivalent of a computer system that runs on top of another system</li>
-<li>Containers: Isolated environments that share the same underlying OS (more this afternoon) &amp; resources</li>
+<li><strong>Hypervisor</strong> (VMWare, Virtualbox, KVM): A hypervisor is a program for creating and running virtual machines</li>
+<li><strong>Virtual Machine</strong>: A virtual machine is the emulated equivalent of a computer system that runs on top of another system</li>
+<li><strong>Containers</strong>: Isolated environments that share the same underlying OS (more this afternoon) &amp; resources</li>
 </ul>
 </section>
 <section id="opens-up-new-possibilities" class="slide level2">
@@ -234,7 +242,7 @@
 </section>
 <section id="so" class="slide level2">
 <h2>So …</h2>
-<p>So basically Amazon became very good at <em>running</em> scalable infrastructure as <em>services</em></p>
+<p>Basically Amazon became very good at <em>running</em> scalable infrastructure as <em>services</em></p>
 <ul>
 <li>For themselves…</li>
 <li>… but also for other partners (target)</li>
@@ -265,9 +273,9 @@
 <section id="abstraction-examples" class="slide level2">
 <h2>Abstraction examples</h2>
 <ul>
-<li>Using data storage service like google cloud storage without managing the infrastructure</li>
-<li>Using google drive</li>
-<li>Renting a server with hard drive and storing data</li>
+<li>Using data storage service like google cloud storage without managing the infrastructure ?aaS</li>
+<li>Using google drive ?aaS</li>
+<li>Renting a server with hard drive and storing data ?aaS</li>
 </ul>
 <div class="fragment">
 <ul>
@@ -290,16 +298,9 @@
 </section>
 <section id="public-european" class="slide level2">
 <h2>Public (European)</h2>
-<p><img data-src="https://www.comptoir-hardware.com/images/stories/_logos/ovhcloud.png" /></p>
-<p><img data-src="https://cloud.orange.com/ui/app/static/assets/brand/logo_header_login.png" /></p>
-<p><img data-src="https://open-telekom-cloud.com/resource/blob/data/594220/5aa8c4c54f7a8b90fe1256f26948fbe7/open-telekom-cloud-tsystems-logo.png" /></p>
+<p><img data-src="https://www.comptoir-hardware.com/images/stories/_logos/ovhcloud.png" style="width:20.0%" /> <img data-src="https://cloud.orange.com/ui/app/static/assets/brand/logo_header_login.png" style="width:20.0%" /> <img data-src="https://open-telekom-cloud.com/resource/blob/data/594220/5aa8c4c54f7a8b90fe1256f26948fbe7/open-telekom-cloud-tsystems-logo.png" style="width:20.0%" /></p>
 <p>Academic, public founded:</p>
-<figure>
-<img data-src="https://www.data-infrastructure.eu/GAIAX/Redaktion/EN/Bilder/gaia-x.jpg?__blob=normal&amp;v=1&amp;size=834w" alt="gaiax" /><figcaption aria-hidden="true">gaiax</figcaption>
-</figure>
-<figure>
-<img data-src="https://eosc-portal.eu/sites/all/themes/theme1/logo.png" alt="EOSC" /><figcaption aria-hidden="true">EOSC</figcaption>
-</figure>
+<p><img data-src="https://www.data-infrastructure.eu/GAIAX/Redaktion/EN/Bilder/gaia-x.jpg?__blob=normal&amp;v=1&amp;size=834w" style="width:20.0%" alt="gaiax" /> <img data-src="https://eosc-portal.eu/sites/all/themes/theme1/logo.png" style="width:20.0%" alt="EOSC" /></p>
 </section>
 <section id="privateon-premise" class="slide level2">
 <h2>Private/on premise</h2>
@@ -307,7 +308,7 @@
 </section>
 <section id="leaders" class="slide level2">
 <h2>Leaders</h2>
-<p><img data-src="https://cdn.statcdn.com/Infographic/images/normal/18819.jpeg" /></p>
+<p><img data-src="https://cdn.statcdn.com/Infographic/images/normal/18819.jpeg" style="width:50.0%" /></p>
 </section>
 <section id="in-france" class="slide level2">
 <h2>In France</h2>
@@ -331,7 +332,7 @@
 <ul>
 <li>Outsourcing infra, maintenance, security, development of new services
 <ul>
-<li>Less (?) operation cost (or at least burden)</li>
+<li>Less (?) operation cost (or at less burden)</li>
 </ul></li>
 <li>Pay-per-use, pay as you go, change of economical model</li>
 <li>“Infinitely scalable” for common folks</li>
@@ -395,11 +396,11 @@
 <li>Start and stop compute resources when needed
 <ul>
 <li>IaC tools like Terraform, Ansible</li>
-<li>Mesos/Nomad nd Other tools.</li>
+<li>Mesos/Nomad and other tools.</li>
 </ul></li>
 <li>Kubernetes as a Service
 <ul>
-<li>With autoscaling features: add Vms if Needed</li>
+<li>With autoscaling features: add VMs if needed</li>
 <li>Dask, Spark and other processing tools plugged in</li>
 </ul></li>
 <li>Function as a Service
@@ -467,8 +468,8 @@
 <section id="section-1" class="slide level2" data-background-image="https://raw.githubusercontent.com/gregsramblings/google-cloud-4-words/master/Poster-medres.png">
 <h2 data-background-image="https://raw.githubusercontent.com/gregsramblings/google-cloud-4-words/master/Poster-medres.png"></h2>
 </section>
-<section id="concepts-2ones-and-regions" class="slide level2">
-<h2>Concepts: 2ones and regions</h2>
+<section id="concepts-zones-and-regions" class="slide level2">
+<h2>Concepts: Zones and regions</h2>
 <p><img data-src="https://cloud.google.com/docs/images/overview/regions-zones.svg" /></p>
 </section>
 <section id="concepts-projects" class="slide level2">
@@ -490,7 +491,7 @@
 <section id="interacting-with-gcp-the-console" class="slide level2">
 <h2>Interacting with GCP: The Console</h2>
 <figure>
-<img data-src="https://cloud.google.com/docs/images/overview/console.png" alt="https://console.cloud.google.com" /><figcaption aria-hidden="true">https://console.cloud.google.com</figcaption>
+<img data-src="https://cloud.google.com/docs/images/overview/console.png" style="width:60.0%" alt="https://console.cloud.google.com" /><figcaption aria-hidden="true">https://console.cloud.google.com</figcaption>
 </figure>
 </section>
 <section id="interacting-with-gcp-sdk-cloud-shell" class="slide level2">
@@ -510,7 +511,7 @@
 <p>Everyone has its credits?</p>
 <ul>
 <li>Create your GCP account, configure your credentials</li>
-<li>Interact with Google cloud console,</li>
+<li>Interact with Google cloud console</li>
 <li>Connect to google cloud shell and interact with it</li>
 <li>Create a Virtual Machine and connect to it</li>
 <li>Create a Google Storage bucket and upload content</li>

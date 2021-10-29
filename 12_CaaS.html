@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc">
   <meta name="author" content="Guillaume Eynard-Bontemps, CNES (Centre National d’Etudes Spatiales - French Space Agency)">
   <meta name="dcterms.date" content="2020-11-15">
-  <title>Container and Kubernetes</title>
+  <title>Containers and Orchestration, Docker and Kubernetes</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -90,7 +90,7 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">Container and Kubernetes</h1>
+  <h1 class="title">Containers and Orchestration, Docker and Kubernetes</h1>
   <p class="author">Guillaume Eynard-Bontemps, CNES (Centre National d’Etudes Spatiales - French Space Agency)</p>
   <p class="date">2020-11-15</p>
 </section>
@@ -104,7 +104,12 @@
 <h2>Didn’t do this</h2>
 <p>Thanks to <a href="florient.f.chouteau@airbus.com%3E">Florient Chouteau</a> and Dennis Wilson</p>
 <p>for their work on this subject.</p>
-<p>I took most of the content from theirs: - https://supaerodatascience.github.io/OBD/slides/1_4_containers.html - https://supaerodatascience.github.io/OBD/slides/1_5_orchestration.html - https://supaerodatascience.github.io/OBD/slides/2_3_kubernetes.html#/</p>
+<p>I took most of the content from theirs:</p>
+<ul>
+<li>https://supaerodatascience.github.io/OBD/slides/1_4_containers.html</li>
+<li>https://supaerodatascience.github.io/OBD/slides/1_5_orchestration.html</li>
+<li>https://supaerodatascience.github.io/OBD/slides/2_3_kubernetes.html#/</li>
+</ul>
 </section></section>
 <section>
 <section id="containers" class="title-slide slide level1">
@@ -127,7 +132,7 @@
 </section>
 <section id="container-vs-vm" class="slide level2">
 <h2>Container vs VM</h2>
-<p><img data-src="https://images.contentstack.io/v3/assets/blt300387d93dabf50e/bltb6200bc085503718/5e1f209a63d1b6503160c6d5/containers-vs-virtual-machines.jpg" /></p>
+<p><img data-src="https://images.contentstack.io/v3/assets/blt300387d93dabf50e/bltb6200bc085503718/5e1f209a63d1b6503160c6d5/containers-vs-virtual-machines.jpg" style="width:10.0%" /></p>
 </section>
 <section id="container-vs-vm-similarities-and-drawbacks" class="slide level2">
 <h2>Container vs VM: similarities and drawbacks</h2>
@@ -138,7 +143,7 @@
 <li>Isolated environments for applications</li>
 <li>Movable between hosts</li>
 </ul>
-</div><div class="column" style="width:40%;">
+</div><div class="column" style="width:35%;">
 <section id="vm-drawbacks" class="slide level2">
 <h2>VM Drawbacks</h2>
 <ul>
@@ -147,9 +152,9 @@
 <li>Communication between VM &lt;=&gt; Communication between computers</li>
 </ul>
 </section>
-</div><div class="column" style="width:30%;">
-<section id="continers-drawbacks" class="slide level2">
-<h2>Continers Drawbacks</h2>
+</div><div class="column" style="width:35%;">
+<section id="containers-drawbacks" class="slide level2">
+<h2>Containers Drawbacks</h2>
 <ul>
 <li>Containers are Linux based (but still works on Windows)</li>
 <li>Isolation is not perfect since containers share underlying kernels
@@ -210,7 +215,7 @@
 <li>Open Source (some parts)</li>
 <li>Not a new idea but set a new standard</li>
 <li>Docker is a company built around its main product (Docker Engine)</li>
-<li>In charge of dev of everything docker + additional paid services (Docker hub…)</li>
+<li>In charge of dev of everything docker (Docker hub…) + additional paid services</li>
 </ul>
 </section>
 <section id="under-the-hood" class="slide level2">
@@ -221,7 +226,7 @@
 </section>
 <section id="using-docker-in-practice" class="slide level2">
 <h2>Using Docker in practice</h2>
-<p><img data-src="static/img/docker-jworkflow.jpg" /></p>
+<p><img data-src="https://supaerodatascience.github.io/OBD/slides/static/img/docker-jworkflow.jpg" /></p>
 </section>
 <section id="vocabulary-of-docker" class="slide level2">
 <h2>Vocabulary of Docker</h2>
@@ -243,7 +248,7 @@
 <section id="layers-container-image" class="slide level2">
 <h2>Layers, Container, Image</h2>
 <figure>
-<img data-src="https://jfrog--c.documentforce.com/servlet/servlet.ImageServer?id=0151r000006uDeN&amp;oid=00D20000000M3v0&amp;lastMod=1584629516000" alt="layers" /><figcaption aria-hidden="true">layers</figcaption>
+<img data-src="https://jfrog--c.documentforce.com/servlet/servlet.ImageServer?id=0151r000006uDeN&amp;oid=00D20000000M3v0&amp;lastMod=1584629516000" style="width:50.0%" alt="layers" /><figcaption aria-hidden="true">layers</figcaption>
 </figure>
 </section>
 <section id="layer-image-analogy" class="slide level2">
@@ -303,7 +308,7 @@
 </section>
 <section id="alternatives-singularity" class="slide level2">
 <h2>Alternatives: Singularity</h2>
-<p><img data-src="https://sylabs.io/guides/3.0/user-guide/_static/logo.png" /></p>
+<p><img data-src="https://sylabs.io/guides/3.0/user-guide/_static/logo.png" height="200" /></p>
 <p>“Docker for HPC”</p>
 <ul>
 <li>No root daemon process</li>
@@ -318,7 +323,7 @@
 </section>
 <section id="alternatives-podman" class="slide level2">
 <h2>Alternatives: Podman</h2>
-<p><img data-src="https://podman.io/images/podman.svg" /></p>
+<p><img data-src="https://podman.io/images/podman.svg" height="200" /></p>
 <p>“Rootless Docker for Redhat”</p>
 <ul>
 <li>Not root daemon</li>
@@ -360,6 +365,8 @@
 </section>
 <section id="tools-example" class="slide level2">
 <h2>Tools example</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
 <p>Examples…</p>
 <ul>
 <li>Docker Swarm</li>
@@ -367,9 +374,12 @@
 <li><a href="https://mesos.apache.org/">Apache Mesos</a> / <a href="https://github.com/mesosphere/marathon">Marathon</a></li>
 </ul>
 <p>… and so many more !</p>
+</div><div class="column" style="width:60%;">
 <figure>
 <img data-src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&amp;fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F996C7D4B5AF43B6C27" alt="ecosystem" /><figcaption aria-hidden="true">ecosystem</figcaption>
 </figure>
+</div>
+</div>
 </section>
 <section id="short-kubernetes-history" class="slide level2">
 <h2>Short Kubernetes history</h2>
@@ -378,7 +388,7 @@
 </section>
 <section id="thanks-to-dennis-for-the-next-part" class="slide level2">
 <h2>Thanks to Dennis for the next part</h2>
-<p><a href="https://supaerodatascience.github.io/OBD/lectures/2_3_kubernetes.html">Slides</a></p>
+<p><a href="https://supaerodatascience.github.io/OBD/slides/2_3_kubernetes.html#/">Slides</a></p>
 </section></section>
 <section>
 <section id="processing-platform-on-kubernetes" class="title-slide slide level1">
@@ -398,7 +408,7 @@
 </section>
 <section id="databricks-spark-as-a-service" class="slide level2">
 <h2>Databricks: Spark as a Service</h2>
-<p><img data-src="https://docs.gcp.databricks.com/_images/databricks-architecture-gcp.png" style="width:50.0%" /></p>
+<p><img data-src="https://docs.gcp.databricks.com/_images/databricks-architecture-gcp.png" style="width:40.0%" /></p>
 </section>
 <section id="coiled-dask-as-a-service" class="slide level2">
 <h2>Coiled: Dask as a Service</h2>

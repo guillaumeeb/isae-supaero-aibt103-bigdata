@@ -205,7 +205,7 @@
 <h2>Pandas</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><img data-src="https://pandas.pydata.org/static/img/pandas.svg" style="height:10.0%" /></p>
+<p><img data-src="https://pandas.pydata.org/static/img/pandas.svg" height="100" /></p>
 <ul>
 <li>Deal with Dataframes, e.g. tables</li>
 <li>Data manipulation and analysis</li>
@@ -222,7 +222,7 @@
 </section>
 <section id="numpy" class="slide level2">
 <h2>Numpy</h2>
-<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/NumPy_logo_2020.svg/2560px-NumPy_logo_2020.svg.png" style="height:10.0%" /></p>
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/NumPy_logo_2020.svg/2560px-NumPy_logo_2020.svg.png" height="100" /></p>
 <ul>
 <li>Manipulate N-dimensionnal arrays</li>
 <li>Numerical computing tools (math functions, linear algebra, Fourier transform, …)</li>
@@ -253,19 +253,24 @@
 </section>
 <section id="xarray" class="slide level2">
 <h2>Xarray</h2>
-<p><img data-src="http://xarray.pydata.org/en/stable/_static/dataset-diagram-logo.png" style="height:10.0%" /></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="http://xarray.pydata.org/en/stable/_static/dataset-diagram-logo.png" height="100" /></p>
 <ul>
 <li>Manipulate N-dimensionnal <strong>labelled</strong> arrays and <strong>datasets</strong></li>
 <li>Introduce dimensions, coordinates and attributes on top of Numpy</li>
 <li>Borrows heavily from Pandas</li>
 </ul>
+</div><div class="column" style="width:60%;">
 <p><img data-src="https://gdfa.ugr.es/python/climate_data/img/xarray2.png" /></p>
+</div>
+</div>
 </section>
 <section id="matplotlib" class="slide level2">
 <h2>Matplotlib</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><img data-src="https://matplotlib.org/stable/_static/logo2_compressed.svg" style="height:10.0%" /></p>
+<p><img data-src="https://matplotlib.org/stable/_static/logo2_compressed.svg" height="100" /></p>
 <ul>
 <li>Base/Reference plotting library</li>
 <li>For Python and Numpy</li>
@@ -299,7 +304,7 @@
 <div class="column" style="width:50%;">
 <p><img data-src="https://jupyter.org/assets/labpreview.png" /></p>
 </div><div class="column" style="width:50%;">
-<p><img data-src="https://jupyter.org/assets/main-logo.svg" style="height:10.0%" /></p>
+<p><img data-src="https://jupyter.org/assets/main-logo.svg" height="100" /></p>
 <ul>
 <li>Open source web application</li>
 <li>Create and share documents that contain live code</li>
@@ -343,7 +348,7 @@
 <h2>Dask</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><img data-src="https://dask.org/_images/dask_horizontal_white_no_pad.svg" style="height:10.0%" /></p>
+<p><img data-src="https://dask.org/_images/dask_horizontal_white_no_pad.svg" height="100" /></p>
 <ul>
 <li>Provides advanced parallelism for analytics</li>
 <li>First designed as allowing to process datasets bigger than memory</li>
@@ -356,13 +361,13 @@
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> dd.read_csv(<span class="st">&#39;2014-*.csv&#39;</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>df.describe().compute()</span></code></pre></div>
 </div><div class="column" style="width:50%;">
-<p><img data-src="https://docs.dask.org/en/latest/_images/dask-dataframe.svg" /></p>
+<p><img data-src="https://docs.dask.org/en/latest/_images/dask-dataframe.svg" style="width:40.0%" /></p>
 </div>
 </div>
 </section>
 <section id="pyspark" class="slide level2">
 <h2>PySpark</h2>
-<p><img data-src="https://databricks.com/wp-content/uploads/2018/12/PySpark-1024x164.png" style="height:10.0%" /></p>
+<p><img data-src="https://databricks.com/wp-content/uploads/2018/12/PySpark-1024x164.png" height="100" /></p>
 <ul>
 <li>Spark is Scala (JVM based), but for data scientists, provides Python and R interface</li>
 <li>This means some complexity and translation between languages</li>
@@ -374,14 +379,14 @@
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3 id="ray"><a href="https://www.ray.io">Ray</a></h3>
-<p><img data-src="https://docs.ray.io/en/latest/_static/ray_logo.png" style="height:10.0%" /></p>
+<p><img data-src="https://docs.ray.io/en/latest/_static/ray_logo.png" height="100" /></p>
 <ul>
 <li>Scale general Python apps</li>
 <li>And a lot of high-level libs oriented towards Machine and Deep Learning</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <h3 id="vaex"><a href="https://vaex.io/docs/index.html">Vaex</a></h3>
-<p><img data-src="https://user-images.githubusercontent.com/18574951/90343540-a1181f80-e011-11ea-8ff5-bb21e5fdc71c.png" style="height:10.0%" /></p>
+<p><img data-src="https://user-images.githubusercontent.com/18574951/90343540-a1181f80-e011-11ea-8ff5-bb21e5fdc71c.png" height="100" /></p>
 <ul>
 <li>Lazy out-of-core Dataframes (similar to Pandas)</li>
 <li>Performance oriented on tabular datasets</li>
@@ -403,7 +408,7 @@
 </section>
 <section id="seaborn" class="slide level2">
 <h2>Seaborn</h2>
-<p><img data-src="https://seaborn.pydata.org/_images/logo-wide-lightbg.svg" /></p>
+<p><img data-src="https://seaborn.pydata.org/_images/logo-wide-lightbg.svg" height="100" /></p>
 <ul>
 <li>Based on Matplotlib</li>
 <li>Integrates closely with Pandas</li>
@@ -413,7 +418,7 @@
 </section>
 <section id="plotly" class="slide level2">
 <h2>Plotly</h2>
-<p><img data-src="https://en.wikipedia.org/wiki/Plotly#/media/File:Plotly-logo-01-square.png" style="width:10.0%" /></p>
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/3/37/Plotly-logo-01-square.png" height="100" /></p>
 <ul>
 <li>Interactive, publication-quality graphs</li>
 <li>Make dashboard with Dash</li>
@@ -422,8 +427,7 @@
 </section>
 <section id="pyviz" class="slide level2">
 <h2>Pyviz</h2>
-<p><img data-src="https://miro.medium.com/max/518/1*Tw1LzNLwcmpJPVI0v1ZsVA.png" /></p>
-<p><img data-src="https://miro.medium.com/max/2400/1*I-xXZpedIymi1cP3RRrhHw.png" /></p>
+<p><img data-src="https://miro.medium.com/max/518/1*Tw1LzNLwcmpJPVI0v1ZsVA.png" /> <img data-src="https://miro.medium.com/max/2400/1*I-xXZpedIymi1cP3RRrhHw.png" /></p>
 <ul>
 <li><strong>HoloViews</strong>: Declarative objects for instantly visualizable data, building Bokeh plots from convenient high-level specifications</li>
 <li><strong>GeoViews</strong>: Visualizable geographic data that that can be mixed and matched with HoloViews objects</li>
@@ -447,7 +451,7 @@
 </section>
 <section id="sickit-learn" class="slide level2">
 <h2>Sickit Learn</h2>
-<p><img data-src="https://scikit-learn.org/stable/_images/scikit-learn-logo-notext.png" height="150" /></p>
+<p><img data-src="https://scikit-learn.org/stable/_images/scikit-learn-logo-notext.png" height="100" /></p>
 <ul>
 <li>Simple and efficient tools for predictive data analysis</li>
 <li>Built on NumPy, SciPy, and matplotlib</li>
@@ -464,7 +468,7 @@
 </section>
 <section id="tensorflow-keras-pytorch" class="slide level2">
 <h2>TensorFlow, Keras, Pytorch</h2>
-<p><img data-src="https://camo.githubusercontent.com/906e661107a3bc03104ca5d88336d1f4b0e80fdcac65efaf7904041d371c747f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6b657261732e696f2f696d672f6b657261732d6c6f676f2d323031382d6c617267652d313230302e706e67" height="150" /> <img data-src="https://camo.githubusercontent.com/aeb4f612bd9b40d81c62fcbebd6db44a5d4344b8b962be0138817e18c9c06963/68747470733a2f2f7777772e74656e736f72666c6f772e6f72672f696d616765732f74665f6c6f676f5f686f72697a6f6e74616c2e706e67" height="150" /> <img data-src="https://upload.wikimedia.org/wikipedia/commons/9/96/Pytorch_logo.png" height="150" /></p>
+<p><img data-src="https://camo.githubusercontent.com/906e661107a3bc03104ca5d88336d1f4b0e80fdcac65efaf7904041d371c747f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6b657261732e696f2f696d672f6b657261732d6c6f676f2d323031382d6c617267652d313230302e706e67" height="100" /> <img data-src="https://camo.githubusercontent.com/aeb4f612bd9b40d81c62fcbebd6db44a5d4344b8b962be0138817e18c9c06963/68747470733a2f2f7777772e74656e736f72666c6f772e6f72672f696d616765732f74665f6c6f676f5f686f72697a6f6e74616c2e706e67" height="100" /> <img data-src="https://upload.wikimedia.org/wikipedia/commons/9/96/Pytorch_logo.png" height="100" /></p>
 <ul>
 <li>Deep Learning on GPU with no previous knowledge</li>
 <li>Keras on top of Tensorflow</li>
@@ -485,7 +489,7 @@
 <li>Runs on major distributed environment (Hadoop, SGE, MPI, Spark)</li>
 <li>Solve problems beyond billions of examples</li>
 </ul>
-<p><img data-src="https://raw.githubusercontent.com/dmlc/dmlc.github.io/master/img/logo-m/xgboost.png" /></p>
+<p><img data-src="https://raw.githubusercontent.com/dmlc/dmlc.github.io/master/img/logo-m/xgboost.png" height="100" /></p>
 </div><div class="column" style="width:50%;">
 <h3 id="lighgbm"><a href="https://lightgbm.readthedocs.io/en/latest/">LighGBM</a></h3>
 <ul>
@@ -494,7 +498,7 @@
 <li>Support of parallel, distributed, and GPU learning</li>
 <li>Capable of handling large-scale data</li>
 </ul>
-<p><img data-src="https://lightgbm.readthedocs.io/en/latest/_images/LightGBM_logo_black_text.svg" /></p>
+<p><img data-src="https://lightgbm.readthedocs.io/en/latest/_images/LightGBM_logo_black_text.svg" height="100" /></p>
 </div>
 </div>
 </section></section>
@@ -505,7 +509,7 @@
 </section>
 <section id="packaging-pip-conda" class="slide level2">
 <h2>Packaging: Pip / Conda</h2>
-<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/PyPI_logo.svg/1200px-PyPI_logo.svg.png" height="150" /> <img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Conda_logo.svg/1280px-Conda_logo.svg.png" height="150" /></p>
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/PyPI_logo.svg/1200px-PyPI_logo.svg.png" height="100" /> <img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Conda_logo.svg/1280px-Conda_logo.svg.png" height="100" /></p>
 <ul>
 <li>Package libraries</li>
 <li>Make them available on repositories</li>
@@ -551,7 +555,7 @@
 </section>
 <section id="numba" class="slide level2">
 <h2>Numba</h2>
-<p><img data-src="https://numba.pydata.org/_static/numba-blue-horizontal-rgb.svg" height="150" /></p>
+<p><img data-src="https://numba.pydata.org/_static/numba-blue-horizontal-rgb.svg" height="100" /></p>
 <blockquote>
 <p>Numba makes Python code fast</p>
 </blockquote>
