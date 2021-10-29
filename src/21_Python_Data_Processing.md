@@ -95,9 +95,7 @@ C/C++, Java
 
 ![](images/KaggleIDEPop.png)
 
-# Python scientific ecosystem
-
-## Overview{background-image=https://jupytearth.org/_images/python-stack.png}
+# Python scientific ecosystem{background-image=https://jupytearth.org/_images/python-stack.png}
 
 # Core (SciPy, PyData ...)
 
@@ -429,20 +427,59 @@ clf.fit(X, y)
 
 ## Packaging: Pip / Conda
 
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/PyPI_logo.svg/1200px-PyPI_logo.svg.png){height=150px}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Conda_logo.svg/1280px-Conda_logo.svg.png){height=150px}
+
+- Package libraries
+- Make them available on repositories
+- Build environments automatically
+
+|     | conda | pip |
+|-----|-------|-----|
+| manages | binaries | wheel or source |
+| can require compilers | no | yes |
+| package types | any | Python-only |
+| create environment | yes, built-in | no, requires virtualenv or venv |
+| dependency checks | yes | no |
+
+Difference between Conda and Pip according to Anaconda.
+
 ## Numba
 
-## Binder?
+![](https://numba.pydata.org/_static/numba-blue-horizontal-rgb.svg){height=150px}
 
-## Scientific domain
+> Numba makes Python code fast
 
-Astropy Sunpy
+- Translates Python functions to optimized machine code at runtime
+- Use LLVM compiler library
+- Python can approach the speeds of C or FORTRAN
+- Just apply one of the Numba decorators
 
-Xarray
+```python
+from numba import jit
+import random
 
-GeoPandas...
+@jit(nopython=True)
+def monte_carlo_pi(nsamples):
+    acc = 0
+    for i in range(nsamples):
+        x = random.random()
+        y = random.random()
+        if (x ** 2 + y ** 2) < 1.0:
+            acc += 1
+    return 4.0 * acc / nsamples
+```
 
-# Exercice
+## Binder
+
+![](https://mybinder.org/static/logo.svg?v=fe52c40adc69454ba7536393f76ebd715e5fb75f5feafe16a27c47483eabf3311c14ed9fda905c49915d6dbf369ae68fb855a40dd05489a7b9542a9ee532e92b)
+
+> Turn a Git repo into a collection of interactive notebooks
+
+![](https://binderhub.readthedocs.io/en/latest/_images/architecture.png)
+
+# Exercise
 
 ## Pandas tutorial
 
-https://github.com/jvns/pandas-cookbook 
+[Let's try Pandas in Binder](https://github.com/jvns/pandas-cookbook)
