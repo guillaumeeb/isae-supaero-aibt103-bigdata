@@ -144,8 +144,19 @@
 </section>
 <section id="matlab-and-others" class="slide level2">
 <h2>Matlab and others</h2>
-<p>Matlab (and equivalent Scilab) - Interactive - With IDE and plotting - Closed, not reproducible - For some searchers</p>
-<p>C/C++, Java - Static languages - Not much visualization - For under layers of use libraries.</p>
+<p>Matlab (and equivalent Scilab)</p>
+<ul>
+<li>Interactive</li>
+<li>With IDE and plotting</li>
+<li>Closed, not reproducible</li>
+<li>For some searchers</li>
+</ul>
+<p>C/C++, Java</p>
+<ul>
+<li>Static languages</li>
+<li>Not much visualization</li>
+<li>For under layers of use libraries.</li>
+</ul>
 </section>
 <section id="python" class="slide level2">
 <h2>Python</h2>
@@ -243,6 +254,16 @@
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng()</span>
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>samples <span class="op">=</span> rng.normal(size<span class="op">=</span><span class="dv">2500</span>)</span></code></pre></div>
 </section>
+<section id="xarray" class="slide level2">
+<h2>Xarray</h2>
+<p><img data-src="http://xarray.pydata.org/en/stable/_static/dataset-diagram-logo.png" style="height:10.0%" /></p>
+<ul>
+<li>Manipulate N-dimensionnal <strong>labelled</strong> arrays and <strong>datasets</strong></li>
+<li>Introduce dimensions, coordinates and attributes on top of Numpy</li>
+<li>Borrows heavily from Pandas</li>
+</ul>
+<p><img data-src="https://gdfa.ugr.es/python/climate_data/img/xarray2.png" /></p>
+</section>
 <section id="matplotlib" class="slide level2">
 <h2>Matplotlib</h2>
 <div class="columns">
@@ -301,83 +322,204 @@
 </div>
 </section></section>
 <section>
-<section id="distributed-computing" class="title-slide slide level1">
-<h1>Distributed computing</h1>
+<section id="distributed-and-sctientific-computing" class="title-slide slide level1">
+<h1>Distributed and sctientific computing</h1>
 
 </section>
 <section id="built-in-mutliprocessing" class="slide level2">
 <h2>Built-in mutliprocessing</h2>
+<ul>
+<li>Python core package</li>
+<li>Spawning processes using an API similar to the threading module</li>
+<li>Effectively side-steps the <strong>Global Interpreter Lock</strong> by using subprocesses instead of threads</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> multiprocessing <span class="im">import</span> Pool</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x):</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">*</span>x</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&#39;__main__&#39;</span>:</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> Pool(<span class="dv">5</span>) <span class="im">as</span> p:</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(p.<span class="bu">map</span>(f, [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]))</span></code></pre></div>
 </section>
 <section id="dask" class="slide level2">
 <h2>Dask</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="https://dask.org/_images/dask_horizontal_white_no_pad.svg" style="height:10.0%" /></p>
+<ul>
+<li>Provides advanced parallelism for analytics</li>
+<li>First designed as allowing to process datasets bigger than memory</li>
+<li>Now from local computer to clusters, to HPC or Cloud computing</li>
+<li>Scales Numpy and Pandas with same interfaces</li>
+<li>More low level APIs for distributing any algorithm</li>
+<li>More this afternoon</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dask.dataframe <span class="im">as</span> dd</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> dd.read_csv(<span class="st">&#39;2014-*.csv&#39;</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>df.describe().compute()</span></code></pre></div>
+</div><div class="column" style="width:50%;">
+<p><img data-src="https://docs.dask.org/en/latest/_images/dask-dataframe.svg" /></p>
+</div>
+</div>
 </section>
 <section id="pyspark" class="slide level2">
 <h2>PySpark</h2>
+<p><img data-src="https://databricks.com/wp-content/uploads/2018/12/PySpark-1024x164.png" style="height:10.0%" /></p>
+<ul>
+<li>Spark is Scala (JVM based), but for data scientists, provides Python and R interface</li>
+<li>This means some complexity and translation between languages</li>
+</ul>
+<p><img data-src="images/PySpark.jpg" /></p>
 </section>
-<section id="ray" class="slide level2">
-<h2>Ray</h2>
+<section id="others" class="slide level2">
+<h2>Others</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="ray"><a href="https://www.ray.io">Ray</a></h3>
+<p><img data-src="https://docs.ray.io/en/latest/_static/ray_logo.png" style="height:10.0%" /></p>
+<ul>
+<li>Scale general Python apps</li>
+<li>And a lot of high-level libs oriented towards Machine and Deep Learning</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="vaex"><a href="https://vaex.io/docs/index.html">Vaex</a></h3>
+<p><img data-src="https://user-images.githubusercontent.com/18574951/90343540-a1181f80-e011-11ea-8ff5-bb21e5fdc71c.png" style="height:10.0%" /></p>
+<ul>
+<li>Lazy out-of-core Dataframes (similar to Pandas)</li>
+<li>Performance oriented on tabular datasets</li>
+<li>Vizualisation</li>
+</ul>
+</div>
+</div>
 </section></section>
 <section>
-<section id="packaging" class="title-slide slide level1">
-<h1>Packaging</h1>
+<section id="vizualisation-other-than-matplotlib" class="title-slide slide level1">
+<h1>Vizualisation (other than Matplotlib)</h1>
 
 </section>
-<section id="pip" class="slide level2">
-<h2>Pip</h2>
+<section id="landscape" class="slide level2">
+<h2>Landscape</h2>
+<figure>
+<img data-src="https://rougier.github.io/python-visualization-landscape/landscape-colors.png" alt="Adaptation of Jake VanderPlas graphic about the Python visualization landscape, by Nicolas P. Rougier" /><figcaption aria-hidden="true">Adaptation of Jake VanderPlas graphic about the Python visualization landscape, by Nicolas P. Rougier</figcaption>
+</figure>
 </section>
-<section id="conda" class="slide level2">
-<h2>Conda</h2>
-</section></section>
-<section>
-<section id="vizualisation" class="title-slide slide level1">
-<h1>Vizualisation</h1>
-
+<section id="seaborn" class="slide level2">
+<h2>Seaborn</h2>
+<p><img data-src="https://seaborn.pydata.org/_images/logo-wide-lightbg.svg" /></p>
+<ul>
+<li>Based on Matplotlib</li>
+<li>Integrates closely with Pandas</li>
+<li>Dataset oriented to produce informative plots</li>
+</ul>
+<p><img data-src="https://seaborn.pydata.org/_images/faceted_lineplot.png" /></p>
 </section>
-<section id="matplotlib-1" class="slide level2">
-<h2>Matplotlib,</h2>
+<section id="plotly" class="slide level2">
+<h2>Plotly</h2>
+<p><img data-src="https://en.wikipedia.org/wiki/Plotly#/media/File:Plotly-logo-01-square.png" style="width:10.0%" /></p>
+<ul>
+<li>Interactive, publication-quality graphs</li>
+<li>Make dashboard with Dash</li>
+</ul>
+<p><img data-src="https://raw.githubusercontent.com/cldougl/plot_images/add_r_img/anim.gif" /></p>
 </section>
-<section id="seaborn-leaflet" class="slide level2">
-<h2>Seaborn Leaflet</h2>
-</section>
-<section id="pyviz-bokeh-holowiews" class="slide level2">
-<h2>Pyviz: Bokeh, Holowiews…</h2>
-</section></section>
-<section>
-<section id="others" class="title-slide slide level1">
-<h1>Others</h1>
-
-</section>
-<section id="binder" class="slide level2">
-<h2>Binder?</h2>
-<p>https://pyviz.org/</p>
+<section id="pyviz" class="slide level2">
+<h2>Pyviz</h2>
+<p><img data-src="https://miro.medium.com/max/518/1*Tw1LzNLwcmpJPVI0v1ZsVA.png" /></p>
+<p><img data-src="https://miro.medium.com/max/2400/1*I-xXZpedIymi1cP3RRrhHw.png" /></p>
+<ul>
+<li><strong>HoloViews</strong>: Declarative objects for instantly visualizable data, building Bokeh plots from convenient high-level specifications</li>
+<li><strong>GeoViews</strong>: Visualizable geographic data that that can be mixed and matched with HoloViews objects</li>
+<li><strong>Bokeh</strong>: Interactive plotting in web browsers, running JavaScript but controlled by Python</li>
+<li><strong>Panel</strong>: Assembling objects from many different libraries into a layout or app, whether in a Jupyter notebook or in a standalone serveable dashboard</li>
+<li><strong>Datashader</strong>: Rasterizing huge datasets quickly as fixed-size images</li>
+<li><strong>hvPlot</strong>: Quickly return interactive HoloViews or GeoViews objects from your Pandas, Xarray, or other data structures</li>
+<li><strong>Param</strong>: Declaring user-relevant parameters, making it simple to work with widgets inside and outside of a notebook context</li>
+</ul>
 </section></section>
 <section>
 <section id="machine-and-deep-learning" class="title-slide slide level1">
 <h1>Machine and Deep Learning</h1>
 
 </section>
+<section id="kaggle-stats" class="slide level2">
+<h2>Kaggle stats</h2>
+<figure>
+<img data-src="images/KaggleFrameworkUsage.png" alt="Machine Learning Frameworks usage" /><figcaption aria-hidden="true">Machine Learning Frameworks usage</figcaption>
+</figure>
+</section>
 <section id="sickit-learn" class="slide level2">
 <h2>Sickit Learn</h2>
-<p>Every traditional ML algorithm. Python.</p>
+<p><img data-src="https://scikit-learn.org/stable/_images/scikit-learn-logo-notext.png" height="150" /></p>
+<ul>
+<li>Simple and efficient tools for predictive data analysis</li>
+<li>Built on NumPy, SciPy, and matplotlib</li>
+<li>Every classical ML Algorithms</li>
+<li>Standard interface with Pipelines, estimators, transformers</li>
+<li>No GPU support (so not good for Deep Learning)</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> RandomForestClassifier</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>clf <span class="op">=</span> RandomForestClassifier(random_state<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> [[ <span class="dv">1</span>,  <span class="dv">2</span>,  <span class="dv">3</span>],  <span class="co"># 2 samples, 3 features</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>     [<span class="dv">11</span>, <span class="dv">12</span>, <span class="dv">13</span>]]</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">1</span>]  <span class="co"># classes of each sample</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>clf.fit(X, y)</span></code></pre></div>
 </section>
 <section id="tensorflow-keras-pytorch" class="slide level2">
 <h2>TensorFlow, Keras, Pytorch</h2>
-<p>Deep Learning on GPU with no knowledge Python.</p>
+<p><img data-src="https://camo.githubusercontent.com/906e661107a3bc03104ca5d88336d1f4b0e80fdcac65efaf7904041d371c747f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6b657261732e696f2f696d672f6b657261732d6c6f676f2d323031382d6c617267652d313230302e706e67" height="150" /> <img data-src="https://camo.githubusercontent.com/aeb4f612bd9b40d81c62fcbebd6db44a5d4344b8b962be0138817e18c9c06963/68747470733a2f2f7777772e74656e736f72666c6f772e6f72672f696d616765732f74665f6c6f676f5f686f72697a6f6e74616c2e706e67" height="150" /> <img data-src="https://upload.wikimedia.org/wikipedia/commons/9/96/Pytorch_logo.png" height="150" /></p>
+<ul>
+<li>Deep Learning on GPU with no previous knowledge</li>
+<li>Keras on top of Tensorflow</li>
+<li>Tensorflow complete platform, with TensorBoard and other tools</li>
+<li>Always trolls about Keras/TF vs PyTorch</li>
+</ul>
+<p><img data-src="https://www.tensorflow.org/tensorboard/images/tensorboard.gif" style="width:50.0%" /></p>
 </section>
-<section id="xgboost-light-gbm" class="slide level2">
-<h2>Xgboost, Light GBM…</h2>
-<p>Other popular algorithms. Python.</p>
+<section id="gradient-boosting-algorithms" class="slide level2">
+<h2>Gradient boosting algorithms</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="xgboost"><a href="https://xgboost.readthedocs.io/en/latest/">XGBoost</a></h3>
+<ul>
+<li>Distributed gradient boosting library</li>
+<li>Efficient, flexible and portable</li>
+<li>XGBoost provides a parallel tree boosting</li>
+<li>Runs on major distributed environment (Hadoop, SGE, MPI, Spark)</li>
+<li>Solve problems beyond billions of examples</li>
+</ul>
+<p><img data-src="https://raw.githubusercontent.com/dmlc/dmlc.github.io/master/img/logo-m/xgboost.png" /></p>
+</div><div class="column" style="width:50%;">
+<h3 id="lighgbm"><a href="https://lightgbm.readthedocs.io/en/latest/">LighGBM</a></h3>
+<ul>
+<li>Distributed gradient boosting framework</li>
+<li>Efficient, Faster, lower memory usage, better accuracy</li>
+<li>Support of parallel, distributed, and GPU learning</li>
+<li>Capable of handling large-scale data</li>
+</ul>
+<p><img data-src="https://lightgbm.readthedocs.io/en/latest/_images/LightGBM_logo_black_text.svg" /></p>
+</div>
+</div>
 </section></section>
 <section>
-<section id="scientific-domain" class="title-slide slide level1">
-<h1>Scientific domain</h1>
+<section id="others-1" class="title-slide slide level1">
+<h1>Others</h1>
 
 </section>
-<section id="astropy-sunpy" class="slide level2">
-<h2>Astropy Sunpy</h2>
+<section id="packaging-pip-conda" class="slide level2">
+<h2>Packaging: Pip / Conda</h2>
 </section>
-<section id="geopandas" class="slide level2">
-<h2>GeoPandas…</h2>
+<section id="numba" class="slide level2">
+<h2>Numba</h2>
+</section>
+<section id="binder" class="slide level2">
+<h2>Binder?</h2>
+</section>
+<section id="scientific-domain" class="slide level2">
+<h2>Scientific domain</h2>
+<p>Astropy Sunpy</p>
+<p>Xarray</p>
+<p>GeoPandas…</p>
 </section></section>
 <section>
 <section id="exercice" class="title-slide slide level1">
