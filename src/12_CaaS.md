@@ -243,21 +243,71 @@ docker run my-image
 
 # Kubernetes
 
-## Thanks to Dennis
+## Why orchestration?
+
+Suppose I have a large pool of machines available
+
+* How do I **deploy my container**?
+* How do I **put the right containers at the right spot**?
+* How do I **scale (up and down) to demand**?
+* How do I **expose the http endpoints**?
+* How do I **manage failure of containers**?
+* How do I **update my model without downtime**?
+
+## Tools example
+
+Examples...
+
+- Docker Swarm
+- CoreOS Fleet
+- [Apache Mesos](https://mesos.apache.org/) / [Marathon](https://github.com/mesosphere/marathon)
+
+... and so many more !
+
+![ecosystem](https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F996C7D4B5AF43B6C27)
+
+## Short Kubernetes history
+
+Kubernetes (or k8s) comes from Google's internal systems [Borg](https://github.com/SupaeroDataScience/OBD/blob/master/readings/borg.pdf)
+
+It is open source now <https://github.com/kubernetes> and used... everywhere ?
+
+## Thanks to Dennis for the next part
 
 [Slides](https://supaerodatascience.github.io/OBD/lectures/2_3_kubernetes.html)
 
-# Processing platform as a Service
 
-## Databricks
+# Processing platform on Kubernetes
 
-Spark as a Service 
+## Kubeflow
 
-## Coiled
+https://www.kubeflow.org/
 
-Dask as a Service
+![kubeflow](https://miro.medium.com/max/2446/1*ZQsFV3o1c3Amu26Z-IEd7w.png){width=55%}
+
+## Jupyterhub/Binder
+
+![](https://miro.medium.com/max/1400/1*F_jJ1nDSQgBhrkbsEXB93Q.png){width=70%}
+
+## Databricks: Spark as a Service
+
+![](https://docs.gcp.databricks.com/_images/databricks-architecture-gcp.png){width=50%}
+
+## Coiled: Dask as a Service
+
+![](../images/Coiled.png)
 
 # Kubernetes tutorial
 
+## Try some
+
 https://training.play-with-kubernetes.com/kubernetes-workshop/ 
+
+https://www.katacoda.com/courses/kubernetes
+
+https://labs.play-with-k8s.com/
+
+https://github.com/yogeek/kubernetes-local-development
+
+
 
