@@ -8,9 +8,6 @@ date: 2020-11-15
 
 ## Spark History
 
-:::::::::::::: {.columns}
-::: {.column width="40%"}
-
 - Research project at the [UC Berkeley AMPLab](https://amplab.cs.berkeley.edu/), started in 2009
 - Open sourced in early 2010:
   - 2013: Moved to Apache Software Foundation
@@ -19,8 +16,7 @@ date: 2020-11-15
   - 2020: 3.0 release
 - Now with 100s of developers
 
-:::
-::: {.column width="60%"}
+## Spark goal and key featyres
 
 From [Spark Research homepage](https://spark.apache.org/research.html):
 
@@ -30,9 +26,6 @@ From [Spark Research homepage](https://spark.apache.org/research.html):
 - Iterative algorithms (many machine learning algorithms)
 - Interactive data mining
 - Streaming applications that maintain aggregate state over time
-
-:::
-::::::::::::::
 
 ## Spark vs Map Reduce
 

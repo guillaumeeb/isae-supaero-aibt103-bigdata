@@ -231,7 +231,7 @@ Each cluster is composed of:
 
 ## CNES Datalake infrastructure example
 
-![](images/CNESDatalake.png){width=60%}
+![](images/CNESDatalake.png){width=50%}
 
 # From HPC to Big Data to Cloud and High Performance Data Analytics
 

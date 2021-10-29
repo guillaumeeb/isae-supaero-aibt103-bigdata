@@ -12,25 +12,37 @@ Thanks to [Florient Chouteau](florient.f.chouteau@airbus.com>) and Dennis Wilson
 
 for their work on this subject.
 
-I took most of the content [from theirs](https://supaerodatascience.github.io/OBD/1_1_overview.html).
+I took most of the content: 
+
+- https://supaerodatascience.github.io/OBD/1_1_overview.html
+- https://supaerodatascience.github.io/OBD/slides/1_1_cloud_computing.html
+- https://supaerodatascience.github.io/OBD/slides/1_2_cloud_usage.html
+- https://supaerodatascience.github.io/OBD/slides/1_3_gcp.html
 
 # What is the Cloud?
 
-## {background-image=https://nerds.net/wp-content/uploads/2018/02/cloud-computer-reality-750x646.jpg}
+## {background-image=https://nerds.net/wp-content/uploads/2018/02/cloud-computer-reality-750x646.jpg data-background-size=contains}
 
-## But it's a bit bigger...
+## But it's a bit bigger... 
 
-<img src="static/img/fb_datacenter.jpg" alt="" width="30%" height="30%" style="background:none; border:none; box-shadow:none; float:left;margin:0 10px 0 20px;"/>
+:::::::::::::: {.columns}
+::: {.column width="30%"}
 
-<img src="https://www.datacenterknowledge.com/sites/datacenterknowledge.com/files/wp-content/uploads/2013/06/lulea-rows.jpg" alt="" width="25%" height="25%" style="background:none; border:none; box-shadow:none;"/>
+![](https://supaerodatascience.github.io/OBD/slides/static/img/fb_datacenter.jpg){width="30%"}
 
-<img src="https://www.datacenterknowledge.com/sites/datacenterknowledge.com/files/wp-content/uploads/2013/06/fb-lulea-external-fans.jpg" alt="" width="25%" height="25%" style="background:none; border:none; box-shadow:none;"/>
+:::
+::: {.column width="70%"}
 
-<img src="https://cdn.arstechnica.net/wp-content/uploads/2013/02/openrack2-640x426.jpg" alt="" width="25%" height="25%" style="background:none; border:none; box-shadow:none;"/>
+![](https://www.datacenterknowledge.com/sites/datacenterknowledge.com/files/wp-content/uploads/2013/06/lulea-rows.jpg){width="25%"}
+![](https://www.datacenterknowledge.com/sites/datacenterknowledge.com/files/wp-content/uploads/2013/06/fb-lulea-external-fans.jpg){width="25%"}
 
-<img src="https://engineering.fb.com/wp-content/uploads/2015/05/GM23qAAlFJW8xm4BABnMiwAAAAAAbj0JAAAD.png" alt="" width="25%" height="25%" style="background:none; border:none; box-shadow:none;"/>
+![](https://cdn.arstechnica.net/wp-content/uploads/2013/02/openrack2-640x426.jpg){width="25%"}
+![](https://engineering.fb.com/wp-content/uploads/2015/05/GM23qAAlFJW8xm4BABnMiwAAAAAAbj0JAAAD.png){width="25%"}
 
 (Facebook's data center & server racks)
+
+:::
+::::::::::::::
 
 ## Google Cloud Data Center locations
 
@@ -38,7 +50,7 @@ I took most of the content [from theirs](https://supaerodatascience.github.io/OB
 
 ## Cloud Definition
 
-> The cloud is a real physical place - accessed over the internet - where a service is performed for you or where your stuff is stored. Your stuff is stoed in the cloud, not on your device because the cloud is not on any device; the cloud lives in datacenters. A program running on your device accesses the cloud over the internet. The cloud is infinite, accessible from anywhere, at any time
+> The cloud is a real physical place - accessed over the internet - where a service is performed for you or where your stuff is stored. Your stuff is stored in the cloud, not on your device because the cloud is not on any device; the cloud lives in datacenters. A program running on your device accesses the cloud over the internet. The cloud is infinite, accessible from anywhere, at any time
 
 Todd Hoff in "Explain the Cloud like I'm 10"
 
@@ -58,9 +70,7 @@ Examples:
 - "Replicated & Secure storage space"
 - "Autoscaling deployment of a microservice"
 
-## A portion of AWS services
-
-![](https://www.matthewb.id.au/cloud/images/AWS-Services.png){width=70%}
+## A portion of AWS services{background-image=https://www.matthewb.id.au/cloud/images/AWS-Services.png data-background-size=contains}
 
 ## How?
 
@@ -88,9 +98,9 @@ Wikipedia
 
 ## Definitions
 
-- Hypervisor (VMWare, Virtualbox, KVM): A hypervisor is a program for creating and running virtual machines
-- Virtual Machine: A virtual machine is the emulated equivalent of a computer system that runs on top of another system
-- Containers: Isolated environments that share the same underlying OS (more this afternoon) & resources
+- **Hypervisor** (VMWare, Virtualbox, KVM): A hypervisor is a program for creating and running virtual machines
+- **Virtual Machine**: A virtual machine is the emulated equivalent of a computer system that runs on top of another system
+- **Containers**: Isolated environments that share the same underlying OS (more this afternoon) & resources
 
 ## Opens up new possibilities
 
@@ -133,7 +143,7 @@ http://blog.b3k.us/2009/01/25/ec2-origins.html
 
 ## So ...
 
-So basically Amazon became very good at *running* scalable infrastructure as *services*
+Basically Amazon became very good at *running* scalable infrastructure as *services*
 
 - For themselves...
 - ... but also for other partners (target)
@@ -156,11 +166,13 @@ And that infrastructure is often there to answer peak load...
 
 ## Abstraction examples
 
-- Using data storage service like google cloud storage without managing the infrastructure
-- Using google drive
-- Renting a server with hard drive and storing data
+- Using data storage service like google cloud storage without managing the infrastructure ?aaS
+- Using google drive ?aaS
+- Renting a server with hard drive and storing data ?aaS
+
 
 . . . 
+
 
 - Using data storage service like google cloud storage without managing the infrastructure **PaaS**
 - Using google drive **SaaS**
@@ -174,17 +186,14 @@ And that infrastructure is often there to answer peak load...
 
 ## Public (European)
 
-![](https://www.comptoir-hardware.com/images/stories/_logos/ovhcloud.png)
-
-![](https://cloud.orange.com/ui/app/static/assets/brand/logo_header_login.png)
-
-![](https://open-telekom-cloud.com/resource/blob/data/594220/5aa8c4c54f7a8b90fe1256f26948fbe7/open-telekom-cloud-tsystems-logo.png)
+![](https://www.comptoir-hardware.com/images/stories/_logos/ovhcloud.png){width=20%}
+![](https://cloud.orange.com/ui/app/static/assets/brand/logo_header_login.png){width=20%}
+![](https://open-telekom-cloud.com/resource/blob/data/594220/5aa8c4c54f7a8b90fe1256f26948fbe7/open-telekom-cloud-tsystems-logo.png){width=20%}
 
 Academic, public founded:
 
-![gaiax](https://www.data-infrastructure.eu/GAIAX/Redaktion/EN/Bilder/gaia-x.jpg?__blob=normal&v=1&size=834w)
-
-![EOSC](https://eosc-portal.eu/sites/all/themes/theme1/logo.png)
+![gaiax](https://www.data-infrastructure.eu/GAIAX/Redaktion/EN/Bilder/gaia-x.jpg?__blob=normal&v=1&size=834w){width=20%}
+![EOSC](https://eosc-portal.eu/sites/all/themes/theme1/logo.png){width=20%}
 
 ## Private/on premise
 
@@ -192,7 +201,7 @@ Academic, public founded:
 
 ## Leaders
 
-![](https://cdn.statcdn.com/Infographic/images/normal/18819.jpeg)
+![](https://cdn.statcdn.com/Infographic/images/normal/18819.jpeg){width=50%}
 
 ## In France
 
@@ -209,7 +218,7 @@ Academic, public founded:
 ## Access and operating computing power
 
 - Outsourcing infra, maintenance, security, development of new services
-  - Less (?) operation cost (or at least burden)
+  - Less (?) operation cost (or at less burden)
 - Pay-per-use, pay as you go, change of economical model
 - "Infinitely scalable" for common folks
 - "No need to plan out" infrastructure
@@ -266,9 +275,9 @@ High througput storage system with horizontal scalability
 
 - Start and stop compute resources when needed
   - IaC tools like Terraform, Ansible
-  - Mesos/Nomad nd Other tools.
+  - Mesos/Nomad and other tools.
 - Kubernetes as a Service
-  - With autoscaling features: add Vms if Needed
+  - With autoscaling features: add VMs if needed
   - Dask, Spark and other processing tools plugged in
 - Function as a Service
   - Just put a bit of code, everything else is handled.
@@ -313,7 +322,7 @@ High througput storage system with horizontal scalability
 
 ## {background-image=https://raw.githubusercontent.com/gregsramblings/google-cloud-4-words/master/Poster-medres.png}
 
-## Concepts: 2ones and regions
+## Concepts: Zones and regions
 
 ![](https://cloud.google.com/docs/images/overview/regions-zones.svg)
 
@@ -332,7 +341,7 @@ High througput storage system with horizontal scalability
 
 ## Interacting with GCP: The Console
 
-![https://console.cloud.google.com](https://cloud.google.com/docs/images/overview/console.png)
+![https://console.cloud.google.com](https://cloud.google.com/docs/images/overview/console.png){width=60%}
 
 ## Interacting with GCP: SDK & Cloud Shell
 
@@ -346,7 +355,7 @@ High througput storage system with horizontal scalability
 Everyone has its credits?
 
 - Create your GCP account, configure your credentials
-- Interact with Google cloud console, 
+- Interact with Google cloud console
 - Connect to google cloud shell and interact with it
 - Create a Virtual Machine and connect to it
 - Create a Google Storage bucket and upload content

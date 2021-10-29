@@ -25,11 +25,11 @@ Guillaume Eynard-Bontemps for ISAE-Supaero
 
 ### Day 2: Cloud Computing and Kubernetes
 
-[Cloud Computing](10_Cloud_Computing.html)
+[Introduction to Cloud Computing](10_Cloud_Computing.html)
 
 Includes first interaction with Google Cloud.
 
-[Container as a Service](12_CaaS.html)
+[Containers and Orchestration, Docker and Kubernetes](12_CaaS.html)
 
 Includes Docker and Kubernetes exercises.
 
@@ -39,9 +39,11 @@ Includes Docker and Kubernetes exercises.
 
 [The rise of the Python ecosystem for Data Processing](21_Python_Data_Processing.html)
 
-Includes Pandas library tutorial.
+Includes [Pandas library tutorial](https://github.com/jvns/pandas-cookboo).
 
-[Dask presentation and tutorials](22_Dask_Pangeo.html)
+[Dask processing framework](22_Dask_Pangeo.html)
+
+Includes [Dask tutorial](https://github.com/dask/dask-tutorial).
 
 [If necessary, finish data processing platform deployment](13_Dask_On_Cloud.html)
 

@@ -104,7 +104,7 @@ C/C++, Java
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
 
-![](https://pandas.pydata.org/static/img/pandas.svg){height=10%}
+![](https://pandas.pydata.org/static/img/pandas.svg){height=100px}
 
 - Deal with Dataframes, e.g. tables
 - Data manipulation and analysis
@@ -127,7 +127,7 @@ pd.describe()
  
 ## Numpy
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/NumPy_logo_2020.svg/2560px-NumPy_logo_2020.svg.png){height=10%}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/NumPy_logo_2020.svg/2560px-NumPy_logo_2020.svg.png){height=100px}
 
 - Manipulate N-dimensionnal arrays
 - Numerical computing tools (math functions, linear algebra, Fourier transform, ...)
@@ -159,20 +159,29 @@ samples = rng.normal(size=2500)
 
 ## Xarray
 
-![](http://xarray.pydata.org/en/stable/_static/dataset-diagram-logo.png){height=10%}
+:::::::::::::: {.columns}
+::: {.column width="40%"}
+
+![](http://xarray.pydata.org/en/stable/_static/dataset-diagram-logo.png){height=100px}
 
 - Manipulate N-dimensionnal **labelled** arrays and **datasets**
 - Introduce dimensions, coordinates and attributes on top of Numpy
 - Borrows heavily from Pandas
 
+:::
+::: {.column width="60%"}
+
 ![](https://gdfa.ugr.es/python/climate_data/img/xarray2.png)
+
+:::
+::::::::::::::
 
 ## Matplotlib
 
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
 
-![](https://matplotlib.org/stable/_static/logo2_compressed.svg){height=10%}
+![](https://matplotlib.org/stable/_static/logo2_compressed.svg){height=100px}
 
 - Base/Reference plotting library
 - For Python and Numpy
@@ -216,7 +225,7 @@ plt.show()
 :::
 ::: {.column width="50%"}
 
-![](https://jupyter.org/assets/main-logo.svg){height=10%}
+![](https://jupyter.org/assets/main-logo.svg){height=100px}
 
 - Open source web application
 - Create and share documents that contain live code
@@ -257,7 +266,7 @@ if __name__ == '__main__':
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
 
-![](https://dask.org/_images/dask_horizontal_white_no_pad.svg){height=10%}
+![](https://dask.org/_images/dask_horizontal_white_no_pad.svg){height=100px}
 
 - Provides advanced parallelism for analytics
 - First designed as allowing to process datasets bigger than memory
@@ -275,14 +284,14 @@ df.describe().compute()
 :::
 ::: {.column width="50%"}
 
-![](https://docs.dask.org/en/latest/_images/dask-dataframe.svg)
+![](https://docs.dask.org/en/latest/_images/dask-dataframe.svg){width=40%}
 
 :::
 ::::::::::::::
 
 ## PySpark
 
-![](https://databricks.com/wp-content/uploads/2018/12/PySpark-1024x164.png){height=10%}
+![](https://databricks.com/wp-content/uploads/2018/12/PySpark-1024x164.png){height=100px}
 
 - Spark is Scala (JVM based), but for data scientists, provides Python and R interface
 - This means some complexity and translation between languages
@@ -297,7 +306,7 @@ df.describe().compute()
 
 ### [Ray](https://www.ray.io)
 
-![](https://docs.ray.io/en/latest/_static/ray_logo.png){height=10%}
+![](https://docs.ray.io/en/latest/_static/ray_logo.png){height=100px}
 
 - Scale general Python apps
 - And a lot of high-level libs oriented towards Machine and Deep Learning
@@ -307,7 +316,7 @@ df.describe().compute()
 
 ### [Vaex](https://vaex.io/docs/index.html)
 
-![](https://user-images.githubusercontent.com/18574951/90343540-a1181f80-e011-11ea-8ff5-bb21e5fdc71c.png){height=10%}
+![](https://user-images.githubusercontent.com/18574951/90343540-a1181f80-e011-11ea-8ff5-bb21e5fdc71c.png){height=100px}
 
 - Lazy out-of-core Dataframes (similar to Pandas)
 - Performance oriented on tabular datasets
@@ -324,7 +333,7 @@ df.describe().compute()
 
 ## Seaborn
 
-![](https://seaborn.pydata.org/_images/logo-wide-lightbg.svg)
+![](https://seaborn.pydata.org/_images/logo-wide-lightbg.svg){height=100px}
 
 - Based on Matplotlib
 - Integrates closely with Pandas
@@ -334,7 +343,7 @@ df.describe().compute()
 
 ## Plotly
 
-![](https://en.wikipedia.org/wiki/Plotly#/media/File:Plotly-logo-01-square.png){width=10%}
+![](https://upload.wikimedia.org/wikipedia/commons/3/37/Plotly-logo-01-square.png){height=100px}
 
 - Interactive, publication-quality graphs
 - Make dashboard with Dash
@@ -344,7 +353,6 @@ df.describe().compute()
 ## Pyviz
 
 ![](https://miro.medium.com/max/518/1*Tw1LzNLwcmpJPVI0v1ZsVA.png)
-
 ![](https://miro.medium.com/max/2400/1*I-xXZpedIymi1cP3RRrhHw.png)
 
 - **HoloViews**: Declarative objects for instantly visualizable data, building Bokeh plots from convenient high-level specifications
@@ -363,7 +371,7 @@ df.describe().compute()
 
 ## Sickit Learn
 
-![](https://scikit-learn.org/stable/_images/scikit-learn-logo-notext.png){height=150px}
+![](https://scikit-learn.org/stable/_images/scikit-learn-logo-notext.png){height=100px}
 
 - Simple and efficient tools for predictive data analysis
 - Built on NumPy, SciPy, and matplotlib
@@ -382,9 +390,9 @@ clf.fit(X, y)
 
 ## TensorFlow, Keras, Pytorch
 
-![](https://camo.githubusercontent.com/906e661107a3bc03104ca5d88336d1f4b0e80fdcac65efaf7904041d371c747f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6b657261732e696f2f696d672f6b657261732d6c6f676f2d323031382d6c617267652d313230302e706e67){height=150px}
-![](https://camo.githubusercontent.com/aeb4f612bd9b40d81c62fcbebd6db44a5d4344b8b962be0138817e18c9c06963/68747470733a2f2f7777772e74656e736f72666c6f772e6f72672f696d616765732f74665f6c6f676f5f686f72697a6f6e74616c2e706e67){height=150px}
-![](https://upload.wikimedia.org/wikipedia/commons/9/96/Pytorch_logo.png){height=150px}
+![](https://camo.githubusercontent.com/906e661107a3bc03104ca5d88336d1f4b0e80fdcac65efaf7904041d371c747f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6b657261732e696f2f696d672f6b657261732d6c6f676f2d323031382d6c617267652d313230302e706e67){height=100px}
+![](https://camo.githubusercontent.com/aeb4f612bd9b40d81c62fcbebd6db44a5d4344b8b962be0138817e18c9c06963/68747470733a2f2f7777772e74656e736f72666c6f772e6f72672f696d616765732f74665f6c6f676f5f686f72697a6f6e74616c2e706e67){height=100px}
+![](https://upload.wikimedia.org/wikipedia/commons/9/96/Pytorch_logo.png){height=100px}
 
 - Deep Learning on GPU with no previous knowledge
 - Keras on top of Tensorflow
@@ -406,7 +414,7 @@ clf.fit(X, y)
 - Runs on major distributed environment (Hadoop, SGE, MPI, Spark)
 - Solve problems beyond billions of examples
 
-![](https://raw.githubusercontent.com/dmlc/dmlc.github.io/master/img/logo-m/xgboost.png)
+![](https://raw.githubusercontent.com/dmlc/dmlc.github.io/master/img/logo-m/xgboost.png){height=100px}
 
 :::
 ::: {.column width="50%"}
@@ -418,7 +426,7 @@ clf.fit(X, y)
 - Support of parallel, distributed, and GPU learning
 - Capable of handling large-scale data
 
-![](https://lightgbm.readthedocs.io/en/latest/_images/LightGBM_logo_black_text.svg)
+![](https://lightgbm.readthedocs.io/en/latest/_images/LightGBM_logo_black_text.svg){height=100px}
 
 :::
 ::::::::::::::
@@ -427,8 +435,8 @@ clf.fit(X, y)
 
 ## Packaging: Pip / Conda
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/PyPI_logo.svg/1200px-PyPI_logo.svg.png){height=150px}
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Conda_logo.svg/1280px-Conda_logo.svg.png){height=150px}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/PyPI_logo.svg/1200px-PyPI_logo.svg.png){height=100px}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Conda_logo.svg/1280px-Conda_logo.svg.png){height=100px}
 
 - Package libraries
 - Make them available on repositories
@@ -446,7 +454,7 @@ Difference between Conda and Pip according to Anaconda.
 
 ## Numba
 
-![](https://numba.pydata.org/_static/numba-blue-horizontal-rgb.svg){height=150px}
+![](https://numba.pydata.org/_static/numba-blue-horizontal-rgb.svg){height=100px}
 
 > Numba makes Python code fast
 

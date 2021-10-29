@@ -6,15 +6,17 @@ date: 2020-11-16
 
 # Context
 
-Dask:
+Dask
+
 - #1 Distributed processing tool in Python
 - Distributed Dataframe and Arrays
 - We'll see more of it tomorrow
 
 Pangeo
+
 - Community of (geo)scientists and developers
 - Tackling big data problems: analysing simulations or sensor data
-- Building a Pangeo platform:
+- Providing recipes to build a Pangeo platform:
   - Jupyterhub
   - Dask
   - Xarray
@@ -23,6 +25,7 @@ Pangeo
 # Exercise
 
 We will focus on getting a data processing platform on the Cloud:
+
 - Dask cluster running in Kubernetes, 
 - With Pangeo libraries available,
 - Which we will then use in the final evaluation.

@@ -94,8 +94,11 @@ I'll try to propose some quizz to be sure your following!
 ## Day 3: Python ecosystem for data processing and Dask
 
 - The rise of the Python ecosystem for Data Processing (1.5h)
-  - Pydata stack (Pandas, Numpy, Dask)
-  - Machine and Deep Learning (Sickit Learn, TensorFlow Pytorch)
+  - Data Science programming languages
+  - Pydata stack (Pandas, Numpy, Matlplotlib, Jupyter)
+  - Distributed and sctientific processing (Dask, PySpark)
+  - Data vizualisation (Seaborn, Plotly, Pyviz)
+  - Machine and Deep Learning (Sickit Learn, TensorFlow, Pytorch)
   - Jupyter notebooks, Binder, Google Colab
 - Pandas tutorial (1h)
 - Dask Presentation (1h)

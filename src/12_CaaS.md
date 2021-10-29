@@ -1,5 +1,5 @@
 ---
-title: Container and Kubernetes
+title: Containers and Orchestration, Docker and Kubernetes
 author: Guillaume Eynard-Bontemps, CNES (Centre National d'Etudes Spatiales - French Space Agency)
 date: 2020-11-15
 ---
@@ -13,6 +13,7 @@ Thanks to [Florient Chouteau](florient.f.chouteau@airbus.com>) and Dennis Wilson
 for their work on this subject.
 
 I took most of the content from theirs:
+
 - https://supaerodatascience.github.io/OBD/slides/1_4_containers.html
 - https://supaerodatascience.github.io/OBD/slides/1_5_orchestration.html
 - https://supaerodatascience.github.io/OBD/slides/2_3_kubernetes.html#/
@@ -31,7 +32,7 @@ I took most of the content from theirs:
 
 ## Container vs VM
 
-![](https://images.contentstack.io/v3/assets/blt300387d93dabf50e/bltb6200bc085503718/5e1f209a63d1b6503160c6d5/containers-vs-virtual-machines.jpg)
+![](https://images.contentstack.io/v3/assets/blt300387d93dabf50e/bltb6200bc085503718/5e1f209a63d1b6503160c6d5/containers-vs-virtual-machines.jpg){width=10%}
 
 ## Container vs VM: similarities and drawbacks
 
@@ -44,7 +45,7 @@ I took most of the content from theirs:
 * Movable between hosts
 
 :::
-::: {.column width="40%"}
+::: {.column width="35%"}
 
 ## VM Drawbacks
 
@@ -53,9 +54,9 @@ I took most of the content from theirs:
 * Communication between VM <=> Communication between computers
 
 :::
-::: {.column width="30%"}
+::: {.column width="35%"}
 
-## Continers Drawbacks
+## Containers Drawbacks
 
 * Containers are Linux based (but still works on Windows)
 * Isolation is not perfect since containers share underlying kernels 
@@ -113,7 +114,7 @@ Docker is **a** solution that **standardizes** packaging and execution of softwa
 * Open Source (some parts)
 * Not a new idea but set a new standard
 * Docker is a company built around its main product (Docker Engine)
-* In charge of dev of everything docker + additional paid services (Docker hub...)
+* In charge of dev of everything docker (Docker hub...) + additional paid services 
 
 ## Under the hood
 
@@ -125,7 +126,7 @@ Docker is some fancy tech over linux kernel capabilities (containers)
 
 ## Using Docker in practice
 
-![](static/img/docker-jworkflow.jpg)
+![](https://supaerodatascience.github.io/OBD/slides/static/img/docker-jworkflow.jpg)
 
 ## Vocabulary of Docker
 
@@ -142,7 +143,7 @@ Docker is some fancy tech over linux kernel capabilities (containers)
 
 ## Layers, Container, Image
 
-![layers](https://jfrog--c.documentforce.com/servlet/servlet.ImageServer?id=0151r000006uDeN&oid=00D20000000M3v0&lastMod=1584629516000)
+![layers](https://jfrog--c.documentforce.com/servlet/servlet.ImageServer?id=0151r000006uDeN&oid=00D20000000M3v0&lastMod=1584629516000){width=50%}
 
 ## Layer / Image Analogy
 
@@ -210,7 +211,7 @@ docker run my-image
 
 ## Alternatives: Singularity
 
-![](https://sylabs.io/guides/3.0/user-guide/_static/logo.png)
+![](https://sylabs.io/guides/3.0/user-guide/_static/logo.png){height=200px}
 
 "Docker for HPC"
 
@@ -223,7 +224,7 @@ docker run my-image
 
 ## Alternatives: Podman
 
-![](https://podman.io/images/podman.svg)
+![](https://podman.io/images/podman.svg){height=200px}
 
 "Rootless Docker for Redhat"
 
@@ -256,6 +257,9 @@ Suppose I have a large pool of machines available
 
 ## Tools example
 
+:::::::::::::: {.columns}
+::: {.column width="40%"}
+
 Examples...
 
 - Docker Swarm
@@ -264,7 +268,13 @@ Examples...
 
 ... and so many more !
 
+:::
+::: {.column width="60%"}
+
 ![ecosystem](https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F996C7D4B5AF43B6C27)
+
+:::
+::::::::::::::
 
 ## Short Kubernetes history
 
@@ -274,7 +284,7 @@ It is open source now <https://github.com/kubernetes> and used... everywhere ?
 
 ## Thanks to Dennis for the next part
 
-[Slides](https://supaerodatascience.github.io/OBD/lectures/2_3_kubernetes.html)
+[Slides](https://supaerodatascience.github.io/OBD/slides/2_3_kubernetes.html#/)
 
 
 # Processing platform on Kubernetes
@@ -291,7 +301,7 @@ https://www.kubeflow.org/
 
 ## Databricks: Spark as a Service
 
-![](https://docs.gcp.databricks.com/_images/databricks-architecture-gcp.png){width=50%}
+![](https://docs.gcp.databricks.com/_images/databricks-architecture-gcp.png){width=40%}
 
 ## Coiled: Dask as a Service
 
