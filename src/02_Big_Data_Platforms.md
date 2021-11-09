@@ -85,6 +85,10 @@ What are the **two** building blocks of Hadoop ecosystem (multiple choices)?
 
 [Answer link](https://toreply.univ-lille.fr/reponse_638)
 
+## Map Reduce exercise
+
+[Learning Python](https://www.learnpython.org/en/Map%2C_Filter%2C_Reduce)
+
 # HDFS 
 
 ## HDFS Basics
@@ -283,6 +287,48 @@ What is the goal of a Datalake?
 ![Answer](data:image/png;base64,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)
 
 [Answer link](https://toreply.univ-lille.fr/reponse_820)
+
+# Data pipelines and associated tools
+
+## Data manipulation is complex
+
+You won't usually do what you want with a single MapReduce or Spark job.
+
+Let's say you want to train a ML model every time a text file is updated on a website and evaluate it next.
+
+You'll need to:
+
+::: incremental
+
+- Perdiocially poll the website for new data
+- Launch your model training when new text file is availaible
+- Evaluate your new model on a reference dataset
+- Push the evaluation result somewhere you can see it
+
+:::
+
+## Processing pipelines
+
+This is called a Pipeline or a workflow.
+
+It mainly means chaining tasks or jobs together to automatically produce a result from an input.
+
+Tasks are typically either:
+- Trigger based on a date, periodicity (like Linux crontab for those who knows).
+- Triggered by an external event: data availability.
+- Triggered by the end of the previous task or tasks.
+
+It is usually represented by Direct Acyclic Graphs (DAGs).
+
+## Example in Satellite ground segment
+
+![Iota2 Pipeline](images/Iota2Pipeline.png)
+
+## Some tools
+
+![Airflow](https://airflow.apache.org/blog/airflow-1.10.10/rbac-ui-timezone.gif)
+
+Plenty others from Apache or in Python ecosystem.
 
 # From HPC to Big Data to Cloud and High Performance Data Analytics
 

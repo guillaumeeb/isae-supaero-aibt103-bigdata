@@ -56,6 +56,12 @@ I'll try to propose some quizz to be sure your following!
 - Before that: 5 years on Hadoop and Spark
 - Originally: Software developer (a lot of Java)
 
+## About yourselves
+
+What are the previous courses you've followed in this master?
+
+What are you familiar with in the big data, cloud, Python and machine learning subjects?
+
 ## First quizz
 
 Let's try the Quizz mechanism.
