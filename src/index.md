@@ -16,7 +16,7 @@ Guillaume Eynard-Bontemps for ISAE-Supaero
 
 [Introduction to Big Data and its Ecosystem](01_Introduction_Big_Data.html)
 
-[Big Data Platforms](02_Big_Data_Platforms.html)
+[Big Data Platforms, Hadoop and beyond](02_Big_Data_Platforms.html)
 
 [Spark Introduction and exercise](03_Spark_Introduction.html)
 

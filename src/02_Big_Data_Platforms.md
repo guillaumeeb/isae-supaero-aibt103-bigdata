@@ -1,5 +1,5 @@
 ---
-title: Big Data Platforms
+title: Big Data Platforms, Hadoop and beyond
 author: Guillaume Eynard-Bontemps, CNES (Centre National d'Etudes Spatiales - French Space Agency)
 date: 2020-11-15
 ---
