@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
   <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     span.underline{text-decoration: underline;}
@@ -254,9 +257,9 @@
 <section id="layer-image-analogy" class="slide level2">
 <h2>Layer / Image Analogy</h2>
 <p>Docker:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode dockerfile"><code class="sourceCode dockerfile"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> python:3.6</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">RUN</span> pip install torch</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">CMD</span> ipython</span></code></pre></div>
+<pre class="dockerfile"><code>FROM python:3.6
+RUN pip install torch
+CMD ipython</code></pre>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> build <span class="at">-f</span> Dockerfile <span class="at">-t</span> my-image:1.0 .</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run my-image</span></code></pre></div>
 <p>Python:</p>
@@ -276,16 +279,16 @@
 <ul>
 <li>Used to build Images</li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode dockerfile"><code class="sourceCode dockerfile"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> python:3.7</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">ENV</span> MYVAR=<span class="st">&quot;HELLO&quot;</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">RUN</span> pip install torch</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">COPY</span> my-conf.txt /app/my-conf.txt</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">ADD</span> my-file.txt /app/my-file.txt</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">EXPOSE</span> 9000</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="kw">WORKDIR</span> <span class="st">&quot;/WORKDIR&quot;</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="kw">USER</span> MYUSER</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="kw">ENTRYPOINT</span> [<span class="st">&quot;/BIN/BASH&quot;</span>]</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="kw">CMD</span> [<span class="st">&quot;ECHO” , &quot;</span>${MYVAR}<span class="st">&quot;]</span></span></code></pre></div>
+<pre class="dockerfile"><code>FROM python:3.7
+ENV MYVAR=&quot;HELLO&quot;
+RUN pip install torch
+COPY my-conf.txt /app/my-conf.txt
+ADD my-file.txt /app/my-file.txt
+EXPOSE 9000
+WORKDIR &quot;/WORKDIR&quot;
+USER MYUSER
+ENTRYPOINT [&quot;/BIN/BASH&quot;]
+CMD [&quot;ECHO” , &quot;${MYVAR}&quot;]</code></pre>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> build <span class="at">-f</span> Dockerfile <span class="at">-t</span> my-image:1.0 .</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run my-image</span></code></pre></div>
 <ul>
@@ -466,7 +469,7 @@
 
         // Add the current slide number to the URL hash so that reloading the
         // page/copying the URL will return you to the same slide
-        hash: false,
+        hash: true,
 
         // Start with 1 for the hash rather than 0
         hashOneBasedIndex: false,
