@@ -48,6 +48,7 @@
 <li>Store and process massive amount of data</li>
 <li>In a distributed way</li>
 <li>On “commodity” hardware (i.e. not expensive)</li>
+<li>Fault tolerant</li>
 </ul>
 </section>
 <section id="a-complex-ecosystem" class="slide level2">
@@ -64,7 +65,12 @@
 <li>With their own developer community</li>
 <li>And their own development cycle</li>
 </ul>
-<p>Hadoop distributions! - Cloudera/Horthonworks (2018 fusion) - MapR - Others smaller</p>
+<p>Hadoop distributions!</p>
+<ul>
+<li>Cloudera/Horthonworks (2018 fusion)</li>
+<li>MapR</li>
+<li>Others smaller</li>
+</ul>
 </div>
 </div>
 </section>
@@ -80,6 +86,7 @@
 <li>Split and store data on a cluster of servers (with local storage)</li>
 <li>Process data localy (on the server which owns it)</li>
 <li>Horizontal scalability: add or remove machines, on the fly, for compute or storage</li>
+<li>Fault tolerant</li>
 </ul>
 </section>
 <section id="hadoop-cluster-components" class="slide level2" data-background-image="https://pbs.twimg.com/media/EKzU0wMWsAAkKLc.jpg" data-background-opacity="0.4">
@@ -364,7 +371,12 @@
 <h2>Processing pipelines</h2>
 <p>This is called a Pipeline or a workflow.</p>
 <p>It mainly means chaining tasks or jobs together to automatically produce a result from an input.</p>
-<p>Tasks are typically either: - Trigger based on a date, periodicity (like Linux crontab for those who knows). - Triggered by an external event: data availability. - Triggered by the end of the previous task or tasks.</p>
+<p>Tasks are typically either:</p>
+<ul>
+<li>Triggered based on a date, periodicity (like Linux crontab for those who knows).</li>
+<li>Triggered by an external event: data availability.</li>
+<li>Triggered by the end of the previous task or tasks.</li>
+</ul>
 <p>It is usually represented by Direct Acyclic Graphs (DAGs).</p>
 </section>
 <section id="example-in-satellite-ground-segment" class="slide level2">
@@ -376,7 +388,7 @@
 <section id="some-tools" class="slide level2">
 <h2>Some tools</h2>
 <figure>
-<img data-src="https://airflow.apache.org/blog/airflow-1.10.10/rbac-ui-timezone.gif" alt="Airflow" /><figcaption aria-hidden="true">Airflow</figcaption>
+<img data-src="https://airflow.apache.org/docs/apache-airflow/stable/_images/airflow.gif" alt="Airflow" /><figcaption aria-hidden="true">Airflow</figcaption>
 </figure>
 <p>Plenty others from Apache or in Python ecosystem.</p>
 </section></section>

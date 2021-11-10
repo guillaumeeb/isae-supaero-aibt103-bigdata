@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Guillaume Eynard-Bontemps, CNES (Centre National d’Etudes Spatiales - French Space Agency)">
-  <meta name="dcterms.date" content="2020-11-15">
+  <meta name="dcterms.date" content="2020-11-16">
   <title>Containers and Orchestration, Docker and Kubernetes</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -95,7 +95,7 @@
 <section id="title-slide">
   <h1 class="title">Containers and Orchestration, Docker and Kubernetes</h1>
   <p class="author">Guillaume Eynard-Bontemps, CNES (Centre National d’Etudes Spatiales - French Space Agency)</p>
-  <p class="date">2020-11-15</p>
+  <p class="date">2020-11-16</p>
 </section>
 
 <section>
@@ -135,7 +135,7 @@
 </section>
 <section id="container-vs-vm" class="slide level2">
 <h2>Container vs VM</h2>
-<p><img data-src="https://images.contentstack.io/v3/assets/blt300387d93dabf50e/bltb6200bc085503718/5e1f209a63d1b6503160c6d5/containers-vs-virtual-machines.jpg" style="width:10.0%" /></p>
+<p><img data-src="https://images.contentstack.io/v3/assets/blt300387d93dabf50e/bltb6200bc085503718/5e1f209a63d1b6503160c6d5/containers-vs-virtual-machines.jpg" style="width:50.0%" /></p>
 </section>
 <section id="container-vs-vm-similarities-and-drawbacks" class="slide level2">
 <h2>Container vs VM: similarities and drawbacks</h2>
@@ -237,7 +237,7 @@
 <section id="under-the-hood" class="slide level2">
 <h2>Under the hood</h2>
 <p>Docker is some fancy tech over linux kernel capabilities (containers)</p>
-<p><img data-src="https://miro.medium.com/max/700/1*4dxszUyIznfjjzSNgpI0nw.png" /></p>
+<p><img data-src="images/DockerLinux.png" /></p>
 <p><a href="https://medium.com/@goyalsaurabh66/docker-basics-cb006b9be243">more info</a></p>
 </section>
 <section id="using-docker-in-practice" class="slide level2">
@@ -258,7 +258,7 @@
 <section id="workflow" class="slide level2">
 <h2>Workflow</h2>
 <figure>
-<img data-src="https://pointful.github.io/docker-intro/docker-img/basics-of-docker-system.png" alt="workflow" /><figcaption aria-hidden="true">workflow</figcaption>
+<img data-src="images/basics-of-docker-system.png" alt="workflow" /><figcaption aria-hidden="true">workflow</figcaption>
 </figure>
 </section>
 <section id="layers-container-image" class="slide level2">
@@ -425,7 +425,7 @@ CMD [&quot;ECHO” , &quot;${MYVAR}&quot;]</code></pre>
 <p>What allows container orchestration (multiple choices)?</p>
 <ul>
 <li>Answer A: Auto scaling of services</li>
-<li>Answer B: It makes coffee</li>
+<li>Answer B: Making coffee</li>
 <li>Answer C: Ensuring container states and availability</li>
 <li>Answer D: Submitting finite jobs</li>
 </ul>
