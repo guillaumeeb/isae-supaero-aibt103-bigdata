@@ -15,6 +15,7 @@ Open source framework supported by Apache foundation:
 - Store and process massive amount of data
 - In a distributed way
 - On "commodity" hardware (i.e. not expensive)
+- Fault tolerant
 
 ## A complex ecosystem
 
@@ -33,6 +34,7 @@ Numerous Apache Software Foundation projects:
 - And their own development cycle
 
 Hadoop distributions!
+
 - Cloudera/Horthonworks (2018 fusion)
 - MapR
 - Others smaller
@@ -54,6 +56,7 @@ Hadoop distributions!
 - Split and store data on a cluster of servers (with local storage)
 - Process data localy (on the server which owns it)
 - Horizontal scalability: add or remove machines, on the fly, for compute or storage
+- Fault tolerant
 
 ## Hadoop cluster components{background-image=https://pbs.twimg.com/media/EKzU0wMWsAAkKLc.jpg data-background-opacity=0.4}
 
@@ -314,7 +317,8 @@ This is called a Pipeline or a workflow.
 It mainly means chaining tasks or jobs together to automatically produce a result from an input.
 
 Tasks are typically either:
-- Trigger based on a date, periodicity (like Linux crontab for those who knows).
+
+- Triggered based on a date, periodicity (like Linux crontab for those who knows).
 - Triggered by an external event: data availability.
 - Triggered by the end of the previous task or tasks.
 
@@ -326,7 +330,7 @@ It is usually represented by Direct Acyclic Graphs (DAGs).
 
 ## Some tools
 
-![Airflow](https://airflow.apache.org/blog/airflow-1.10.10/rbac-ui-timezone.gif)
+![Airflow](https://airflow.apache.org/docs/apache-airflow/stable/_images/airflow.gif)
 
 Plenty others from Apache or in Python ecosystem.
 

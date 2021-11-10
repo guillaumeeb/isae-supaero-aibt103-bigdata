@@ -140,6 +140,9 @@ pd.describe()
  
 ## Numpy
 
+:::::::::::::: {.columns}
+::: {.column width="60%"}
+
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/NumPy_logo_2020.svg/2560px-NumPy_logo_2020.svg.png){height=100px}
 
 - Manipulate N-dimensionnal arrays
@@ -148,6 +151,9 @@ pd.describe()
 - Easy and de facto standard syntax
 
 > Nearly every scientist working in Python draws on the power of NumPy. 
+
+:::
+::: {.column width="40%"}
 
 ```Python
 # The standard way to import NumPy:
@@ -169,6 +175,9 @@ array([ 4,  8, 13])
 rng = np.random.default_rng()
 samples = rng.normal(size=2500)
 ```
+
+:::
+::::::::::::::
 
 ## Xarray
 

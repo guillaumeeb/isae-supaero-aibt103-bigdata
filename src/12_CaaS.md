@@ -1,7 +1,7 @@
 ---
 title: Containers and Orchestration, Docker and Kubernetes
 author: Guillaume Eynard-Bontemps, CNES (Centre National d'Etudes Spatiales - French Space Agency)
-date: 2020-11-15
+date: 2020-11-16
 ---
 
 # Credits and thanks
@@ -32,7 +32,7 @@ I took most of the content from theirs:
 
 ## Container vs VM
 
-![](https://images.contentstack.io/v3/assets/blt300387d93dabf50e/bltb6200bc085503718/5e1f209a63d1b6503160c6d5/containers-vs-virtual-machines.jpg){width=10%}
+![](https://images.contentstack.io/v3/assets/blt300387d93dabf50e/bltb6200bc085503718/5e1f209a63d1b6503160c6d5/containers-vs-virtual-machines.jpg){width=50%}
 
 ## Container vs VM: similarities and drawbacks
 
@@ -132,7 +132,7 @@ Docker is **a** solution that **standardizes** packaging and execution of softwa
 
 Docker is some fancy tech over linux kernel capabilities (containers)
 
-![](https://miro.medium.com/max/700/1*4dxszUyIznfjjzSNgpI0nw.png)
+![](images/DockerLinux.png)
 
 [more info](https://medium.com/@goyalsaurabh66/docker-basics-cb006b9be243)
 
@@ -151,7 +151,7 @@ Docker is some fancy tech over linux kernel capabilities (containers)
 
 ## Workflow
 
-![workflow](https://pointful.github.io/docker-intro/docker-img/basics-of-docker-system.png)
+![workflow](images/basics-of-docker-system.png)
 
 ## Layers, Container, Image
 
@@ -317,7 +317,7 @@ It is open source now <https://github.com/kubernetes> and used... everywhere ?
 What allows container orchestration (multiple choices)?
 
 - Answer A: Auto scaling of services
-- Answer B: It makes coffee
+- Answer B: Making coffee
 - Answer C: Ensuring container states and availability
 - Answer D: Submitting finite jobs
 

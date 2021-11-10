@@ -161,7 +161,7 @@ Cite some V's of Big Data (multiple choices):
 
 ## Data Science and Machine Learning
 
-![Machine Learning tools (Azure)](https://azurecomcdn.azureedge.net/cvt-4487a6447cf1bf91e230713a05f34bad0db35c4f6fcd9ef40ec213488bd18749/images/page/services/machine-learning/value-prop-4.png)
+![Machine Learning tools (Azure)](https://i1.wp.com/neptune.ai/wp-content/uploads/MLOps-platforms-azure-2.png?resize=1024%2C578&ssl=1)
 
 ## Quizz
 
@@ -251,7 +251,7 @@ What is the typical volumes of scientific Datasets (multiple choices)?
 
 # Big Data to Machine Learning
 
-## Big Data ecosystm allows (part of) machine learning to be effective
+## Big Data ecosystem allows (part of) machine learning to be effective
 
 - More data = more precise models
 - Deep Learning difficult without large (optionnaly generated) input datasets
@@ -259,7 +259,7 @@ What is the typical volumes of scientific Datasets (multiple choices)?
 - Tools to analyse and visualize data
 - Real time model learning
 
-https://blog.dataiku.com/when-and-when-not-to-use-deep-learning
+![https://blog.dataiku.com/when-and-when-not-to-use-deep-learning](https://blog.dataiku.com/when-and-when-not-to-use-deep-learning)
 
 ## Pre processing before machine learning
 

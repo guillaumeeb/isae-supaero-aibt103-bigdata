@@ -21,23 +21,25 @@ I took most of the content:
 
 # What is the Cloud?
 
-## {background-image=https://nerds.net/wp-content/uploads/2018/02/cloud-computer-reality-750x646.jpg data-background-size=contains}
+## 
+
+![](https://nerds.net/wp-content/uploads/2018/02/cloud-computer-reality-750x646.jpg)
 
 ## But it's a bit bigger... 
 
 :::::::::::::: {.columns}
 ::: {.column width="30%"}
 
-![](https://supaerodatascience.github.io/OBD/slides/static/img/fb_datacenter.jpg){width="30%"}
+![](https://supaerodatascience.github.io/OBD/slides/static/img/fb_datacenter.jpg)
 
 :::
 ::: {.column width="70%"}
 
-![](https://www.datacenterknowledge.com/sites/datacenterknowledge.com/files/wp-content/uploads/2013/06/lulea-rows.jpg){width="25%"}
-![](https://www.datacenterknowledge.com/sites/datacenterknowledge.com/files/wp-content/uploads/2013/06/fb-lulea-external-fans.jpg){width="25%"}
+![](https://www.datacenterknowledge.com/sites/datacenterknowledge.com/files/wp-content/uploads/2013/06/lulea-rows.jpg){width="35%"}
+![](https://www.datacenterknowledge.com/sites/datacenterknowledge.com/files/wp-content/uploads/2013/06/fb-lulea-external-fans.jpg){width="35%"}
 
-![](https://cdn.arstechnica.net/wp-content/uploads/2013/02/openrack2-640x426.jpg){width="25%"}
-![](https://engineering.fb.com/wp-content/uploads/2015/05/GM23qAAlFJW8xm4BABnMiwAAAAAAbj0JAAAD.png){width="25%"}
+![](https://cdn.arstechnica.net/wp-content/uploads/2013/02/openrack2-640x426.jpg){width="35%"}
+![](https://engineering.fb.com/wp-content/uploads/2015/05/GM23qAAlFJW8xm4BABnMiwAAAAAAbj0JAAAD.png){width="35%"}
 
 (Facebook's data center & server racks)
 
@@ -258,7 +260,7 @@ Academic, public founded:
 ## Access and operating computing power
 
 - Outsourcing infra, maintenance, security, development of new services
-  - Less (?) operation cost (or at less burden)
+  - Less (?) operation cost (or at least less burden)
 - Pay-per-use, pay as you go, change of economical model
 - "Infinitely scalable" for common folks
 - "No need to plan out" infrastructure
