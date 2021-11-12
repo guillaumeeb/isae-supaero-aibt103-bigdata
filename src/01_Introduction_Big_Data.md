@@ -179,6 +179,18 @@ Which technology is the most representative of the Big Data world?
 
 # Big Data use cases
 
+## Typical Dataset (originally)
+
+Huge amount of small objects:
+- Billions of records
+- KB to MB range
+
+Think of:
+- Web pages, and words into it
+- Tweets
+- Text files, where each line is a record
+- IoT and everyday life sensors: a record per second, minute or hour.
+
 ## Cost effective storage and processing
 
 - Commodity hardware (standard servers, disks and network)
@@ -259,7 +271,7 @@ What is the typical volumes of scientific Datasets (multiple choices)?
 - Tools to analyse and visualize data
 - Real time model learning
 
-![https://blog.dataiku.com/when-and-when-not-to-use-deep-learning](https://blog.dataiku.com/when-and-when-not-to-use-deep-learning)
+[https://blog.dataiku.com/when-and-when-not-to-use-deep-learning](https://blog.dataiku.com/when-and-when-not-to-use-deep-learning)
 
 ## Pre processing before machine learning
 
