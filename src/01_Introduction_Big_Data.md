@@ -182,10 +182,12 @@ Which technology is the most representative of the Big Data world?
 ## Typical Dataset (originally)
 
 Huge amount of small objects:
+
 - Billions of records
 - KB to MB range
 
 Think of:
+
 - Web pages, and words into it
 - Tweets
 - Text files, where each line is a record
@@ -212,9 +214,9 @@ Extract new knowledge and value from the data:
 - Find new Key Performance Indicators,
 - Explain your data with no prior knowledge (Data Mining)
 
-Cross analyse internal and external data, correlation:
+Cross analysis of internal and external data, correlations:
 
-- Trends with news or social network and correlation to sales
+- Trends with news or social network stream and correlation to sales
 - Near real time updates with Stream processing
 
 ## Scientific data processing
@@ -266,7 +268,7 @@ What is the typical volumes of scientific Datasets (multiple choices)?
 ## Big Data ecosystem allows (part of) machine learning to be effective
 
 - More data = more precise models
-- Deep Learning difficult without large (optionnaly generated) input datasets
+- Deep Learning difficult without large (possibly generated) input datasets
 - Tools to collect, store, filter, index, structure data
 - Tools to analyse and visualize data
 - Real time model learning

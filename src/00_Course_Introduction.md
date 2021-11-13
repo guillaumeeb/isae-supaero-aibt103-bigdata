@@ -8,7 +8,6 @@ date: 2020-11-15
 
 ## Course Overview
 
-Title
 - ARTIFICIAL INTELLIGENCE & BUSINESS TRANSFORMATION
 - BLOC 1 : ARTIFICIAL INTELLIGENCE INTERNALS
 - AIBT103_Big Data Processing
@@ -34,13 +33,13 @@ By the end of this module, participants will be able to:
 
 | Time slot | Content |
 |-----------|---------|
-| 9:00-10:30 | Slides, tutorial or exercices |
+| 9:00-10:30 | Slides, tutorial or exercises |
 | 10:30-10:45 | Coffee Break |
-| 10:45-12:15 | Slides, tutorial or exercices |
+| 10:45-12:15 | Slides, tutorial or exercises |
 | 12:15-13:15 | Lunch (I know it's a bit short) |
-| 13:15-15:15 | Slides, tutorial or exercices (not nap) |
+| 13:15-15:15 | Slides, tutorial or exercises (not nap) |
 | 15:15-15:45 | Coffee Break (we may also make two breaks of 15min) |
-| 15:45-17:15 | Slides, tutorial or exercices (last session, at last) |
+| 15:45-17:15 | Slides, tutorial or exercises (last session, at last) |
 
 I'll try to propose some quizz to be sure your following!
 
@@ -85,9 +84,9 @@ What is this course module main subject?
   - Legacy “Big Data” ecosystem
   - Big Data use cases
   - Big Data to Machine Learning
-- Big Data platforms (2h)
+- Big Data platforms, Hadoop & Beyond (2h)
   - Hadoop, HDFS and MapReduce,
-  - Datalakes
+  - Datalakes, Data Pipelines
   - From HPC to Big Data to Cloud and High Performance Data Analytics 
   - BI vs Big Data
   - Hadoop legacy: Spark, Dask, Object Storage ...

@@ -58,7 +58,7 @@ Hadoop distributions!
 - Horizontal scalability: add or remove machines, on the fly, for compute or storage
 - Fault tolerant
 
-## Hadoop cluster components{background-image=https://pbs.twimg.com/media/EKzU0wMWsAAkKLc.jpg data-background-opacity=0.4}
+## Hadoop cluster components{background-image=https://pbs.twimg.com/media/EKzU0wMWsAAkKLc.jpg data-background-opacity=0.2}
 
 - CLuster of "commodity" servers
 - **Shared Nothing** architecture: only shared component is _standard_ network
@@ -104,7 +104,7 @@ What are the **two** building blocks of Hadoop ecosystem (multiple choices)?
 - Written in **Java**
 - Allowing to **store** massive amounts of data, 
   - structured or not, 
-  - on a machines cluster
+  - on a cluster of machines
 - Extensible and portable
 - One of the first **Software Defined Storage** 
   - (OK, Google was here first)
@@ -121,8 +121,8 @@ What are the **two** building blocks of Hadoop ecosystem (multiple choices)?
 - With a **replication** factor for preventing data loss 
   - (3 replicas default)
 - Hadoop 3: **Erasure coding**
-  - similar durability as replication 3, 
-  - but **only 50%** volume increase
+  - similar or better durability as replication 3, 
+  - but **only 50%** volume increase (can be less or more)
   - instead of 200%
 
 :::
@@ -181,12 +181,12 @@ What means HDFS?
 
 - **Functional** language concept
 - Heavily used by Google for **WWW indexing**
-- **Colocate** data and processing (with Hadoop and others)
+- **Colocate** data and processing (with Hadoop and alikes)
 - Automatic process **ditribution** on pieces of data (eager distribution)
 - Optimized for fast processing of **huge datasets**
 - **Fault tolerant**: 
   - Data is replicated, 
-  - Individual task can be restarted anywhere
+  - Individual tasks can be restarted anywhere
 
 ## Wordcount (1. storage)
 
@@ -295,7 +295,7 @@ What is the goal of a Datalake?
 
 ## Data manipulation is complex
 
-You won't usually do what you want with a single MapReduce or Spark job.
+You won't usually achieve what you want with a single MapReduce or Spark job.
 
 Let's say you want to train a ML model every time a text file is updated on a website and evaluate it next.
 
@@ -303,7 +303,7 @@ You'll need to:
 
 ::: incremental
 
-- Perdiocially poll the website for new data
+- Periodically poll the website for new data
 - Launch your model training when new text file is availaible
 - Evaluate your new model on a reference dataset
 - Push the evaluation result somewhere you can see it
@@ -386,8 +386,8 @@ Plenty others from Apache or in Python ecosystem.
 
 ![](images/HPDA.png){width=50%}
 
-- Hadoop world step to HPC: YaRN, equivalent to HPC resources scheduler
-- HPC step to Big Data: hardware not so specialized
+- Hadoop world step towards HPC: YaRN, equivalent to HPC resources scheduler
+- HPC step towards Big Data: hardware not so specialized
 - Hadoop big limitation: non standard File System and compute and storage colocation
 - HPC big limitation: storage can be difficult to scale
 
@@ -479,8 +479,8 @@ _Wikipedia_
 
 Business Intelligence _can_ use Big Data ecosystems, but is more commonly considered something different.
 
-https://medium.com/doctolib/data-engineers-are-no-longer-data-folks-d10d44712580
-https://alphalyr.fr/blog/difference-bi-business-intelligence-big-data/
+[https://medium.com/doctolib/data-engineers-are-no-longer-data-folks-d10d44712580](https://medium.com/doctolib/data-engineers-are-no-longer-data-folks-d10d44712580)
+[https://alphalyr.fr/blog/difference-bi-business-intelligence-big-data/](https://alphalyr.fr/blog/difference-bi-business-intelligence-big-data/)
 
 ## Classical BI key points
 

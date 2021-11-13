@@ -8,16 +8,16 @@ date: 2020-11-16
 
 ## Didn't do this
 
-Thanks to [Florient Chouteau](florient.f.chouteau@airbus.com>) and Dennis Wilson 
+Thanks to [Florient Chouteau](mailto:florient.f.chouteau@airbus.com) and [Dennis Wilson](mailto:Dennis.WILSON@isae-supaero.fr)
 
 for their work on this subject.
 
-I took most of the content: 
+I took most of the content from theirs: 
 
-- https://supaerodatascience.github.io/OBD/1_1_overview.html
-- https://supaerodatascience.github.io/OBD/slides/1_1_cloud_computing.html
-- https://supaerodatascience.github.io/OBD/slides/1_2_cloud_usage.html
-- https://supaerodatascience.github.io/OBD/slides/1_3_gcp.html
+- [https://supaerodatascience.github.io/OBD/1_1_overview.html](https://supaerodatascience.github.io/OBD/1_1_overview.html)
+- [https://supaerodatascience.github.io/OBD/slides/1_1_cloud_computing.html](https://supaerodatascience.github.io/OBD/slides/1_1_cloud_computing.html)
+- [https://supaerodatascience.github.io/OBD/slides/1_2_cloud_usage.html](https://supaerodatascience.github.io/OBD/slides/1_2_cloud_usage.html)
+- [https://supaerodatascience.github.io/OBD/slides/1_3_gcp.html](https://supaerodatascience.github.io/OBD/slides/1_3_gcp.html)
 
 # What is the Cloud?
 
@@ -74,8 +74,6 @@ Examples:
 
 ## A portion of AWS services{background-image=https://www.matthewb.id.au/cloud/images/AWS-Services.png data-background-size=contains}
 
-## How?
-
 ## Quizz
 
 What's the Cloud?
@@ -88,6 +86,8 @@ What's the Cloud?
 ![Answer](data:image/png;base64,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)
 
 [Answer link](https://toreply.univ-lille.fr/reponse_631)
+
+## How?
 
 # Virtualization
 
@@ -168,7 +168,7 @@ Amazon (the e-commerce store) has "scaling" issues
 
 > Building an infrastructure that is completely standardized, completely automated, and relied extensively on web services for things like storage 
 
-http://blog.b3k.us/2009/01/25/ec2-origins.html
+[http://blog.b3k.us/2009/01/25/ec2-origins.html](http://blog.b3k.us/2009/01/25/ec2-origins.html)
 
 ## So ...
 
@@ -267,7 +267,7 @@ Academic, public founded:
   - Enabling innovation
   - Power in the hands of developpers/builders
 
-## Technical benefis
+## Technical benefits
 
 - Infrastructure as Code
 - Continuous Deployment
@@ -403,17 +403,18 @@ High througput storage system with horizontal scalability
 
 ## Interacting with GCP: SDK & Cloud Shell
 
-- Using the gcloud CLI: https://cloud.google.com/sdk/install
+- Using the gcloud CLI: [https://cloud.google.com/sdk/install](https://cloud.google.com/sdk/install)
 - Using Google Cloud Shell: A small VM instance you can connect to with your browser
 
 # First interaction with Google Cloud (Exercise)
 
 ## Objectives
 
-Everyone has its credits?
+Everyone has its credits/coupons?
 
 - Create your GCP account, configure your credentials
-- Interact with Google cloud console
+- With the coupons you got, you should see USD 50 of credits (in the billing tab)
+- Interact with Google cloud console: check all the services
 - Connect to google cloud shell and interact with it
 - Create a Virtual Machine and connect to it
 - Create a Google Storage bucket and upload content

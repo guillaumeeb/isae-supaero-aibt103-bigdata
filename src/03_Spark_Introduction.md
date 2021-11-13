@@ -31,7 +31,7 @@ From [Spark Research homepage](https://spark.apache.org/research.html):
 
 ![Difference between MapReduce and Spark (Knoldus)](https://i0.wp.com/blog.knoldus.com/wp-content/uploads/2018/10/Difference-between-MapReduce-and-Spark_A.jpg?w=700&ssl=1)
 
-- MapReduce alternative wihch provides in memory processing (100x faster)
+- MapReduce alternative which provides in memory processing (100x faster)
 - A lot of other things, tools, higher level API
 
 ## Tools and ecosystem
@@ -123,7 +123,7 @@ What's the main difference between Spark and Hadoop Map Reduce?
 - Wide Dependencies (shuffles, so MapReduce): 1 to N
 - transformations in Spark are **lazy**
   - No computations
-  - Just remember the transformations to base dataset
+  - Just remember the transformations from input dataset
 
 :::
 ::: {.column width="40%"}
