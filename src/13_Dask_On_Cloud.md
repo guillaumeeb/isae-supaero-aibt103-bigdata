@@ -30,4 +30,4 @@ We will focus on getting a data processing platform on the Cloud:
 - With Pangeo libraries available,
 - Which we will then use in the final evaluation.
 
-[Documentation notebook](https://github.com/SupaeroDataScience/OBD/blob/master/notebooks/Kubernetes_Daskhub.ipynb)
+[Documentation notebook](https://github.com/guillaumeeb/OBD/blob/master/notebooks/Kubernetes_Daskhub.ipynb)

@@ -8,15 +8,15 @@ date: 2020-11-16
 
 ## Didn't do this
 
-Thanks to [Florient Chouteau](florient.f.chouteau@airbus.com>) and Dennis Wilson 
+Thanks to [Florient Chouteau](mailto:florient.f.chouteau@airbus.com) and [Dennis Wilson](mailto:Dennis.WILSON@isae-supaero.fr)
 
 for their work on this subject.
 
 I took most of the content from theirs:
 
-- https://supaerodatascience.github.io/OBD/slides/1_4_containers.html
-- https://supaerodatascience.github.io/OBD/slides/1_5_orchestration.html
-- https://supaerodatascience.github.io/OBD/slides/2_3_kubernetes.html#/
+- [https://supaerodatascience.github.io/OBD/slides/1_4_containers.html](https://supaerodatascience.github.io/OBD/slides/1_4_containers.html)
+- [https://supaerodatascience.github.io/OBD/slides/1_5_orchestration.html](https://supaerodatascience.github.io/OBD/slides/1_5_orchestration.html)
+- [https://supaerodatascience.github.io/OBD/slides/2_3_kubernetes.html#/](https://supaerodatascience.github.io/OBD/slides/2_3_kubernetes.html#/)
 
 # Containers
 
@@ -25,7 +25,8 @@ I took most of the content from theirs:
 - How to get software to run reliably when moved from one computing environment to another
   - from a developer's laptop to a test environment
   - from staging to prod
-- Packaging application + runtime as a syngle package
+  - from a Cloud provider to another
+- Packaging application + runtime as a single package
 - Abstract differences in OS and underlying hardware
 - Build once, run anywhere
 - Pet vs Cattle, at another level
@@ -263,10 +264,12 @@ What's Docker typical workflow?
 
 ## Play with Docker
 
-* You need to have a docker hub account : https://hub.docker.com/
-* https://labs.play-with-docker.com/
+* You need to have a docker hub account : [https://hub.docker.com/](https://hub.docker.com/)
+* Then we'll use the service provided at [https://labs.play-with-docker.com/](https://labs.play-with-docker.com/)
 * Free, interactive, cluster of vms to experiment docker with
-* https://training.play-with-docker.com/ lots of resoures !
+* [https://training.play-with-docker.com/](https://training.play-with-docker.com/) lots of resoures !
+* We'll begin with [https://training.play-with-docker.com/beginner-linux/](https://training.play-with-docker.com/beginner-linux/)
+* And try to make it to the [Voting App](https://training.play-with-docker.com/swarm-stack-intro/)
 
 # Kubernetes
 
@@ -330,7 +333,7 @@ What allows container orchestration (multiple choices)?
 
 ## Kubeflow
 
-https://www.kubeflow.org/
+[https://www.kubeflow.org/](https://www.kubeflow.org/)
 
 ![kubeflow](https://miro.medium.com/max/2446/1*ZQsFV3o1c3Amu26Z-IEd7w.png){width=55%}
 
@@ -364,13 +367,6 @@ How do you deploy containers through Kubernetes (mutliple choices)?
 
 ## Try some
 
-https://training.play-with-kubernetes.com/kubernetes-workshop/ 
+[https://training.play-with-kubernetes.com/kubernetes-workshop/](https://training.play-with-kubernetes.com/kubernetes-workshop/)
 
-https://www.katacoda.com/courses/kubernetes
-
-https://labs.play-with-k8s.com/
-
-https://github.com/yogeek/kubernetes-local-development
-
-
-
+[https://labs.play-with-k8s.com/](https://labs.play-with-k8s.com/) with [Voting App](https://training.play-with-docker.com/swarm-stack-intro/)
