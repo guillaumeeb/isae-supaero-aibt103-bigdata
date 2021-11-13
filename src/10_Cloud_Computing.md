@@ -412,11 +412,12 @@ High througput storage system with horizontal scalability
 
 Everyone has its credits/coupons?
 
-- Create your GCP account, configure your credentials
-- With the coupons you got, you should see USD 50 of credits (in the billing tab)
+- Create your GCP account, configure your credentials, ensure everything is working
+- With the coupons you got, you should see $50 of credits (in the billing tab)
 - Interact with Google cloud console: check all the services
-- Connect to google cloud shell and interact with it
-- Create a Virtual Machine and connect to it
+- Start a first VM instance through the console, watch prices and all the options
 - Create a Google Storage bucket and upload content
+- Connect to google cloud shell and interact with it
+- Follow [this Google codelabs](https://codelabs.developers.google.com/codelabs/cloud-compute-engine#2) to deploy a Website!
 
 We'll do more this afternoon!
