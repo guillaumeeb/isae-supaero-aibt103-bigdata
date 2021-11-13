@@ -89,8 +89,8 @@
 <li>Fault tolerant</li>
 </ul>
 </section>
-<section id="hadoop-cluster-components" class="slide level2" data-background-image="https://pbs.twimg.com/media/EKzU0wMWsAAkKLc.jpg" data-background-opacity="0.4">
-<h2 data-background-image="https://pbs.twimg.com/media/EKzU0wMWsAAkKLc.jpg" data-background-opacity="0.4">Hadoop cluster components</h2>
+<section id="hadoop-cluster-components" class="slide level2" data-background-image="https://pbs.twimg.com/media/EKzU0wMWsAAkKLc.jpg" data-background-opacity="0.2">
+<h2 data-background-image="https://pbs.twimg.com/media/EKzU0wMWsAAkKLc.jpg" data-background-opacity="0.2">Hadoop cluster components</h2>
 <ul>
 <li>CLuster of “commodity” servers</li>
 <li><strong>Shared Nothing</strong> architecture: only shared component is <em>standard</em> network</li>
@@ -145,7 +145,7 @@
 <li>Allowing to <strong>store</strong> massive amounts of data,
 <ul>
 <li>structured or not,</li>
-<li>on a machines cluster</li>
+<li>on a cluster of machines</li>
 </ul></li>
 <li>Extensible and portable</li>
 <li>One of the first <strong>Software Defined Storage</strong>
@@ -168,8 +168,8 @@
 </ul></li>
 <li>Hadoop 3: <strong>Erasure coding</strong>
 <ul>
-<li>similar durability as replication 3,</li>
-<li>but <strong>only 50%</strong> volume increase</li>
+<li>similar or better durability as replication 3,</li>
+<li>but <strong>only 50%</strong> volume increase (can be less or more)</li>
 <li>instead of 200%</li>
 </ul></li>
 </ul>
@@ -231,13 +231,13 @@
 <ul>
 <li><strong>Functional</strong> language concept</li>
 <li>Heavily used by Google for <strong>WWW indexing</strong></li>
-<li><strong>Colocate</strong> data and processing (with Hadoop and others)</li>
+<li><strong>Colocate</strong> data and processing (with Hadoop and alikes)</li>
 <li>Automatic process <strong>ditribution</strong> on pieces of data (eager distribution)</li>
 <li>Optimized for fast processing of <strong>huge datasets</strong></li>
 <li><strong>Fault tolerant</strong>:
 <ul>
 <li>Data is replicated,</li>
-<li>Individual task can be restarted anywhere</li>
+<li>Individual tasks can be restarted anywhere</li>
 </ul></li>
 </ul>
 </section>
@@ -355,12 +355,12 @@
 </section>
 <section id="data-manipulation-is-complex" class="slide level2">
 <h2>Data manipulation is complex</h2>
-<p>You won’t usually do what you want with a single MapReduce or Spark job.</p>
+<p>You won’t usually achieve what you want with a single MapReduce or Spark job.</p>
 <p>Let’s say you want to train a ML model every time a text file is updated on a website and evaluate it next.</p>
 <p>You’ll need to:</p>
 <div>
 <ul>
-<li class="fragment">Perdiocially poll the website for new data</li>
+<li class="fragment">Periodically poll the website for new data</li>
 <li class="fragment">Launch your model training when new text file is availaible</li>
 <li class="fragment">Evaluate your new model on a reference dataset</li>
 <li class="fragment">Push the evaluation result somewhere you can see it</li>
@@ -502,8 +502,8 @@
 <h2>HPDA convergence</h2>
 <p><img data-src="images/HPDA.png" style="width:50.0%" /></p>
 <ul>
-<li>Hadoop world step to HPC: YaRN, equivalent to HPC resources scheduler</li>
-<li>HPC step to Big Data: hardware not so specialized</li>
+<li>Hadoop world step towards HPC: YaRN, equivalent to HPC resources scheduler</li>
+<li>HPC step towards Big Data: hardware not so specialized</li>
 <li>Hadoop big limitation: non standard File System and compute and storage colocation</li>
 <li>HPC big limitation: storage can be difficult to scale</li>
 </ul>
@@ -595,7 +595,7 @@
 </blockquote>
 <p><em>Wikipedia</em></p>
 <p>Business Intelligence <em>can</em> use Big Data ecosystems, but is more commonly considered something different.</p>
-<p>https://medium.com/doctolib/data-engineers-are-no-longer-data-folks-d10d44712580 https://alphalyr.fr/blog/difference-bi-business-intelligence-big-data/</p>
+<p><a href="https://medium.com/doctolib/data-engineers-are-no-longer-data-folks-d10d44712580">https://medium.com/doctolib/data-engineers-are-no-longer-data-folks-d10d44712580</a> <a href="https://alphalyr.fr/blog/difference-bi-business-intelligence-big-data/">https://alphalyr.fr/blog/difference-bi-business-intelligence-big-data/</a></p>
 </section>
 <section id="classical-bi-key-points" class="slide level2">
 <h2>Classical BI key points</h2>
