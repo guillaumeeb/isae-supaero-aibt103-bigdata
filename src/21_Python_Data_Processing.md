@@ -562,3 +562,9 @@ def monte_carlo_pi(nsamples):
 ## Pandas tutorial
 
 [Let's try Pandas in Binder](https://github.com/jvns/pandas-cookbook)
+
+Follow this first tutorial at least till chapter 6. Use the binder button!
+
+[Pandas & Scikit-learn](https://github.com/INRIA/scikit-learn-mooc/)
+
+If you have time, go through part "The predictive modeling pipeline". Notebook 01 to 03. With Binder too.

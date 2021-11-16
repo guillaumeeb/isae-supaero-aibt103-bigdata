@@ -310,7 +310,7 @@ Why Cloud computing is a usage revolution (multiple choices)?
 
 - Answer A: Infinite resources (CPU, memory, storage)
 - Answer B: It's cheaper
-- Answer C: Infrastructure manage as Code
+- Answer C: Infrastructure managed as Code
 - Answer D: Pay per use
 - Answer E: It gives all our data to Google and Amazon
 

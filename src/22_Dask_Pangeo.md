@@ -26,6 +26,15 @@ What produces all dask API in the end?
 
 [ Just use the Dask tutorial](https://github.com/dask/dask-tutorial)
 
+Try to follow by order of importance:
+
+- Dask Dataframes
+- Distributed
+- Parallel and Distributed Machine Learning
+- Next, if you have more time
+  - Array
+  - Bag (this should remind RDDs of Spark)
+
 # Pangeo tutorial or finish deploying your computing platform
 
 [Just try some use cases here](https://gallery.pangeo.io/)

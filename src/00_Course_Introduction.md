@@ -98,7 +98,7 @@ What is this course module main subject?
 - Introduction to Cloud Computing (2h)
   - What's the Cloud, Virtualization
   - Cloud history, layers, Engines
-  - Usage revolution an new Data processing standard
+  - Usage revolution and new Data processing standard
   - Google Cloud Engine
 - First interaction with Google Cloud, how to get a server? (1h)
   - Exercise through Google console or cloud CLI
