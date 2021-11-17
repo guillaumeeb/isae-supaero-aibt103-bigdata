@@ -6,16 +6,19 @@ date: 2020-11-18
 
 # Context
 
-Prerequisite: Pangeo platform deployed before
+Prerequisite: Dask Hub platform deployed before.
 
-Dataset: taxi cab simplified.
+Dataset: New York Taxi cab statistics simplified.
 
 # What has to be done
 
 - What's wrong with pandas?
-- Clean big amounts of data using Dask in the cloud,
-- Train machine learning models in parallel (hyper parameter search)
+- Clean big amounts of data using Dask in the cloud (interactive distributed processing)
+- Train a machine learning model with a big dataset in input
+- Train machine learning models in parallel (hyper parameter search) on smaller input dataset
 
 # Evaluation link
 
-[Let's go](https://github.com/SupaeroDataScience/OBD/blob/master/notebooks/BEDaskMLTaxyCabEmpty.ipynb)
+[Let's go](https://github.com/guillaumeeb/isae-supaero-aibt103-bigdata/tree/main/notebooks/EvaluationDaskMLTaxyCabEmpty.pynb)
+
+- Just git clone this repository from your Juptyerlab to start
