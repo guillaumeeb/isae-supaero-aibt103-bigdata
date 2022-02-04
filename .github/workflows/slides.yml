@@ -33,7 +33,8 @@ jobs:
           - 02_Big_Data_Platforms
           - 03_Spark_Introduction
           - 10_Cloud_Computing
-          - 12_CaaS
+          - 11_ContainersAndDocker
+          - 12_OrchestrationKubernetes
           - 13_Dask_On_Cloud
           - 21_Python_Data_Processing
           - 22_Dask_Pangeo

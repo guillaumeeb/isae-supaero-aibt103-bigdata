@@ -28,9 +28,13 @@ Guillaume Eynard-Bontemps for ISAE-Supaero
 
 Includes first interaction with Google Cloud.
 
-[Containers and Orchestration, Docker and Kubernetes](12_CaaS.html)
+[Containers and Docker](11_ContainersAndDocker)
 
-Includes Docker and Kubernetes exercises.
+Includes Docker exercises.
+
+[Containers Orchestration, Kubernetes](12_OrchestrationKubernetes.html)
+
+Includes Kubernetes exercices.
 
 [Deploy Data processing platform on the Cloud](13_Dask_On_Cloud.html)
 

@@ -8,9 +8,7 @@ date: 2020-11-15
 
 ## Course Overview
 
-- ARTIFICIAL INTELLIGENCE & BUSINESS TRANSFORMATION
-- BLOC 1 : ARTIFICIAL INTELLIGENCE INTERNALS
-- AIBT103_Big Data Processing
+- Big Data Processing
 
 Harnessing the complexity of large amounts of data is a challenge in itself. 
 
