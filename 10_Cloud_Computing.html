@@ -94,7 +94,8 @@
 
 <section id="title-slide">
   <h1 class="title">Introduction to Cloud Computing</h1>
-  <p class="author">Guillaume Eynard-Bontemps, CNES (Centre National d’Etudes Spatiales - French Space Agency)</p>
+  <p class="author">Guillaume Eynard-Bontemps, CNES (Centre National
+d’Etudes Spatiales - French Space Agency)</p>
   <p class="date">2020-11-16</p>
 </section>
 
@@ -105,14 +106,20 @@
 </section>
 <section id="didnt-do-this" class="slide level2">
 <h2>Didn’t do this</h2>
-<p>Thanks to <a href="mailto:florient.f.chouteau@airbus.com">Florient Chouteau</a> and <a href="mailto:Dennis.WILSON@isae-supaero.fr">Dennis Wilson</a></p>
+<p>Thanks to <a href="mailto:florient.f.chouteau@airbus.com">Florient
+Chouteau</a> and <a href="mailto:Dennis.WILSON@isae-supaero.fr">Dennis
+Wilson</a></p>
 <p>for their work on this subject.</p>
 <p>I took most of the content from theirs:</p>
 <ul>
-<li><a href="https://supaerodatascience.github.io/OBD/1_1_overview.html">https://supaerodatascience.github.io/OBD/1_1_overview.html</a></li>
-<li><a href="https://supaerodatascience.github.io/OBD/slides/1_1_cloud_computing.html">https://supaerodatascience.github.io/OBD/slides/1_1_cloud_computing.html</a></li>
-<li><a href="https://supaerodatascience.github.io/OBD/slides/1_2_cloud_usage.html">https://supaerodatascience.github.io/OBD/slides/1_2_cloud_usage.html</a></li>
-<li><a href="https://supaerodatascience.github.io/OBD/slides/1_3_gcp.html">https://supaerodatascience.github.io/OBD/slides/1_3_gcp.html</a></li>
+<li><a
+href="https://supaerodatascience.github.io/OBD/1_1_overview.html">https://supaerodatascience.github.io/OBD/1_1_overview.html</a></li>
+<li><a
+href="https://supaerodatascience.github.io/OBD/slides/1_1_cloud_computing.html">https://supaerodatascience.github.io/OBD/slides/1_1_cloud_computing.html</a></li>
+<li><a
+href="https://supaerodatascience.github.io/OBD/slides/1_2_cloud_usage.html">https://supaerodatascience.github.io/OBD/slides/1_2_cloud_usage.html</a></li>
+<li><a
+href="https://supaerodatascience.github.io/OBD/slides/1_3_gcp.html">https://supaerodatascience.github.io/OBD/slides/1_3_gcp.html</a></li>
 </ul>
 </section></section>
 <section>
@@ -122,16 +129,26 @@
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
-<p><img data-src="https://nerds.net/wp-content/uploads/2018/02/cloud-computer-reality-750x646.jpg" /></p>
+<p><img
+data-src="https://nerds.net/wp-content/uploads/2018/02/cloud-computer-reality-750x646.jpg" /></p>
 </section>
 <section id="but-its-a-bit-bigger" class="slide level2">
 <h2>But it’s a bit bigger…</h2>
 <div class="columns">
 <div class="column" style="width:30%;">
-<p><img data-src="https://supaerodatascience.github.io/OBD/slides/static/img/fb_datacenter.jpg" /></p>
+<p><img
+data-src="https://supaerodatascience.github.io/OBD/slides/static/img/fb_datacenter.jpg" /></p>
 </div><div class="column" style="width:70%;">
-<p><img data-src="https://www.datacenterknowledge.com/sites/datacenterknowledge.com/files/wp-content/uploads/2013/06/lulea-rows.jpg" style="width:35.0%" /> <img data-src="https://www.datacenterknowledge.com/sites/datacenterknowledge.com/files/wp-content/uploads/2013/06/fb-lulea-external-fans.jpg" style="width:35.0%" /></p>
-<p><img data-src="https://cdn.arstechnica.net/wp-content/uploads/2013/02/openrack2-640x426.jpg" style="width:35.0%" /> <img data-src="https://engineering.fb.com/wp-content/uploads/2015/05/GM23qAAlFJW8xm4BABnMiwAAAAAAbj0JAAAD.png" style="width:35.0%" /></p>
+<p><img
+data-src="https://www.datacenterknowledge.com/sites/datacenterknowledge.com/files/wp-content/uploads/2013/06/lulea-rows.jpg"
+style="width:35.0%" /> <img
+data-src="https://www.datacenterknowledge.com/sites/datacenterknowledge.com/files/wp-content/uploads/2013/06/fb-lulea-external-fans.jpg"
+style="width:35.0%" /></p>
+<p><img
+data-src="https://cdn.arstechnica.net/wp-content/uploads/2013/02/openrack2-640x426.jpg"
+style="width:35.0%" /> <img
+data-src="https://engineering.fb.com/wp-content/uploads/2015/05/GM23qAAlFJW8xm4BABnMiwAAAAAAbj0JAAAD.png"
+style="width:35.0%" /></p>
 <p>(Facebook’s data center &amp; server racks)</p>
 </div>
 </div>
@@ -139,23 +156,32 @@
 <section id="google-cloud-data-center-locations" class="slide level2">
 <h2>Google Cloud Data Center locations</h2>
 <figure>
-<img data-src="https://cloud.google.com/images/locations/regions.png" alt="Data Centers" /><figcaption aria-hidden="true">Data Centers</figcaption>
+<img data-src="https://cloud.google.com/images/locations/regions.png"
+alt="Data Centers" />
+<figcaption aria-hidden="true">Data Centers</figcaption>
 </figure>
 </section>
 <section id="cloud-definition" class="slide level2">
 <h2>Cloud Definition</h2>
 <blockquote>
-<p>The cloud is a real physical place - accessed over the internet - where a service is performed for you or where your stuff is stored. Your stuff is stored in the cloud, not on your device because the cloud is not on any device; the cloud lives in datacenters. A program running on your device accesses the cloud over the internet. The cloud is infinite, accessible from anywhere, at any time</p>
+<p>The cloud is a real physical place - accessed over the internet -
+where a service is performed for you or where your stuff is stored. Your
+stuff is stored in the cloud, not on your device because the cloud is
+not on any device; the cloud lives in datacenters. A program running on
+your device accesses the cloud over the internet. The cloud is infinite,
+accessible from anywhere, at any time</p>
 </blockquote>
 <p>Todd Hoff in “Explain the Cloud like I’m 10”</p>
 </section>
 <section id="cloud-computing" class="slide level2">
 <h2>Cloud Computing</h2>
-<p>Using cloud resources for any purpose, web server, storage, computations.</p>
+<p>Using cloud resources for any purpose, web server, storage,
+computations.</p>
 <ul>
 <li>The cloud is a set of <strong>cloud providers</strong></li>
 <li>Renting cloud <strong>services</strong></li>
-<li>Increasingly <strong>abstracted</strong> from the physical hardware</li>
+<li>Increasingly <strong>abstracted</strong> from the physical
+hardware</li>
 </ul>
 <div class="fragment">
 <p>Examples:</p>
@@ -166,8 +192,12 @@
 </ul>
 </div>
 </section>
-<section id="a-portion-of-aws-services" class="slide level2" data-background-image="https://www.matthewb.id.au/cloud/images/AWS-Services.png" data-background-size="contains">
-<h2 data-background-image="https://www.matthewb.id.au/cloud/images/AWS-Services.png" data-background-size="contains">A portion of AWS services</h2>
+<section id="a-portion-of-aws-services" class="slide level2"
+data-background-image="https://www.matthewb.id.au/cloud/images/AWS-Services.png"
+data-background-size="contains">
+<h2
+data-background-image="https://www.matthewb.id.au/cloud/images/AWS-Services.png"
+data-background-size="contains">A portion of AWS services</h2>
 </section>
 <section id="quizz" class="slide level2">
 <h2>Quizz</h2>
@@ -176,12 +206,17 @@
 <li>Answer A: Still don’t know…</li>
 <li>Answer B: A magic place where my photos and likes are</li>
 <li>Answer C: Someone else computer</li>
-<li>Answer D: Several big Data centers around the world that host data and service</li>
+<li>Answer D: Several big Data centers around the world that host data
+and service</li>
 </ul>
 <figure>
-<img data-src="data:image/png;base64,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" alt="Answer" /><figcaption aria-hidden="true">Answer</figcaption>
+<img
+data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAIAAAD2HxkiAAAGnklEQVR42u3dXXMiKRgG0HHL//+XsxepsSynu0Xx/cA+52Z3khhp7EcQAlx+fn7+AHX+UwUghHBq19//XC6X25dqO6i/JYkuw/313l/13tdzSnL/XA8l+bcYORVFUkt4ezn3bsSP33bRT/HU7WIf/v/+Kwm1sVfz91/fLEZ5BfLJED68oebkcDAe5UJrY7PmNythM6J8W3d0sGf48JXBrtTm3bzZm7r9wF7v6+G7t19y8MCF+tJ7D+z2Rsnnu6OhXan77x53Akfuwr2+WVpfeuTT3atluPx10HX32U8Ip96bJ3uYT5+rSROx2bEcubqDd5AOby7kdUffeMfdvDN+O4dPB/e+0huXeR/d33rb7CDsfYuvCuFmeN675/79pOcGgt3u6MNntvsUHQzKbQ60/P7zpSSP/PDeZ86GAy0vXfvBdT38Hh8Lv9tl8yPWfcN1P/B4MDp68PU/+6Og4486Hh199X6NmKx/7w8e3pisz/+LAjJCSEnLCUIIDT4TqgIQQhBCQAhBCAEhBCEEhBCEEBBCEEJACEEIASEEIQSEEIQQEEIQQiDONedpGm4gvbm5Tlo507b2eXULxv6/s/YO0RKC7igghCCEgBCCEAKfci187obD9LWFb1jOvSMocx6+9B2iJQTdUUAIQQgBIQQhBI5duxVocrA4YlB7fL3F5E9GLOyYnCSY/J0NJ3IaHk2tJQQhBCEEhBCEEBBCOKerKrgXMRsxbunpmYi5EC0hIIQghIAQghACQghfzBTFc2kbE0Wc3JC2U5N5Cy0hCCEghCCEgBCCEAIvaTdFUTt+XTugn/aTtbW09B2iJQTdUUAIQQgBIQQhBD6lcoqi9oziiMI3nI1I+8nJWvq+O0RLCEIICCEIISCEIITAsaQpCnv7JNRnw9kId4iWEIQQEEIQQkAIQQiBPZduQ8MRI91p512PFymiltJ2f1qlPleZNdESgu4oCCEghCCEgBDCOSWtopgcKI84n7l2/HqVc6Qbnss9Wc60qRQtIeiOAkIIQggIIQghcKzdWRSTw/STA9AN50IaTmYsPXPQsD61hKA7CkIICCEIISCEcE6VZ1Gk/en6KsPfaXM2EZeZ9nJ832nbWkIQQhBCQAhBCAEhhHOqXEWRNtZcu/vT982FpK2iiLjBGs5baAlBCEEIASEEIQSEEM7pFMdlTz577TKItAppeJhExMNrZ020hKA7CgghCCEghCCEwE3lcdmbxoeVawegIxZ2TFZI2gu3WaTJF652PytnUYDuKCCEIISAEIIQAvnaraLIu/KsFQ+rnAYx+UQN169EVIiWEHRHASEEIQSEEIQQ+JRTbPSUNvydtuKh9okiainiDlll+k1LCEIIQggIIQghIIRwTtclSrnKoQIRz755mavsExVxmMT4FU3uD+YsCtAdBYQQhBAQQhBCINQaqyhWOXE64jJrR8+XngtZZRJLSwi6oyCEgBCCEAJCCOf0bWdR1A7ojxdpXO15DKscEVG7yZWWEHRHASEEIQSEEIQQeMN13aJPLkQYNzl233BtxGSRJq897XUff7iWEHRHASEEIQSEEIQQyJe0imKVLXcihr9rHx5hlcO60x6uJQTdUUAIQQgBIQQhBN5QuYqidmehhjtcRRyoUFufaS/HKrMRWkLQHQWEEIQQEEIQQuBmjY2eancWmizSpPGh/9otjCL23Vr6hAktIeiOAkIIQggIIQghcOx6housPTei4Th7WoWkzUYsvc5GSwi6oyCEgBCCEAJCCOeUNEUxPtqbthBhU8OzlCelHYKdNvQ/voKk4YIJLSEIISCEIISAEIIQAjdJUxQNh/4jBt8jihQxIt9wXchkkdKOstASgu4oIIQghIAQghACn9LuuOwIaUPqDa+99niMtHLWHiquJQTdUUAIQQgBIQQhBN7Q7iyKVUa6J4sUMaQesadTWjkjKjntJdYSgu4oIIQghIAQghACb7iqgqciRvmX3pSpYYVMVl3tvIWWEHRHQQgBIQQhBIQQzskUxXMN94ma/J0N15pEHNZde0i7lhB0RwEhBCEEhBCEEDjWboqidrB48k/sI3apmtwrKWL7ploRqyi0hKA7CgghCCEghCCEQL7KKYqGpwKMq93TqXYLo9rDJCYf3nDeQksIuqMghIAQghACQgjndGn4R+WgJQSEEIQQEEIQQkAIQQgBIQQhBIQQhBAQQhBCQAhBCAEhBCEEhBCEEBBCEEJACEEIASEEIQSEEIQQEEIQQkAIQQgBIQQhBIQQlvE/uXhbdKmj2cwAAAAASUVORK5CYII="
+alt="Answer" />
+<figcaption aria-hidden="true">Answer</figcaption>
 </figure>
-<p><a href="https://toreply.univ-lille.fr/reponse_631">Answer link</a></p>
+<p><a href="https://toreply.univ-lille.fr/reponse_631">Answer
+link</a></p>
 </section>
 <section id="how" class="slide level2">
 <h2>How?</h2>
@@ -194,31 +229,41 @@
 <section id="definition" class="slide level2">
 <h2>Definition</h2>
 <blockquote>
-<p>In computing, virtualization refers to the act of creating a virtual (rather than actual) version of something, including virtual computer hardware platforms, storage devices, and computer network resources.</p>
+<p>In computing, virtualization refers to the act of creating a virtual
+(rather than actual) version of something, including virtual computer
+hardware platforms, storage devices, and computer network resources.</p>
 </blockquote>
 <p>Wikipedia</p>
 <blockquote>
-<p>Basically we are running software on “abstract hardware” which is a “portion” of a real computer (“bare metal”)</p>
+<p>Basically we are running software on “abstract hardware” which is a
+“portion” of a real computer (“bare metal”)</p>
 </blockquote>
 </section>
 <section id="desktop-virtualization" class="slide level2">
 <h2>Desktop virtualization</h2>
-<p><img data-src="https://www.unixtutorial.org/images/posts/Hardware-Virtualization-Desktop-Virtualization-Example.png" style="width:75.0%" /></p>
+<p><img
+data-src="https://www.unixtutorial.org/images/posts/Hardware-Virtualization-Desktop-Virtualization-Example.png"
+style="width:75.0%" /></p>
 </section>
 <section id="server-virtualization" class="slide level2">
 <h2>Server virtualization</h2>
-<p><img data-src="https://www.researchgate.net/profile/Bashir-Mohammed-2/publication/269636339/figure/fig1/AS:295113902313473@1447372045341/illustration-of-the-concept-of-Virtualization-7.png" /></p>
+<p><img
+data-src="https://www.researchgate.net/profile/Bashir-Mohammed-2/publication/269636339/figure/fig1/AS:295113902313473@1447372045341/illustration-of-the-concept-of-Virtualization-7.png" /></p>
 </section>
 <section id="virtualization-evolution" class="slide level2">
 <h2>Virtualization evolution</h2>
-<p><img data-src="https://miro.medium.com/max/10698/1*wE7TrQmFyRTDwh6VpbkbMQ.png" /></p>
+<p><img
+data-src="https://miro.medium.com/max/10698/1*wE7TrQmFyRTDwh6VpbkbMQ.png" /></p>
 </section>
 <section id="definitions" class="slide level2">
 <h2>Definitions</h2>
 <ul>
-<li><strong>Hypervisor</strong> (VMWare, Virtualbox, KVM): A hypervisor is a program for creating and running virtual machines</li>
-<li><strong>Virtual Machine</strong>: A virtual machine is the emulated equivalent of a computer system that runs on top of another system</li>
-<li><strong>Containers</strong>: Isolated environments that share the same underlying OS (more this afternoon) &amp; resources</li>
+<li><strong>Hypervisor</strong> (VMWare, Virtualbox, KVM): A hypervisor
+is a program for creating and running virtual machines</li>
+<li><strong>Virtual Machine</strong>: A virtual machine is the emulated
+equivalent of a computer system that runs on top of another system</li>
+<li><strong>Containers</strong>: Isolated environments that share the
+same underlying OS (more this afternoon) &amp; resources</li>
 </ul>
 </section>
 <section id="opens-up-new-possibilities" class="slide level2">
@@ -234,7 +279,10 @@
 </div><div class="column" style="width:50%;">
 <h3 id="reliability-security">Reliability, security…</h3>
 <figure>
-<img data-src="https://yogeek.github.io/enseignement/Introduction_Virtualisation_CloudComputing/img/vm_charge_repartition.gif" alt="balancing" /><figcaption aria-hidden="true">balancing</figcaption>
+<img
+data-src="https://yogeek.github.io/enseignement/Introduction_Virtualisation_CloudComputing/img/vm_charge_repartition.gif"
+alt="balancing" />
+<figcaption aria-hidden="true">balancing</figcaption>
 </figure>
 </div>
 </div>
@@ -243,16 +291,21 @@
 <h2>Quizz</h2>
 <p>Virtualization allows… (multiple choices)</p>
 <ul>
-<li>Answer A: Hardware abstraction, download a machine with more ram</li>
+<li>Answer A: Hardware abstraction, download a machine with more
+ram</li>
 <li>Answer B: Resources sharing optimization</li>
 <li>Answer C: Building immersive video games</li>
 <li>Answer D: Reliability</li>
 <li>Answer E: Reproducibility</li>
 </ul>
 <figure>
-<img data-src="data:image/png;base64,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" alt="Answer" /><figcaption aria-hidden="true">Answer</figcaption>
+<img
+data-src="data:image/png;base64,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"
+alt="Answer" />
+<figcaption aria-hidden="true">Answer</figcaption>
 </figure>
-<p><a href="https://toreply.univ-lille.fr/reponse_710">Answer link</a></p>
+<p><a href="https://toreply.univ-lille.fr/reponse_710">Answer
+link</a></p>
 </section></section>
 <section>
 <section id="cloud-history" class="title-slide slide level1">
@@ -263,19 +316,24 @@
 <h2>AWS</h2>
 <p>Once upon a time…</p>
 <p>Amazon (the e-commerce store) has “scaling” issues</p>
-<p><img data-src="https://cdn.chiefmartec.com/wp-content/uploads/2016/11/jeff_bezos_big_mandate.jpg" /></p>
+<p><img
+data-src="https://cdn.chiefmartec.com/wp-content/uploads/2016/11/jeff_bezos_big_mandate.jpg" /></p>
 </section>
 <section id="idea" class="slide level2">
 <h2>Idea</h2>
 <p>2002-2003; The idea</p>
 <blockquote>
-<p>Building an infrastructure that is completely standardized, completely automated, and relied extensively on web services for things like storage</p>
+<p>Building an infrastructure that is completely standardized,
+completely automated, and relied extensively on web services for things
+like storage</p>
 </blockquote>
-<p><a href="http://blog.b3k.us/2009/01/25/ec2-origins.html">http://blog.b3k.us/2009/01/25/ec2-origins.html</a></p>
+<p><a
+href="http://blog.b3k.us/2009/01/25/ec2-origins.html">http://blog.b3k.us/2009/01/25/ec2-origins.html</a></p>
 </section>
 <section id="so" class="slide level2">
 <h2>So …</h2>
-<p>Basically Amazon became very good at <em>running</em> scalable infrastructure as <em>services</em></p>
+<p>Basically Amazon became very good at <em>running</em> scalable
+infrastructure as <em>services</em></p>
 <ul>
 <li>For themselves…</li>
 <li>… but also for other partners (target)</li>
@@ -284,37 +342,48 @@
 </section>
 <section id="lets-sell-it" class="slide level2">
 <h2>Let’s sell it !</h2>
-<p><img data-src="https://fchouteau.github.io/isae-practical-gcp/static/img/ec2.png" /></p>
+<p><img
+data-src="https://fchouteau.github.io/isae-practical-gcp/static/img/ec2.png" /></p>
 </section></section>
 <section>
-<section id="the-many-layers-of-cloud-computing" class="title-slide slide level1">
+<section id="the-many-layers-of-cloud-computing"
+class="title-slide slide level1">
 <h1>The many layers of Cloud Computing</h1>
 
 </section>
 <section id="public-hybrid-private" class="slide level2">
 <h2>Public, hybrid, private</h2>
 <figure>
-<img data-src="https://lh5.googleusercontent.com/e-i1nyv49RP3F3ZCHSepEZ4k_qYhqqgk496wDcsOkHLBbaT7deOuXi3AxesN6LNbQMWXJreOzRqpRbUkNgpFMhX8oxQvbAzAsIi8DObI9xWwq0d5lUfZmAlSbJf5ry-Vmto7i2JL" style="width:50.0%" alt="From Padok" /><figcaption aria-hidden="true">From Padok</figcaption>
+<img
+data-src="https://lh5.googleusercontent.com/e-i1nyv49RP3F3ZCHSepEZ4k_qYhqqgk496wDcsOkHLBbaT7deOuXi3AxesN6LNbQMWXJreOzRqpRbUkNgpFMhX8oxQvbAzAsIi8DObI9xWwq0d5lUfZmAlSbJf5ry-Vmto7i2JL"
+style="width:50.0%" alt="From Padok" />
+<figcaption aria-hidden="true">From Padok</figcaption>
 </figure>
 </section>
 <section id="different-layers-of-abstractions" class="slide level2">
 <h2>Different layers of abstractions</h2>
 <figure>
-<img data-src="https://static.packt-cdn.com/products/9781789538519/graphics/faf54214-c5e7-4cc4-9594-9cf06dacc923.png" alt="From pakt" /><figcaption aria-hidden="true">From pakt</figcaption>
+<img
+data-src="https://static.packt-cdn.com/products/9781789538519/graphics/faf54214-c5e7-4cc4-9594-9cf06dacc923.png"
+alt="From pakt" />
+<figcaption aria-hidden="true">From pakt</figcaption>
 </figure>
 </section>
 <section id="abstraction-examples" class="slide level2">
 <h2>Abstraction examples</h2>
 <ul>
-<li>Using data storage service like google cloud storage without managing the infrastructure ?aaS</li>
+<li>Using data storage service like google cloud storage without
+managing the infrastructure ?aaS</li>
 <li>Using google drive ?aaS</li>
 <li>Renting a server with hard drive and storing data ?aaS</li>
 </ul>
 <div class="fragment">
 <ul>
-<li>Using data storage service like google cloud storage without managing the infrastructure <strong>PaaS</strong></li>
+<li>Using data storage service like google cloud storage without
+managing the infrastructure <strong>PaaS</strong></li>
 <li>Using google drive <strong>SaaS</strong></li>
-<li>Renting a server with hard drive and storing data <strong>IaaS</strong></li>
+<li>Renting a server with hard drive and storing data
+<strong>IaaS</strong></li>
 </ul>
 </div>
 </section>
@@ -328,9 +397,13 @@
 <li>Answer D: Infrastructure as a Service</li>
 </ul>
 <figure>
-<img data-src="data:image/png;base64,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" alt="Answer" /><figcaption aria-hidden="true">Answer</figcaption>
+<img
+data-src="data:image/png;base64,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"
+alt="Answer" />
+<figcaption aria-hidden="true">Answer</figcaption>
 </figure>
-<p><a href="https://toreply.univ-lille.fr/reponse_526">Answer link</a></p>
+<p><a href="https://toreply.univ-lille.fr/reponse_526">Answer
+link</a></p>
 </section></section>
 <section>
 <section id="cloud-engines" class="title-slide slide level1">
@@ -340,29 +413,47 @@
 <section id="public" class="slide level2">
 <h2>Public</h2>
 <figure>
-<img data-src="https://yogeek.github.io/enseignement/Introduction_Virtualisation_CloudComputing/img/cloud_vendors.jpg" alt="Cloud Vendors" /><figcaption aria-hidden="true">Cloud Vendors</figcaption>
+<img
+data-src="https://yogeek.github.io/enseignement/Introduction_Virtualisation_CloudComputing/img/cloud_vendors.jpg"
+alt="Cloud Vendors" />
+<figcaption aria-hidden="true">Cloud Vendors</figcaption>
 </figure>
 </section>
 <section id="public-european" class="slide level2">
 <h2>Public (European)</h2>
-<p><img data-src="https://www.comptoir-hardware.com/images/stories/_logos/ovhcloud.png" style="width:20.0%" /> <img data-src="https://cloud.orange.com/ui/app/static/assets/brand/logo_header_login.png" style="width:20.0%" /> <img data-src="https://open-telekom-cloud.com/resource/blob/data/594220/5aa8c4c54f7a8b90fe1256f26948fbe7/open-telekom-cloud-tsystems-logo.png" style="width:20.0%" /></p>
+<p><img
+data-src="https://www.comptoir-hardware.com/images/stories/_logos/ovhcloud.png"
+style="width:20.0%" /> <img
+data-src="https://cloud.orange.com/ui/app/static/assets/brand/logo_header_login.png"
+style="width:20.0%" /> <img
+data-src="https://open-telekom-cloud.com/resource/blob/data/594220/5aa8c4c54f7a8b90fe1256f26948fbe7/open-telekom-cloud-tsystems-logo.png"
+style="width:20.0%" /></p>
 <p>Academic, public founded:</p>
-<p><img data-src="https://www.data-infrastructure.eu/GAIAX/Redaktion/EN/Bilder/gaia-x.jpg?__blob=normal&amp;v=1&amp;size=834w" style="width:20.0%" alt="gaiax" /> <img data-src="https://eosc-portal.eu/sites/all/themes/theme1/logo.png" style="width:20.0%" alt="EOSC" /></p>
+<p><img
+data-src="https://www.data-infrastructure.eu/GAIAX/Redaktion/EN/Bilder/gaia-x.jpg?__blob=normal&amp;v=1&amp;size=834w"
+style="width:20.0%" alt="gaiax" /> <img
+data-src="https://eosc-portal.eu/sites/all/themes/theme1/logo.png"
+style="width:20.0%" alt="EOSC" /></p>
 </section>
 <section id="privateon-premise" class="slide level2">
 <h2>Private/on premise</h2>
-<p><img data-src="http://1.bp.blogspot.com/-1BuI8MUh498/Uc4BOPBpChI/AAAAAAAAGjk/XWA0iYO5drA/s1028/Screen+Shot+2013-06-28+at+12.03.11+PM.png" /></p>
+<p><img
+data-src="http://1.bp.blogspot.com/-1BuI8MUh498/Uc4BOPBpChI/AAAAAAAAGjk/XWA0iYO5drA/s1028/Screen+Shot+2013-06-28+at+12.03.11+PM.png" /></p>
 </section>
 <section id="leaders" class="slide level2">
 <h2>Leaders</h2>
-<p><img data-src="https://cdn.statcdn.com/Infographic/images/normal/18819.jpeg" style="width:50.0%" /></p>
+<p><img
+data-src="https://cdn.statcdn.com/Infographic/images/normal/18819.jpeg"
+style="width:50.0%" /></p>
 </section>
 <section id="in-france" class="slide level2">
 <h2>In France</h2>
-<p><img data-src="https://i2.wp.com/datacenter-magazine.fr/contenus/uploads/2020/03/CORE_MARKESS_PRG_OPE_19-20_COMPETITIVE_ENVIRONMENT_PRESSE_MARS-2020.png?resize=600%2C340&amp;ssl=1" /></p>
+<p><img
+data-src="https://i2.wp.com/datacenter-magazine.fr/contenus/uploads/2020/03/CORE_MARKESS_PRG_OPE_19-20_COMPETITIVE_ENVIRONMENT_PRESSE_MARS-2020.png?resize=600%2C340&amp;ssl=1" /></p>
 </section></section>
 <section>
-<section id="cloud-computing-usage-revolution" class="title-slide slide level1">
+<section id="cloud-computing-usage-revolution"
+class="title-slide slide level1">
 <h1>Cloud computing: usage revolution</h1>
 
 </section>
@@ -377,7 +468,8 @@
 <section id="access-and-operating-computing-power" class="slide level2">
 <h2>Access and operating computing power</h2>
 <ul>
-<li>Outsourcing infra, maintenance, security, development of new services
+<li>Outsourcing infra, maintenance, security, development of new
+services
 <ul>
 <li>Less (?) operation cost (or at least less burden)</li>
 </ul></li>
@@ -399,10 +491,12 @@
 <li>On demand scalability and resources</li>
 </ul>
 </section>
-<section id="changing-the-way-we-interact-with-hardware" class="slide level2">
+<section id="changing-the-way-we-interact-with-hardware"
+class="slide level2">
 <h2>Changing the way we interact with hardware</h2>
 <p>We interact with cloud providers using APIs…</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gcloud</span> compute <span class="at">--project</span><span class="op">=</span>deeplearningsps instances create <span class="va">${INSTANCE_NAME}</span> <span class="dt">\</span></span>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gcloud</span> compute <span class="at">--project</span><span class="op">=</span>deeplearningsps instances create <span class="va">${INSTANCE_NAME}</span> <span class="dt">\</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">--zone</span><span class="op">=</span><span class="va">${ZONE}</span> <span class="dt">\</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">--machine-type</span><span class="op">=</span>n1-standard-8 <span class="dt">\</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">--scopes</span><span class="op">=</span>default,storage-rw,compute-rw <span class="dt">\</span></span>
@@ -419,13 +513,18 @@
 <ul>
 <li>Infrastructure is now managed via text files</li>
 <li>Data is securely stored on storage</li>
-<li>So we store code + urls on git… and everything is reproducible ! (not <em>that</em> simple)</li>
-<li>We use automated deployment tools (terraform, gcp deployment manager…)</li>
+<li>So we store code + urls on git… and everything is reproducible !
+(not <em>that</em> simple)</li>
+<li>We use automated deployment tools (terraform, gcp deployment
+manager…)</li>
 </ul>
 </section>
 <section id="pet-vs-cattle" class="slide level2">
 <h2>Pet vs Cattle</h2>
-<p><img data-src="https://blog.octo.com/wp-content/uploads/2016/12/image01-e1482225268205-1024x827.png" /> <img data-src="https://blog.octo.com/wp-content/uploads/2019/07/pet_vs-cattle-1024x636.png" /></p>
+<p><img
+data-src="https://blog.octo.com/wp-content/uploads/2016/12/image01-e1482225268205-1024x827.png" />
+<img
+data-src="https://blog.octo.com/wp-content/uploads/2019/07/pet_vs-cattle-1024x636.png" /></p>
 </section>
 <section id="quizz-3" class="slide level2">
 <h2>Quizz</h2>
@@ -438,19 +537,25 @@
 <li>Answer E: It gives all our data to Google and Amazon</li>
 </ul>
 <figure>
-<img data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAIAAAD2HxkiAAAGyklEQVR42u3d0XLbIBAF0Kjj//9l98EzGleVFSy8u2Cd89JOEkcS0RUYDCz3+/0HqPNHEYAQwqXdHv8sy7J+qbaB+jiT6HN4vt7nq3719Zwz2Rzr1bc2J+kNxeyW+/3+fN8nZOD4EDkhfHWszVeiT+ag5F99K/kMyWiObv6KryqENPf7fZxbKrQ0Dkr+4Fub8in/e/Gx5mhPRfFre2n3Xtl9hK8/8H8Od4+1/pKDF87Yln5c0bIsvzZP1ISX7pjZPJjXGDx/ffPd56f4bo33axt198H/uFnL64RNCbxbze6+03tE8dVTSQIvHcK3GrGdLcxfjzVIW3pzGm/lcK30Gp87x99i1uboicfq7p9/bUq1VHFf5sRltjQyN63Tg4Yrc4dwNzzn7rn/H+rukldPMcXCn923/o//HLxp2e1oWXv22pPc8sOv3nMO2NHy7lPs1XUdXPLmEN4WfsOzePct1vMT+rnj8aB39ODrP23D0MevOu4dffemjBisP/eBB4P1aA5V1pwghDDAe0JFAEIIQggIIQghIIQghIAQghACQghCCAghCCEghCCEgBCCEAJCCEIIxLnlHGbAVaIPVt09/fKIa+88z87fmbYE0Sx3iJoQNEcBIQQhBIQQhBD4lFvhsQfs/o44pbTBjM6jR1x757DHRQZI1ISgOQpCCAghCCEghHBNt9FOKGJ+QOfRO+cctP9kxISJzkGCztGdtGGPtDtETQiao4AQghACQghCCHzKTRE8ixjhiDiliEWZOkcjateJUhMCQghCCAghCCEghDAdQxT/qJ3x0K5zGkTtAkrGLdSEIISAEIIQAkIIQgj8DDhEUdt/XTtlYZadsdNOfsA7RE0ImqOAEIIQAkIIQgh8SuUQRe0exe2nlLYXxSw/eeU7RE0IQggIIQghIIQghMCnJA1RTP3J91k6yjvHGAacv6ImBIQQhBAQQhBCQAjhiy1f1jXcuedz5+/sPFDnZQ64sXZ7gVx5BomaEDRHQQgBIQQhBIQQrilpiKJ284Pa/Rg6S2lX58YP31cg7QYck1MTghCCEAJCCEIICCFc03B7Uez2IEeMRnSeZ+1lRujsu48YNam969SEoDkKCCEIISCEIIRAqMq9KNr7r9NWFmp/eft5pnV/1/byR/w5BpyEoSYEzVFACEEIASEEIQQ+5TbaCUUsNzTgKQ24I0Jah37apJZZxpbUhKA5CkIICCEIISCEcE2VQxTt3fQDboLdeZlpJx/Rz562lUXEWl4DTq1QE4IQghACQghCCAghXFPSEEXavscRffe1+1sMuL1zZym178PRefS0l6sJQXMUEEIQQkAIQQiBE5YpesDTOvTThlIiLjPi5bW3R+2MBws9geYoIIQghIAQghACoW5XuMjOz/KnjRzUFkja70ybvzLLBBQ1IQghCCEghCCEgBDCNSXNoojYVGDAD/gPuLV1xKhJ2l4UEVc04AwSNSFojoIQAkIIQggIIVxT0iyKtE7t2g7otG76WaTNX1ETAkIIQggIIQghIIQwnYn3oqidslA78JA2NyKi6Aa89rQCUROC5igghCCEgBCCEAKrpFkUnevw1H7EPm1mRlqfeOcVdc6NiLiXpp6qoiYEIQQhBIQQhBAQQrim4bbLHvDj8O2nFDFuUTuDJO0P1zkKVTtqoiYEzVFACEEIASEEIQROmGO77Npdl9OOPmDJR5z81Mt2qQlBcxQQQhBCQAhBCIFPuX3Z9dRuqFC7rlHtbI/Ookv7nWZRAEIIQggIIQghIIQwiMpZFLtqt51Ik7Z3QueB0tbIqi1kNSFojgJCCEIICCEIIZBvmaUbN6k4AiZM1H7qP22hp9p1ogY8TzUhaI4CQghCCAghCCFwLGmhpwGnQXTupdw55yBtf4vaLTc675CI8ox4uZoQNEcBIQQhBIQQhBA4oXIvitodktt/srbvfsBZFAPeDAPOjVATguYoIIQghIAQghACx4bbLrt2WaTOOQcDbkMdcUWdB6odyLHQEyCEIISAEIIQAkIIg7gpgnMixi3afzKt9zxi5au0iR2zzCBRE4LmKAghIIQghIAQwjUZojgpoqe7dhfriE0v2l8+YIGoCUFzFBBCEEJACEEIgVBLzufx01ZASjv61KsV1a6mNfWmF2pC0BwFhBCEEBBCEELgUypnUQz4efb284zYi6Lz5QNO7Og8UEQp1Y6WqQlBcxQQQhBCQAhBCIHVMuCHykFNCAghCCEghCCEgBCCEAJCCEIICCEIISCEIISAEIIQAkIIQggIIQghIIQghIAQghACQghCCAghCCEghCCEgBCCEAJCCEIICCFM4y8v5HlY7Kbk3QAAAABJRU5ErkJggg==" alt="Answer" /><figcaption aria-hidden="true">Answer</figcaption>
+<img
+data-src="data:image/png;base64,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"
+alt="Answer" />
+<figcaption aria-hidden="true">Answer</figcaption>
 </figure>
-<p><a href="https://toreply.univ-lille.fr/reponse_983">Answer link</a></p>
+<p><a href="https://toreply.univ-lille.fr/reponse_983">Answer
+link</a></p>
 </section></section>
 <section>
-<section id="new-data-processing-standard" class="title-slide slide level1">
+<section id="new-data-processing-standard"
+class="title-slide slide level1">
 <h1>New Data Processing standard</h1>
 
 </section>
 <section id="object-store" class="slide level2">
 <h2>Object store</h2>
 <p>High througput storage system with horizontal scalability</p>
-<p><img data-src="images/FileStorage.png" /> <img data-src="images/ObjectStorage.png" /></p>
+<p><img data-src="images/FileStorage.png" /> <img
+data-src="images/ObjectStorage.png" /></p>
 </section>
 <section id="compute-as-a-service" class="slide level2">
 <h2>Compute as a service</h2>
@@ -481,7 +586,8 @@
 <h1>Discussions and Troll</h1>
 
 </section>
-<section id="is-using-cloud-computing-less-expensive" class="slide level2">
+<section id="is-using-cloud-computing-less-expensive"
+class="slide level2">
 <h2>Is using cloud computing less expensive?</h2>
 <ul>
 <li>👍 Depend on your {normal / peak} utilization</li>
@@ -495,7 +601,8 @@
 </ul></li>
 </ul>
 </section>
-<section id="is-using-cloud-computing-more-secure-safer." class="slide level2">
+<section id="is-using-cloud-computing-more-secure-safer."
+class="slide level2">
 <h2>Is using cloud computing more secure / safer.</h2>
 <ul>
 <li>👍 The best engineers in the world working on it</li>
@@ -505,7 +612,10 @@
 <li>👎 Still need to handle security inside you resources</li>
 </ul>
 <figure>
-<img data-src="https://cdn.searchenginejournal.com/wp-content/uploads/2021/03/fire-ovh-data-center-60488d3b150d6-760x400.jpg" alt="OVHCloud burning" /><figcaption aria-hidden="true">OVHCloud burning</figcaption>
+<img
+data-src="https://cdn.searchenginejournal.com/wp-content/uploads/2021/03/fire-ovh-data-center-60488d3b150d6-760x400.jpg"
+alt="OVHCloud burning" />
+<figcaption aria-hidden="true">OVHCloud burning</figcaption>
 </figure>
 </section></section>
 <section>
@@ -528,18 +638,23 @@
 </section>
 <section id="services" class="slide level2">
 <h2>Services</h2>
-<p><img data-src="https://static.packt-cdn.com/products/9781788837675/graphics/ee72c164-888d-4cec-b3f9-efd3b8e8e4cb.png" /></p>
+<p><img
+data-src="https://static.packt-cdn.com/products/9781788837675/graphics/ee72c164-888d-4cec-b3f9-efd3b8e8e4cb.png" /></p>
 </section>
-<section id="section-1" class="slide level2" data-background-image="https://raw.githubusercontent.com/gregsramblings/google-cloud-4-words/master/Poster-medres.png">
-<h2 data-background-image="https://raw.githubusercontent.com/gregsramblings/google-cloud-4-words/master/Poster-medres.png"></h2>
+<section id="section-1" class="slide level2"
+data-background-image="https://raw.githubusercontent.com/gregsramblings/google-cloud-4-words/master/Poster-medres.png">
+<h2
+data-background-image="https://raw.githubusercontent.com/gregsramblings/google-cloud-4-words/master/Poster-medres.png"></h2>
 </section>
 <section id="concepts-zones-and-regions" class="slide level2">
 <h2>Concepts: Zones and regions</h2>
-<p><img data-src="https://cloud.google.com/docs/images/overview/regions-zones.svg" /></p>
+<p><img
+data-src="https://cloud.google.com/docs/images/overview/regions-zones.svg" /></p>
 </section>
 <section id="concepts-projects" class="slide level2">
 <h2>Concepts: Projects</h2>
-<p><img data-src="https://cloud.google.com/docs/images/overview/console-ids.png" /></p>
+<p><img
+data-src="https://cloud.google.com/docs/images/overview/console-ids.png" /></p>
 <ul>
 <li>Access (Enabling API/Services)</li>
 <li>Ressources (Quota by project)</li>
@@ -547,27 +662,37 @@
 <li>Billing</li>
 </ul>
 </section>
-<section id="concepts-identity-and-access-management-iam" class="slide level2">
+<section id="concepts-identity-and-access-management-iam"
+class="slide level2">
 <h2>Concepts: Identity and Access Management (IAM)</h2>
 <figure>
-<img data-src="https://miro.medium.com/max/638/0*kGyUfNWZCk78hmPU." alt="IAM" /><figcaption aria-hidden="true">IAM</figcaption>
+<img data-src="https://miro.medium.com/max/638/0*kGyUfNWZCk78hmPU."
+alt="IAM" />
+<figcaption aria-hidden="true">IAM</figcaption>
 </figure>
 </section>
 <section id="interacting-with-gcp-the-console" class="slide level2">
 <h2>Interacting with GCP: The Console</h2>
 <figure>
-<img data-src="https://cloud.google.com/docs/images/overview/console.png" style="width:60.0%" alt="https://console.cloud.google.com" /><figcaption aria-hidden="true">https://console.cloud.google.com</figcaption>
+<img
+data-src="https://cloud.google.com/docs/images/overview/console.png"
+style="width:60.0%" alt="https://console.cloud.google.com" />
+<figcaption
+aria-hidden="true">https://console.cloud.google.com</figcaption>
 </figure>
 </section>
 <section id="interacting-with-gcp-sdk-cloud-shell" class="slide level2">
 <h2>Interacting with GCP: SDK &amp; Cloud Shell</h2>
 <ul>
-<li>Using the gcloud CLI: <a href="https://cloud.google.com/sdk/install">https://cloud.google.com/sdk/install</a></li>
-<li>Using Google Cloud Shell: A small VM instance you can connect to with your browser</li>
+<li>Using the gcloud CLI: <a
+href="https://cloud.google.com/sdk/install">https://cloud.google.com/sdk/install</a></li>
+<li>Using Google Cloud Shell: A small VM instance you can connect to
+with your browser</li>
 </ul>
 </section></section>
 <section>
-<section id="first-interaction-with-google-cloud-exercise" class="title-slide slide level1">
+<section id="first-interaction-with-google-cloud-exercise"
+class="title-slide slide level1">
 <h1>First interaction with Google Cloud (Exercise)</h1>
 
 </section>
@@ -575,13 +700,18 @@
 <h2>Objectives</h2>
 <p>Everyone has its credits/coupons?</p>
 <ul>
-<li>Create your GCP account, configure your credentials, ensure everything is working</li>
-<li>With the coupons you got, you should see $50 of credits (in the billing tab)</li>
+<li>Create your GCP account, configure your credentials, ensure
+everything is working</li>
+<li>With the coupons you got, you should see $50 of credits (in the
+billing tab)</li>
 <li>Interact with Google cloud console: check all the services</li>
-<li>Start a first VM instance through the console, watch prices and all the options</li>
+<li>Start a first VM instance through the console, watch prices and all
+the options</li>
 <li>Create a Google Storage bucket and upload content</li>
 <li>Connect to google cloud shell and interact with it</li>
-<li>Follow <a href="https://codelabs.developers.google.com/codelabs/cloud-compute-engine#2">this Google codelabs</a> to deploy a Website!</li>
+<li>Follow <a
+href="https://codelabs.developers.google.com/codelabs/cloud-compute-engine#2">this
+Google codelabs</a> to deploy a Website!</li>
 </ul>
 <p>We’ll do more this afternoon!</p>
 </section></section>

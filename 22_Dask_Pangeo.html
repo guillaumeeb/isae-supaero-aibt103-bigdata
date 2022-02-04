@@ -31,16 +31,22 @@
 
 <section id="title-slide">
   <h1 class="title">Dask presentation and tutorials</h1>
-  <p class="author">Guillaume Eynard-Bontemps, CNES (Centre National d’Etudes Spatiales - French Space Agency)</p>
+  <p class="author">Guillaume Eynard-Bontemps, CNES (Centre National
+d’Etudes Spatiales - French Space Agency)</p>
   <p class="date">2020-11-17</p>
 </section>
 
 <section id="dask-presentation" class="slide level1">
 <h1>Dask Presentation</h1>
 <figure>
-<img data-src="https://docs.dask.org/en/latest/_images/dask_horizontal_no_pad.svg" height="100" alt="Dask logo" /><figcaption aria-hidden="true">Dask logo</figcaption>
+<img
+data-src="https://docs.dask.org/en/latest/_images/dask_horizontal_no_pad.svg"
+height="100" alt="Dask logo" />
+<figcaption aria-hidden="true">Dask logo</figcaption>
 </figure>
-<p><a href="https://docs.google.com/presentation/d/e/2PACX-1vSTH2kAR0DCR0nw8pFBe5kuYbOk3inZ9cQfZbzOIRjyzQoVaOoMfI2JONGBz-qsvG_P6g050ddHxSXT/pub?start=false&amp;loop=false&amp;delayms=60000#slide=id.p">Just use the Dask slidedeck</a></p>
+<p><a
+href="https://docs.google.com/presentation/d/e/2PACX-1vSTH2kAR0DCR0nw8pFBe5kuYbOk3inZ9cQfZbzOIRjyzQoVaOoMfI2JONGBz-qsvG_P6g050ddHxSXT/pub?start=false&amp;loop=false&amp;delayms=60000#slide=id.p">Just
+use the Dask slidedeck</a></p>
 </section>
 <section id="quizz" class="slide level1">
 <h1>Quizz</h1>
@@ -51,13 +57,18 @@
 <li>Answer C: Tasks and associated graphs</li>
 </ul>
 <figure>
-<img data-src="data:image/png;base64,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" alt="Answer" /><figcaption aria-hidden="true">Answer</figcaption>
+<img
+data-src="data:image/png;base64,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"
+alt="Answer" />
+<figcaption aria-hidden="true">Answer</figcaption>
 </figure>
-<p><a href="https://toreply.univ-lille.fr/reponse_568">Answer link</a></p>
+<p><a href="https://toreply.univ-lille.fr/reponse_568">Answer
+link</a></p>
 </section>
 <section id="dask-tutorial" class="slide level1">
 <h1>Dask Tutorial</h1>
-<p><a href="https://github.com/dask/dask-tutorial">Just use the Dask tutorial</a></p>
+<p><a href="https://github.com/dask/dask-tutorial">Just use the Dask
+tutorial</a></p>
 <p>Try to follow by order of importance:</p>
 <ul>
 <li>Dask Dataframes</li>
@@ -70,11 +81,16 @@
 </ul></li>
 </ul>
 </section>
-<section id="pangeo-tutorial-or-finish-deploying-your-computing-platform" class="slide level1">
+<section
+id="pangeo-tutorial-or-finish-deploying-your-computing-platform"
+class="slide level1">
 <h1>Pangeo tutorial or finish deploying your computing platform</h1>
-<p><a href="https://gallery.pangeo.io/">Just try some use cases here</a></p>
+<p><a href="https://gallery.pangeo.io/">Just try some use cases
+here</a></p>
 <p>or</p>
-<p><a href="https://github.com/SupaeroDataScience/OBD/blob/master/notebooks/Kubernetes_Daskhub.ipynb">Finish yesterday deployment</a> (needed for tomorrow).</p>
+<p><a
+href="https://github.com/SupaeroDataScience/OBD/blob/master/notebooks/Kubernetes_Daskhub.ipynb">Finish
+yesterday deployment</a> (needed for tomorrow).</p>
 </section>
     </div>
   </div>

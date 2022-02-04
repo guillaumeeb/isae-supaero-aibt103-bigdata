@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Guillaume Eynard-Bontemps, CNES (Centre National d’Etudes Spatiales - French Space Agency)">
+  <meta name="dcterms.date" content="2020-11-16">
+  <title>Containers Orchestration, Kubernetes</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/solarized.css" id="theme">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Containers Orchestration, Kubernetes</h1>
+  <p class="author">Guillaume Eynard-Bontemps, CNES (Centre National
+d’Etudes Spatiales - French Space Agency)</p>
+  <p class="date">2020-11-16</p>
+</section>
+
+<section>
+<section id="credits-and-thanks" class="title-slide slide level1">
+<h1>Credits and thanks</h1>
+
+</section>
+<section id="didnt-do-this" class="slide level2">
+<h2>Didn’t do this</h2>
+<p>Thanks to <a href="mailto:florient.f.chouteau@airbus.com">Florient
+Chouteau</a> and <a href="mailto:Dennis.WILSON@isae-supaero.fr">Dennis
+Wilson</a></p>
+<p>for their work on this subject.</p>
+<p>I took most of the content from theirs:</p>
+<ul>
+<li><a
+href="https://supaerodatascience.github.io/OBD/slides/1_5_orchestration.html">https://supaerodatascience.github.io/OBD/slides/1_5_orchestration.html</a></li>
+<li><a
+href="https://supaerodatascience.github.io/OBD/slides/2_3_kubernetes.html#/">https://supaerodatascience.github.io/OBD/slides/2_3_kubernetes.html#/</a></li>
+</ul>
+</section></section>
+<section>
+<section id="kubernetes" class="title-slide slide level1">
+<h1>Kubernetes</h1>
+
+</section>
+<section id="why-orchestration" class="slide level2">
+<h2>Why orchestration?</h2>
+<p>Suppose I have a large pool of machines available</p>
+<ul>
+<li>How do I <strong>deploy my container</strong>?</li>
+<li>How do I <strong>put the right containers at the right
+spot</strong>?</li>
+<li>How do I <strong>scale (up and down) to demand</strong>?</li>
+<li>How do I <strong>expose the http endpoints</strong>?</li>
+<li>How do I <strong>manage failure of containers</strong>?</li>
+<li>How do I <strong>update my model without downtime</strong>?</li>
+</ul>
+</section>
+<section id="tools-example" class="slide level2">
+<h2>Tools example</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p>Examples…</p>
+<ul>
+<li>Docker Swarm</li>
+<li>CoreOS Fleet</li>
+<li><a href="https://mesos.apache.org/">Apache Mesos</a> / <a
+href="https://github.com/mesosphere/marathon">Marathon</a></li>
+</ul>
+<p>… and so many more !</p>
+</div><div class="column" style="width:60%;">
+<figure>
+<img
+data-src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&amp;fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F996C7D4B5AF43B6C27"
+alt="ecosystem" />
+<figcaption aria-hidden="true">ecosystem</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="short-kubernetes-history" class="slide level2">
+<h2>Short Kubernetes history</h2>
+<p>Kubernetes (or k8s) comes from Google’s internal systems <a
+href="https://github.com/SupaeroDataScience/OBD/blob/master/readings/borg.pdf">Borg</a></p>
+<p>It is open source now <a href="https://github.com/kubernetes"
+class="uri">https://github.com/kubernetes</a> and used… everywhere ?</p>
+</section>
+<section id="thanks-to-dennis-for-the-next-part" class="slide level2">
+<h2>Thanks to Dennis for the next part</h2>
+<p><a
+href="https://supaerodatascience.github.io/OBD/slides/2_3_kubernetes.html#/">Slides</a></p>
+</section>
+<section id="quizz" class="slide level2">
+<h2>Quizz</h2>
+<p>What allows container orchestration (multiple choices)?</p>
+<ul>
+<li>Answer A: Auto scaling of services</li>
+<li>Answer B: Making coffee</li>
+<li>Answer C: Ensuring container states and availability</li>
+<li>Answer D: Submitting finite jobs</li>
+</ul>
+<figure>
+<img
+data-src="data:image/png;base64,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"
+alt="Answer" />
+<figcaption aria-hidden="true">Answer</figcaption>
+</figure>
+<p><a href="https://toreply.univ-lille.fr/reponse_108">Answer
+link</a></p>
+</section></section>
+<section>
+<section id="processing-platform-on-kubernetes"
+class="title-slide slide level1">
+<h1>Processing platform on Kubernetes</h1>
+
+</section>
+<section id="kubeflow" class="slide level2">
+<h2>Kubeflow</h2>
+<p><a href="https://www.kubeflow.org/">https://www.kubeflow.org/</a></p>
+<figure>
+<img
+data-src="https://miro.medium.com/max/2446/1*ZQsFV3o1c3Amu26Z-IEd7w.png"
+style="width:55.0%" alt="kubeflow" />
+<figcaption aria-hidden="true">kubeflow</figcaption>
+</figure>
+</section>
+<section id="jupyterhubbinder" class="slide level2">
+<h2>Jupyterhub/Binder</h2>
+<p><img
+data-src="https://miro.medium.com/max/1400/1*F_jJ1nDSQgBhrkbsEXB93Q.png"
+style="width:70.0%" /></p>
+</section>
+<section id="databricks-spark-as-a-service" class="slide level2">
+<h2>Databricks: Spark as a Service</h2>
+<p><img
+data-src="https://docs.gcp.databricks.com/_images/databricks-architecture-gcp.png"
+style="width:40.0%" /></p>
+</section>
+<section id="coiled-dask-as-a-service" class="slide level2">
+<h2>Coiled: Dask as a Service</h2>
+<p><img data-src="images/Coiled.png" /></p>
+</section>
+<section id="quizz-1" class="slide level2">
+<h2>Quizz</h2>
+<p>How do you deploy containers through Kubernetes (mutliple
+choices)?</p>
+<ul>
+<li>Answer A: docker run</li>
+<li>Answer B: Helm charts and command</li>
+<li>Answer C: yaml configuration and kubectl</li>
+<li>Answer D: custom bash script</li>
+</ul>
+<figure>
+<img
+data-src="data:image/png;base64,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"
+alt="Answer" />
+<figcaption aria-hidden="true">Answer</figcaption>
+</figure>
+<p><a href="https://toreply.univ-lille.fr/reponse_651">Answer
+link</a></p>
+</section></section>
+<section>
+<section id="kubernetes-tutorial" class="title-slide slide level1">
+<h1>Kubernetes tutorial</h1>
+
+</section>
+<section id="try-some" class="slide level2">
+<h2>Try some</h2>
+<p><a
+href="https://training.play-with-kubernetes.com/kubernetes-workshop/">https://training.play-with-kubernetes.com/kubernetes-workshop/</a></p>
+<p><a
+href="https://labs.play-with-k8s.com/">https://labs.play-with-k8s.com/</a>
+with <a
+href="https://training.play-with-docker.com/swarm-stack-intro/">Voting
+App</a></p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+       // Parallax background image
+       parallaxBackgroundImage: 'images/background-logo.png', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1800,
+
+        height: 900,
+
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.1,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
