@@ -1,7 +1,9 @@
 ![Build course slides](https://github.com/guillaumeeb/isae-supaero-aibt103-bigdata/actions/workflows/slides.yml/badge.svg)
 
-# isae-supaero-aibt103-bigdata
+# Main Subject
 Supaero Course on Big Data Processing support, for 4 days training.
+
+Built for ISAE-Supaero, AIBT specialized master, and SDD course (https://supaerodatascience.github.io/OBD/index.html#data-distribution).
 
 # Output
 https://guillaumeeb.github.io/isae-supaero-aibt103-bigdata
