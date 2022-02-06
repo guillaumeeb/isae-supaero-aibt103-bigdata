@@ -113,12 +113,12 @@ Cite some V's of Big Data (multiple choices):
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
 
-![SQL vs NoSQL databases model (Sumit Singh)](https://eadn-wc03-4064062.nxedge.io/cdn/wp-content/uploads/2020/12/asesoftware-sql-nosql.png){width=50%}
+![SQL vs NoSQL databases model (altitudetvm)](https://altitudetvm.com/images/komputer/apa-itu-nosql-berikut-ini-pengertian-nosql-beserta-kelebihannya_2.png){width=50%}
 
 :::
 ::: {.column width="50%"}
 
-![Popular NoSQL Databases](https://eadn-wc03-4064062.nxedge.io/cdn/wp-content/uploads/2020/12/NoSQL-databases.jpg)
+![Popular NoSQL Databases](https://miro.medium.com/max/800/1*Sz73n23vbZ_Gtsx2FU3Otg.jpeg)
 
 :::
 ::::::::::::::
@@ -154,7 +154,7 @@ Cite some V's of Big Data (multiple choices):
 
 ### Python (libraries)
 
-![Python data vizualisation landscape](https://www.anaconda.com/wp-content/uploads/2019/01/PythonVisLandscape.jpg){width=60%}
+![Python data vizualisation landscape](https://rougier.github.io/python-visualization-landscape/landscape-colors.png){width=60%}
 
 :::
 ::::::::::::::
