@@ -39,7 +39,7 @@ By the end of this module, participants will be able to:
 | 15:15-15:45 | Coffee Break (we may also make two breaks of 15min) |
 | 15:45-17:15 | Slides, tutorial or exercises (last session, at last) |
 
-I'll try to propose some quizz to be sure your following!
+I'll try to propose some quizz to be sure you're following!
 
 ## About myself{background-image="images/HPC-blue.jpg" style="color:white"}
 
