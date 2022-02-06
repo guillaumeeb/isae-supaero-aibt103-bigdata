@@ -53,3 +53,7 @@ Includes [Dask tutorial](https://github.com/dask/dask-tutorial).
 ### Day 4: Evaluation
 
 [Final Evaluation](30_Evaluation.html)
+
+# OBD Data Distribution course
+
+[OBD Course Introduction](00_OBD_Course_Introduction.html)
