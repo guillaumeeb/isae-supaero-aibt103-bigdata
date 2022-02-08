@@ -81,15 +81,15 @@ What is this course module main subject?
   - Kubernetes & CaaS & PaaS (Databricks, Coiled)
   - Play with Kubernetes (if we have time)
 - Dask Presentation (1h)
+- Dask Tutorial (1.5h)
+
+
+## Evaluation: DaskHub, Dask preprocess, ML training (6 or 7h)
+
 - Deploy a Data processing platform on the Cloud based on Kubernetes and Dask (1.5h)
   - Exercise: DaskHub or Dask Kubernetes or Pangeo
-
-
-## Evaluation (7h)
-
-- Prerequisite: Pangeo platform deployed before
-- Clean big amounts of data using Dask in the cloud (3h)
-- Train machine learning models in parallel (hyper parameter search) (3h)
+- Clean big amounts of data using Dask in the cloud (2h)
+- Train machine learning models in parallel (hyper parameter search) (2.5h)
 - Notebook with cell codes to fill or answers to give
 
 ## Quizz
