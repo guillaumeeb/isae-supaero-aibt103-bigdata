@@ -19,7 +19,7 @@ Dataset: New York Taxi cab statistics simplified.
 
 # Evaluation link
 
-[Let's go](https://github.com/guillaumeeb/isae-supaero-aibt103-bigdata/tree/main/notebooks/EvaluationDaskMLTaxyCabEmpty.pynb)
+[Let's go](https://github.com/guillaumeeb/isae-supaero-aibt103-bigdata/blob/main/notebooks/EvaluationDaskMLTaxyCabEmpty.ipynb)
 
 - Just git clone this repository from your Juptyerlab to start
 - At the end (end periodically) make sure to save your notebook with outputs by downloading it on your laptop

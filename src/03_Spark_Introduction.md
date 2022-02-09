@@ -16,7 +16,7 @@ date: 2020-11-15
   - 2020: 3.0 release
 - Now with 100s of developers
 
-## Spark goal and key featyres
+## Spark goal and key features
 
 From [Spark Research homepage](https://spark.apache.org/research.html):
 
