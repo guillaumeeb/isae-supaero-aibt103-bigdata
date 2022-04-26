@@ -336,13 +336,75 @@ Plenty others from Apache or in Python ecosystem.
 
 # HPC Platforms
 
-## Use cases
+## Overview and Use cases
+
+:::::::::::::: {.columns}
+::: {.column width="40%"}
+
+> HPC = High Performance Computing
+
+- HPC were built to solve compute bound problems
+- Some early fields of research:
+  - Weather forecasting
+  - Atmospheric and climate research
+  - Rockets and Aeronautics design
+  - Computational Fluid Dynamics in general
+- High performance infrastructure: compute, CPU, storage, Network
+
+:::
+::: {.column width="60%"}
+
+Some pictures of a simulations: Pangeo/Ocean/Earth? https://vimeo.com/300943265
+<iframe src="https://player.vimeo.com/video/300943265?h=ef84e12ec0" width="640" height="362" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/300943265">Current speed in eNATL60 simulation with explicit tidal motion.</a> from <a href="https://vimeo.com/oceannumerique">Oc&eacute;an Num&eacute;rique</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+:::
+::::::::::::::
+
+## CNES typical use cases
+
+Take slide from Roadmap.
 
 ## Architecture, big picture
 
+Just a schema with all elements: login nodes, job scheduler, compute nodes, storage, IB network...
+
 ## Job scheduler
 
+- Job Queuing System
+- Resources management
+- SLURM, PBS, SGE, LSF, etc.
+- Priority, fairshare partition, QoS
+
+Example resources reservation
+Some schema?
+
 ## High Performance Storage
+
+- POSIX file system
+- Usually based on powerfull SAN storage infrastructure
+- High performance and capacity: millions IO/s, undreds GB/s, undreds PB capacity.
+- Spectrum Scale (GPFS) and Lustre
+- Other players: WekaIO, BeeGFS
+
+Schema IO nodes and SAN 
+
+## Software technologies
+
+- Classical HPC: C and Fortran
+  - Compile languages, hardware optimized
+  - MPI
+  - OpenMP
+  - CUDA, OpenACC
+- More and More: Python, Julia
+  - Interpreted Languages, easyer to use
+  - Lots of performant libraries to reuse (e.g. Numpy, Scipy, Pandas, etc.)
+  - Parallel and distributed computations:
+    - Multiprocessing
+    - MPI4Py : Python over MPI
+    - Dask, Ray, etc.
+
+Some MPI Code?
 
 # From HPC to Big Data to Cloud and High Performance Data Analytics
 
