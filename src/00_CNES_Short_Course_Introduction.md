@@ -1,19 +1,19 @@
 ---
-title: OBD Data Distribution Course
+title: CNES Big Data Processing & Distribution Course
 author: Guillaume Eynard-Bontemps, CNES (Centre National d'Etudes Spatiales - French Space Agency)
-date: 2022-02-08
+date: 2022-04-08
 ---
 
 # Welcome
 
 ## Course Overview
 
-- Data Distribution & Big Data Processing
+- Big Data Processing & Distribution
 
 Harnessing the complexity of large amounts of data is a challenge in itself. 
 
 But Big Data processing is more than that: originally characterized by the 3 Vs of Volume, Velocity and Variety, 
-the concepts popularized by Hadoop and Google require dedicated computing solutions (both software and infrastructure), 
+the concepts popularized by Hadoop and Google require dedicated computing and storage solutions (both software and infrastructure), 
 which will be explored in this module.
 
 ## Objectives
@@ -22,9 +22,10 @@ By the end of this module, participants will be able to:
 
 - Understand the differences and usage between main distributed computing architectures (HPC, Big Data, Cloud, CPU vs GPGPU)
 - Implement the distribution of simple operations via the Map/Reduce principle in PySpark
-- Understand the principle of Kubernetes
-- Deploy a Big Data Processing Platform on the Cloud
-- Implement the distribution of data wrangling/cleaning and training machine learning algorithms using PyData stack, Jupyter notebooks and Dask
+- Understand the principle of Kubernetes and object storage
+- Deploy a Big Data Processing Platform (Pangeo) on the Cloud
+- Either implement the distribution of data wrangling/cleaning and training machine learning algorithms using Dask
+- Or implement a NDVI processing at scale using Pangeo platform.
 
 ## About myself{background-image="images/HPC-blue.jpg" style="color:white"}
 
@@ -47,7 +48,7 @@ Let's try it.
 What is this course module main subject?
 
 - Answer A: Cloud computing
-- Answer B: Data Distribution
+- Answer B: Data Distribution & Processing
 - Answer C: Machine Learning
 
 ![Answer](data:image/png;base64,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)
@@ -56,41 +57,53 @@ What is this course module main subject?
 
 # Program
 
-## Big Data & Distributed Computing (3h)
+## Big Data & Distributed Computing (3.5h)
 
-- Introduction to Big Data and its ecosystem (1h)
+- [Introduction to Big Data and its ecosystem (45min)](01_Introduction_Big_Data.html)
   - What is Big Data?
   - Legacy “Big Data” ecosystem
   - Big Data use cases
   - Big Data to Machine Learning
-- Big Data platforms, Hadoop & Beyond (2h)
-  - Hadoop, HDFS and MapReduce,
+- [Big Data platforms, Hadoop, HPC & Beyond (1h45min)](02_Big_Data_Platforms.html)
+  - Hadoop, HDFS and MapReduce
   - Datalakes, Data Pipelines
+  - HPC Platforms Architecture
   - From HPC to Big Data to Cloud and High Performance Data Analytics 
   - BI vs Big Data
   - Hadoop legacy: Spark, Dask, Object Storage ...
+- [Spark](03_Spark_Introduction.html)
+  - Spark Introduction (30min)
+  - Exercise: Play with MapReudce through Spark (30min)
 
-## Spark (3.5h)
+## Cloud, Kubernetes & Object stores (3.5h)
 
-- Spark Introduction (1h)
-- Play with MapReduce through Spark (Notebook on small datasets) (2.5h)
-
-## Kubernetes & Dask (3.5h)
-
-- Containers Orchestration (1h)
-  - Kubernetes & CaaS & PaaS (Databricks, Coiled)
-  - Play with Kubernetes (if we have time)
-- Dask Presentation (1h)
-- Dask Tutorial (1.5h)
-
-
-## Evaluation: DaskHub, Dask preprocess, ML training (6 or 7h)
-
-- Deploy a Data processing platform on the Cloud based on Kubernetes and Dask (1.5h)
+- [The Cloud in 30 minutes (30min)](10_Cloud_Computing.html)
+  - What's the Cloud, Virtualization
+  - Cloud history, layers, Engines
+  - Usage revolution and new Data processing standard
+- [Containers Orchestration (1h)](12_OrchestrationKubernetes.html)
+  - Container orchestration and Kubernetes
+  - Processing Platform over Kubernetes (Databricks, Coiled)
+- [Object storage (30min)](14_ObjectStorage.html)
+  - Object storage concepts: POSIX vs Object
+  - Object storage architecture
+  - Processing tools interfaces, Cloud Optimized files
+- [Deploy a Data processing platform on the Cloud based on Kubernetes and Dask (1.5h)](13_Dask_On_Cloud.html)
   - Exercise: DaskHub or Dask Kubernetes or Pangeo
-- Clean big amounts of data using Dask in the cloud (2h)
-- Train machine learning models in parallel (hyper parameter search) (2.5h)
-- Notebook with cell codes to fill or answers to give
+
+## Python ecosystem for data processing and Dask at scale (3.5h)
+
+- [The rise of the Python ecosystem for Data Processing (1h)](21_Python_Data_Processing.html)
+  - Data Science programming languages
+  - Pydata stack (Pandas, Numpy, Matlplotlib, Jupyter)
+  - Distributed and sctientific processing (Dask, PySpark)
+  - Data vizualisation (Seaborn, Plotly, Pyviz)
+  - Machine and Deep Learning (Sickit Learn, TensorFlow, Pytorch)
+  - Jupyter notebooks, Binder, Google Colab
+- [Dask Presentation (30min)](22_Dask_Pangeo.html)
+- Dask/Pangeo practice:
+  - Either play with Pangeo notebooks ([in the cloud](https://gallery.pangeo.io/) or [on HAL cluster](https://gitlab.cnes.fr/inno/pangeo-jupyter-demo)
+  - [Or try to answer Supaero evaluation notebook!](30_Evaluation.html)
 
 ## Quizz
 

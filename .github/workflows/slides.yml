@@ -29,6 +29,7 @@ jobs:
       matrix:
         slides:
           - 00_Course_Introduction
+          - 00_CNES_Short_Course_Introduction
           - 00_OBD_Course_Introduction
           - 01_Introduction_Big_Data
           - 02_Big_Data_Platforms
@@ -37,6 +38,7 @@ jobs:
           - 11_ContainersAndDocker
           - 12_OrchestrationKubernetes
           - 13_Dask_On_Cloud
+          - 14_ObjectStorage
           - 21_Python_Data_Processing
           - 22_Dask_Pangeo
           - 30_Evaluation

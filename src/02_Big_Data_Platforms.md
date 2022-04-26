@@ -334,6 +334,16 @@ It is usually represented by Direct Acyclic Graphs (DAGs).
 
 Plenty others from Apache or in Python ecosystem.
 
+# HPC Platforms
+
+## Use cases
+
+## Architecture, big picture
+
+## Job scheduler
+
+## High Performance Storage
+
 # From HPC to Big Data to Cloud and High Performance Data Analytics
 
 ## HPC platform, story and use case
