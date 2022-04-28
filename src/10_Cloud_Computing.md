@@ -345,21 +345,21 @@ High througput storage system with horizontal scalability
 
 ## Is using cloud computing less expensive?
 
-- ![+1](https://github.com/twitter/twemoji/blob/master/assets/svg/1f44d.svg){height=20px} Depend on your {normal / peak} utilization
-- ![+1](https://github.com/twitter/twemoji/blob/master/assets/svg/1f44d.svg){height=20px} Access to latest hardware without investment
-- ![-1](https://github.com/twitter/twemoji/blob/master/assets/svg/1f44e.svg){height=20px} Fully utilized hardware is more expensive on the cloud
-- ![-1](https://github.com/twitter/twemoji/blob/master/assets/svg/1f44e.svg){height=20px} CLOUD HYGIENE !
+- ![+1](images/thumbsup.svg){height=20px} Depend on your {normal / peak} utilization
+- ![+1](images/thumbsup.svg){height=20px} Access to latest hardware without investment
+- ![-1](images/thumbsdown.svg){height=20px} Fully utilized hardware is more expensive on the cloud
+- ![-1](images/thumbsdown.svg){height=20px} CLOUD HYGIENE !
   - Watch for unused services / storage
   - Shutdown machines when not used
   - Services stack up...
 
 ## Is using cloud computing more secure / safer.
 
-- ![+1](https://github.com/twitter/twemoji/blob/master/assets/svg/1f44d.svg){height=20px} The best engineers in the world working on it
-- ![+1](https://github.com/twitter/twemoji/blob/master/assets/svg/1f44d.svg){height=20px} Secure regions / private cloud...
-- ![-1](https://github.com/twitter/twemoji/blob/master/assets/svg/1f44e.svg){height=20px} Your data somewhere in some datacenter...
-- ![-1](https://github.com/twitter/twemoji/blob/master/assets/svg/1f44e.svg){height=20px} "Dependency" towards your cloud provider...
-- ![-1](https://github.com/twitter/twemoji/blob/master/assets/svg/1f44e.svg){height=20px} Still need to handle security inside you resources
+- ![+1](images/thumbsup.svg){height=20px} The best engineers in the world working on it
+- ![+1](images/thumbsup.svg){height=20px} Secure regions / private cloud...
+- ![-1](images/thumbsdown.svg){height=20px} Your data somewhere in some datacenter...
+- ![-1](images/thumbsdown.svg){height=20px} "Dependency" towards your cloud provider...
+- ![-1](images/thumbsdown.svg){height=20px} Still need to handle security inside you resources
 
 ![OVHCloud burning](https://cdn.searchenginejournal.com/wp-content/uploads/2021/03/fire-ovh-data-center-60488d3b150d6-760x400.jpg)
 
