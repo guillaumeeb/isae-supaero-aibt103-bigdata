@@ -37,25 +37,7 @@ I took most of the content from theirs:
 
 ## Container vs VM: similarities and drawbacks
 
-:::::::::::::: {.columns}
-::: {.column width="30%"}
 
-### Similarities
-
-* Isolated environments for applications
-* Movable between hosts
-
-:::
-::: {.column width="35%"}
-
-## VM Drawbacks
-
-* VM Contains full OS at each install => Install + Resource overhead
-* VM needs pre-allocation of resource for each VM (=> Waste if not used)
-* Communication between VM <=> Communication between computers
-
-:::
-::: {.column width="35%"}
 
 ## Containers Drawbacks
 
