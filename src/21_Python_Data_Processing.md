@@ -242,12 +242,12 @@ plt.show()
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
 
-![](https://jupyter.org/assets/labpreview.png)
+![](https://jupyterlab.readthedocs.io/en/1.2.x/_images/jupyterlab.png)
 
 :::
 ::: {.column width="50%"}
 
-![](https://jupyter.org/assets/main-logo.svg){height=100px}
+![](https://jupyter.org/assets/homepage/main-logo.svgg){height=100px}
 
 - Open source web application
 - Create and share documents that contain live code
