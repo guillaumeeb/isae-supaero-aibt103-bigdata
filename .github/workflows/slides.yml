@@ -120,7 +120,7 @@ jobs:
           folder: output # The folder the action should deploy.
   deploy_pdf:
     runs-on: ubuntu-18.04
-    needs: [build_slides_pd]
+    needs: [build_slides_pdf]
     steps:
       # Checkout our files
       - uses: actions/checkout@v2
