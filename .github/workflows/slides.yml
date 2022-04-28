@@ -61,6 +61,42 @@ jobs:
           path: output/*
           key: ${{ github.sha }}-${{ matrix.slides }}
           restore-keys: ${{ github.sha }}-
+  build_slides_pdf:
+    strategy:
+      max-parallel: 1 # needed for the cache mechanism to work
+      matrix:
+        slides:
+          - 00_Course_Introduction
+          - 00_CNES_Short_Course_Introduction
+          - 00_OBD_Course_Introduction
+          - 01_Introduction_Big_Data
+          - 02_Big_Data_Platforms
+          - 03_Spark_Introduction
+          - 10_Cloud_Computing
+          - 11_ContainersAndDocker
+          - 12_OrchestrationKubernetes
+          - 13_Dask_On_Cloud
+          - 14_ObjectStorage
+          - 21_Python_Data_Processing
+          - 22_Dask_Pangeo
+          - 30_Evaluation
+    runs-on: ubuntu-18.04
+    steps:
+      # Checkout our files
+      - uses: actions/checkout@v2
+      - run: mkdir output_pdf && cp -r images output_pdf/
+      # Build slidedeck
+      - uses: docker://pandoc/latex:latest
+        with:
+          args: >- # allows you to break string into multiple lines
+            -t beamer -s src/${{ matrix.slides }}.md -o output_pdf/${{ matrix.slides }}.pdf
+            -V theme:Warsaw
+      - uses: actions/cache@v2
+        id: cache-pdf
+        with:
+          path: output_pdf/*
+          key: pdf-${{ github.sha }}-${{ matrix.slides }}
+          restore-keys: pdf-${{ github.sha }}-
   deploy:
     runs-on: ubuntu-18.04
     needs: [build_slides]
@@ -82,3 +118,19 @@ jobs:
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: output # The folder the action should deploy.
+  deploy_pdf:
+    runs-on: ubuntu-18.04
+    needs: [build_slides_pd]
+    steps:
+      # Checkout our files
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        id: cache-pdf
+        with:
+          path: output_pdf/*
+          key: pdf-${{ github.sha }}-deploy
+          restore-keys: pdf-${{ github.sha }}-
+      - uses: actions/upload-artifact@master
+        with:
+          name: output_pdf
+          path: output_pdf

@@ -354,9 +354,13 @@ Plenty others from Apache or in Python ecosystem.
 :::
 ::: {.column width="60%"}
 
-Some pictures of a simulations: Pangeo/Ocean/Earth? https://vimeo.com/300943265
 <iframe src="https://player.vimeo.com/video/300943265?h=ef84e12ec0" width="640" height="362" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 <p><a href="https://vimeo.com/300943265">Current speed in eNATL60 simulation with explicit tidal motion.</a> from <a href="https://vimeo.com/oceannumerique">Oc&eacute;an Num&eacute;rique</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+- number of processors in parallel required: 18000
+- Model time step: 40s
+- Model integration speed: 45 minutes for 1 model day
+- 40 million cpu-hour allocation
 
 :::
 ::::::::::::::
