@@ -117,7 +117,7 @@ Docker is **a** solution that **standardizes** packaging and execution of softwa
 
 > Build, Share, and Run Any App, Anywhere
 
-![](https://www.docker.com/sites/default/files/social/docker_facebook_share.png)
+![](https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png)
 
 ## History
 
