@@ -37,9 +37,27 @@ I took most of the content from theirs:
 
 ## Container vs VM: similarities and drawbacks
 
+:::::::::::::: {.columns}
+::: {.column width="30%"}
 
+### Similarities
 
-## Containers Drawbacks
+* Isolated environments for applications
+* Movable between hosts
+
+:::
+::: {.column width="35%"}
+
+### VM Drawbacks
+
+* VM Contains full OS at each install => Install + Resource overhead
+* VM needs pre-allocation of resource for each VM (=> Waste if not used)
+* Communication between VM <=> Communication between computers
+
+:::
+::: {.column width="35%"}
+
+### Containers Drawbacks
 
 * Containers are Linux based (but still works on Windows)
 * Isolation is not perfect since containers share underlying kernels 
@@ -138,7 +156,7 @@ Docker is some fancy tech over linux kernel capabilities (containers)
 
 ## Layers, Container, Image
 
-![layers](https://jfrog--c.documentforce.com/servlet/servlet.ImageServer?id=0151r000006uDeN&oid=00D20000000M3v0&lastMod=1584629516000){width=50%}
+![layers](images/servlet.ImageServer.jpg){width=50%}
 
 ## Layer / Image Analogy
 
