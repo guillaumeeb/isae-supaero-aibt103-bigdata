@@ -247,7 +247,6 @@ plt.show()
 :::
 ::: {.column width="50%"}
 
-![](https://jupyter.org/assets/share.png){height=100px}
 
 - Open source web application
 - Create and share documents that contain live code
@@ -277,7 +276,7 @@ Which tools allows manipulating tabular data?
 
 [Answer link](https://toreply.univ-lille.fr/reponse_120)
 
-# Distributed and sctientific computing
+# Distributed and scientific computing
 
 ## Built-in mutliprocessing
 
@@ -319,7 +318,7 @@ df.describe().compute()
 :::
 ::: {.column width="50%"}
 
-![](https://docs.dask.org/en/latest/_images/dask-dataframe.svg){width=40%}
+![](https://docs.dask.org/en/latest/_images/dask-dataframe.svg){width=80%}
 
 :::
 ::::::::::::::
