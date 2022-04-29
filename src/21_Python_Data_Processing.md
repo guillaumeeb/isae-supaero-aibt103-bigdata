@@ -376,20 +376,29 @@ What Dask does better than Spark (multiple choices)?
 
 # Vizualisation (other than Matplotlib)
 
+## Landscape
 
+![Adaptation of Jake VanderPlas graphic about the Python visualization landscape, by Nicolas P. Rougier](https://rougier.github.io/python-visualization-landscape/landscape-colors.png)
 
-## Pyviz
+## Seaborn
 
-![](https://miro.medium.com/max/518/1*Tw1LzNLwcmpJPVI0v1ZsVA.png)
-![](https://miro.medium.com/max/2400/1*I-xXZpedIymi1cP3RRrhHw.png)
+![](https://seaborn.pydata.org/_images/logo-wide-lightbg.svg){height=100px}
 
-- **HoloViews**: Declarative objects for instantly visualizable data, building Bokeh plots from convenient high-level specifications
-- **GeoViews**: Visualizable geographic data that that can be mixed and matched with HoloViews objects
-- **Bokeh**: Interactive plotting in web browsers, running JavaScript but controlled by Python
-- **Panel**: Assembling objects from many different libraries into a layout or app, whether in a Jupyter notebook or in a standalone serveable dashboard
-- **Datashader**: Rasterizing huge datasets quickly as fixed-size images
-- **hvPlot**: Quickly return interactive HoloViews or GeoViews objects from your Pandas, Xarray, or other data structures
-- **Param**: Declaring user-relevant parameters, making it simple to work with widgets inside and outside of a notebook context
+- Based on Matplotlib
+- Integrates closely with Pandas
+- Dataset oriented to produce informative plots
+
+![](https://seaborn.pydata.org/_images/faceted_lineplot.png)
+
+## Plotly
+
+![](https://upload.wikimedia.org/wikipedia/commons/3/37/Plotly-logo-01-square.png){height=100px}
+
+- Interactive, publication-quality graphs
+- Make dashboard with Dash
+
+![](https://raw.githubusercontent.com/cldougl/plot_images/add_r_img/anim.gif)
+
 
 ## Quizz
 
