@@ -376,28 +376,6 @@ What Dask does better than Spark (multiple choices)?
 
 # Vizualisation (other than Matplotlib)
 
-## Landscape
-
-![Adaptation of Jake VanderPlas graphic about the Python visualization landscape, by Nicolas P. Rougier](https://rougier.github.io/python-visualization-landscape/landscape-colors.png)
-
-## Seaborn
-
-![](https://seaborn.pydata.org/_images/logo-wide-lightbg.svg){height=100px}
-
-- Based on Matplotlib
-- Integrates closely with Pandas
-- Dataset oriented to produce informative plots
-
-![](https://seaborn.pydata.org/_images/faceted_lineplot.png)
-
-## Plotly
-
-![](https://upload.wikimedia.org/wikipedia/commons/3/37/Plotly-logo-01-square.png){height=100px}
-
-- Interactive, publication-quality graphs
-- Make dashboard with Dash
-
-![](https://raw.githubusercontent.com/cldougl/plot_images/add_r_img/anim.gif)
 
 
 ## Quizz
