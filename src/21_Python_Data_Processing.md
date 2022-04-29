@@ -386,7 +386,6 @@ What Dask does better than Spark (multiple choices)?
 
 ![](https://seaborn.pydata.org/_images/faceted_lineplot.png)
 
-
 ## Pyviz
 
 ![](https://miro.medium.com/max/518/1*Tw1LzNLwcmpJPVI0v1ZsVA.png)
@@ -408,6 +407,45 @@ Matlplotlib is the only vizualisation library for Python.
 
 [Answer link](https://toreply.univ-lille.fr/reponse_672)
 
+# Machine and Deep Learning
+
+## Kaggle stats
+
+![Machine Learning Frameworks usage](images/KaggleFrameworkUsage.png)
+
+## Sickit Learn
+
+![](https://scikit-learn.org/stable/_images/scikit-learn-logo-notext.png){height=100px}
+
+- Simple and efficient tools for predictive data analysis
+- Built on NumPy, SciPy, and matplotlib
+- Every classical ML Algorithms
+- Standard interface with Pipelines, estimators, transformers
+- No GPU support (so not good for Deep Learning)
+
+```python
+from sklearn.ensemble import RandomForestClassifier
+clf = RandomForestClassifier(random_state=0)
+X = [[ 1,  2,  3],  # 2 samples, 3 features
+     [11, 12, 13]]
+y = [0, 1]  # classes of each sample
+clf.fit(X, y)
+```
+
+
+## Quizz
+
+Which is the best Deep Learning library in Python?
+
+- Answer A: Sickit-Learn
+- Answer B: Keras
+- Answer C: TensorFlow
+- Answer D: PyTorch
+- Answer E: XGBoost
+
+![Answer](data:image/png;base64,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)
+
+[Answer link](https://toreply.univ-lille.fr/reponse_72)
 
 # Exercise
 
