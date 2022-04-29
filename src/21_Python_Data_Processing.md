@@ -247,7 +247,7 @@ plt.show()
 :::
 ::: {.column width="50%"}
 
-![](https://jupyter.org/assets/homepage/main-logo.svgg){height=100px}
+![](https://jupyter.org/assets/share.png){height=100px}
 
 - Open source web application
 - Create and share documents that contain live code
