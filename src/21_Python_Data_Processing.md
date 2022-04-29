@@ -374,16 +374,6 @@ What Dask does better than Spark (multiple choices)?
 
 [Answer link](https://toreply.univ-lille.fr/reponse_618)
 
-# Vizualisation (other than Matplotlib)
-
-
-
-# Machine and Deep Learning
-
-
-
-# Others
-
 
 
 # Exercise
