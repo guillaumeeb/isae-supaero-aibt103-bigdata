@@ -376,9 +376,15 @@ What Dask does better than Spark (multiple choices)?
 
 # Vizualisation (other than Matplotlib)
 
-## Landscape
+## Seaborn
 
-![Adaptation of Jake VanderPlas graphic about the Python visualization landscape, by Nicolas P. Rougier](https://rougier.github.io/python-visualization-landscape/landscape-colors.png)
+![](https://seaborn.pydata.org/_images/logo-wide-lightbg.svg){height=100px}
+
+- Based on Matplotlib
+- Integrates closely with Pandas
+- Dataset oriented to produce informative plots
+
+![](https://seaborn.pydata.org/_images/faceted_lineplot.png)
 
 # Exercise
 
