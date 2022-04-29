@@ -461,41 +461,6 @@ Which is the best Deep Learning library in Python?
 # Others
 
 
-
-## Numba
-
-![](https://numba.pydata.org/_static/numba-blue-horizontal-rgb.svg){height=100px}
-
-> Numba makes Python code fast
-
-- Translates Python functions to optimized machine code at runtime
-- Use LLVM compiler library
-- Python can approach the speeds of C or FORTRAN
-- Just apply one of the Numba decorators
-
-```python
-from numba import jit
-import random
-
-@jit(nopython=True)
-def monte_carlo_pi(nsamples):
-    acc = 0
-    for i in range(nsamples):
-        x = random.random()
-        y = random.random()
-        if (x ** 2 + y ** 2) < 1.0:
-            acc += 1
-    return 4.0 * acc / nsamples
-```
-
-## Binder
-
-![](https://mybinder.org/static/logo.svg?v=fe52c40adc69454ba7536393f76ebd715e5fb75f5feafe16a27c47483eabf3311c14ed9fda905c49915d6dbf369ae68fb855a40dd05489a7b9542a9ee532e92b)
-
-> Turn a Git repo into a collection of interactive notebooks
-
-![](https://binderhub.readthedocs.io/en/latest/_images/architecture.png)
-
 # Exercise
 
 ## Pandas tutorial
