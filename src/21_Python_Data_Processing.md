@@ -502,59 +502,7 @@ Which is the best Deep Learning library in Python?
 
 [Answer link](https://toreply.univ-lille.fr/reponse_72)
 
-# Others
 
-## Packaging: Pip / Conda
-
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/PyPI_logo.svg/1200px-PyPI_logo.svg.png){height=100px}
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Conda_logo.svg/1280px-Conda_logo.svg.png){height=100px}
-
-- Package libraries
-- Make them available on repositories
-- Build environments automatically
-
-|     | conda | pip |
-|-----|-------|-----|
-| manages | binaries | wheel or source |
-| can require compilers | no | yes |
-| package types | any | Python-only |
-| create environment | yes, built-in | no, requires virtualenv or venv |
-| dependency checks | yes | no |
-
-Difference between Conda and Pip according to Anaconda.
-
-## Numba
-
-![](https://numba.pydata.org/_static/numba-blue-horizontal-rgb.svg){height=100px}
-
-> Numba makes Python code fast
-
-- Translates Python functions to optimized machine code at runtime
-- Use LLVM compiler library
-- Python can approach the speeds of C or FORTRAN
-- Just apply one of the Numba decorators
-
-```python
-from numba import jit
-import random
-
-@jit(nopython=True)
-def monte_carlo_pi(nsamples):
-    acc = 0
-    for i in range(nsamples):
-        x = random.random()
-        y = random.random()
-        if (x ** 2 + y ** 2) < 1.0:
-            acc += 1
-    return 4.0 * acc / nsamples
-```
-
-## Binder
-
-
-> Turn a Git repo into a collection of interactive notebooks
-
-![](https://binderhub.readthedocs.io/en/latest/_images/architecture.png)
 
 # Exercise
 
