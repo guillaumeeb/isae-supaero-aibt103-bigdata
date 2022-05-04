@@ -90,7 +90,7 @@ jobs:
         with:
           args: >- # allows you to break string into multiple lines
             -t beamer -s src/${{ matrix.slides }}.md -o output_pdf/${{ matrix.slides }}.pdf
-            -V theme:Warsaw
+            -V theme:Warsaw --verbose
       - uses: actions/cache@v2
         id: cache-pdf
         with:
