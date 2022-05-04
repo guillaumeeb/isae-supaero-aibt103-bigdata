@@ -143,7 +143,7 @@ pd.describe()
 :::::::::::::: {.columns}
 ::: {.column width="60%"}
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/NumPy_logo_2020.svg/2560px-NumPy_logo_2020.svg.png){height=100px}
+![](https://numpy.org/doc/stable/_static/numpylogo.svg){height=100px}
 
 - Manipulate N-dimensionnal arrays
 - Numerical computing tools (math functions, linear algebra, Fourier transform, ...)
@@ -376,6 +376,10 @@ What Dask does better than Spark (multiple choices)?
 
 # Vizualisation (other than Matplotlib)
 
+## Landscape
+
+![Adaptation of Jake VanderPlas graphic about the Python visualization landscape, by Nicolas P. Rougier](images/Python-viz-landscape-colors.png)
+
 ## Seaborn
 
 ![](https://seaborn.pydata.org/_images/logo-wide-lightbg.svg){height=100px}
@@ -385,6 +389,15 @@ What Dask does better than Spark (multiple choices)?
 - Dataset oriented to produce informative plots
 
 ![](https://seaborn.pydata.org/_images/faceted_lineplot.png)
+
+## Plotly
+
+![](images/Plotly-logo-01-square.png){height=100px}
+
+- Interactive, publication-quality graphs
+- Make dashboard with Dash
+
+![](https://raw.githubusercontent.com/cldougl/plot_images/add_r_img/anim.gif)
 
 ## Pyviz
 
@@ -432,6 +445,48 @@ y = [0, 1]  # classes of each sample
 clf.fit(X, y)
 ```
 
+## TensorFlow, Keras, Pytorch
+
+![](https://camo.githubusercontent.com/906e661107a3bc03104ca5d88336d1f4b0e80fdcac65efaf7904041d371c747f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6b657261732e696f2f696d672f6b657261732d6c6f676f2d323031382d6c617267652d313230302e706e67){height=100px}
+![](https://camo.githubusercontent.com/aeb4f612bd9b40d81c62fcbebd6db44a5d4344b8b962be0138817e18c9c06963/68747470733a2f2f7777772e74656e736f72666c6f772e6f72672f696d616765732f74665f6c6f676f5f686f72697a6f6e74616c2e706e67){height=100px}
+![](https://upload.wikimedia.org/wikipedia/commons/9/96/Pytorch_logo.png){height=100px}
+
+- Deep Learning on GPU with no previous knowledge
+- Keras on top of Tensorflow
+- Tensorflow complete platform, with TensorBoard and other tools
+- Always trolls about Keras/TF vs PyTorch
+
+![](https://www.tensorflow.org/tensorboard/images/tensorboard.gif){width=50%}
+
+## Gradient boosting algorithms
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
+### [XGBoost](https://xgboost.readthedocs.io/en/latest/)
+
+- Distributed gradient boosting library
+- Efficient, flexible and portable
+- XGBoost provides a parallel tree boosting
+- Runs on major distributed environment (Hadoop, SGE, MPI, Spark)
+- Solve problems beyond billions of examples
+
+![](https://raw.githubusercontent.com/dmlc/dmlc.github.io/master/img/logo-m/xgboost.png){height=100px}
+
+:::
+::: {.column width="50%"}
+
+### [LighGBM](https://lightgbm.readthedocs.io/en/latest/)
+
+- Distributed gradient boosting framework
+- Efficient, Faster, lower memory usage, better accuracy
+- Support of parallel, distributed, and GPU learning
+- Capable of handling large-scale data
+
+![](https://lightgbm.readthedocs.io/en/latest/_images/LightGBM_logo_black_text.svg){height=100px}
+
+:::
+::::::::::::::
 
 ## Quizz
 
@@ -446,6 +501,61 @@ Which is the best Deep Learning library in Python?
 ![Answer](data:image/png;base64,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)
 
 [Answer link](https://toreply.univ-lille.fr/reponse_72)
+
+# Others
+
+## Packaging: Pip / Conda
+
+![](https://pypi.org/static/images/logo-large.6bdbb439.svg){height=100px}
+![](https://docs.conda.io/en/latest/_images/conda_logo.svg){height=100px}
+
+- Package libraries
+- Make them available on repositories
+- Build environments automatically
+
+|     | conda | pip |
+|-----|-------|-----|
+| manages | binaries | wheel or source |
+| can require compilers | no | yes |
+| package types | any | Python-only |
+| create environment | yes, built-in | no, requires virtualenv or venv |
+| dependency checks | yes | no |
+
+Difference between Conda and Pip according to Anaconda.
+
+## Numba
+
+![](https://numba.pydata.org/_static/numba-blue-horizontal-rgb.svg){height=100px}
+
+> Numba makes Python code fast
+
+- Translates Python functions to optimized machine code at runtime
+- Use LLVM compiler library
+- Python can approach the speeds of C or FORTRAN
+- Just apply one of the Numba decorators
+
+```python
+from numba import jit
+import random
+
+@jit(nopython=True)
+def monte_carlo_pi(nsamples):
+    acc = 0
+    for i in range(nsamples):
+        x = random.random()
+        y = random.random()
+        if (x ** 2 + y ** 2) < 1.0:
+            acc += 1
+    return 4.0 * acc / nsamples
+```
+
+## Binder
+
+![](https://mybinder.org/static/logo.svg?v=fe52c40adc69454ba7536393f76ebd715e5fb75f5feafe16a27c47483eabf3311c14ed9fda905c49915d6dbf369ae68fb855a40dd05489a7b9542a9ee532e92b)
+
+> Turn a Git repo into a collection of interactive notebooks
+
+![](https://binderhub.readthedocs.io/en/latest/_images/architecture.png)
 
 # Exercise
 
