@@ -105,7 +105,7 @@ Wikipedia
 
 ## Server virtualization
 
-![](https://www.researchgate.net/profile/Bashir-Mohammed-2/publication/269636339/figure/fig1/AS:295113902313473@1447372045341/illustration-of-the-concept-of-Virtualization-7.png)
+![](images/illustration-of-the-concept-of-Virtualization-7.png)
 
 ## Virtualization evolution
 
