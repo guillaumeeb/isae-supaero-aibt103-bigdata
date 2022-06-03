@@ -367,38 +367,113 @@ Plenty others from Apache or in Python ecosystem.
 
 ## CNES typical use cases
 
-Take slide from Roadmap.
+:::::::::::::: {.columns}
+::: {.column width="35%"}
+
+### R&D, Studies, upstream research
+
+- Launchers (combustion, structure)
+- Flight dynamics, orbitography
+- Sensor data simulation
+- Satellite structure and materials
+- Technical domain: MPI, HTC, Big Data, AI
+
+![HPC Upstream](images/HPCUpstream.png)
+
+:::
+::: {.column width="30%"}
+
+### Data production and diffusion
+
+![HPC production](images/HPCProduction.png)
+
+- Continuous data production (L0 --> L2)
+- Data portals, catalogs
+- Processing or reprocessing campains
+- Technical Domain: HTC
+- CNES Projects: SWOT, THEIA, SWH, SSALTO, PEPS
+
+:::
+::: {.column width="30%"}
+
+### Data analysis, dowstream research
+
+- Scientific studies on data prodcuts
+- Multi temporal or cross domain analysis
+- EO or astronomical Data
+- Technical Domain: HTC, Big Data, AI
+- CNES labs or projects : CESBIO, LEGOS, AI4Geo, EOLab 
+- 
+![HPC downstream](images/HPCDownstream.png)
+
+:::
+::::::::::::::
 
 ## Architecture, big picture
 
-Just a schema with all elements: login nodes, job scheduler, compute nodes, storage, IB network...
+![HPC Architecture](https://www.marquette.edu/high-performance-computing/images/architecture.png)
+
+Several things: Login nodes, Admin/Scheduler nodes, Compute resources, Parallel FS, RMDA Network
 
 ## Job scheduler
 
-- Job Queuing System
-- Resources management
-- SLURM, PBS, SGE, LSF, etc.
-- Priority, fairshare partition, QoS
+:::::::::::::: {.columns}
+::: {.column width="30%"}
 
-Example resources reservation
-Some schema?
+- Job Queuing System
+- Job = Resources, Walltime, Queue, Account, etc.
+- Resources management and scheduling
+- Priority, fairshare partition, QoS
+- SLURM, PBS, SGE, LSF, etc.
+
+```bash
+#!/bin/bash
+#SBATCH --job-name=serial_job_test    # Job name
+#SBATCH --ntasks=1                    # Run on a single CPU
+#SBATCH --mem=1gb                     # Job memory request
+#SBATCH --time=00:05:00               # Time limit hrs:min:sec
+#SBATCH --output=serial_test_%j.log   # Standard output and error log
+
+module load python
+
+python /data/training/SLURM/plot_template.py
+```
+
+:::
+::: {.column width="70%"}
+
+![HPC Scheduler](images/HPCScheduler.png)
+
+:::
+::::::::::::::
 
 ## High Performance Storage
 
+:::::::::::::: {.columns}
+::: {.column width="30%"}
+
 - POSIX file system
 - Usually based on powerfull SAN storage infrastructure
-- High performance and capacity: millions IO/s, undreds GB/s, undreds PB capacity.
+- High performance and capacity: millions IO/s, hundreds GB/s, hundreds PB capacity.
 - Spectrum Scale (GPFS) and Lustre
 - Other players: WekaIO, BeeGFS
 
-Schema IO nodes and SAN 
+:::
+::: {.column width="70%"}
+
+![HAL GPFS](images/GPFSHALArchitecture.png)
+
+:::
+::::::::::::::
 
 ## Software technologies
 
+:::::::::::::: {.columns}
+::: {.column width="40%"}
+
 - Classical HPC: C and Fortran
-  - Compile languages, hardware optimized
-  - MPI
-  - OpenMP
+  - Compiled languages, hardware optimized
+  - MPI & OpenMP
   - CUDA, OpenACC
 - More and More: Python, Julia
   - Interpreted Languages, easyer to use
@@ -408,7 +483,13 @@ Schema IO nodes and SAN
     - MPI4Py : Python over MPI
     - Dask, Ray, etc.
 
-Some MPI Code?
+:::
+::: {.column width="60%"}
+
+![MPI Code](https://cvw.cac.cornell.edu/hybrid/images/mpimultistampede70pct.png)
+
+:::
+::::::::::::::
 
 # From HPC to Big Data to Cloud and High Performance Data Analytics
 
