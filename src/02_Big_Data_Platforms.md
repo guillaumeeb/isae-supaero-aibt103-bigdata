@@ -368,7 +368,7 @@ Plenty others from Apache or in Python ecosystem.
 ## CNES typical use cases (1)
 
 :::::::::::::: {.columns}
-:::
+::: {.column width="50%"}
 
 ### R&D, Studies, upstream research
 
@@ -379,7 +379,7 @@ Plenty others from Apache or in Python ecosystem.
 - Technical domain: MPI, HTC, Big Data, AI
 
 :::
-:::
+::: {.column width="50%"}
 
 ![HPC Upstream](images/HPCUpstream.png)
 
@@ -389,12 +389,12 @@ Plenty others from Apache or in Python ecosystem.
 ## CNES typical use cases (2)
 
 :::::::::::::: {.columns}
-::: 
+::: {.column width="50%"}
 
 ![HPC production](images/HPCProduction.png)
 
 :::
-::: 
+::: {.column width="50%"}
 
 ### Data production and diffusion
 
@@ -410,7 +410,7 @@ Plenty others from Apache or in Python ecosystem.
 ## CNES typical use cases (3)
 
 :::::::::::::: {.columns}
-:::
+::: {.column width="50%"}
 
 ### Data analysis, dowstream research
 
@@ -421,7 +421,7 @@ Plenty others from Apache or in Python ecosystem.
 - CNES labs or projects : CESBIO, LEGOS, AI4Geo, EOLab 
 
 :::
-:::
+::: {.column width="50%"}
 - 
 ![HPC downstream](images/HPCDownstream.png)
 
@@ -430,14 +430,14 @@ Plenty others from Apache or in Python ecosystem.
 
 ## Architecture, big picture
 
-![HPC Architecture](https://www.marquette.edu/high-performance-computing/images/architecture.png){width=60%}
+![HPC Architecture](https://www.marquette.edu/high-performance-computing/images/architecture.png){width=50%}
 
 Several things: Login nodes, Admin/Scheduler nodes, Compute resources, Parallel FS, RMDA Network
 
 ## Job scheduler
 
 :::::::::::::: {.columns}
-:::
+::: {.column width="50%"}
 
 - Job Queuing System
 - Job = Resources, Walltime, Queue, Account, etc.
@@ -448,7 +448,7 @@ Several things: Login nodes, Admin/Scheduler nodes, Compute resources, Parallel 
 ![HPC Scheduler](images/HPCScheduler.png)
 
 :::
-:::
+::: {.column width="50%"}
 
 ```bash
 #!/bin/bash
@@ -469,7 +469,7 @@ python /data/training/SLURM/plot_template.py
 ## High Performance Storage
 
 :::::::::::::: {.columns}
-:::
+::: {.column width="50%"}
 
 - POSIX file system
 - Usually based on powerfull SAN storage infrastructure
@@ -478,7 +478,7 @@ python /data/training/SLURM/plot_template.py
 - Other players: WekaIO, BeeGFS
 
 :::
-:::
+::: {.column width="50%"}
 
 ![HAL GPFS](images/GPFSHALArchitecture.png)
 
