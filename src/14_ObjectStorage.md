@@ -8,13 +8,27 @@ date: 2022-04-26
 
 ## Object Storage concepts
 
-TODO
+> Object storage is a computer data storage that manages data as objects, as opposed to other storage architectures like file systems which manages data as a file hierarchy, and block storage which manages data as blocks within sectors and tracks. 
+> Each object typically includes the data itself, a variable amount of metadata, and a globally unique identifier. (Wikipedia)
+
+But Why?
+
+- Scalability. Scale-out, infinitly. 
+- Security/Reliability/Availability. Erasure Coding.
+- Cost. Commodity hardware.
+- Performance (bandwith). Just need good network.
 
 ## POSIX vs Object Storage
 
+![](https://blog.scaleway.com/content/images/2019/12/schema_storage.svg)
+
 ## Object store Architecture
 
+![](https://www.glennklockwood.com/data-intensive/storage/object-store-schematic.png)
+
 ## Ceph @CNES
+
+![](images/Ceph-CNES.png)
 
 # Processing and Cloud Optimized datasets
 
