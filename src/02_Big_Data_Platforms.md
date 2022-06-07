@@ -365,10 +365,10 @@ Plenty others from Apache or in Python ecosystem.
 :::
 ::::::::::::::
 
-## CNES typical use cases
+## CNES typical use cases (1)
 
 :::::::::::::: {.columns}
-::: {.column width="35%"}
+:::
 
 ### R&D, Studies, upstream research
 
@@ -378,14 +378,25 @@ Plenty others from Apache or in Python ecosystem.
 - Satellite structure and materials
 - Technical domain: MPI, HTC, Big Data, AI
 
+:::
+:::
+
 ![HPC Upstream](images/HPCUpstream.png)
 
 :::
-::: {.column width="30%"}
+::::::::::::::
 
-### Data production and diffusion
+## CNES typical use cases (2)
+
+:::::::::::::: {.columns}
+::: 
 
 ![HPC production](images/HPCProduction.png)
+
+:::
+::: 
+
+### Data production and diffusion
 
 - Continuous data production (L0 --> L2)
 - Data portals, catalogs
@@ -394,7 +405,12 @@ Plenty others from Apache or in Python ecosystem.
 - CNES Projects: SWOT, THEIA, SWH, SSALTO, PEPS
 
 :::
-::: {.column width="30%"}
+::::::::::::::
+
+## CNES typical use cases (3)
+
+:::::::::::::: {.columns}
+:::
 
 ### Data analysis, dowstream research
 
@@ -403,6 +419,9 @@ Plenty others from Apache or in Python ecosystem.
 - EO or astronomical Data
 - Technical Domain: HTC, Big Data, AI
 - CNES labs or projects : CESBIO, LEGOS, AI4Geo, EOLab 
+
+:::
+:::
 - 
 ![HPC downstream](images/HPCDownstream.png)
 
@@ -411,20 +430,25 @@ Plenty others from Apache or in Python ecosystem.
 
 ## Architecture, big picture
 
-![HPC Architecture](https://www.marquette.edu/high-performance-computing/images/architecture.png)
+![HPC Architecture](https://www.marquette.edu/high-performance-computing/images/architecture.png){width=60%}
 
 Several things: Login nodes, Admin/Scheduler nodes, Compute resources, Parallel FS, RMDA Network
 
 ## Job scheduler
 
 :::::::::::::: {.columns}
-::: {.column width="30%"}
+:::
 
 - Job Queuing System
 - Job = Resources, Walltime, Queue, Account, etc.
 - Resources management and scheduling
 - Priority, fairshare partition, QoS
 - SLURM, PBS, SGE, LSF, etc.
+
+![HPC Scheduler](images/HPCScheduler.png)
+
+:::
+:::
 
 ```bash
 #!/bin/bash
@@ -440,17 +464,12 @@ python /data/training/SLURM/plot_template.py
 ```
 
 :::
-::: {.column width="70%"}
-
-![HPC Scheduler](images/HPCScheduler.png)
-
-:::
 ::::::::::::::
 
 ## High Performance Storage
 
 :::::::::::::: {.columns}
-::: {.column width="30%"}
+:::
 
 - POSIX file system
 - Usually based on powerfull SAN storage infrastructure
@@ -459,7 +478,7 @@ python /data/training/SLURM/plot_template.py
 - Other players: WekaIO, BeeGFS
 
 :::
-::: {.column width="70%"}
+:::
 
 ![HAL GPFS](images/GPFSHALArchitecture.png)
 
@@ -469,7 +488,7 @@ python /data/training/SLURM/plot_template.py
 ## Software technologies
 
 :::::::::::::: {.columns}
-::: {.column width="40%"}
+::: {.column width="60%"}
 
 - Classical HPC: C and Fortran
   - Compiled languages, hardware optimized
@@ -484,7 +503,7 @@ python /data/training/SLURM/plot_template.py
     - Dask, Ray, etc.
 
 :::
-::: {.column width="60%"}
+::: {.column width="40%"}
 
 ![MPI Code](https://cvw.cac.cornell.edu/hybrid/images/mpimultistampede70pct.png)
 
@@ -525,7 +544,7 @@ python /data/training/SLURM/plot_template.py
 | 3 | Sierra - United States | 1,572,480 | 94,640.0 | 125,712.0 | 7,438 |
 | 8 | JUWELS Booster Module - Germany | 449,280 | 44,120.0 | 70,980.0 | 1,764 |
 | 21 | PANGEA III - France | 291,024 | 17,860.0 | 25,025.8 | 1,367 |
-| 92 | Jean Zay - France | 93,960 | 4,478.0 | 7,345.6 |
+| 92 | Jean Zay - France | 93,960 | 4,478.0 | 7,345.6 | |
 
 [Top 500 (june 2021)](https://top500.org/lists/top500/list/2021/06/)
 
