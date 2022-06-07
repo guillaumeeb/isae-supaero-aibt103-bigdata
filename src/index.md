@@ -60,4 +60,4 @@ Includes [Dask tutorial](https://github.com/dask/dask-tutorial).
 
 # CNES Big Data Processing & Distribution course
 
-[OBD Course Introduction](00_CNES_Short_Course_Introduction.html)
+[CNES Course Introduction](00_CNES_Short_Course_Introduction.html)

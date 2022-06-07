@@ -301,7 +301,7 @@ if __name__ == '__main__':
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
 
-![](https://dask.org/_images/dask_horizontal_white_no_pad.svg){height=100px}
+![](images/Dask-Logo-lockup-primary.png){height=100px}
 
 - Provides advanced parallelism for analytics
 - First designed as allowing to process datasets bigger than memory
