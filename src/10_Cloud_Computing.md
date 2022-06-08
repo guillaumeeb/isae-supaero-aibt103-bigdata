@@ -101,7 +101,7 @@ Wikipedia
 
 ## Desktop virtualization
 
-![](https://www.unixtutorial.org/images/posts/Hardware-Virtualization-Desktop-Virtualization-Example.png){width=75%}
+![](images/virtualization.png){width=75%}
 
 ## Server virtualization
 
@@ -191,7 +191,7 @@ And that infrastructure is often there to answer peak load...
 
 ## Different layers of abstractions
 
-![From pakt](https://static.packt-cdn.com/products/9781789538519/graphics/faf54214-c5e7-4cc4-9594-9cf06dacc923.png)
+![](images/../../images/modeles-de-services-cloud.png)
 
 ## Abstraction examples
 
