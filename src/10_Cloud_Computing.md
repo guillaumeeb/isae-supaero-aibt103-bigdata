@@ -341,6 +341,12 @@ High througput storage system with horizontal scalability
   - With POSIX filesystem (sometimes over Object store)
   - And high performance network.
 
+## HPC as a Service
+
+AWS ParallelCluster
+
+![](https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2019/11/06/parallelcluster-1.gif)
+
 # Discussions and Troll
 
 ## Is using cloud computing less expensive?

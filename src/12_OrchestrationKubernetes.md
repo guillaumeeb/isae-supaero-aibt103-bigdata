@@ -95,7 +95,6 @@ What allows container orchestration (multiple choices)?
 
 ![](images/Coiled.png)
 
-
 ## Quizz
 
 How do you deploy containers through Kubernetes (mutliple choices)?
