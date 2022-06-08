@@ -134,15 +134,53 @@ What is Cloud Optimized?
 
 ## Cloud Optimized Geotiff
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
+- Metadata at the start of the file only
+- Tiling instead of stripes (chunks)
+- Compression
+- Overviews (zoom out)
+- HTTP range requests, and so object storage!
+
+:::
+::: {.column width="50%"}
+
+![](https://staging.dev.element84.com/wp-content/uploads/2019/04/smiley_tiled.png)
+
+:::
+::::::::::::::
+
 ## Zarr
+
+:::::::::::::: {.columns}
+::: {.column width="30%"}
+
+![](images/Zarr.png)
+
+:::
+::: {.column width="70%"}
+
+- Python library for storage of chunked, compressed NDarrays
+- Developed by Alistair Miles (Imperial) for genomics research (@alimanfoo)
+- Arrays are split into user-defined chunks; each chunk is optional compressed (zlib, zstd, etc.)
+- Can store arrays in memory, directories, zip files, or any python mutable mapping interface (dictionary)
+- External libraries (s3fs, gcsf) provide a way to store directly into cloud object storage
+
+:::
+::::::::::::::
 
 ## Parquet
 
+- Chunked binary file
+- Compressed
+- Metadata easily accessible
+
+![](images/Parquet.png)
+
 ## See more
 
-Cloud outreach link
-https://www.youtube.com/playlist?list=PLQsQNjNIDU87yUFyKy1seaiRps389RPwk
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hprPIr9Vt4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Quizz
 
