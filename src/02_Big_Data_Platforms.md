@@ -73,7 +73,9 @@ Each cluster is composed of:
 
 ## Hadoop story, from google to Spark
 
-![Hadoop history (Packt)](https://static.packt-cdn.com/products/9781788999830/graphics/assets/4cf97ee3-8f90-4904-9094-dffd90bd066c.png){height=40%}
+![Hadoop history](images/Hadoop_Final.jpg){height=40%}
+
+Spark first version in 2014.
 
 ## Quizz
 
