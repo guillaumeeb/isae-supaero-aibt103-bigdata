@@ -13,7 +13,7 @@ date: 2022-02-08
 Harnessing the complexity of large amounts of data is a challenge in itself. 
 
 But Big Data processing is more than that: originally characterized by the 3 Vs of Volume, Velocity and Variety, 
-the concepts popularized by Hadoop and Google requires dedicated computing solutions (both software and infrastructure), 
+the concepts popularized by Hadoop and Google require dedicated computing solutions (both software and infrastructure), 
 which will be explored in this module.
 
 ## Objectives
