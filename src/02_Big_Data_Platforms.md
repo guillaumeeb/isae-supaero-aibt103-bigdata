@@ -480,7 +480,7 @@ python /data/training/SLURM/plot_template.py
 :::
 ::: {.column width="50%"}
 
-![HAL GPFS](images/GPFSHALArchitecture.png)
+![HAL GPFS](images/GPFSHALArchitecture.png){width=40%}
 
 :::
 ::::::::::::::
