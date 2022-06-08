@@ -422,7 +422,7 @@ Plenty others from Apache or in Python ecosystem.
 
 :::
 ::: {.column width="50%"}
-- 
+
 ![HPC downstream](images/HPCDownstream.png)
 
 :::
@@ -480,7 +480,7 @@ python /data/training/SLURM/plot_template.py
 :::
 ::: {.column width="50%"}
 
-![HAL GPFS](images/GPFSHALArchitecture.png){width=40%}
+![HAL GPFS](images/GPFSHALArchitecture.png){width=70%}
 
 :::
 ::::::::::::::

@@ -57,7 +57,8 @@ What makes object storage efficient? (multiple choices)
 aws s3 cp /tmp/foo/ s3://bucket/ --recursive --exclude "*" --include "*.jpg"
 ```
 
-Interfaces and libraries for major programming languages
+Interfaces and libraries for major programming languages:
+
 - [Boto3 for Python](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html): not just S3, all AWS services
 - Higher level for Python: [s3fs: Pythonic file interface for S3](https://s3fs.readthedocs.io/en/latest/)
 - Other languages:
@@ -69,15 +70,67 @@ Interfaces and libraries for major programming languages
 
 ## Processing framework and Object store
 
-Pandas
-Spark
-Dask
+All Major Data processing framework are compatible with S3 like interfaces.
 
-Just replace / by s3://
+- [Pandas dataframes](https://pandas.pydata.org/docs/user_guide/io.html)
+- [Spark](https://spark.apache.org/docs/latest/cloud-integration.html)
+- [Dask](https://docs.dask.org/en/stable/how-to/connect-to-remote-data.html)
 
-## Cloud Optimized data?
+Just replace */* or *file://* by *s3://*.
 
-Compatible with Object store
+```python
+import dask.dataframe as dd
+df = dd.read_csv('s3://bucket/path/to/data-*.csv')
+df = dd.read_parquet('gcs://bucket/path/to/data-*.parq')
+```
+
+More on the next part of the course.
+
+## ARCO Data
+
+**A**nalysis **R**eady **C**loud **O**ptimized Data.
+
+Thanks to Ryan Abernathey.
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
+What is Analysis Ready?
+
+- Think in Datasets, not data files
+- No need for tedious homogenizing, cleaning steps
+- Curated and cataloged
+
+:::
+::: {.column width="50%"}
+
+![How do data scientists spend their time (Crowdflower Data Science Report, 2016)](images/What-data-scientists-spend-the-most-time-doing-7.ppm.png)
+
+:::
+::::::::::::::
+
+## ARCO Data (2)
+
+**A**nalysis **R**eady **C**loud **O**ptimized Data.
+
+Thanks to Ryan Abernathey.
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
+What is Cloud Optimized?
+
+- Compatible with object storage (access via HTTP)
+- Support lazy access and intelligent subsetting
+- Integrates with high-level analysis libraries and distributed frameworks
+
+:::
+::: {.column width="50%"}
+
+![](images/ARCOData.png)
+
+:::
+::::::::::::::
 
 ## Cloud Optimized Geotiff
 
